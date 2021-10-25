@@ -229,7 +229,45 @@ ex) yoojiih.github.io</li>
 <p><code class="language-text">npm run deploy</code></p>
 </li>
 </ul>
-<h2 id="9-테마-최신버전으로-업데이트" style="position:relative;"><a href="#9-%ED%85%8C%EB%A7%88-%EC%B5%9C%EC%8B%A0%EB%B2%84%EC%A0%84%EC%9C%BC%EB%A1%9C-%EC%97%85%EB%8D%B0%EC%9D%B4%ED%8A%B8" aria-label="9 테마 최신버전으로 업데이트 permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>9. 테마 최신버전으로 업데이트</h2>
+<h2 id="9-댓글기능-추가" style="position:relative;"><a href="#9-%EB%8C%93%EA%B8%80%EA%B8%B0%EB%8A%A5-%EC%B6%94%EA%B0%80" aria-label="9 댓글기능 추가 permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>9. 댓글기능 추가</h2>
+<p>블로그에 깃허브 댓글 적용하기(utterances)</p>
+<ol>
+<li>
+<p>댓글이 올라올 저장소 <span style="color:red">선택</span> or 생성</p>
+<ul>
+<li>github page 레포지터리를 private로 설정한 경우 따로 blog-comments 라는 이름의 신규 public 레포지터리를 추가해서 사용</li>
+<li><span style="color:red">github page 레포지토리를 public으로 설정한 경우 바로 다음 단계로 넘어감</span></li>
+</ul>
+</li>
+<li>
+<p>utterance 설치</p>
+<ul>
+<li><a href="https://github.com/apps/utterances">https://github.com/apps/utterances</a> 로 이동해서 깃허브에 utterances 앱을 설치, 추가해 레포지토리의 접근권한을 주면 됨</li>
+<li>only select repository 선택 -> ex) yoojiih/yoojiih.github.io -> install 클릭 </li>
+</ul>
+</li>
+<li>
+<p>install 후 나오는 페이지에 몇가지 설정 기입</p>
+<ol>
+<li>repo에 레포지토리 주소를 계정/레포지토리 형식으로 기입 ex) yoojiih/yoojiih.github.io </li>
+<li>issue title contains page pathname 선택</li>
+<li>테마는 아무거나</li>
+<li>이렇게 설정 기입하면 알아서 스크립트를 만들어 주는데 이걸 활용할 예정</li>
+</ol>
+</li>
+<li>
+<p>블로그 html에 스크립트 추가
+이 테마의 경우 gatsby-meta-config.js 파일의 repo: 부분에 기입하면 끝</p>
+<div class="gatsby-highlight" data-language="javascript"><pre class="language-javascript"><code class="language-javascript">  comments<span class="token operator">:</span> <span class="token punctuation">{</span>
+    <span class="token comment">//댓글기능</span>
+    utterances<span class="token operator">:</span> <span class="token punctuation">{</span>
+      repo<span class="token operator">:</span> <span class="token template-string"><span class="token template-punctuation string">`</span><span class="token string">yoojiih/yoojiih.github.io</span><span class="token template-punctuation string">`</span></span><span class="token punctuation">,</span>
+    <span class="token punctuation">}</span><span class="token punctuation">,</span>
+  <span class="token punctuation">}</span><span class="token punctuation">,</span></code></pre></div>
+<p><a href="https://ansohxxn.github.io/blog/utterances/#2-utterance-%EB%A5%BC-install-%EC%84%A4%EC%B9%98%ED%95%9C%EB%8B%A4">참고</a></p>
+</li>
+</ol>
+<h2 id="10-테마-최신버전으로-업데이트" style="position:relative;"><a href="#10-%ED%85%8C%EB%A7%88-%EC%B5%9C%EC%8B%A0%EB%B2%84%EC%A0%84%EC%9C%BC%EB%A1%9C-%EC%97%85%EB%8D%B0%EC%9D%B4%ED%8A%B8" aria-label="10 테마 최신버전으로 업데이트 permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>10. 테마 최신버전으로 업데이트</h2>
 <ul>
 <li>
 <p><code class="language-text">git remote add upstream [Gatsby Theme을 제공하는 저장소 주소].git</code></p>
@@ -255,6 +293,7 @@ ex) yoojiih.github.io</li>
 <li><a href="#6-repository-source-branch-%EB%B3%80%EA%B2%BD%ED%95%98%EA%B8%B0">6. Repository Source Branch 변경하기</a></li>
 <li><a href="#7-%EB%B0%B0%ED%8F%AC%EB%90%9C-%ED%8E%98%EC%9D%B4%EC%A7%80-%ED%99%95%EC%9D%B8%ED%95%98%EA%B8%B0">7. 배포된 페이지 확인하기</a></li>
 <li><a href="#8-%EC%88%98%EC%A0%95%ED%95%98%EA%B3%A0-%EB%B0%B0%ED%8F%AC%ED%95%98%EA%B8%B0">8. 수정하고 배포하기</a></li>
-<li><a href="#9-%ED%85%8C%EB%A7%88-%EC%B5%9C%EC%8B%A0%EB%B2%84%EC%A0%84%EC%9C%BC%EB%A1%9C-%EC%97%85%EB%8D%B0%EC%9D%B4%ED%8A%B8">9. 테마 최신버전으로 업데이트</a></li>
+<li><a href="#9-%EB%8C%93%EA%B8%80%EA%B8%B0%EB%8A%A5-%EC%B6%94%EA%B0%80">9. 댓글기능 추가</a></li>
+<li><a href="#10-%ED%85%8C%EB%A7%88-%EC%B5%9C%EC%8B%A0%EB%B2%84%EC%A0%84%EC%9C%BC%EB%A1%9C-%EC%97%85%EB%8D%B0%EC%9D%B4%ED%8A%B8">10. 테마 최신버전으로 업데이트</a></li>
 </ul>
-</div></div></div></div><div class="post-cards-adjacent-wrapper"><div class="post-cards-adjacent"><div class="post-card-adjacent-wrapper"><a class="post-card prev" href="/gatsby-starter-zoomkoding-introduction/"><div class="direction">이전 글</div><div class="title">쉽고 빠르게 나만의 개츠비(Gatsby) 블로그 만들기</div></a></div><div class="post-card-adjacent-wrapper"></div></div></div><div class="utterances"></div></main><footer class="page-footer-wrapper"><p class="page-footer">© <!-- -->2021<!-- --> <a href="https://github.com/yoojiih">유지현</a> powered by<a href="https://github.com/zoomKoding/zoomkoding-gatsby-blog"> zoomkoding-gatsby-blog</a></p></footer></div></div><div id="gatsby-announcer" style="position:absolute;top:0;width:1px;height:1px;padding:0;overflow:hidden;clip:rect(0, 0, 0, 0);white-space:nowrap;border:0" aria-live="assertive" aria-atomic="true"></div></div><script id="gatsby-script-loader">/*<![CDATA[*/window.pagePath="/gatsby-github-blog/";/*]]>*/</script><script id="gatsby-chunk-mapping">/*<![CDATA[*/window.___chunkMapping={"polyfill":["/polyfill-384ea82b9c97dbd7ee60.js"],"app":["/app-25ce3b242183dc597f8a.js"],"component---cache-caches-gatsby-plugin-offline-app-shell-js":["/component---cache-caches-gatsby-plugin-offline-app-shell-js-241020a1cf7d0f317bbe.js"],"component---src-pages-404-js":["/component---src-pages-404-js-18966798326ae6e5a169.js"],"component---src-pages-about-js":["/component---src-pages-about-js-d4a17c8107ec4d45892f.js"],"component---src-pages-index-js":["/component---src-pages-index-js-075b56c20bb45784e0f2.js"],"component---src-templates-blog-template-js":["/component---src-templates-blog-template-js-5ea40d560b401e429c55.js"],"component---src-templates-category-template-js":["/component---src-templates-category-template-js-d01b478dab935d07b01d.js"]};/*]]>*/</script><script src="/polyfill-384ea82b9c97dbd7ee60.js" nomodule=""></script><script src="/component---src-templates-blog-template-js-5ea40d560b401e429c55.js" async=""></script><script src="/f9d3028dbef90a6e9b8db85387d63dd9f4edf538-ac5c80044f20d501767d.js" async=""></script><script src="/styles-407fe62976dc5310c43e.js" async=""></script><script src="/app-25ce3b242183dc597f8a.js" async=""></script><script src="/framework-81279cacaab4bdba7685.js" async=""></script><script src="/webpack-runtime-c63ab93c0b4b0eb1ffab.js" async=""></script></body></html>
+</div></div></div></div><div class="post-cards-adjacent-wrapper"><div class="post-cards-adjacent"><div class="post-card-adjacent-wrapper"></div><div class="post-card-adjacent-wrapper"><a class="post-card next" href="/gatsby-starter-zoomkoding-introduction/"><div class="direction">다음 글</div><div class="title">Md 문법 정리</div></a></div></div></div><div class="utterances"></div></main><footer class="page-footer-wrapper"><p class="page-footer">© <!-- -->2021<!-- --> <a href="https://github.com/yoojiih">유지현</a> powered by<a href="https://github.com/zoomKoding/zoomkoding-gatsby-blog"> zoomkoding-gatsby-blog</a></p></footer></div></div><div id="gatsby-announcer" style="position:absolute;top:0;width:1px;height:1px;padding:0;overflow:hidden;clip:rect(0, 0, 0, 0);white-space:nowrap;border:0" aria-live="assertive" aria-atomic="true"></div></div><script id="gatsby-script-loader">/*<![CDATA[*/window.pagePath="/gatsby-github-blog/";/*]]>*/</script><script id="gatsby-chunk-mapping">/*<![CDATA[*/window.___chunkMapping={"polyfill":["/polyfill-384ea82b9c97dbd7ee60.js"],"app":["/app-25ce3b242183dc597f8a.js"],"component---cache-caches-gatsby-plugin-offline-app-shell-js":["/component---cache-caches-gatsby-plugin-offline-app-shell-js-241020a1cf7d0f317bbe.js"],"component---src-pages-404-js":["/component---src-pages-404-js-18966798326ae6e5a169.js"],"component---src-pages-about-js":["/component---src-pages-about-js-d4a17c8107ec4d45892f.js"],"component---src-pages-index-js":["/component---src-pages-index-js-075b56c20bb45784e0f2.js"],"component---src-templates-blog-template-js":["/component---src-templates-blog-template-js-5ea40d560b401e429c55.js"],"component---src-templates-category-template-js":["/component---src-templates-category-template-js-d01b478dab935d07b01d.js"]};/*]]>*/</script><script src="/polyfill-384ea82b9c97dbd7ee60.js" nomodule=""></script><script src="/component---src-templates-blog-template-js-5ea40d560b401e429c55.js" async=""></script><script src="/f9d3028dbef90a6e9b8db85387d63dd9f4edf538-ac5c80044f20d501767d.js" async=""></script><script src="/styles-407fe62976dc5310c43e.js" async=""></script><script src="/app-25ce3b242183dc597f8a.js" async=""></script><script src="/framework-81279cacaab4bdba7685.js" async=""></script><script src="/webpack-runtime-c63ab93c0b4b0eb1ffab.js" async=""></script></body></html>
