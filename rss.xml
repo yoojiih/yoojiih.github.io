@@ -1,4 +1,43 @@
-<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Yooji's Blog]]></title><description><![CDATA[줌코딩의 개발일기]]></description><link>https://www.yoojiih.github.io</link><generator>GatsbyJS</generator><lastBuildDate>Tue, 26 Oct 2021 16:24:36 GMT</lastBuildDate><item><title><![CDATA[Shop Project]]></title><description><![CDATA[Project명 (무제) _ 개인 프로젝트 목표 Frontend 기술 스택 학습에 집중하되 
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Yooji's Blog]]></title><description><![CDATA[줌코딩의 개발일기]]></description><link>https://www.yoojiih.github.io</link><generator>GatsbyJS</generator><lastBuildDate>Wed, 27 Oct 2021 05:28:12 GMT</lastBuildDate><item><title><![CDATA[Shop Project _ Next.js 도입]]></title><description><![CDATA[환경설정 기본 요구사항 Node.js : 자바스크립트 런타임 
+NPM : 패키지 매니저 도구
+Yarn : 개선된 버전의 NPM (선택사항)   설치 Next.js 공식 문서 참고 CNA로 next 프로젝트 생성 및 개발환경 실행 cra…]]></description><link>https://www.yoojiih.github.io/TIL_20211027/</link><guid isPermaLink="false">https://www.yoojiih.github.io/TIL_20211027/</guid><pubDate>Wed, 27 Oct 2021 04:00:00 GMT</pubDate><content:encoded>&lt;h2 id=&quot;환경설정&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#%ED%99%98%EA%B2%BD%EC%84%A4%EC%A0%95&quot; aria-label=&quot;환경설정 permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;환경설정&lt;/h2&gt;
+&lt;p&gt;기본 요구사항&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;Node.js : 자바스크립트 런타임
+NPM : 패키지 매니저 도구
+Yarn : 개선된 버전의 NPM (선택사항) &lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code class=&quot;language-text&quot;&gt;npm install -g yarn&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&quot;설치&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#%EC%84%A4%EC%B9%98&quot; aria-label=&quot;설치 permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;설치&lt;/h2&gt;
+&lt;p&gt;&lt;a href=&quot;https://nextjs.org/docs/getting-started&quot;&gt;Next.js 공식 문서 참고&lt;/a&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;CNA로 next 프로젝트 생성 및 개발환경 실행&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;bash&quot;&gt;&lt;pre class=&quot;language-bash&quot;&gt;&lt;code class=&quot;language-bash&quot;&gt;&lt;span class=&quot;token function&quot;&gt;mkdir&lt;/span&gt; 디렉토리명
+&lt;span class=&quot;token builtin class-name&quot;&gt;cd&lt;/span&gt; 디렉토리명
+npx create-next-app &lt;span class=&quot;token builtin class-name&quot;&gt;.&lt;/span&gt;
+&lt;span class=&quot;token function&quot;&gt;npm&lt;/span&gt; &lt;span class=&quot;token function&quot;&gt;install&lt;/span&gt; next react react-dom
+&lt;span class=&quot;token function&quot;&gt;npm&lt;/span&gt; i sass
+
+&lt;span class=&quot;token function&quot;&gt;npm&lt;/span&gt; run dev&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;/li&gt;
+&lt;li&gt;cra보다 가볍고 불필요한 잡다한 파일이 적다.&lt;/li&gt;
+&lt;li&gt;typescript, sass는 설치와 동시에 적용된다.(react에서 typescript사용하기 위함)&lt;/li&gt;
+&lt;li&gt;기본적으로 es6문법이 사용가능하고, autoprefix가 적용되어 있다.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&quot;nextjs에서-redux-사용&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#nextjs%EC%97%90%EC%84%9C-redux-%EC%82%AC%EC%9A%A9&quot; aria-label=&quot;nextjs에서 redux 사용 permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;Next.js에서 Redux 사용&lt;/h2&gt;
+&lt;ol&gt;
+&lt;li&gt;redux와 redux와 react를 연결하는데 많은 도움을 주는 react-redux라이브러리를 설치
+&lt;code class=&quot;language-text&quot;&gt;npm install redux react-redux&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;Next에서 react를 연결하기 위해서는 next-redux-wrapper가 필요
+&lt;code class=&quot;language-text&quot;&gt;npm install next-redux-wrapper&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;redux 사용시 유용한 redux devtools를 사용하기 위해 설치
+&lt;code class=&quot;language-text&quot;&gt;npm install -D redux-devtools-extension&lt;/code&gt;&lt;/li&gt;
+&lt;/ol&gt;</content:encoded></item><item><title><![CDATA[Shop Project]]></title><description><![CDATA[Project명 (무제) _ 개인 프로젝트 목표 Frontend 기술 스택 학습에 집중하되 
 실제로 사용자들이 사용한다는 가정하에 UI / UX 고려 및 사용자들의 유입을 위한 검색 엔진 최적화(SEO…]]></description><link>https://www.yoojiih.github.io/TIL_ShopProject/</link><guid isPermaLink="false">https://www.yoojiih.github.io/TIL_ShopProject/</guid><pubDate>Tue, 26 Oct 2021 06:00:00 GMT</pubDate><content:encoded>&lt;h1 id=&quot;project명-무제-_-개인-프로젝트&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#project%EB%AA%85-%EB%AC%B4%EC%A0%9C-_-%EA%B0%9C%EC%9D%B8-%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8&quot; aria-label=&quot;project명 무제 _ 개인 프로젝트 permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;Project명 (무제) _ 개인 프로젝트&lt;/h1&gt;
 &lt;ul&gt;
 &lt;li&gt;
@@ -14,16 +53,13 @@
 &lt;blockquote&gt;
 &lt;p&gt;Next.js
 React
-TypeScript
 Redux, Redux-saga
 Sass&lt;/p&gt;
 &lt;/blockquote&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
 &lt;hr&gt;
-&lt;h1 id=&quot;1-서론&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#1-%EC%84%9C%EB%A1%A0&quot; aria-label=&quot;1 서론 permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;1. 서론&lt;/h1&gt;
-&lt;p&gt;  프로젝트 개발 진행에 앞서 프로젝트에 적용할 기술 스택의 선정 과정에 대해 기술하고자 한다 &lt;/p&gt;
-&lt;ul&gt;
+&lt;h2 id=&quot;1-서론&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#1-%EC%84%9C%EB%A1%A0&quot; aria-label=&quot;1 서론 permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;1. 서론&lt;/h2&gt;
+&lt;p&gt;프로젝트 개발 진행에 앞서 프로젝트에 적용할 기술 스택의 선정 과정에 대해 기술하고자 한다 &lt;/p&gt;
+&lt;/li&gt;
 &lt;li&gt;
 &lt;h2 id=&quot;프로젝트-구성을-위한-기능들&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8-%EA%B5%AC%EC%84%B1%EC%9D%84-%EC%9C%84%ED%95%9C-%EA%B8%B0%EB%8A%A5%EB%93%A4&quot; aria-label=&quot;프로젝트 구성을 위한 기능들 permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;프로젝트 구성을 위한 기능들&lt;/h2&gt;
 &lt;p&gt;현재 원활한 협업을 위해 필요한 기능들은 다음과 같다&lt;/p&gt;
@@ -61,7 +97,7 @@ Sass&lt;/p&gt;
 &lt;/blockquote&gt;
 &lt;/li&gt;
 &lt;li&gt;
-&lt;h2 id=&quot;리액트-프레임-워크-비교&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#%EB%A6%AC%EC%95%A1%ED%8A%B8-%ED%94%84%EB%A0%88%EC%9E%84-%EC%9B%8C%ED%81%AC-%EB%B9%84%EA%B5%90&quot; aria-label=&quot;리액트 프레임 워크 비교 permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;리액트 프레임 워크 비교&lt;/h2&gt;
+&lt;h2 id=&quot;react-framework-비교&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#react-framework-%EB%B9%84%EA%B5%90&quot; aria-label=&quot;react framework 비교 permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;React Framework 비교&lt;/h2&gt;
 &lt;p&gt;&lt;span
       class=&quot;gatsby-resp-image-wrapper&quot;
       style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 720px; &quot;
@@ -91,27 +127,49 @@ Sass&lt;/p&gt;
 &lt;tr&gt;
 &lt;th&gt;Create React App&lt;/th&gt;
 &lt;th&gt;기본적으로 싱글 페이지 어플리케이션(SPA)으로 CSR 방식으로 렌더링을 제공 → React를 배우고 있거나 새로운 싱글페이지 앱을 만들 때 사용&lt;/th&gt;
-&lt;th&gt;&lt;/th&gt;
 &lt;/tr&gt;
 &lt;/thead&gt;
 &lt;tbody&gt;
 &lt;tr&gt;
 &lt;td&gt;Next.js&lt;/td&gt;
 &lt;td&gt;SSG와 SSR 둘 다 사용 가능한 하이브리드 형태로 렌더링을 제공 → 서버 렌더링 Node.js 웹사이트를 만들 때 사용&lt;/td&gt;
-&lt;td&gt;&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
 &lt;td&gt;Gatsby&lt;/td&gt;
 &lt;td&gt;Site Generator (정적 페이지)를 생성하여 SSG 방식으로 렌더링을 제공 → 고정적인 콘텐츠 지향적 웹사이트를 만들 때 사용&lt;/td&gt;
-&lt;td&gt;&lt;/td&gt;
 &lt;/tr&gt;
 &lt;/tbody&gt;
 &lt;/table&gt;
 &lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;&lt;img src=&quot;next%EB%B9%84%EA%B5%90.png&quot; alt=&quot;next비교.png&quot;&gt;&lt;/p&gt;
-&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;&gt; next.js가 가장 사용률이 높다
-Redux의 창시자이며, 현재는 Facebook React Core팀의 일원인 Dan Abramov도 SSG,SSR,CSR 셋을 혼합하는 현재 Next.js의 방식이 리액트 프레임워크가 나아가야 할 방향이라고 언급하기도 함&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;&lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 720px; &quot;
+    &gt;
+      &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 39.44444444444444%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAICAYAAAD5nd/tAAAACXBIWXMAABYlAAAWJQFJUiTwAAABLElEQVQoz11Si3KEIAz0/7/17F2B8EgC2w16nWtxdqJI9hE9ns8nzvNErRUigpwzzAyx1Cd8Tky3DZ2GtRb2tS78X4e7/9mYQUBE0yMrWh9Q+YYRZ3+ReALBc2Muii7/xZFSgqpeijMcUSCUb/HJQ/HobIxmo8vhA9UqijGRZdaCxNq844iYbleU7WwuRlOIXw1CvKtsgoLqbZPaHsH87Q0TR++dBxuys5EkQuXsZc8rXIVR264/5vKOjDvMBkmJ7VC1MRuHTuVzPHhPAjoAhaB1v/vEcr2w7z/22LcJY44pcQYlYcgLXTJSZrxCt7Wj5ATh168lzmSMygSNqBdGzRvaG47IHr+HcnZVJ74SZ9edMRfMF4Y5pA3WhXYjNcNLFGUs5D4hrC/hhxqOH2e2dD8hGtKjAAAAAElFTkSuQmCC&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        alt=&quot;nextcom.png&quot;
+        title=&quot;nextcom.png&quot;
+        src=&quot;/static/b7e75bd16fb9994c9efc33c0cea4656d/37523/nextcom.png&quot;
+        srcset=&quot;/static/b7e75bd16fb9994c9efc33c0cea4656d/e9ff0/nextcom.png 180w,
+/static/b7e75bd16fb9994c9efc33c0cea4656d/f21e7/nextcom.png 360w,
+/static/b7e75bd16fb9994c9efc33c0cea4656d/37523/nextcom.png 720w,
+/static/b7e75bd16fb9994c9efc33c0cea4656d/302a4/nextcom.png 1080w,
+/static/b7e75bd16fb9994c9efc33c0cea4656d/07a9c/nextcom.png 1440w,
+/static/b7e75bd16fb9994c9efc33c0cea4656d/fb458/nextcom.png 2362w&quot;
+        sizes=&quot;(max-width: 720px) 100vw, 720px&quot;
+        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
+        loading=&quot;lazy&quot;
+      /&gt;
+    &lt;/span&gt;&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;next.js가 가장 사용률이 높다
+Redux의 창시자이며, 현재는 Facebook React Core팀의 일원인 Dan Abramov도 SSG,SSR,CSR 셋을 혼합하는 현재 Next.js의 방식이 리액트 프레임워크가 나아가야 할 방향이라고 언급하기도 함&lt;/p&gt;
+&lt;/blockquote&gt;
 &lt;h2 id=&quot;nextjs가-떠오르는-대표적인-이유&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#nextjs%EA%B0%80-%EB%96%A0%EC%98%A4%EB%A5%B4%EB%8A%94-%EB%8C%80%ED%91%9C%EC%A0%81%EC%9D%B8-%EC%9D%B4%EC%9C%A0&quot; aria-label=&quot;nextjs가 떠오르는 대표적인 이유 permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;Next.js가 떠오르는 대표적인 이유&lt;/h2&gt;
 &lt;ol&gt;
 &lt;li&gt;react를 node환경에서 사용할 수 있기 때문에 페이지에 따라 pre-rendering, CSR을 쉽게 선택적으로 적용 가능&lt;/li&gt;
@@ -154,14 +212,14 @@ ex) 카테고리, unsupport페이지, 에러페이지&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
 &lt;/ul&gt;
-&lt;h2 id=&quot;spasingle-page-application-단일-페이지-애플리케이션&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#spasingle-page-application-%EB%8B%A8%EC%9D%BC-%ED%8E%98%EC%9D%B4%EC%A7%80-%EC%95%A0%ED%94%8C%EB%A6%AC%EC%BC%80%EC%9D%B4%EC%85%98&quot; aria-label=&quot;spasingle page application 단일 페이지 애플리케이션 permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;SPA(Single-page application, 단일 페이지 애플리케이션)&lt;/h2&gt;
+&lt;h2 id=&quot;spasingle-page-application&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#spasingle-page-application&quot; aria-label=&quot;spasingle page application permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;SPA(Single-page application&lt;/h2&gt;
 &lt;ul&gt;
 &lt;li&gt;웹사이트에서 사용자가 액션을 취할 때(ex.좋아요 클릭) 전체 페이지가 처음부터 재로딩되는 대신 현재 웹페이지에서 동적으로 데이터만 바뀌게 되는 것&lt;/li&gt;
 &lt;li&gt;CSR 방식을 사용하기 때문에 틀은 정해져 있어 변하는 데이터들만 내려주면 되니까 개발측면에선 데이터 비용을 아끼고 사용자 측면에선 편하게 스크롤을 내리기만해도 데이터들을 볼 수 있다.
 하지만 사이트 규모가 커질수록 한번 들어 가면 초기 페이지 생성시 시간이 로딩 시간이 오래 걸려 사용자들이 불편을 겪게 됨&lt;/li&gt;
 &lt;li&gt;이런 로딩속도 문제를 극복하기 위해서 예전 방식인 SSR을 사용하게됨&lt;/li&gt;
 &lt;/ul&gt;
-&lt;h2 id=&quot;seo-search-engine-optimization-검색-엔진-최적화--검색-rank-개선&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#seo-search-engine-optimization-%EA%B2%80%EC%83%89-%EC%97%94%EC%A7%84-%EC%B5%9C%EC%A0%81%ED%99%94--%EA%B2%80%EC%83%89-rank-%EA%B0%9C%EC%84%A0&quot; aria-label=&quot;seo search engine optimization 검색 엔진 최적화  검색 rank 개선 permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;SEO (Search Engine Optimization) 검색 엔진 최적화 = 검색 Rank 개선&lt;/h2&gt;
+&lt;h2 id=&quot;seo-search-engine-optimization-검색-엔진-최적화-검색-rank-개선&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#seo-search-engine-optimization-%EA%B2%80%EC%83%89-%EC%97%94%EC%A7%84-%EC%B5%9C%EC%A0%81%ED%99%94-%EA%B2%80%EC%83%89-rank-%EA%B0%9C%EC%84%A0&quot; aria-label=&quot;seo search engine optimization 검색 엔진 최적화 검색 rank 개선 permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;SEO (Search Engine Optimization) 검색 엔진 최적화, 검색 Rank 개선&lt;/h2&gt;
 &lt;ul&gt;
 &lt;li&gt;사용자가 구글에 키워드를 검색했을때 구글의 Search engine이 웹페이지의 정보들을 읽어서 가장 관련성이 높은 글들을 보여주는데 이것을 설정해 사이트가 검색 결과에 더 잘 보이도록 최적화하는 과정이다&lt;/li&gt;
 &lt;li&gt;검색 엔진 봇들은 사이트의 데이터를 크롤링할 때 자바스크립트 파일을 해석할 수 없기 때문에 HTML 파일에서 끌어 올 데이터를 수집하게 된다. &lt;/li&gt;
@@ -198,8 +256,8 @@ ex) 카테고리, unsupport페이지, 에러페이지&lt;/li&gt;
 &lt;li&gt;&lt;a href=&quot;#nextjs%EA%B0%80-%EB%96%A0%EC%98%A4%EB%A5%B4%EB%8A%94-%EB%8C%80%ED%91%9C%EC%A0%81%EC%9D%B8-%EC%9D%B4%EC%9C%A0&quot;&gt;Next.js가 떠오르는 대표적인 이유&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&quot;#ssg-vs-ssr-pre-redering%EC%9D%98-%EB%91%90%EA%B0%80%EC%A7%80-%ED%98%95%ED%83%9C&quot;&gt;SSG VS SSR (Pre-redering의 두가지 형태)&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&quot;#ssr-vs-csr&quot;&gt;SSR VS CSR&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;#spasingle-page-application-%EB%8B%A8%EC%9D%BC-%ED%8E%98%EC%9D%B4%EC%A7%80-%EC%95%A0%ED%94%8C%EB%A6%AC%EC%BC%80%EC%9D%B4%EC%85%98&quot;&gt;SPA(Single-page application, 단일 페이지 애플리케이션)&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;#seo-search-engine-optimization-%EA%B2%80%EC%83%89-%EC%97%94%EC%A7%84-%EC%B5%9C%EC%A0%81%ED%99%94--%EA%B2%80%EC%83%89-rank-%EA%B0%9C%EC%84%A0&quot;&gt;SEO (Search Engine Optimization) 검색 엔진 최적화 = 검색 Rank 개선&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;#spasingle-page-application&quot;&gt;SPA(Single-page application&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;#seo-search-engine-optimization-%EA%B2%80%EC%83%89-%EC%97%94%EC%A7%84-%EC%B5%9C%EC%A0%81%ED%99%94-%EA%B2%80%EC%83%89-rank-%EA%B0%9C%EC%84%A0&quot;&gt;SEO (Search Engine Optimization) 검색 엔진 최적화, 검색 Rank 개선&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&quot;#nextjs-%EB%8F%84%EC%9E%85-%EC%9D%B4%EC%9C%A0&quot;&gt;Next.js 도입 이유&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/div&gt;</content:encoded></item><item><title><![CDATA[Md 문법 정리]]></title><description><![CDATA[👋 MD 문법 제목 1개 ~ 6개를 붙여서 제목 글자 크기를 정할 수 있다. 과 텍스트 사이에는 여백이 있어야 한다. 개행 강제개행
