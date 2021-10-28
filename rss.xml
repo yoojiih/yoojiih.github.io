@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Yooji's Blog]]></title><description><![CDATA[줌코딩의 개발일기]]></description><link>https://www.yoojiih.github.io</link><generator>GatsbyJS</generator><lastBuildDate>Wed, 27 Oct 2021 05:31:38 GMT</lastBuildDate><item><title><![CDATA[Shop Project _ Next.js 도입]]></title><description><![CDATA[환경설정 기본 요구사항 Node.js : 자바스크립트 런타임  NPM : 패키지 매니저 도구 Yarn : 개선된 버전의 NPM (선택사항)   설치 Next.js 공식 문서 참고 CNA로 next 프로젝트 생성 및 개발환경 실행 cra…]]></description><link>https://www.yoojiih.github.io/TIL_20211027/</link><guid isPermaLink="false">https://www.yoojiih.github.io/TIL_20211027/</guid><pubDate>Wed, 27 Oct 2021 04:00:00 GMT</pubDate><content:encoded>&lt;h2 id=&quot;환경설정&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#%ED%99%98%EA%B2%BD%EC%84%A4%EC%A0%95&quot; aria-label=&quot;환경설정 permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;환경설정&lt;/h2&gt;
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Yooji's Blog]]></title><description><![CDATA[줌코딩의 개발일기]]></description><link>https://www.yoojiih.github.io</link><generator>GatsbyJS</generator><lastBuildDate>Thu, 28 Oct 2021 11:09:19 GMT</lastBuildDate><item><title><![CDATA[Shop Project _ Next.js 도입 + 라우팅 메인페이지 구성(Header,Footer,Nav, Auth)]]></title><description><![CDATA[환경설정 기본 요구사항 Node.js : 자바스크립트 런타임  NPM : 패키지 매니저 도구 Yarn : 개선된 버전의 NPM (선택사항)   설치 (Ver. 12.0.1) Next.js 공식 문서 참고 CNA로 next…]]></description><link>https://www.yoojiih.github.io/TIL_20211027/</link><guid isPermaLink="false">https://www.yoojiih.github.io/TIL_20211027/</guid><pubDate>Wed, 27 Oct 2021 04:00:00 GMT</pubDate><content:encoded>&lt;h2 id=&quot;환경설정&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#%ED%99%98%EA%B2%BD%EC%84%A4%EC%A0%95&quot; aria-label=&quot;환경설정 permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;환경설정&lt;/h2&gt;
 &lt;p&gt;기본 요구사항&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;Node.js : 자바스크립트 런타임 &lt;/li&gt;
@@ -10,44 +10,148 @@
 &lt;/ul&gt;
 &lt;/li&gt;
 &lt;/ul&gt;
-&lt;h2 id=&quot;설치&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#%EC%84%A4%EC%B9%98&quot; aria-label=&quot;설치 permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;설치&lt;/h2&gt;
+&lt;h2 id=&quot;설치-ver-1201&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#%EC%84%A4%EC%B9%98-ver-1201&quot; aria-label=&quot;설치 ver 1201 permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;설치 (Ver. 12.0.1)&lt;/h2&gt;
 &lt;p&gt;&lt;a href=&quot;https://nextjs.org/docs/getting-started&quot;&gt;Next.js 공식 문서 참고&lt;/a&gt;&lt;/p&gt;
 &lt;ul&gt;
-&lt;li&gt;CNA로 next 프로젝트 생성 및 개발환경 실행&lt;/li&gt;
-&lt;/ul&gt;
-&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;bash&quot;&gt;&lt;pre class=&quot;language-bash&quot;&gt;&lt;code class=&quot;language-bash&quot;&gt;    &lt;span class=&quot;token function&quot;&gt;mkdir&lt;/span&gt; 디렉토리명
-    &lt;span class=&quot;token builtin class-name&quot;&gt;cd&lt;/span&gt; 디렉토리명
-    npx create-next-app &lt;span class=&quot;token builtin class-name&quot;&gt;.&lt;/span&gt;
-    &lt;span class=&quot;token function&quot;&gt;npm&lt;/span&gt; &lt;span class=&quot;token function&quot;&gt;install&lt;/span&gt; next react react-dom
-    &lt;span class=&quot;token function&quot;&gt;npm&lt;/span&gt; i sass
+&lt;li&gt;
+&lt;p&gt;CNA로 next 프로젝트 생성 및 개발환경 실행&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;bash&quot;&gt;&lt;pre class=&quot;language-bash&quot;&gt;&lt;code class=&quot;language-bash&quot;&gt;&lt;span class=&quot;token function&quot;&gt;mkdir&lt;/span&gt; 디렉토리명
+&lt;span class=&quot;token builtin class-name&quot;&gt;cd&lt;/span&gt; 디렉토리명
+npx create-next-app &lt;span class=&quot;token builtin class-name&quot;&gt;.&lt;/span&gt;
 
-    &lt;span class=&quot;token function&quot;&gt;npm&lt;/span&gt; run dev&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;span class=&quot;token function&quot;&gt;npm&lt;/span&gt; run dev&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&quot;cna으로-설치시&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#cna%EC%9C%BC%EB%A1%9C-%EC%84%A4%EC%B9%98%EC%8B%9C&quot; aria-label=&quot;cna으로 설치시 permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;CNA으로 설치시&lt;/h2&gt;
+&lt;p&gt;nextjs프로젝트의 기본 세팅을 간편하게 시작하는 방법으로서 react, react-dom, next가 함께 설치됨&lt;/p&gt;
 &lt;ol&gt;
-&lt;li&gt;cra보다 가볍고 불필요한 잡다한 파일이 적다.&lt;/li&gt;
+&lt;li&gt;컴파일과 번들링이 자동으로 된다 (webpack과 babel을 이용해서)&lt;/li&gt;
+&lt;li&gt;자동 리프레시 기능으로 수정하면 화면에 바로 반영됨&lt;/li&gt;
+&lt;li&gt;서버 사이드 렌더링(SSR)이 지원됨&lt;/li&gt;
+&lt;li&gt;static파일을 지원함 (public폴더 밑에)&lt;/li&gt;
+&lt;li&gt;CRA와 같은 방식으로 짧은 시간 내에 앱을 빌드 할 수 있지만 CRA보다 가볍고 불필요한 잡다한 파일이 적다는 특징이 있다.&lt;/li&gt;
 &lt;li&gt;typescript, sass는 설치와 동시에 적용된다.(react에서 typescript사용하기 위함)&lt;/li&gt;
 &lt;li&gt;기본적으로 es6문법이 사용가능하고, autoprefix가 적용되어 있다.&lt;/li&gt;
 &lt;/ol&gt;
-&lt;h2 id=&quot;nextjs에서-redux-사용&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#nextjs%EC%97%90%EC%84%9C-redux-%EC%82%AC%EC%9A%A9&quot; aria-label=&quot;nextjs에서 redux 사용 permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;Next.js에서 Redux 사용&lt;/h2&gt;
+&lt;h2 id=&quot;nextjs-파일-구조&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#nextjs-%ED%8C%8C%EC%9D%BC-%EA%B5%AC%EC%A1%B0&quot; aria-label=&quot;nextjs 파일 구조 permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;Next.js 파일 구조&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;React와 달리 Next는 static한 페이지를 만들며, pages 내의 폴더나 파일 기반으로 라우팅을 지원하기 때문에 폴더 안에 각 페이지들을 만들면 따로 작업할 필요없이 하나의 URL처럼 작동됨&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;pages 폴더 &lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;폴더트리가 곧 주소창 경로 (url의 구조) -&gt; 구조 짤 때 신경써야함&lt;/li&gt;
+&lt;li&gt;index.js : root파일, 메인 화면 역할 (폴더명이 index.js파일의 주소명이 됨) &lt;/li&gt;
+&lt;li&gt;나머지 파일들은 라우터 경로가 됨 (export defalt 한 컴포넌트를 라우팅)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;blockquote&gt;
+&lt;p&gt;pages&gt;index.js - &lt;a href=&quot;http://localhost:3000/&quot;&gt;http://localhost:3000/&lt;/a&gt;
+pages&gt;about.js - &lt;a href=&quot;http://localhost:3000/about&quot;&gt;http://localhost:3000/about&lt;/a&gt;
+pages&gt;product&gt;index.js - &lt;a href=&quot;http://localhost:3000/product&quot;&gt;http://localhost:3000/product&lt;/a&gt;
+pages&gt;product&gt;detail.js -&lt;a href=&quot;http://localhost:3000/product/detail&quot;&gt;http://localhost:3000/product/detail&lt;/a&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;public 폴더&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;public폴더는 static(정적)파일들을 지원하기 때문에
+이미지 사용시 public안에 images 폴더 만들어서 이미지 넣어주면
+별도의 import없이 src=“/images/logo.png” 이런식으로 이미지 호출해 사용 가능함&lt;/li&gt;
+&lt;li&gt;public폴더에는 로봇파일이나 html파일을 넣어서 사용가능
+(주의: pages폴더 밑에 같은이름의 static파일 있으면 오류발생) &lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;_app.js 파일&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Next 구동순서중 1번째로 실행되는 파일&lt;/li&gt;
+&lt;li&gt;Client에서 띄워지는 전체 컴포넌트의 공통 레이아웃으로
+최초에 실행되어 내부에 들어갈 컴포넌트들을 실행함 &lt;/li&gt;
+&lt;li&gt;모든 페이지는 이곳을 통하기 때문에 글로벌 CSS를 이곳에 선언&lt;/li&gt;
+&lt;li&gt;app.js를 이용하면 페이지 전환시 레이아웃을 유지할 수 있고 상태값을 유지 가능&lt;/li&gt;
+&lt;li&gt;componentDidCatch를 이용해서 커스텀 에러 핸들링 가능&lt;/li&gt;
+&lt;li&gt;추가적인 데이터를 페이지로 주입가능 &lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;_document.js 파일
+&lt;a href=&quot;https://nextjs.org/docs/advanced-features/custom-document&quot;&gt;공식문서 소스파일 참조&lt;/a&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Next 구동순서중 2번째로 실행되는 파일&lt;/li&gt;
+&lt;li&gt;_app.js에서 구성한 HTML이 어떤 형태로 들어갈지 구성해주는 것&lt;/li&gt;
+&lt;li&gt;Next에서 제공하는 document를 커스터마이징 가능 &lt;/li&gt;
+&lt;li&gt;Next.js 페이지들은 &lt;Html&gt;&lt;Head&gt;등의 마크업 정의를 건너뛰고 페이지를 만들기 때문에 마크업 태그들을 만들어야 할 때는 이 파일이 필수로 있어야 수정가능&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;_app.js VS _document.js &lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Next는 두 파일 모두 pages 폴더 안에 있어야 함&lt;/li&gt;
+&lt;li&gt;둘다 Server only file이기 때문에 클라이언트 단에서 사용하는 함수(ex. addEventlistner, window 등)를 사용하면 안된다.&lt;/li&gt;
+&lt;li&gt;_app.js는 레이아웃 잡는 용도이며 모든 페이지에 적용되야하는 내용이 들어감&lt;/li&gt;
+&lt;li&gt;반면 _document.js는 서버에서만 렌더링 되고 OnClick같은 이벤트 핸들러는 작동하지 않음 &amp;#x26; css 사용 x&lt;/li&gt;
+&lt;li&gt;이 둘에서 공통적으로 사용되는 &lt;Head&gt;도 다르기 때문에 타이틀같은 속성 넣을 때 document에서 넣으면 안되고 app에서 넣거나 각 페이지에서 import해서 사용해야함&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;styles 폴더&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;css 파일들이 모여 있는 폴더&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&quot;route&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#route&quot; aria-label=&quot;route permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;Route&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;pages 폴더에 js 파일을 생성하면, 그 파일로 routing이 되고 파일의 이름이 param이 됨&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Dynamic Routes&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;next는 각각의 페이지를 일일이 만드는 것이 아닌 id값으로 동적 라우터가 가능하다.
+파일명 : &lt;code class=&quot;language-text&quot;&gt;[ ].js&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;ex) pages&gt;view&gt;[id].js 생성 시 &lt;a href=&quot;http://localhost:3000/view/1&quot;&gt;http://localhost:3000/view/1&lt;/a&gt; 이런식으로 url이 생성됨&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;useRouter()
+현재 페이지의 router 정보를 객체로 받아 활용 가능&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;javascript&quot;&gt;&lt;pre class=&quot;language-javascript&quot;&gt;&lt;code class=&quot;language-javascript&quot;&gt;&lt;span class=&quot;token comment&quot;&gt;// pages/view/[id].js&lt;/span&gt;
+&lt;span class=&quot;token keyword&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt; useRouter &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;from&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&quot;next/dist/client/router&quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+
+&lt;span class=&quot;token keyword&quot;&gt;export&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;default&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;function&lt;/span&gt; &lt;span class=&quot;token function&quot;&gt;ViewId&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+&lt;span class=&quot;token keyword&quot;&gt;const&lt;/span&gt; router &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token function&quot;&gt;useRouter&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;token keyword&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;&amp;lt;&lt;/span&gt;div&lt;span class=&quot;token operator&quot;&gt;&gt;&lt;/span&gt;ViewId&lt;span class=&quot;token operator&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;/&lt;/span&gt;div&lt;span class=&quot;token operator&quot;&gt;&gt;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&quot;스타일-적용-ui-framework&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#%EC%8A%A4%ED%83%80%EC%9D%BC-%EC%A0%81%EC%9A%A9-ui-framework&quot; aria-label=&quot;스타일 적용 ui framework permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;스타일 적용 (UI Framework)&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;h3 id=&quot;semantic-ui-react&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#semantic-ui-react&quot; aria-label=&quot;semantic ui react permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;semantic UI React&lt;/h3&gt;
+&lt;p&gt;&lt;a href=&quot;https://react.semantic-ui.com/&quot;&gt;Semantic UI React 링크 &lt;/a&gt; &lt;/p&gt;
 &lt;ol&gt;
-&lt;li&gt;
-&lt;p&gt;redux와 redux와 react를 연결하는데 많은 도움을 주는 react-redux라이브러리를 설치&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;code class=&quot;language-text&quot;&gt;npm install redux react-redux&lt;/code&gt;&lt;/li&gt;
-&lt;/ul&gt;
+&lt;li&gt;설치
+&lt;code class=&quot;language-text&quot;&gt;npm install semantic-ui-react semantic-ui-css&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;적용 (_app.js)
+&lt;code class=&quot;language-text&quot;&gt;import &apos;semantic-ui-css/semantic.min.css&lt;/code&gt;&lt;/li&gt;
+&lt;/ol&gt;
 &lt;/li&gt;
 &lt;li&gt;
-&lt;p&gt;Next에서 react를 연결하기 위해서는 next-redux-wrapper가 필요&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;code class=&quot;language-text&quot;&gt;npm install next-redux-wrapper&lt;/code&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
+&lt;h3 id=&quot;react-icons-heroicons&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#react-icons-heroicons&quot; aria-label=&quot;react icons heroicons permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;react-icons (Heroicons)&lt;/h3&gt;
+&lt;ol&gt;
+&lt;li&gt;설치
+&lt;code class=&quot;language-text&quot;&gt;npm install @heroicons/react&lt;/code&gt;&lt;/li&gt;
 &lt;li&gt;
-&lt;p&gt;redux 사용시 유용한 redux devtools를 사용하기 위해 설치&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;code class=&quot;language-text&quot;&gt;npm install -D redux-devtools-extension&lt;/code&gt;&lt;/li&gt;
-&lt;/ul&gt;
+&lt;p&gt;적용 (아무데나)&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;javascript&quot;&gt;&lt;pre class=&quot;language-javascript&quot;&gt;&lt;code class=&quot;language-javascript&quot;&gt;&lt;span class=&quot;token keyword&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+HomeIcon&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
+SearchIcon&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
+    &lt;span class=&quot;token operator&quot;&gt;...&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;이런식으로 사용하고자 하는 아이콘 추가
+&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;from&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&quot;@heroicons/react/outline&quot;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 &lt;/li&gt;
-&lt;/ol&gt;</content:encoded></item><item><title><![CDATA[Shop Project]]></title><description><![CDATA[Project명 (무제) _ 개인 프로젝트 목표 Frontend 기술 스택 학습에 집중하되 
+&lt;/ol&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;참고
+&lt;a href=&quot;https://www.howdy-mj.me/next/next-js-intro/&quot;&gt;MJ Kim님 블로그&lt;/a&gt;&lt;/p&gt;</content:encoded></item><item><title><![CDATA[Shop Project]]></title><description><![CDATA[Project명 (무제) _ 개인 프로젝트 목표 Frontend 기술 스택 학습에 집중하되 
 실제로 사용자들이 사용한다는 가정하에 UI / UX 고려 및 사용자들의 유입을 위한 검색 엔진 최적화(SEO…]]></description><link>https://www.yoojiih.github.io/TIL_ShopProject/</link><guid isPermaLink="false">https://www.yoojiih.github.io/TIL_ShopProject/</guid><pubDate>Tue, 26 Oct 2021 06:00:00 GMT</pubDate><content:encoded>&lt;h1 id=&quot;project명-무제-_-개인-프로젝트&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#project%EB%AA%85-%EB%AC%B4%EC%A0%9C-_-%EA%B0%9C%EC%9D%B8-%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8&quot; aria-label=&quot;project명 무제 _ 개인 프로젝트 permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;Project명 (무제) _ 개인 프로젝트&lt;/h1&gt;
 &lt;ul&gt;
 &lt;li&gt;
@@ -182,33 +286,39 @@ Redux의 창시자이며, 현재는 Facebook React Core팀의 일원인 Dan Abra
 &lt;/blockquote&gt;
 &lt;h2 id=&quot;nextjs가-떠오르는-대표적인-이유&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#nextjs%EA%B0%80-%EB%96%A0%EC%98%A4%EB%A5%B4%EB%8A%94-%EB%8C%80%ED%91%9C%EC%A0%81%EC%9D%B8-%EC%9D%B4%EC%9C%A0&quot; aria-label=&quot;nextjs가 떠오르는 대표적인 이유 permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;Next.js가 떠오르는 대표적인 이유&lt;/h2&gt;
 &lt;ol&gt;
-&lt;li&gt;react를 node환경에서 사용할 수 있기 때문에 페이지에 따라 pre-rendering, CSR을 쉽게 선택적으로 적용 가능&lt;/li&gt;
+&lt;li&gt;react를 node환경에서 사용할 수 있기 때문에 페이지에 따라 pre-rendering, CSR을 쉽게 선택적으로 적용 가능
+pre-rendering은 더 좋은 퍼포먼스를 내고 SEO(검색엔진최적화)에도 좋음&lt;/li&gt;
 &lt;li&gt;손쉬운 라우팅을 제공&lt;/li&gt;
 &lt;/ol&gt;
 &lt;h2 id=&quot;ssg-vs-ssr-pre-redering의-두가지-형태&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#ssg-vs-ssr-pre-redering%EC%9D%98-%EB%91%90%EA%B0%80%EC%A7%80-%ED%98%95%ED%83%9C&quot; aria-label=&quot;ssg vs ssr pre redering의 두가지 형태 permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;SSG VS SSR (Pre-redering의 두가지 형태)&lt;/h2&gt;
+&lt;p&gt;차이점은 언제 HTML을 생성하는가에 있음 (렌더링)
+Next.js는 퍼포먼스 이유로 정적생성 SSG를 권고함&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;
 &lt;p&gt;SSG (Static Site Generation) &lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;빌드타임에 렌더링된다&lt;/li&gt;
-&lt;li&gt;HTML이 CDN을 통해 제공된다&lt;/li&gt;
+&lt;li&gt;HTML이 CDN을 통해 제공된다 (CDN에 캐시되어 속도 빠름)&lt;/li&gt;
 &lt;li&gt;자바스크립트, CSS파일, 데이터까지 미리 가져오는 형태(Prefetch)&lt;/li&gt;
 &lt;li&gt;이러한 특성 때문에 콘텐츠 변화가 거의 없는 페이지에 사용됨
-ex) 카테고리, unsupport페이지, 에러페이지&lt;/li&gt;
+ex) 카테고리, unsupport페이지, 에러페이지 (유저가 요청하기전에 미리 페이지를 만들어 놔도 상관없는 부분)&lt;/li&gt;
+&lt;li&gt;사용법: getStaticProps / get StaticPaths&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
 &lt;li&gt;
 &lt;p&gt;SSR (Server Side Rendering)&lt;/p&gt;
 &lt;ul&gt;
-&lt;li&gt;페이지가 요청되었을 때 렌더링됨&lt;/li&gt;
+&lt;li&gt;페이지가 요청되었을 때 렌더링됨 -&gt; 서버를 통해 pre-rendering 되기 때문에 항상 최신 상태 유지&lt;/li&gt;
 &lt;li&gt;런타임 실행이 필요&lt;/li&gt;
 &lt;li&gt;자바스크립트와 CSS 파일를 미리 가져오는 형태(Prefetch)&lt;/li&gt;
-&lt;li&gt;이러한 특성 때문에 컨텐츠가 자주 바뀌는 페이지에 사용됨&lt;/li&gt;
-&lt;/ul&gt;
+&lt;li&gt;이러한 특성 때문에 컨텐츠가 자주 바뀌는 페이지에 사용됨
+ex) 마케팅페이지, 제품 리스트&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;사용법: getServerSideProps&lt;/p&gt;
+&lt;h2 id=&quot;ssr-vs-csr&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#ssr-vs-csr&quot; aria-label=&quot;ssr vs csr permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;SSR VS CSR&lt;/h2&gt;
 &lt;/li&gt;
 &lt;/ul&gt;
-&lt;h2 id=&quot;ssr-vs-csr&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#ssr-vs-csr&quot; aria-label=&quot;ssr vs csr permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;SSR VS CSR&lt;/h2&gt;
-&lt;ul&gt;
+&lt;/li&gt;
 &lt;li&gt;
 &lt;p&gt;CSR (Client Side Rendering)&lt;/p&gt;
 &lt;ul&gt;
@@ -265,7 +375,6 @@ ex) 카테고리, unsupport페이지, 에러페이지&lt;/li&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;a href=&quot;#nextjs%EA%B0%80-%EB%96%A0%EC%98%A4%EB%A5%B4%EB%8A%94-%EB%8C%80%ED%91%9C%EC%A0%81%EC%9D%B8-%EC%9D%B4%EC%9C%A0&quot;&gt;Next.js가 떠오르는 대표적인 이유&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&quot;#ssg-vs-ssr-pre-redering%EC%9D%98-%EB%91%90%EA%B0%80%EC%A7%80-%ED%98%95%ED%83%9C&quot;&gt;SSG VS SSR (Pre-redering의 두가지 형태)&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;#ssr-vs-csr&quot;&gt;SSR VS CSR&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&quot;#spasingle-page-application&quot;&gt;SPA(Single-page application&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&quot;#seo-search-engine-optimization-%EA%B2%80%EC%83%89-%EC%97%94%EC%A7%84-%EC%B5%9C%EC%A0%81%ED%99%94-%EA%B2%80%EC%83%89-rank-%EA%B0%9C%EC%84%A0&quot;&gt;SEO (Search Engine Optimization) 검색 엔진 최적화, 검색 Rank 개선&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&quot;#nextjs-%EB%8F%84%EC%9E%85-%EC%9D%B4%EC%9C%A0&quot;&gt;Next.js 도입 이유&lt;/a&gt;&lt;/li&gt;

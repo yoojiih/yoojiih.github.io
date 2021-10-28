@@ -241,33 +241,39 @@ Redux의 창시자이며, 현재는 Facebook React Core팀의 일원인 Dan Abra
 </blockquote>
 <h2 id="nextjs가-떠오르는-대표적인-이유" style="position:relative;"><a href="#nextjs%EA%B0%80-%EB%96%A0%EC%98%A4%EB%A5%B4%EB%8A%94-%EB%8C%80%ED%91%9C%EC%A0%81%EC%9D%B8-%EC%9D%B4%EC%9C%A0" aria-label="nextjs가 떠오르는 대표적인 이유 permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Next.js가 떠오르는 대표적인 이유</h2>
 <ol>
-<li>react를 node환경에서 사용할 수 있기 때문에 페이지에 따라 pre-rendering, CSR을 쉽게 선택적으로 적용 가능</li>
+<li>react를 node환경에서 사용할 수 있기 때문에 페이지에 따라 pre-rendering, CSR을 쉽게 선택적으로 적용 가능
+pre-rendering은 더 좋은 퍼포먼스를 내고 SEO(검색엔진최적화)에도 좋음</li>
 <li>손쉬운 라우팅을 제공</li>
 </ol>
 <h2 id="ssg-vs-ssr-pre-redering의-두가지-형태" style="position:relative;"><a href="#ssg-vs-ssr-pre-redering%EC%9D%98-%EB%91%90%EA%B0%80%EC%A7%80-%ED%98%95%ED%83%9C" aria-label="ssg vs ssr pre redering의 두가지 형태 permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>SSG VS SSR (Pre-redering의 두가지 형태)</h2>
+<p>차이점은 언제 HTML을 생성하는가에 있음 (렌더링)
+Next.js는 퍼포먼스 이유로 정적생성 SSG를 권고함</p>
 <ul>
 <li>
 <p>SSG (Static Site Generation) </p>
 <ul>
 <li>빌드타임에 렌더링된다</li>
-<li>HTML이 CDN을 통해 제공된다</li>
+<li>HTML이 CDN을 통해 제공된다 (CDN에 캐시되어 속도 빠름)</li>
 <li>자바스크립트, CSS파일, 데이터까지 미리 가져오는 형태(Prefetch)</li>
 <li>이러한 특성 때문에 콘텐츠 변화가 거의 없는 페이지에 사용됨
-ex) 카테고리, unsupport페이지, 에러페이지</li>
+ex) 카테고리, unsupport페이지, 에러페이지 (유저가 요청하기전에 미리 페이지를 만들어 놔도 상관없는 부분)</li>
+<li>사용법: getStaticProps / get StaticPaths</li>
 </ul>
 </li>
 <li>
 <p>SSR (Server Side Rendering)</p>
 <ul>
-<li>페이지가 요청되었을 때 렌더링됨</li>
+<li>페이지가 요청되었을 때 렌더링됨 -> 서버를 통해 pre-rendering 되기 때문에 항상 최신 상태 유지</li>
 <li>런타임 실행이 필요</li>
 <li>자바스크립트와 CSS 파일를 미리 가져오는 형태(Prefetch)</li>
-<li>이러한 특성 때문에 컨텐츠가 자주 바뀌는 페이지에 사용됨</li>
-</ul>
+<li>이러한 특성 때문에 컨텐츠가 자주 바뀌는 페이지에 사용됨
+ex) 마케팅페이지, 제품 리스트</li>
+<li>
+<p>사용법: getServerSideProps</p>
+<h2 id="ssr-vs-csr" style="position:relative;"><a href="#ssr-vs-csr" aria-label="ssr vs csr permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>SSR VS CSR</h2>
 </li>
 </ul>
-<h2 id="ssr-vs-csr" style="position:relative;"><a href="#ssr-vs-csr" aria-label="ssr vs csr permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>SSR VS CSR</h2>
-<ul>
+</li>
 <li>
 <p>CSR (Client Side Rendering)</p>
 <ul>
@@ -324,9 +330,8 @@ ex) 카테고리, unsupport페이지, 에러페이지</li>
 <ul>
 <li><a href="#nextjs%EA%B0%80-%EB%96%A0%EC%98%A4%EB%A5%B4%EB%8A%94-%EB%8C%80%ED%91%9C%EC%A0%81%EC%9D%B8-%EC%9D%B4%EC%9C%A0">Next.js가 떠오르는 대표적인 이유</a></li>
 <li><a href="#ssg-vs-ssr-pre-redering%EC%9D%98-%EB%91%90%EA%B0%80%EC%A7%80-%ED%98%95%ED%83%9C">SSG VS SSR (Pre-redering의 두가지 형태)</a></li>
-<li><a href="#ssr-vs-csr">SSR VS CSR</a></li>
 <li><a href="#spasingle-page-application">SPA(Single-page application</a></li>
 <li><a href="#seo-search-engine-optimization-%EA%B2%80%EC%83%89-%EC%97%94%EC%A7%84-%EC%B5%9C%EC%A0%81%ED%99%94-%EA%B2%80%EC%83%89-rank-%EA%B0%9C%EC%84%A0">SEO (Search Engine Optimization) 검색 엔진 최적화, 검색 Rank 개선</a></li>
 <li><a href="#nextjs-%EB%8F%84%EC%9E%85-%EC%9D%B4%EC%9C%A0">Next.js 도입 이유</a></li>
 </ul>
-</div></div></div></div><div class="post-cards-adjacent-wrapper"><div class="post-cards-adjacent"><div class="post-card-adjacent-wrapper"><a class="post-card prev" href="/gatsby-starter-zoomkoding-introduction/"><div class="direction">이전 글</div><div class="title">Md 문법 정리</div></a></div><div class="post-card-adjacent-wrapper"><a class="post-card next" href="/TIL_20211027/"><div class="direction">다음 글</div><div class="title">Shop Project _ Next.js 도입</div></a></div></div></div><div class="utterances"></div></main><footer class="page-footer-wrapper"><p class="page-footer">© <!-- -->2021<!-- --> <a href="https://github.com/yoojiih">유지현</a> powered by<a href="https://github.com/zoomKoding/zoomkoding-gatsby-blog"> zoomkoding-gatsby-blog</a></p></footer></div></div><div id="gatsby-announcer" style="position:absolute;top:0;width:1px;height:1px;padding:0;overflow:hidden;clip:rect(0, 0, 0, 0);white-space:nowrap;border:0" aria-live="assertive" aria-atomic="true"></div></div><script id="gatsby-script-loader">/*<![CDATA[*/window.pagePath="/TIL_ShopProject/";/*]]>*/</script><script id="gatsby-chunk-mapping">/*<![CDATA[*/window.___chunkMapping={"polyfill":["/polyfill-384ea82b9c97dbd7ee60.js"],"app":["/app-25ce3b242183dc597f8a.js"],"component---cache-caches-gatsby-plugin-offline-app-shell-js":["/component---cache-caches-gatsby-plugin-offline-app-shell-js-241020a1cf7d0f317bbe.js"],"component---src-pages-404-js":["/component---src-pages-404-js-18966798326ae6e5a169.js"],"component---src-pages-about-js":["/component---src-pages-about-js-d4a17c8107ec4d45892f.js"],"component---src-pages-index-js":["/component---src-pages-index-js-075b56c20bb45784e0f2.js"],"component---src-templates-blog-template-js":["/component---src-templates-blog-template-js-5ea40d560b401e429c55.js"],"component---src-templates-category-template-js":["/component---src-templates-category-template-js-d01b478dab935d07b01d.js"]};/*]]>*/</script><script src="/polyfill-384ea82b9c97dbd7ee60.js" nomodule=""></script><script src="/component---src-templates-blog-template-js-5ea40d560b401e429c55.js" async=""></script><script src="/f9d3028dbef90a6e9b8db85387d63dd9f4edf538-ac5c80044f20d501767d.js" async=""></script><script src="/styles-407fe62976dc5310c43e.js" async=""></script><script src="/app-25ce3b242183dc597f8a.js" async=""></script><script src="/framework-81279cacaab4bdba7685.js" async=""></script><script src="/webpack-runtime-c63ab93c0b4b0eb1ffab.js" async=""></script></body></html>
+</div></div></div></div><div class="post-cards-adjacent-wrapper"><div class="post-cards-adjacent"><div class="post-card-adjacent-wrapper"><a class="post-card prev" href="/gatsby-starter-zoomkoding-introduction/"><div class="direction">이전 글</div><div class="title">Md 문법 정리</div></a></div><div class="post-card-adjacent-wrapper"><a class="post-card next" href="/TIL_20211027/"><div class="direction">다음 글</div><div class="title">Shop Project _ Next.js 도입 + 라우팅 메인페이지 구성(Header,Footer,Nav, Auth)</div></a></div></div></div><div class="utterances"></div></main><footer class="page-footer-wrapper"><p class="page-footer">© <!-- -->2021<!-- --> <a href="https://github.com/yoojiih">유지현</a> powered by<a href="https://github.com/zoomKoding/zoomkoding-gatsby-blog"> zoomkoding-gatsby-blog</a></p></footer></div></div><div id="gatsby-announcer" style="position:absolute;top:0;width:1px;height:1px;padding:0;overflow:hidden;clip:rect(0, 0, 0, 0);white-space:nowrap;border:0" aria-live="assertive" aria-atomic="true"></div></div><script id="gatsby-script-loader">/*<![CDATA[*/window.pagePath="/TIL_ShopProject/";/*]]>*/</script><script id="gatsby-chunk-mapping">/*<![CDATA[*/window.___chunkMapping={"polyfill":["/polyfill-384ea82b9c97dbd7ee60.js"],"app":["/app-25ce3b242183dc597f8a.js"],"component---cache-caches-gatsby-plugin-offline-app-shell-js":["/component---cache-caches-gatsby-plugin-offline-app-shell-js-241020a1cf7d0f317bbe.js"],"component---src-pages-404-js":["/component---src-pages-404-js-18966798326ae6e5a169.js"],"component---src-pages-about-js":["/component---src-pages-about-js-d4a17c8107ec4d45892f.js"],"component---src-pages-index-js":["/component---src-pages-index-js-075b56c20bb45784e0f2.js"],"component---src-templates-blog-template-js":["/component---src-templates-blog-template-js-5ea40d560b401e429c55.js"],"component---src-templates-category-template-js":["/component---src-templates-category-template-js-d01b478dab935d07b01d.js"]};/*]]>*/</script><script src="/polyfill-384ea82b9c97dbd7ee60.js" nomodule=""></script><script src="/component---src-templates-blog-template-js-5ea40d560b401e429c55.js" async=""></script><script src="/f9d3028dbef90a6e9b8db85387d63dd9f4edf538-ac5c80044f20d501767d.js" async=""></script><script src="/styles-407fe62976dc5310c43e.js" async=""></script><script src="/app-25ce3b242183dc597f8a.js" async=""></script><script src="/framework-81279cacaab4bdba7685.js" async=""></script><script src="/webpack-runtime-c63ab93c0b4b0eb1ffab.js" async=""></script></body></html>
