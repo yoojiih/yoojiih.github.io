@@ -115,7 +115,11 @@ className같은 속성을 부여할 일이 있을 경우 Link가 아닌 a 태그
         
     </>
   )
-} expor…</p><div class="info"><div class="date">November 02, 2021</div><div class="categories"><div class="category" to="/posts/TIL">TIL</div></div></div></a></div><div class="post-card-wrapper"><a class="post-card" href="/TIL_20211101/"><div class="title">Shop Project_SSG vs SSR (with Method)</div><p class="description"></p><div class="info"><div class="date">November 01, 2021</div><div class="categories"><div class="category" to="/posts/TIL">TIL</div></div></div></a></div><div class="post-card-wrapper"><a class="post-card" href="/TIL_20211031/"><div class="title">Shop Project_Next style comparison</div><p class="description">Flex css (참고)  flex는 css에서 레이아웃 표현 기법중 하나임 
+} expor…</p><div class="info"><div class="date">November 02, 2021</div><div class="categories"><div class="category" to="/posts/TIL">TIL</div></div></div></a></div><div class="post-card-wrapper"><a class="post-card" href="/TIL_20211101/"><div class="title">Shop Project_SSG vs SSR (with Method)</div><p class="description">next.js는 기본적으로 static generation이 적용되어 있으며 외부데이터(API, DB)등을 포함하여 렌더링해야할 때 ssg ssr을 선택적으로 적용할 수 있다. Nextjs공식문서 Static Generation with data (Recommended) 정적 생성은 build시 HTML을 생성한다
+보통 데이터에 의존하지 않는 페이지들은 모두 이에 해당 (ex.인터렉션에 관계없이 똑같은 정보를 제공해야 하는 프로모션 페이지)
+또한 페이지의 컨텐츠나 경로가 외부 데이터에 의존할 경우, getStaticProps 와 getStaticPaths 를 활용하여 HTML을 정적 생성할 수 있다. Data Fetching Next.js에서 제공하는 Functions (fetching external data for pre-rendering)
+Your page  depends on external data: 
+Your page  depend on external data:  (u…</p><div class="info"><div class="date">November 01, 2021</div><div class="categories"><div class="category" to="/posts/TIL">TIL</div></div></div></a></div><div class="post-card-wrapper"><a class="post-card" href="/TIL_20211031/"><div class="title">Shop Project_Next style comparison</div><p class="description">Flex css (참고)  flex는 css에서 레이아웃 표현 기법중 하나임 
 예전 css는 한정되고 복잡한 속성들로 레이아웃을 표현해왔었는데 이젠 간단하게 레이아웃을 표현할 수 있는 방법이 많이 생겼다 
 그 중 대표적인게 flex 속성
 flex는 기본적으로 정렬된 아이템들의 부모 요소에다가 적용하고(가로정렬, 세로정렬등) 

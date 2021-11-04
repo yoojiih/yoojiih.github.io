@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Yooji's Blog]]></title><description><![CDATA[줌코딩의 개발일기]]></description><link>https://www.yoojiih.github.io</link><generator>GatsbyJS</generator><lastBuildDate>Thu, 04 Nov 2021 10:44:37 GMT</lastBuildDate><item><title><![CDATA[Shop Project_Shop Project_Login & Logout(Auth) 장바구니]]></title><link>https://www.yoojiih.github.io/TIL_20211103/index./</link><guid isPermaLink="false">https://www.yoojiih.github.io/TIL_20211103/index./</guid><pubDate>Wed, 03 Nov 2021 11:00:00 GMT</pubDate><content:encoded></content:encoded></item><item><title><![CDATA[Shop Project_동적 라우팅]]></title><description><![CDATA[Next js에서 라우팅 구현 페이지 이동 이동할 페이지를 만들기 위해 pages 디렉토리 내부에 파일 생성 pages/about.js
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Yooji's Blog]]></title><description><![CDATA[줌코딩의 개발일기]]></description><link>https://www.yoojiih.github.io</link><generator>GatsbyJS</generator><lastBuildDate>Thu, 04 Nov 2021 15:36:22 GMT</lastBuildDate><item><title><![CDATA[Shop Project_Shop Project_Login & Logout(Auth) 장바구니]]></title><link>https://www.yoojiih.github.io/TIL_20211103/index./</link><guid isPermaLink="false">https://www.yoojiih.github.io/TIL_20211103/index./</guid><pubDate>Wed, 03 Nov 2021 11:00:00 GMT</pubDate><content:encoded></content:encoded></item><item><title><![CDATA[Shop Project_동적 라우팅]]></title><description><![CDATA[Next js에서 라우팅 구현 페이지 이동 이동할 페이지를 만들기 위해 pages 디렉토리 내부에 파일 생성 pages/about.js
 pages/blog/slug.js 간단하게 파일 내부 구현 메인 페이지(index.js…]]></description><link>https://www.yoojiih.github.io/TIL_20211102/</link><guid isPermaLink="false">https://www.yoojiih.github.io/TIL_20211102/</guid><pubDate>Tue, 02 Nov 2021 11:00:00 GMT</pubDate><content:encoded>&lt;h1 id=&quot;next-js에서-라우팅-구현&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#next-js%EC%97%90%EC%84%9C-%EB%9D%BC%EC%9A%B0%ED%8C%85-%EA%B5%AC%ED%98%84&quot; aria-label=&quot;next js에서 라우팅 구현 permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;Next js에서 라우팅 구현&lt;/h1&gt;
 &lt;h2 id=&quot;페이지-이동&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#%ED%8E%98%EC%9D%B4%EC%A7%80-%EC%9D%B4%EB%8F%99&quot; aria-label=&quot;페이지 이동 permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;페이지 이동&lt;/h2&gt;
 &lt;ol&gt;
@@ -76,7 +76,176 @@ const Post = () =&gt; {
 
 export default Post;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 &lt;p&gt;&lt;a href=&quot;https://nextjs.org/docs/api-reference/next/link&quot;&gt;Nextjs공식문서&lt;/a&gt;
-&lt;a href=&quot;https://velog.io/@jakeseo_me/Next.js-%EB%B9%A8%EB%A6%AC-%EB%B0%B0%EC%9A%B0%EA%B8%B0-y0jz9oebn0#%EC%8B%9C%EC%9E%91%ED%95%98%EA%B8%B0&quot;&gt;jakeseo_me님 블로그&lt;/a&gt;&lt;/p&gt;</content:encoded></item><item><title><![CDATA[Shop Project_SSG vs SSR (with Method)]]></title><link>https://www.yoojiih.github.io/TIL_20211101/</link><guid isPermaLink="false">https://www.yoojiih.github.io/TIL_20211101/</guid><pubDate>Mon, 01 Nov 2021 11:00:00 GMT</pubDate><content:encoded></content:encoded></item><item><title><![CDATA[Shop Project_Next style comparison]]></title><description><![CDATA[Flex css (참고)  flex는 css에서 레이아웃 표현 기법중 하나임 
+&lt;a href=&quot;https://velog.io/@jakeseo_me/Next.js-%EB%B9%A8%EB%A6%AC-%EB%B0%B0%EC%9A%B0%EA%B8%B0-y0jz9oebn0#%EC%8B%9C%EC%9E%91%ED%95%98%EA%B8%B0&quot;&gt;jakeseo_me님 블로그&lt;/a&gt;&lt;/p&gt;</content:encoded></item><item><title><![CDATA[Shop Project_SSG vs SSR (with Method)]]></title><description><![CDATA[next.js는 기본적으로 static generation이 적용되어 있으며 외부데이터(API, DB)등을 포함하여 렌더링해야할 때 ssg ssr을 선택적으로 적용할 수 있다. Nextjs공식문서 Static Generation with data…]]></description><link>https://www.yoojiih.github.io/TIL_20211101/</link><guid isPermaLink="false">https://www.yoojiih.github.io/TIL_20211101/</guid><pubDate>Mon, 01 Nov 2021 11:00:00 GMT</pubDate><content:encoded>&lt;h2 id=&quot;nextjs는-기본적으로-static-generation이-적용되어-있으며-외부데이터api-db등을-포함하여-렌더링해야할-때-ssg-ssr을-선택적으로-적용할-수-있다&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#nextjs%EB%8A%94-%EA%B8%B0%EB%B3%B8%EC%A0%81%EC%9C%BC%EB%A1%9C-static-generation%EC%9D%B4-%EC%A0%81%EC%9A%A9%EB%90%98%EC%96%B4-%EC%9E%88%EC%9C%BC%EB%A9%B0-%EC%99%B8%EB%B6%80%EB%8D%B0%EC%9D%B4%ED%84%B0api-db%EB%93%B1%EC%9D%84-%ED%8F%AC%ED%95%A8%ED%95%98%EC%97%AC-%EB%A0%8C%EB%8D%94%EB%A7%81%ED%95%B4%EC%95%BC%ED%95%A0-%EB%95%8C-ssg-ssr%EC%9D%84-%EC%84%A0%ED%83%9D%EC%A0%81%EC%9C%BC%EB%A1%9C-%EC%A0%81%EC%9A%A9%ED%95%A0-%EC%88%98-%EC%9E%88%EB%8B%A4&quot; aria-label=&quot;nextjs는 기본적으로 static generation이 적용되어 있으며 외부데이터api db등을 포함하여 렌더링해야할 때 ssg ssr을 선택적으로 적용할 수 있다 permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;next.js는 기본적으로 static generation이 적용되어 있으며 외부데이터(API, DB)등을 포함하여 렌더링해야할 때 ssg ssr을 선택적으로 적용할 수 있다.&lt;/h2&gt;
+&lt;p&gt;&lt;a href=&quot;https://nextjs.org/docs/basic-features/pages&quot;&gt;Nextjs공식문서&lt;/a&gt;&lt;/p&gt;
+&lt;h2 id=&quot;static-generation-with-data-recommended&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#static-generation-with-data-recommended&quot; aria-label=&quot;static generation with data recommended permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;Static Generation with data (Recommended)&lt;/h2&gt;
+&lt;p&gt;정적 생성은 build시 HTML을 생성한다
+보통 데이터에 의존하지 않는 페이지들은 모두 이에 해당 (ex.인터렉션에 관계없이 똑같은 정보를 제공해야 하는 프로모션 페이지)
+또한 페이지의 컨텐츠나 경로가 외부 데이터에 의존할 경우, getStaticProps 와 getStaticPaths 를 활용하여 HTML을 정적 생성할 수 있다.&lt;/p&gt;
+&lt;h1 id=&quot;data-fetching&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#data-fetching&quot; aria-label=&quot;data fetching permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;Data Fetching&lt;/h1&gt;
+&lt;p&gt;Next.js에서 제공하는 Functions (fetching external data for pre-rendering)
+Your page &lt;code class=&quot;language-text&quot;&gt;content&lt;/code&gt; depends on external data: &lt;code class=&quot;language-text&quot;&gt;Use getStaticProps&lt;/code&gt;
+Your page &lt;code class=&quot;language-text&quot;&gt;paths&lt;/code&gt; depend on external data: &lt;code class=&quot;language-text&quot;&gt;Use getStaticPaths&lt;/code&gt; (usually in addition to getStaticProps).&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;The HTML is generated at build time and will be reused on each request. To make a page use Static Generation, either export the page component, or export getStaticProps (and getStaticPaths if necessary). It’s great for pages that can be pre-rendered ahead of a user’s request. You can also use it with Client-side Rendering to bring in additional data.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h2 id=&quot;server-side-rendering&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#server-side-rendering&quot; aria-label=&quot;server side rendering permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;Server-side Rendering&lt;/h2&gt;
+&lt;p&gt;매 요청마다 데이터를 fetching해야 한다면 getServerSideProps를 사용해 SSR을 함
+getServerSideProps is run on every request instead of on build time.(getStaticProps와의 차이점)&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;The HTML is generated on each request. To make a page use Server-side Rendering, export getServerSideProps. Because Server-side Rendering results in slower performance than Static Generation, use this only if absolutely necessary.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h1 id=&quot;getinitialprops-next-93에선-사용-권장하지-않음&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#getinitialprops-next-93%EC%97%90%EC%84%A0-%EC%82%AC%EC%9A%A9-%EA%B6%8C%EC%9E%A5%ED%95%98%EC%A7%80-%EC%95%8A%EC%9D%8C&quot; aria-label=&quot;getinitialprops next 93에선 사용 권장하지 않음 permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;getInitialProps (Next 9.3에선 사용 권장하지 않음)&lt;/h1&gt;
+&lt;p&gt;React에서 프로젝트를 진행하면 렌더링 후에 componentDidMount나 useEffect()로 데이터를 불러와야 하지만
+Next에선 getInitialProps를 통해 데이터를 미리 불러와 한 번에 렌더링이 가능해 속도 빨라지고 코드상 처리 깔끔해짐
+어디든지 사용가능한 공통 데이터가 필요 시 _app.js에 getInitialProps를 붙이면 되고,그게 아니면 페이지마다 붙이면 됨
+자식 컴포넌트에서 사용할 수 없으며, 오로지 default export 컴포넌트에서만 사용가능&lt;/p&gt;
+&lt;h1 id=&quot;getstaticprops-vs-getstaticpaths-vs-getserversideprops&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#getstaticprops-vs-getstaticpaths-vs-getserversideprops&quot; aria-label=&quot;getstaticprops vs getstaticpaths vs getserversideprops permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;getStaticProps VS getStaticPaths VS getServerSideProps&lt;/h1&gt;
+&lt;p&gt;getStaticProps (Static Generation): 빌드(build)할 때 데이터를 불러옴
+getStaticPaths (Static Generation): 데이터에 기반하여 pre-render때 특정한 동적 라우팅 구현
+getServerSideProps (Server-side Rendering): 요청(request) 있을 때 데이터를 불러옴&lt;/p&gt;
+&lt;h1 id=&quot;getstaticprops-함수&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#getstaticprops-%ED%95%A8%EC%88%98&quot; aria-label=&quot;getstaticprops 함수 permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;getStaticProps 함수&lt;/h1&gt;
+&lt;blockquote&gt;
+&lt;p&gt;어떤 페이지에서 getStaticProps 함수를 async로 export하면, getStaticProps에서 리턴되는 props를 가지고 페이지를 pre-render 한다.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;ul&gt;
+&lt;li&gt;초기 렌더링 때 한번 실행된 후 실행안됨&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;기본 코드&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;javascript&quot;&gt;&lt;pre class=&quot;language-javascript&quot;&gt;&lt;code class=&quot;language-javascript&quot;&gt;&lt;span class=&quot;token keyword&quot;&gt;export&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;async&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;function&lt;/span&gt; &lt;span class=&quot;token function&quot;&gt;getStaticProps&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token parameter&quot;&gt;context&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+&lt;span class=&quot;token keyword&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+props&lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;token comment&quot;&gt;// 컴포넌트로 넘어갈 props&lt;/span&gt;
+&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;
+&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;/li&gt;
+&lt;li&gt;context 매개변수
+params: 페이지 이름이 [id].js (동적라우팅)-&gt; params는 {id: …} 라우팅 매개변수 지님
+preview: true일 때 preview 모드가 된다.
+previewData: setPreviewData로 설정한 preview data를 지닌다.&lt;/li&gt;
+&lt;li&gt;API, DB 등 외부 데이터를 포함하고 있을 경우 렌더링 하는 방법
+async function으로 컴포넌트 내에 외부데이터를 포함하여 pre-render하기 위해 사용
+getStaticProps 함수는 서버 단에서 build 시간에 호출됨 (직접 데이터베이스 쿼리에도 접근 가능)
+{ props: posts }을 리턴하여 Blog 컴포넌트는 getStaticProps()에 의해 build 시간에 ‘posts’를 props로 받아서 사용
+-&gt; 외부데이터를 pre-render하기전에 getStaticProps함수를 한번 거치는 것
+Fetch API (자바스크립트에 내장된) 사용 예시&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;javascript&quot;&gt;&lt;pre class=&quot;language-javascript&quot;&gt;&lt;code class=&quot;language-javascript&quot;&gt;&lt;span class=&quot;token keyword&quot;&gt;function&lt;/span&gt; &lt;span class=&quot;token function&quot;&gt;Blog&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token parameter&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt; posts &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+  &lt;span class=&quot;token keyword&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;
+    &lt;span class=&quot;token operator&quot;&gt;&amp;lt;&lt;/span&gt;ul&lt;span class=&quot;token operator&quot;&gt;&gt;&lt;/span&gt;
+      &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;posts&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;map&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token parameter&quot;&gt;post&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;=&gt;&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;
+        &lt;span class=&quot;token operator&quot;&gt;&amp;lt;&lt;/span&gt;li&lt;span class=&quot;token operator&quot;&gt;&gt;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;post&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;title&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;/&lt;/span&gt;li&lt;span class=&quot;token operator&quot;&gt;&gt;&lt;/span&gt;
+      &lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;
+    &lt;span class=&quot;token operator&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;/&lt;/span&gt;ul&lt;span class=&quot;token operator&quot;&gt;&gt;&lt;/span&gt;
+  &lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;
+&lt;span class=&quot;token comment&quot;&gt;//먼저 getStaticProps 함수 내에 외부 데이터를 props객체로 반환한다.&lt;/span&gt;
+&lt;span class=&quot;token keyword&quot;&gt;export&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;async&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;function&lt;/span&gt; &lt;span class=&quot;token function&quot;&gt;getStaticProps&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+  &lt;span class=&quot;token keyword&quot;&gt;const&lt;/span&gt; res &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;await&lt;/span&gt; &lt;span class=&quot;token function&quot;&gt;fetch&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&apos;https://.../posts&apos;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;token comment&quot;&gt;// 외부데이터&lt;/span&gt;
+  &lt;span class=&quot;token keyword&quot;&gt;const&lt;/span&gt; posts &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;await&lt;/span&gt; res&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;json&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;
+
+  &lt;span class=&quot;token keyword&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+    props&lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+      posts&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
+    &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
+  &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;
+&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;
+&lt;span class=&quot;token keyword&quot;&gt;export&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;default&lt;/span&gt; Blog&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;getStaticProps가 필요한 경우&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;페이지를 렌더링 하는데 사용자의 요청보다 먼저 build 시간에 필요한 데이터를 가져올 때&lt;/li&gt;
+&lt;li&gt;headless CMS에서 데이터가 올 때&lt;/li&gt;
+&lt;li&gt;공개적으로 캐시될 수 있는 데이터(특정 유저가 아닌)&lt;/li&gt;
+&lt;li&gt;페이지가 사전 렌더링(ex. SEO)되어야 하고 엄청 빨라야 할 때(getStatidProps는 HTML과 JSON 파일을 생성하며, 이 두 파일 모두 CDN에서 성능을 위해 캐시할 수 있음)&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h1 id=&quot;getstaticpaths&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#getstaticpaths&quot; aria-label=&quot;getstaticpaths permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;getStaticPaths&lt;/h1&gt;
+&lt;p&gt;Next는 pre-render에서 정적으로 getStaticPaths에서 호출하는 경로들을 가져옴
+외부데이터를 이용하여 data를 빌드타임에 fetching하면서 data에 따라 다른페이지를 보여줄 동적 라우팅이 필요한 경우
+id의 경우에는 동적라우트 컴포넌트 파일명을 따름 ([id].js -&gt; id: “1”, [hi].js -&gt; hi: 1)
+Link href 주소와 매칭이 되어야 한다.&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;javascript&quot;&gt;&lt;pre class=&quot;language-javascript&quot;&gt;&lt;code class=&quot;language-javascript&quot;&gt;&lt;span class=&quot;token keyword&quot;&gt;export&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;async&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;function&lt;/span&gt; &lt;span class=&quot;token function&quot;&gt;getStaticPaths&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+  &lt;span class=&quot;token keyword&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+    paths&lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;[&lt;/span&gt;
+      &lt;span class=&quot;token operator&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;!&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;--&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt; params&lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;...&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;--&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;&gt;&lt;/span&gt;
+        &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt; params&lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt; id&lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&apos;1&apos;&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
+        &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt; params&lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt; id&lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&apos;2&apos;&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
+    &lt;span class=&quot;token punctuation&quot;&gt;]&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
+    fallback&lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token boolean&quot;&gt;true&lt;/span&gt; or &lt;span class=&quot;token boolean&quot;&gt;false&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
+  &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;javascript&quot;&gt;&lt;pre class=&quot;language-javascript&quot;&gt;&lt;code class=&quot;language-javascript&quot;&gt;&lt;span class=&quot;token keyword&quot;&gt;export&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;async&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;function&lt;/span&gt; &lt;span class=&quot;token function&quot;&gt;getStaticProps&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token parameter&quot;&gt;context&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+    console&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;log&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;context&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;params&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;id&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt; 
+    &lt;span class=&quot;token keyword&quot;&gt;const&lt;/span&gt; postData &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token function&quot;&gt;context&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;getStaticPaths에서 리턴한 값&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;를 이용하여 데이터를 가공&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;
+    &lt;span class=&quot;token keyword&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+        props&lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+            postData&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
+        &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
+    &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;  
+&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;원하는 컴포넌트에서 가공된 데이터를 활용&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;javascript&quot;&gt;&lt;pre class=&quot;language-javascript&quot;&gt;&lt;code class=&quot;language-javascript&quot;&gt;&lt;span class=&quot;token keyword&quot;&gt;export&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;default&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;function&lt;/span&gt; &lt;span class=&quot;token function&quot;&gt;Post&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token parameter&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;postData&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+  &lt;span class=&quot;token keyword&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;ul&gt;
+&lt;li&gt;paths
+paths: 동적 라우팅 경로를 pre-render함
+params: 페이지 이름에 사용되는 매개변수와 일치
+ex) pages/posts/[postId]/[commentId] -&gt; params는 postId와 commentId를 포함해야 함
+pages/[…slug]와 같이 모든 경로를 사용 -&gt; params는 slug가 담긴 배열이여야 함&lt;/li&gt;
+&lt;li&gt;fallback
+false: getStaticPaths로 리턴되지 않은 것은 모두 404 페이지 뜨게함
+true: getStaticPaths로 리턴되는 것은 build 시간에 HTML이 렌더됨
+params가 수천개가 넘어갈 경우 빌드타임에 수천개의 페이지가 만들어지는 문제점을 해결&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h1 id=&quot;getserversideprops-server-side-rendering&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#getserversideprops-server-side-rendering&quot; aria-label=&quot;getserversideprops server side rendering permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;getServerSideProps (Server-Side rendering)&lt;/h1&gt;
+&lt;p&gt;빌드타임 이후 유저의 요청(request time)에 즉각 반응하여 SEO를 적용한 새로운 외부 데이터를 제공해야 하는 ssr의 경우
+page 요청때마다 항상 실행되어 리턴되는 데이터를 getServerSideProps로 pre-render함 &lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;기본 문법&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;javascript&quot;&gt;&lt;pre class=&quot;language-javascript&quot;&gt;&lt;code class=&quot;language-javascript&quot;&gt;&lt;span class=&quot;token keyword&quot;&gt;export&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;async&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;function&lt;/span&gt; &lt;span class=&quot;token function&quot;&gt;getServerSideProps&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token parameter&quot;&gt;context&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+&lt;span class=&quot;token keyword&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+props&lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; 
+&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;
+&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;/li&gt;
+&lt;li&gt;외부 API에서 데이터 호출 시&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;javascript&quot;&gt;&lt;pre class=&quot;language-javascript&quot;&gt;&lt;code class=&quot;language-javascript&quot;&gt;&lt;span class=&quot;token keyword&quot;&gt;export&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;async&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;function&lt;/span&gt; &lt;span class=&quot;token function&quot;&gt;getServerSideProps&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+  
+  &lt;span class=&quot;token keyword&quot;&gt;const&lt;/span&gt; res &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;await&lt;/span&gt; &lt;span class=&quot;token function&quot;&gt;fetch&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token template-string&quot;&gt;&lt;span class=&quot;token template-punctuation string&quot;&gt;`&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;https://.../data&lt;/span&gt;&lt;span class=&quot;token template-punctuation string&quot;&gt;`&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;
+  &lt;span class=&quot;token keyword&quot;&gt;const&lt;/span&gt; data &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;await&lt;/span&gt; res&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;json&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;
+
+  &lt;span class=&quot;token comment&quot;&gt;// 페이지에 props로 데이터 보내기&lt;/span&gt;
+  &lt;span class=&quot;token keyword&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt; props&lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt; data &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;
+&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;javascript&quot;&gt;&lt;pre class=&quot;language-javascript&quot;&gt;&lt;code class=&quot;language-javascript&quot;&gt;&lt;span class=&quot;token keyword&quot;&gt;function&lt;/span&gt; &lt;span class=&quot;token function&quot;&gt;Page&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token parameter&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt; data &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;token operator&quot;&gt;...&lt;/span&gt;
+&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;ul&gt;
+&lt;li&gt;Context Object (getStaticProps와 비슷)
+params: 페이지 이름이 [id].js (동적라우팅)-&gt; params는 {id: …} 라우팅 매개변수 지님
+req: HTTP request object
+res: HTTP response object
+query: 쿼리스트링
+preview: true일 때 preview 모드 됨
+previewData: setPreviewData로 설정한 preview data를 지닌다.&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;getServerSideProp가 필요한 경우&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;요청(request)할 때 데이터를 가져와야 하는 페이지를 미리 렌더해야 할때 사용
+서버가 모든 요청에 대한 결과를 계산하고, 추가 구성 없이 CDN에 의해 결과를 캐시할 수 없기 때문에
+첫 번째 바이트까지의 시간(TTFB)은 getStaticProps보다 느리다.&lt;/li&gt;
+&lt;li&gt;만약 미리 렌더를 하지 않아도 될 경우, 클라이언트 단에서 데이터를 불러오는 것을 고려해야 한다.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;a href=&quot;https://velog.io/@gytlr01/Next.js-%EC%A3%BC%EC%9A%94-%EA%B0%9C%EB%85%90-%EC%A0%95%EB%A6%AC-%EB%B0%8F-%EC%82%AC%EC%9A%A9%EB%B2%95&quot;&gt;Hyosik님 블로그&lt;/a&gt;
+&lt;a href=&quot;https://www.howdy-mj.me/next/next-js-intro/&quot;&gt;MJKim님 블로그&lt;/a&gt;
+&lt;a href=&quot;https://coffeeandcakeandnewjeong.tistory.com/m/97&quot;&gt;newjeong님 블로그&lt;/a&gt;&lt;/p&gt;</content:encoded></item><item><title><![CDATA[Shop Project_Next style comparison]]></title><description><![CDATA[Flex css (참고)  flex는 css에서 레이아웃 표현 기법중 하나임 
 예전 css는 한정되고 복잡한 속성들로 레이아웃을 표현해왔었는데 이젠 간단하게 레이아웃을 표현할 수 있는 방법이 많이 생겼다 
 그 중 대표적인게 flex 속성
 flex…]]></description><link>https://www.yoojiih.github.io/TIL_20211031/</link><guid isPermaLink="false">https://www.yoojiih.github.io/TIL_20211031/</guid><pubDate>Sun, 31 Oct 2021 11:00:00 GMT</pubDate><content:encoded>&lt;h2 id=&quot;flex-css-참고&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#flex-css-%EC%B0%B8%EA%B3%A0&quot; aria-label=&quot;flex css 참고 permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;Flex css (참고)&lt;/h2&gt;
@@ -261,14 +430,16 @@ props에 name 추가 &amp;#x26;&amp;#x26;  Post에서 파라미터로 받아서 
           name&lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt; process&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;env&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;name
         &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
       &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
-    &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</content:encoded></item><item><title><![CDATA[Shop Project_API calls]]></title><description><![CDATA[프로젝트 구성 우선 처음 로딩되는 화면이 (=메인페이지)가 어떤 것인지 알아보기위해 간단하게 테스트 해봄
+    &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</content:encoded></item><item><title><![CDATA[Shop Project_API calls]]></title><description><![CDATA[프로젝트 구성 Next 구동 순서
+우선 처음 로딩되는 화면이 (=메인페이지)가 어떤 것인지 알아보기위해 간단하게 테스트 해봄
 index.js vs _app.js  app.js 코드 및 실행화면
 
  index.js 코드
- 위를 보면 _app.js에서 index.js…]]></description><link>https://www.yoojiih.github.io/TIL_20211028/</link><guid isPermaLink="false">https://www.yoojiih.github.io/TIL_20211028/</guid><pubDate>Thu, 28 Oct 2021 11:00:00 GMT</pubDate><content:encoded>&lt;h2 id=&quot;프로젝트-구성&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8-%EA%B5%AC%EC%84%B1&quot; aria-label=&quot;프로젝트 구성 permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;프로젝트 구성&lt;/h2&gt;
-&lt;p&gt;우선 처음 로딩되는 화면이 (=메인페이지)가 어떤 것인지 알아보기위해 간단하게 테스트 해봄
-index.js vs _app.js &lt;/p&gt;
+ 위를 보면 _app.js…]]></description><link>https://www.yoojiih.github.io/TIL_20211028/</link><guid isPermaLink="false">https://www.yoojiih.github.io/TIL_20211028/</guid><pubDate>Thu, 28 Oct 2021 11:00:00 GMT</pubDate><content:encoded>&lt;h2 id=&quot;프로젝트-구성&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8-%EA%B5%AC%EC%84%B1&quot; aria-label=&quot;프로젝트 구성 permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;프로젝트 구성&lt;/h2&gt;
 &lt;ul&gt;
+&lt;li&gt;Next 구동 순서
+우선 처음 로딩되는 화면이 (=메인페이지)가 어떤 것인지 알아보기위해 간단하게 테스트 해봄
+index.js vs _app.js &lt;/li&gt;
 &lt;li&gt;app.js 코드 및 실행화면
 &lt;span
       class=&quot;gatsby-resp-image-wrapper&quot;
@@ -345,8 +516,13 @@ index.js vs _app.js &lt;/p&gt;
 &lt;/ul&gt;
 &lt;p&gt;위를 보면 _app.js에서 index.js 코드를 불러왔다는 것을 알 수 있음
 결론은 _app.js가 제일 처음 로딩되는 화면임&lt;/p&gt;
+&lt;p&gt;Next의 SSR이 가능한 이유&lt;/p&gt;
+&lt;p&gt;Next는 _app.js와 _document.js가 제일 처음에 실행된다
+( 두 파일 모두 pages 폴더 안에 있어야 하고, Server only file로 클라이언트 단에서 사용하는 함수(ex. addEventlistner, window 등)를 사용하면 안됨&lt;/p&gt;
 &lt;h3 id=&quot;_appjs-파일-props&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#_appjs-%ED%8C%8C%EC%9D%BC-props&quot; aria-label=&quot;_appjs 파일 props permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;_app.js 파일 (props)&lt;/h3&gt;
-&lt;p&gt;우선 _app.js에서 props로 넘어온 Component와 pageProps에 대해서 짚고 넘어가지면 &lt;/p&gt;
+&lt;p&gt;최초로 실행되는 파일
+Client에서 띄워지는 전체 컴포넌트의 레이아웃 (공통 레이아웃으로 최초에 실행되어 내부에 들어갈 컴포넌트들을 실행함)
+_app.js에서 props로 넘어온 Component와 pageProps는&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;Component → props로 받은 현재 페이지를 의미
 (페이지 전환시 이 컴포넌트 props가 변경됨)&lt;/li&gt;
@@ -354,11 +530,11 @@ index.js vs _app.js &lt;/p&gt;
 이 메소드를 사용하지 않는다면 …pageProps 객체가 전달됨&lt;/li&gt;
 &lt;/ul&gt;
 &lt;h3 id=&quot;_documentjs-파일&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#_documentjs-%ED%8C%8C%EC%9D%BC&quot; aria-label=&quot;_documentjs 파일 permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;_document.js 파일&lt;/h3&gt;
-&lt;p&gt;&lt;a href=&quot;https://nextjs.org/docs/advanced-features/custom-document&quot;&gt;Next js 공식문서_Custom Document&lt;/a&gt; &lt;/p&gt;
+&lt;p&gt;&lt;em&gt;app.js다음에 _document.js가 실행되는데, 이는 _app.js에서 구성한 HTML이 어떤 형태로 들어갈지 구성해주는 것
+[Next js 공식문서&lt;/em&gt;Custom Document](&lt;a href=&quot;https://nextjs.org/docs/advanced-features/custom-document&quot;&gt;https://nextjs.org/docs/advanced-features/custom-document&lt;/a&gt;) &lt;/p&gt;
 &lt;ul&gt;
-&lt;li&gt;위 링크의 소스코드를 pages 폴더 내에 넣어줌&lt;/li&gt;
 &lt;li&gt;
-&lt;p&gt;_app.js에서 구성한 HTML이 어떤 형태로 들어갈지 구성해주는 것&lt;/p&gt;
+&lt;p&gt;위 링크의 소스코드를 pages 폴더 내에 넣어줌&lt;/p&gt;
 &lt;blockquote&gt;
 &lt;ul&gt;
 &lt;li&gt;사이트를 만들때 가장 루트경로가 되는 파일은 index.html이지만 next초기설정에서는 index.html을 볼수가 없다.&lt;br&gt;
@@ -379,8 +555,7 @@ Next js에서는 index.html의 역할을 pages 디렉토리 밑의 _document.js 
 &lt;/blockquote&gt;
 &lt;blockquote&gt;
 &lt;ul&gt;
-&lt;li&gt;Next에서 제공하는 document를 직접 생성해 커스터마이징 가능하고
-만약 사용자가 생성하지 않으면 NEXT자체에서 지정해 둔 _document.js로 대체 됨&lt;/li&gt;
+&lt;li&gt;Next에서 제공하는 document를 직접 생성해 커스터마이징 가능하고 만약 사용자가 생성하지 않으면 NEXT자체에서 지정해 둔 _document.js로 대체 됨&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/blockquote&gt;
 &lt;h1 id=&quot;api-application-programming-interface&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#api-application-programming-interface&quot; aria-label=&quot;api application programming interface permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;API (Application Programming Interface)&lt;/h1&gt;
