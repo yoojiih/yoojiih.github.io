@@ -1,4 +1,563 @@
-<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Yooji's Blog]]></title><description><![CDATA[줌코딩의 개발일기]]></description><link>https://www.yoojiih.github.io</link><generator>GatsbyJS</generator><lastBuildDate>Thu, 28 Oct 2021 11:09:19 GMT</lastBuildDate><item><title><![CDATA[Shop Project _ Next.js 도입 + 라우팅 메인페이지 구성(Header,Footer,Nav, Auth)]]></title><description><![CDATA[환경설정 기본 요구사항 Node.js : 자바스크립트 런타임  NPM : 패키지 매니저 도구 Yarn : 개선된 버전의 NPM (선택사항)   설치 (Ver. 12.0.1) Next.js 공식 문서 참고 CNA로 next…]]></description><link>https://www.yoojiih.github.io/TIL_20211027/</link><guid isPermaLink="false">https://www.yoojiih.github.io/TIL_20211027/</guid><pubDate>Wed, 27 Oct 2021 04:00:00 GMT</pubDate><content:encoded>&lt;h2 id=&quot;환경설정&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#%ED%99%98%EA%B2%BD%EC%84%A4%EC%A0%95&quot; aria-label=&quot;환경설정 permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;환경설정&lt;/h2&gt;
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Yooji's Blog]]></title><description><![CDATA[줌코딩의 개발일기]]></description><link>https://www.yoojiih.github.io</link><generator>GatsbyJS</generator><lastBuildDate>Thu, 04 Nov 2021 07:03:15 GMT</lastBuildDate><item><title><![CDATA[Shop Project_장바구니]]></title><link>https://www.yoojiih.github.io/TIL_20211103/index./</link><guid isPermaLink="false">https://www.yoojiih.github.io/TIL_20211103/index./</guid><pubDate>Wed, 03 Nov 2021 11:00:00 GMT</pubDate><content:encoded></content:encoded></item><item><title><![CDATA[Shop Project_Login & Logout(Auth)]]></title><link>https://www.yoojiih.github.io/TIL_20211102/</link><guid isPermaLink="false">https://www.yoojiih.github.io/TIL_20211102/</guid><pubDate>Tue, 02 Nov 2021 11:00:00 GMT</pubDate><content:encoded></content:encoded></item><item><title><![CDATA[Shop Project_SSG vs SSR (with Method)]]></title><link>https://www.yoojiih.github.io/TIL_20211101/</link><guid isPermaLink="false">https://www.yoojiih.github.io/TIL_20211101/</guid><pubDate>Mon, 01 Nov 2021 11:00:00 GMT</pubDate><content:encoded></content:encoded></item><item><title><![CDATA[Shop Project_Next style comparison]]></title><description><![CDATA[Flex css (참고)  flex는 css에서 레이아웃 표현 기법중 하나임 
+예전 css는 한정되고 복잡한 속성들로 레이아웃을 표현해왔었는데 
+이제는 간단하게 레이아웃을 표현할 수 있는 방법이 많이 생겼다 그 중 대표적인게 flex 속성
+flex…]]></description><link>https://www.yoojiih.github.io/TIL_20211031/</link><guid isPermaLink="false">https://www.yoojiih.github.io/TIL_20211031/</guid><pubDate>Sun, 31 Oct 2021 11:00:00 GMT</pubDate><content:encoded>&lt;h2 id=&quot;flex-css-참고&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#flex-css-%EC%B0%B8%EA%B3%A0&quot; aria-label=&quot;flex css 참고 permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;Flex css (참고)&lt;/h2&gt;
+&lt;p&gt;&lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 720px; &quot;
+    &gt;
+      &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 128.88888888888889%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/jpeg;base64,/9j/2wBDABALDA4MChAODQ4SERATGCgaGBYWGDEjJR0oOjM9PDkzODdASFxOQERXRTc4UG1RV19iZ2hnPk1xeXBkeFxlZ2P/2wBDARESEhgVGC8aGi9jQjhCY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2P/wgARCAAaABQDASIAAhEBAxEB/8QAGQABAQADAQAAAAAAAAAAAAAAAgABAwQF/8QAFgEBAQEAAAAAAAAAAAAAAAAAAQAC/9oADAMBAAIQAxAAAAH1kWKjOcHqMi2Rf//EABwQAAICAgMAAAAAAAAAAAAAAAECEBEAEiEiMf/aAAgBAQABBQJrDMcTxqLGiUPXU7tw4io//8QAFBEBAAAAAAAAAAAAAAAAAAAAIP/aAAgBAwEBPwEf/8QAFBEBAAAAAAAAAAAAAAAAAAAAIP/aAAgBAgEBPwEf/8QAGhABAAMAAwAAAAAAAAAAAAAAEQABECAxQf/aAAgBAQAGPwJbJXeBcMSecf/EABwQAQEAAgMBAQAAAAAAAAAAAAERADEQIUFRcf/aAAgBAQABPyFeoNGIiEWY17qo52L9BzRNT3PJq+46pPtxQjTLcIEOItheP//aAAwDAQACAAMAAAAQqPE//8QAFxEAAwEAAAAAAAAAAAAAAAAAAAExEP/aAAgBAwEBPxBUUK8//8QAGBEAAwEBAAAAAAAAAAAAAAAAAAExEEH/2gAIAQIBAT8QcHTmf//EAB0QAQEAAgIDAQAAAAAAAAAAAAERACExURBBYZH/2gAIAQEAAT8QUJ+TdMAkDh9esUjBFSZo3RZIY6SpTsfTLWXZKrip73sv5iTUAFtyDADgPCtm7TeQ6M//2Q==&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        alt=&quot;flexnote.jpg&quot;
+        title=&quot;flexnote.jpg&quot;
+        src=&quot;/static/c9720a3874877bbb37ed337314fc2103/80e3c/flexnote.jpg&quot;
+        srcset=&quot;/static/c9720a3874877bbb37ed337314fc2103/4ec73/flexnote.jpg 180w,
+/static/c9720a3874877bbb37ed337314fc2103/158ba/flexnote.jpg 360w,
+/static/c9720a3874877bbb37ed337314fc2103/80e3c/flexnote.jpg 720w,
+/static/c9720a3874877bbb37ed337314fc2103/47311/flexnote.jpg 1080w,
+/static/c9720a3874877bbb37ed337314fc2103/644c5/flexnote.jpg 1440w,
+/static/c9720a3874877bbb37ed337314fc2103/c06f5/flexnote.jpg 1668w&quot;
+        sizes=&quot;(max-width: 720px) 100vw, 720px&quot;
+        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
+        loading=&quot;lazy&quot;
+      /&gt;
+    &lt;/span&gt;&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;flex는 css에서 레이아웃 표현 기법중 하나임
+예전 css는 한정되고 복잡한 속성들로 레이아웃을 표현해왔었는데
+이제는 간단하게 레이아웃을 표현할 수 있는 방법이 많이 생겼다 그 중 대표적인게 flex 속성
+flex는 기본적으로 정렬된 아이템들의 부모요소에다가 적용하고(가로정렬, 세로정렬등)
+특히 가로정렬하는데 굉장히 유용한 도구로 쓰임
+근데 부모요소에 flex를 적용시 첫번째 자식에 해당하는 요소들 까지만 flex 속성이 적용됨
+기본적으로 모든 해당 요소들이 좌측과 상단을 기준으로 default값이 설정됨&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h3 id=&quot;justify-content-flex된-해당-부모가-감싸고-있는-영역의-요소들을-가로-정렬&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#justify-content-flex%EB%90%9C-%ED%95%B4%EB%8B%B9-%EB%B6%80%EB%AA%A8%EA%B0%80-%EA%B0%90%EC%8B%B8%EA%B3%A0-%EC%9E%88%EB%8A%94-%EC%98%81%EC%97%AD%EC%9D%98-%EC%9A%94%EC%86%8C%EB%93%A4%EC%9D%84-%EA%B0%80%EB%A1%9C-%EC%A0%95%EB%A0%AC&quot; aria-label=&quot;justify content flex된 해당 부모가 감싸고 있는 영역의 요소들을 가로 정렬 permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;justify-content (flex된 해당 부모가 감싸고 있는 영역의 요소들을 가로 정렬)&lt;/h3&gt;
+&lt;p&gt;justify-content: flex-start → 왼쪽으로 정렬 (기본값)
+justify-content: flex-end → 오른쪽으로 정렬
+justify-content: flex-center → 중앙으로 정렬&lt;/p&gt;
+&lt;h3 id=&quot;justify-content-space-아이템들-간에-간격-조정&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#justify-content-space-%EC%95%84%EC%9D%B4%ED%85%9C%EB%93%A4-%EA%B0%84%EC%97%90-%EA%B0%84%EA%B2%A9-%EC%A1%B0%EC%A0%95&quot; aria-label=&quot;justify content space 아이템들 간에 간격 조정 permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;justify-content: space (아이템들 간에 간격 조정)&lt;/h3&gt;
+&lt;p&gt;justify-content: space-around  → 각 요소들의 좌우 margin이 같게 자동 정렬
+justify-content: space-between → 첫번째와 마지막 아이템의 좌우 마진은 사라지고 아이템들간의 영역만 동일 간격으로 띄워짐
+justify-content: space-evenly → 아이템을 제외한 빈 모든 공간이 동일한 간격을 가짐 ( VS space-around : 아이템의 좌우 마진값을 동일하게)  &lt;/p&gt;
+&lt;h3 id=&quot;align-items-세로기준-정렬&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#align-items-%EC%84%B8%EB%A1%9C%EA%B8%B0%EC%A4%80-%EC%A0%95%EB%A0%AC&quot; aria-label=&quot;align items 세로기준 정렬 permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;align-items (세로기준 정렬)&lt;/h3&gt;
+&lt;p&gt;align-items: flex-start → 부모 안에서 상단기준 정렬
+align-items: flex-end → 부모 안에서 하단기준 정렬
+align-items: center → 부모 안에서 중앙 정렬&lt;/p&gt;
+&lt;h3 id=&quot;flex-direction-축-변경&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#flex-direction-%EC%B6%95-%EB%B3%80%EA%B2%BD&quot; aria-label=&quot;flex direction 축 변경 permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;flex-direction (축 변경)&lt;/h3&gt;
+&lt;p&gt;flex-direction: colum → 세로로 정렬
+flex-direction: row → 가로로 정렬 (flex default값과 동일)
+flex-direction: reverse → 아이템들 반대로 정렬
+flex-direction: colum-reverse → 아이템들 세로로 정렬 후 반대로 정렬&lt;/p&gt;
+&lt;p&gt;대략 이런식으로 사용됨 (소스코드 예시)&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;html&quot;&gt;&lt;pre class=&quot;language-html&quot;&gt;&lt;code class=&quot;language-html&quot;&gt;    &lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;&amp;lt;&lt;/span&gt;div&lt;/span&gt; &lt;span class=&quot;token attr-name&quot;&gt;class&lt;/span&gt;&lt;span class=&quot;token attr-value&quot;&gt;&lt;span class=&quot;token punctuation attr-equals&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&quot;&lt;/span&gt;wrapper&lt;span class=&quot;token punctuation&quot;&gt;&quot;&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&gt;&lt;/span&gt;&lt;/span&gt;
+	&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;&amp;lt;&lt;/span&gt;div&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&gt;&lt;/span&gt;&lt;/span&gt;1&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;&amp;lt;/&lt;/span&gt;div&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&gt;&lt;/span&gt;&lt;/span&gt;
+	&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;&amp;lt;&lt;/span&gt;div&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&gt;&lt;/span&gt;&lt;/span&gt;2&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;&amp;lt;/&lt;/span&gt;div&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&gt;&lt;/span&gt;&lt;/span&gt;
+    &lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;&amp;lt;/&lt;/span&gt;div&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&gt;&lt;/span&gt;&lt;/span&gt;
+    .wrapper {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-direction: colum;
+    }&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</content:encoded></item><item><title><![CDATA[Shop Project_TDD_Test jest]]></title><link>https://www.yoojiih.github.io/TIL_20211030/</link><guid isPermaLink="false">https://www.yoojiih.github.io/TIL_20211030/</guid><pubDate>Sat, 30 Oct 2021 11:00:00 GMT</pubDate><content:encoded></content:encoded></item><item><title><![CDATA[Shop Project_Error Page & 환경변수 구분 개발환경 분리]]></title><link>https://www.yoojiih.github.io/TIL_20211029/</link><guid isPermaLink="false">https://www.yoojiih.github.io/TIL_20211029/</guid><pubDate>Fri, 29 Oct 2021 11:00:00 GMT</pubDate><content:encoded></content:encoded></item><item><title><![CDATA[Shop Project_API calls]]></title><description><![CDATA[프로젝트 구성 우선 처음 로딩되는 화면이 (=메인페이지)가 어떤 것인지 알아보기위해 간단하게 테스트 해봄
+index.js vs _app.js  app.js 코드 및 실행화면
+
+ index.js 코드
+ 위를 보면 _app.js에서 index.js…]]></description><link>https://www.yoojiih.github.io/TIL_20211028/</link><guid isPermaLink="false">https://www.yoojiih.github.io/TIL_20211028/</guid><pubDate>Thu, 28 Oct 2021 11:00:00 GMT</pubDate><content:encoded>&lt;h2 id=&quot;프로젝트-구성&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8-%EA%B5%AC%EC%84%B1&quot; aria-label=&quot;프로젝트 구성 permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;프로젝트 구성&lt;/h2&gt;
+&lt;p&gt;우선 처음 로딩되는 화면이 (=메인페이지)가 어떤 것인지 알아보기위해 간단하게 테스트 해봄
+index.js vs _app.js &lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;app.js 코드 및 실행화면
+&lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 720px; &quot;
+    &gt;
+      &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 75%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAPCAYAAADkmO9VAAAACXBIWXMAABYlAAAWJQFJUiTwAAAB1UlEQVQ4y62RS2/aQBSF/f//BYsuYIGQuijKomklNiEtpKQKRTUQaLCx8WM8Hns8fnB6ZyqQEyE1ajPSp2tZ956554x1PB6h0adpGvzrMRqEdRI8ia1WKwwGA4xGI0wmE0ynU4zHY8znP3D39QY3Nsf1zwaTXzXunRrjTY0n9me2uSS4WCzQ6XTQ7XbR7/cxHA7R6/Vw/ekzrj68x8dve3RuG/TvFK7mFd59KS8Lntd+K8vtHPV3FEXGvma73cK2bex2OziuS3jYez7KstQaZrOTxjPBNrpZCGGQUiLLMlPzPDe1KIrz5W2sF4vjf4+VpgJpysE5py0kNpsNZvcz4jtmsxnW6xWSJKGeFEEQ4OFhjuVyiZgxM9NG91gyY8jyEqqQUDJBTNmFYYQocOD7HhhLzha1bc8/4BCGiBN+tt/GCoItDTkQWUwij7DXj4hp66rwkAoGWZSoqspkqtG51XX97F8bK8sVCYTw6UZGDxBw2pD7SCWHKgtU1KRKdXH4oqBSBW2Yw9kLuJ5HOT3Bj0J4UQz3EMKlGtBFmX7p/O9YOpskF/DTDIzHEImPhAQY2U4IJjLTmGvBV0AbkmUaCCngg66ppDwLyqkydqtXWm1ZVnhLfgMIn4IKOKnasgAAAABJRU5ErkJggg==&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        alt=&quot;project.png&quot;
+        title=&quot;project.png&quot;
+        src=&quot;/static/ec763965b56d937dd037361285d13a8e/37523/project.png&quot;
+        srcset=&quot;/static/ec763965b56d937dd037361285d13a8e/e9ff0/project.png 180w,
+/static/ec763965b56d937dd037361285d13a8e/f21e7/project.png 360w,
+/static/ec763965b56d937dd037361285d13a8e/37523/project.png 720w,
+/static/ec763965b56d937dd037361285d13a8e/302a4/project.png 1080w,
+/static/ec763965b56d937dd037361285d13a8e/07a9c/project.png 1440w,
+/static/ec763965b56d937dd037361285d13a8e/bd9eb/project.png 1442w&quot;
+        sizes=&quot;(max-width: 720px) 100vw, 720px&quot;
+        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
+        loading=&quot;lazy&quot;
+      /&gt;
+    &lt;/span&gt;
+&lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 720px; &quot;
+    &gt;
+      &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 62.77777777777778%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAANCAYAAACpUE5eAAAACXBIWXMAABYlAAAWJQFJUiTwAAABf0lEQVQ4y51STU/DMAzt//8vO3CfBgMJceGAxA4dTAKEYN3okiZxs6Yfj9eUIU3ABkR6clzbz89OE6BD132P/vS2aRq0bRvt7h79tqMldvlEsiv6iezw2Y93hwh3ZNPpFKPRCOPxGJPTCXGGq8sLTK4fcHILnN8HnN3VSLM25h8lzLIMs9kMaZpiPp9jsVjg6fEBjy855jmQrlrcPDdY2zYqTvDLUxQFtNZQSkHzLs5CTI6mkr0FJC2XHEJAqGvUdSB623zYOsa22y2stbDGwHyCvnUQKVH19WHIT6w1cE7YsWCCoPdNoWKBI4lzLipSvUISicge+nhs9oFko1aw8sZxlsg2GuINPP1yGz4VVhVVVhVtNUxzAIn4Eht21lSX6xwbTSXs5MVEkmMEXwgdd7BcKTwv18iNUKXBWg8jFoyV3lP1gPIXSKw4ZMUSVr2ySFBw0T2RpzrPxygJ/weQkIstqSQ0/DCMWP9xzP0dklVRak5iZUv+Ilx+GB7gP3gH887wNmrNxggAAAAASUVORK5CYII=&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        alt=&quot;project2.png&quot;
+        title=&quot;project2.png&quot;
+        src=&quot;/static/42618ec0681090956e711c30dad780e7/37523/project2.png&quot;
+        srcset=&quot;/static/42618ec0681090956e711c30dad780e7/e9ff0/project2.png 180w,
+/static/42618ec0681090956e711c30dad780e7/f21e7/project2.png 360w,
+/static/42618ec0681090956e711c30dad780e7/37523/project2.png 720w,
+/static/42618ec0681090956e711c30dad780e7/302a4/project2.png 1080w,
+/static/42618ec0681090956e711c30dad780e7/07a9c/project2.png 1440w,
+/static/42618ec0681090956e711c30dad780e7/3707e/project2.png 1878w&quot;
+        sizes=&quot;(max-width: 720px) 100vw, 720px&quot;
+        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
+        loading=&quot;lazy&quot;
+      /&gt;
+    &lt;/span&gt;&lt;/li&gt;
+&lt;li&gt;index.js 코드
+&lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 720px; &quot;
+    &gt;
+      &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 79.44444444444444%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAQCAYAAAAWGF8bAAAACXBIWXMAABYlAAAWJQFJUiTwAAACWUlEQVQ4y5VUXW+bQBDk//+4SlXeKiW1G2MwcN+3dwdYms4dtVIlUao+jBawmZvZnaXz+gn9vGBWFsNocNMKKUfkkrFtO7H9F7rvJuCX8xhJ+uwD+qBwsy+46B8IyaGsmeSp1XVd/0148h5TiDDWYSDhGAVeNGbfY/FXmDgRNzihchLXl74i7iaJGFPGa4wIpWBVK0Rv0L7AF/5pv+NOvNn/WmU3UM1puEJfZ9h+hV4SyQIMYUOArgflgo2q1q/wIIzZIugFMr7A6wgfU0Okakf7ydo2oKpy3yr2pvZx/fZsa6RdTBqLbJDLFXKe0Y8Wo+1xUwOu5gZ/WaAHhzmwsp82zhyWbbX22skCIw5pfShMhgOgvdMTZNBQTqCFRIrVO5hKZBeoWsUzUtKmXqOVirT71FJwWO90sNDawlnFUzlhn1hpN1X7wutqvyBKRUYQtoR41KNF0lBb1AX2UDHU8fyK5Vlw/Rbws9e4jAsu04zTwmGRvFRVhOSay0Jlmc/Kh+E0y4Ynz3puSkNVZAOCKlBetSyqMEKHgfXGe9fUGeY3pfQhSp3kQOkZEgSr8JS0o9SJ7X9OLWtTVHu08/l931vd9/3TkB8K6d1wh5eTRf9sadegnxRepwWDrlN38Omw2MgrqO6zjekCY1Mbb5xCmSfazfDXDM1p12BbBluxGu67ZRoc17TWNE2N/L3Kro7f0bI3lqeyyWFDTgStFq5e4pas22Fzu9NqxX5YbtbfKzwsMwZ6Qjjza/PCjwSVjgz1ZEbWCUvgb5y0cM/dkDmsGhOuJFulifUvwt/v9NGqlp+BqgAAAABJRU5ErkJggg==&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        alt=&quot;indexcode.png&quot;
+        title=&quot;indexcode.png&quot;
+        src=&quot;/static/b4f85c0d700f19969d80156d3a4c98ec/37523/indexcode.png&quot;
+        srcset=&quot;/static/b4f85c0d700f19969d80156d3a4c98ec/e9ff0/indexcode.png 180w,
+/static/b4f85c0d700f19969d80156d3a4c98ec/f21e7/indexcode.png 360w,
+/static/b4f85c0d700f19969d80156d3a4c98ec/37523/indexcode.png 720w,
+/static/b4f85c0d700f19969d80156d3a4c98ec/302a4/indexcode.png 1080w,
+/static/b4f85c0d700f19969d80156d3a4c98ec/7161f/indexcode.png 1182w&quot;
+        sizes=&quot;(max-width: 720px) 100vw, 720px&quot;
+        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
+        loading=&quot;lazy&quot;
+      /&gt;
+    &lt;/span&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;위를 보면 _app.js에서 index.js 코드를 불러왔다는 것을 알 수 있음
+결론은 _app.js가 제일 처음 로딩되는 화면임&lt;/p&gt;
+&lt;h3 id=&quot;_appjs-파일-props&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#_appjs-%ED%8C%8C%EC%9D%BC-props&quot; aria-label=&quot;_appjs 파일 props permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;_app.js 파일 (props)&lt;/h3&gt;
+&lt;p&gt;우선 _app.js에서 props로 넘어온 Component와 pageProps에 대해서 짚고 넘어가지면 &lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Component → props로 받은 현재 페이지를 의미
+(페이지 전환시 이 컴포넌트 props가 변경됨)&lt;/li&gt;
+&lt;li&gt;pageProps → data fetching 메소드를 통해 미리 가져온 초기 객체임
+이 메소드를 사용하지 않는다면 …pageProps 객체가 전달됨&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&quot;_documentjs-파일&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#_documentjs-%ED%8C%8C%EC%9D%BC&quot; aria-label=&quot;_documentjs 파일 permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;_document.js 파일&lt;/h3&gt;
+&lt;p&gt;&lt;a href=&quot;https://nextjs.org/docs/advanced-features/custom-document&quot;&gt;Next js 공식문서_Custom Document&lt;/a&gt; &lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;위 링크의 소스코드를 pages 폴더 내에 넣어줌&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;_app.js에서 구성한 HTML이 어떤 형태로 들어갈지 구성해주는 것&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;ul&gt;
+&lt;li&gt;사이트를 만들때 가장 루트경로가 되는 파일은 index.html이지만 next초기설정에서는 index.html을 볼수가 없다.&lt;br&gt;
+Next js에서는 index.html의 역할을 pages 디렉토리 밑의 _document.js 파일의 내용이 대체하기 때문&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/blockquote&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;blockquote&gt;
+&lt;ul&gt;
+&lt;li&gt;초기 작업 head에 넣는것, 스타일시트 링크, 폰트 임포팅, 도큐먼트 기본 설정, meta/link, 그밖에 link, import 등등! 특히, 서버 사이드 렌더링이 되면서 css가 깨져보이는 문제를 해결하기 위해 _document.js를 통해 초기값을 세팅&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/blockquote&gt;
+&lt;blockquote&gt;
+&lt;ul&gt;
+&lt;li&gt;Next.js페이지들은 &lt;Html&gt;&lt;Head&gt;등의 마크업 정의를 건너뛰고 페이지를 만들기 때문에 마크업 태그들을 만들어야할때는 이 파일이 필수로 있어야 마크업 태그부분들 수정가능&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/blockquote&gt;
+&lt;blockquote&gt;
+&lt;ul&gt;
+&lt;li&gt;Next에서 제공하는 document를 직접 생성해 커스터마이징 가능하고
+만약 사용자가 생성하지 않으면 NEXT자체에서 지정해 둔 _document.js로 대체 됨&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/blockquote&gt;
+&lt;h1 id=&quot;api-application-programming-interface&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#api-application-programming-interface&quot; aria-label=&quot;api application programming interface permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;API (Application Programming Interface)&lt;/h1&gt;
+&lt;p&gt;api 요청하기 전 api를 둘러싼 서버나 통신에 대해서 알고 넘어가기&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;API 는 데이터와 기능의 집합을 제공하여 컴퓨터 프로그램간 상호작용을 촉진하며 서로 정보를 교환할 수 있는 것이다.
+소프트웨어가 다른 소프트웨어로부터 “지정된 형식”으로 요청(서버가 그 형식에 맞는 행동을 해줌), 명령을 받을 수 있는 소통을 위한 인터페이스
+즉, 개발자는 그 형식에 맞게 코드 작성시 개발 및 유지보수에 유리함&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;&gt; 기상정보가 관리되는 기상청 서버가 존재
+&gt; 날씨에 관련된 서비스를 제공하는 웹 사이트, 앱들이 이 기상청 서버로부터 실시간으로 날씨정보를 요청해서 전송 받으려면 미리 작성된 sw의 지정된 요청 형식을 이용함
+&gt; 예를들어 &quot;date:191031 | place:seoul | which:temperature&quot; 이렇게 어떤 식으로 데이터가 작성 되어있는지 표시해서 
+&gt; 이 주소로 정보 요청 시 &quot;17degree&quot; 이런식으로 응답한다는 공개된 메뉴얼이 있으면 이걸 참조해 기상청 정보를 활용하는 sw개발 가능&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;h1 id=&quot;rest-representational-state-transfer&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#rest-representational-state-transfer&quot; aria-label=&quot;rest representational state transfer permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;REST (Representational State Transfer)&lt;/h1&gt;
+&lt;blockquote&gt;
+&lt;p&gt;자원을 이름(자원의 표현)으로 구분하여 해당 자원의 상태(정보)를 주고 받는 모든 것
+통신 규약인 &lt;code class=&quot;language-text&quot;&gt;HTTP&lt;/code&gt;와 마찬가지로 다양한 브라우저, 클라이언트, 요청의 등장과 애플리케이션 통합성의 필요성으로 인해 &lt;code class=&quot;language-text&quot;&gt;REST&lt;/code&gt;라는 표준 아키텍처 등장 (규칙)&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h1 id=&quot;restful&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#restful&quot; aria-label=&quot;restful permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;RESTful&lt;/h1&gt;
+&lt;ul&gt;
+&lt;li&gt;REST라는 architecture를 구현하는 웹서비스를 나타내기 위해 사용되는 용어 (rest api형식을 지키는 개발자 간 약속)&lt;/li&gt;
+&lt;li&gt;restful한 REST API 설계 기본은 REST 구성요소를 지키는 것. 리소스에 원형을 무너뜨리지 않음&lt;/li&gt;
+&lt;li&gt;클라이언트가 서버에 http 요청을 보낼때 사용하는 여러 메소드 중에서 rest api에선 crud를 많이 사용. &lt;/li&gt;
+&lt;li&gt;효율적인 rest를 위해서는 메서드를 목적에 맞게 구분하는 것이 좋음&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h1 id=&quot;restful-목적&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#restful-%EB%AA%A9%EC%A0%81&quot; aria-label=&quot;restful 목적 permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;RESTful 목적&lt;/h1&gt;
+&lt;ul&gt;
+&lt;li&gt;이해도와 호환성을 높인 RESTapi를 만들기 위함 (성능향상 목적 X)&lt;/li&gt;
+&lt;li&gt;정보를 주고받기 위한 것 (실제론 api 표준이 없음)&lt;/li&gt;
+&lt;li&gt;좋은 restful을 위해서는 소프트웨어의 특징, 개발자의 성향등 고려해 설계되어야 함&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h1 id=&quot;rest-api&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#rest-api&quot; aria-label=&quot;rest api permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;REST API&lt;/h1&gt;
+&lt;ul&gt;
+&lt;li&gt;Restful한 구조를 갖는 API&lt;/li&gt;
+&lt;li&gt;사용자의 편의를 위해 규칙에 맞게 서비스 API를 구현한 것 (API작성 표준 아키텍처)&lt;/li&gt;
+&lt;li&gt;REST는 HTTP를 기반하기 때문에 HTTP를 지원하는 프로그램 언어로 서버, 클라이언트를 구축하여 많이 사용하고 있음&lt;/li&gt;
+&lt;li&gt;일종의 데이터 요청 응답 형식 → 어떤 언어, 프레임워크를 쓰든 이 규칙에 맞춰서 기능을 만들어 내면 됨&lt;/li&gt;
+&lt;li&gt;가장 중요한 특성은 요청을 보내는 주소만으로도 대략 무슨기능의 요청인지 파악가능&lt;/li&gt;
+&lt;li&gt;서비스를 개발자 혼자 만드는게 아니기 때문에 동작만 하게 만들면 그만이 아니라 나중에 인계받을 개발자나 이 api를 활용해서 다른제품을 만들 개발자들이 파악하기 쉽게 만들어야함&lt;/li&gt;
+&lt;/ul&gt;
+&lt;blockquote&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;ex) 어떤 학원의 반과 학생들에 대한 api를 만들고 학원 db에게 정보를 보내달라는 요청을 할 때
+도메인/1 이런식이 아니라
+도메인/classes 주소 뒤에 classes가 붙는다면 학원의 반들 목록을 받아오는 요청일 것 
+도메인/classes/2  classes 뒤에 index 고유번호가 따라붙으면 반들 중 해당 인덱스 번호의 반 정보
+도메인/classes/2/students 뒤에 students를 붙여서 보내면 이 반에 해당하는 학생들의 정보
+도메인/classes/2/students/15 뒤에 인덱스를 붙이면 학생들중 번호가 15번인 학생의 정보
+도메인/classes/2/students?sex=male 이런식으로 조건을 붙여서 남학생들의 정보만
+도메인/classes/2/students?page=2&amp;amp;count=10 한페이지에 10명씩 받아오는 요청 가능
+이렇게 자원을 구조와 함께 나타내는 이런식의 구분자를 uri이라고 함&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;/blockquote&gt;
+&lt;h1 id=&quot;rest-특징&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#rest-%ED%8A%B9%EC%A7%95&quot; aria-label=&quot;rest 특징 permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;REST 특징&lt;/h1&gt;
+&lt;ul&gt;
+&lt;li&gt;Uniform Interface
+URL로 지정된 리소스에 대한 조작을 통일하고 한정적인 인터페이스로 수행하는 아키택처 스타일&lt;/li&gt;
+&lt;li&gt;Client-Server (역할 구분)
+서버는 API를 제공하고 클라이언트는 로그인 등 직접 관리하는 구조, 개발할 내용 명확, 의존성 down&lt;/li&gt;
+&lt;li&gt;Stateless
+API 서버는 요청만 처리하고 서버에 불필요한 상태 정보 저장 &amp;#x26; 관리 안함, 서비스의 자유도 UP &lt;/li&gt;
+&lt;li&gt;Cacheable
+HTTP 웹 표준을 그대로 사용하기 때문에 웹에서 사용하는 기존 인프라(캐싱 기능)를 그대로 활용 가능&lt;/li&gt;
+&lt;li&gt;Layered System
+보안, 로드 밸런싱, 암호화 계층을 추가해 (다중계층) 구조상의 유연성을 둘 수 있음&lt;/li&gt;
+&lt;li&gt;Self-descriptiveness
+REST API 메세지만 봐도 쉽게 이해할 수 있는 자체 표현 구조로 되어있음&lt;/li&gt;
+&lt;li&gt;Code-On-Demand
+서버로부터 스크립트를 받아서 클라이언트에 실행된다.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h1 id=&quot;rest-구성-요소-3가지&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#rest-%EA%B5%AC%EC%84%B1-%EC%9A%94%EC%86%8C-3%EA%B0%80%EC%A7%80&quot; aria-label=&quot;rest 구성 요소 3가지 permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;REST 구성 요소 3가지&lt;/h1&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;자원 (Resource)&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;내용 : 이미지, 텍스트 등&lt;/li&gt;
+&lt;li&gt;규칙 : HTTP URI &lt;/li&gt;
+&lt;li&gt;자원이 있어야 메소드 가능
+URI : 인터넷 상의 자원을 식별하기 위한 문자열의 구성
+URL : 인터넷 상의 자원의 위치&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;행위 (Verb) - Method&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;내용 : CRUD 기능&lt;/li&gt;
+&lt;li&gt;규칙 : HTTP Method&lt;/li&gt;
+&lt;li&gt;상태를 주고 받는 것 (요청)&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;METHOD와 역할 &lt;code class=&quot;language-text&quot;&gt;CRUD Operation&lt;/code&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;POST: URI 요청 시 리소스 생성 &lt;code class=&quot;language-text&quot;&gt;Create&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;GET: 리소스를 조회 &lt;code class=&quot;language-text&quot;&gt;Read&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;PUT: 리소스를 수정 &lt;code class=&quot;language-text&quot;&gt;Update&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;DELETE: 리소스를 삭제 &lt;code class=&quot;language-text&quot;&gt;Delete&lt;/code&gt;&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;GET VS POST
+POST를 제외한 나머지 메소드들은 여러번 수행시 결과가 같음 (멱등성)
+HTTP프로토콜 이용해 서버에 요청시 사용하는 메소드
+GET : 헤더부분에 데이터 담아 전송하는 방식, 크기 제한, 데이터 요청시 데이터가 HTTP Request Message 헤더부분의 url에 그대로 담겨 전송되기 때문에 보안에 신경써야 하는 부분이라면 사용 자제
+GET 요청은 브라우저에 캐싱되기 때문에 사용시 기존에 캐싱된 데이터가 응답할 수 있음
+ex) 검색창에 a 데이터 입력시 &lt;a href=&quot;https://www.google.com/search?q=a&quot;&gt;https://www.google.com/search?q=a&lt;/a&gt; 라고 뜸
+POST : Body 부분에 데이터 담아 전송하는 방식, 서버의 값이나 상태등을 변경하고자 할 때 사용&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;표현 (Representation of Resource)&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;내용 : 클라이언트의 자원 조작 요청에 대한 서버의 응답 메시지&lt;/li&gt;
+&lt;li&gt;규칙 : JSON, XML (응답 메시지 형태)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h1 id=&quot;rest-api-응답-상태&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#rest-api-%EC%9D%91%EB%8B%B5-%EC%83%81%ED%83%9C&quot; aria-label=&quot;rest api 응답 상태 permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;REST API 응답 상태&lt;/h1&gt;
+&lt;ul&gt;
+&lt;li&gt;1xx : 전송 프로토콜 수준의 정보 교환&lt;/li&gt;
+&lt;li&gt;2xx : 클라이언트 요청이 성공적으로 수행됨&lt;/li&gt;
+&lt;li&gt;3xx : 클라잉언트는 요청을 완료하기 위해 추가적인 행동을 취해야 함&lt;/li&gt;
+&lt;li&gt;4xx : client error&lt;/li&gt;
+&lt;li&gt;5xx : server error&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&quot;참조&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#%EC%B0%B8%EC%A1%B0&quot; aria-label=&quot;참조 permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;참조&lt;/h3&gt;
+&lt;p&gt;&lt;a href=&quot;https://gmlwjd9405.github.io/2018/09/21/rest-and-restful.html&quot;&gt;[Network] REST란? REST API란? RESTful이란?&lt;/a&gt;
+&lt;a href=&quot;https://meetup.toast.com/posts/92&quot;&gt;REST API 제대로 알고 사용하기&lt;/a&gt;
+&lt;a href=&quot;https://ijbgo.tistory.com/20&quot;&gt;REST API 란 ?&lt;/a&gt;&lt;/p&gt;
+&lt;h1 id=&quot;axios&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#axios&quot; aria-label=&quot;axios permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;Axios&lt;/h1&gt;
+&lt;ul&gt;
+&lt;li&gt;Axios는 브라우저, Node.js를 위한 Promise API를 활용하는 HTTP 비동기 통신 라이브러리&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Axois vs Fetch API (자바스크립트에 내장되어 있음)&lt;/p&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;&lt;/th&gt;
+&lt;th&gt;Axios&lt;/th&gt;
+&lt;th&gt;fetch&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;요청 객체에 url 존재 여부&lt;/td&gt;
+&lt;td&gt;O&lt;/td&gt;
+&lt;td&gt;X&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;설치 필요 여부&lt;/td&gt;
+&lt;td&gt;O (써드파티 라이브러리)&lt;/td&gt;
+&lt;td&gt;X (현대 브라우저에 빌트인)&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;보호&lt;/td&gt;
+&lt;td&gt;XSRF 보호&lt;/td&gt;
+&lt;td&gt;X&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;속성&lt;/td&gt;
+&lt;td&gt;data 속성을 사용 (object를 포함)&lt;/td&gt;
+&lt;td&gt;body 속성을 사용 (문자열화 됨)&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;성공 여부 파악 방식&lt;/td&gt;
+&lt;td&gt;status가 200이고 statusText가 ‘OK’이면 성공&lt;/td&gt;
+&lt;td&gt;응답객체가 ok 속성을 포함하면 성공&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;자동 json데이터 형식으로 변환 여부&lt;/td&gt;
+&lt;td&gt;O&lt;/td&gt;
+&lt;td&gt;X (json()메서드를 사용해야함&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;요청 취소 &amp;#x26; 타임아웃 기능&lt;/td&gt;
+&lt;td&gt;O&lt;/td&gt;
+&lt;td&gt;X&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;HTTP 요청 가로채기 가능여부&lt;/td&gt;
+&lt;td&gt;O&lt;/td&gt;
+&lt;td&gt;X&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;download진행 지원 여부&lt;/td&gt;
+&lt;td&gt;O&lt;/td&gt;
+&lt;td&gt;X&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;브라우저 호환성&lt;/td&gt;
+&lt;td&gt;많은 브라우저에 지원됨&lt;/td&gt;
+&lt;td&gt;Chrome 42+, Firefox 39+, Edge 14+, and Safari 10.1+이상에 지원&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;-&gt; 간단하게 사용시 fectch가 적합
+확장성을 염두해 봤을 땐 별도의 설치 필요하지만 fetch 보다 많은 기능을 지원하고 간소한 문법을 사용하는 axios가 적합&lt;/p&gt;
+&lt;h1 id=&quot;axios-사용법&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#axios-%EC%82%AC%EC%9A%A9%EB%B2%95&quot; aria-label=&quot;axios 사용법 permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;AXIOS 사용법&lt;/h1&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;1. 설치
+    `npm i axios`
+2. 사용하고자 하는 곳에 import
+    `import Axios from &quot;axios&quot;;`
+3. axois로 api 호출
+ 	```javascript
+     API_URL = &quot;http://makeup-api.herokuapp.com/api/v1/products.json?brand=dior&quot;
+     Axios.get(API_URL)
+ 		.then((res) =&gt; {
+     console.log(res);
+ 	});
+    ```&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;blockquote&gt;
+&lt;p&gt;api 호출 시 서버 에러
+간혹 잘 되다가 갑자기 서버에러 뜨는 경우가 있는데 해결방법은 정말 간단했다
+해당 소스코드 싹 지우고 콘솔로그만 띄워서 정상작동 되는거 확인 후에 다시 소스코드 원래대로 되돌려 보면 정상적으로 api 호출됨
+에러 뜰 때와 안뜰 때의 코드 변화가 전혀 없어서 아직은 원인을 알 수는 없다&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;&lt;a href=&quot;https://kyun2da.dev/%EB%9D%BC%EC%9D%B4%EB%B8%8C%EB%9F%AC%EB%A6%AC/axios-%EA%B0%9C%EB%85%90-%EC%A0%95%EB%A6%AC/&quot;&gt;kyun2da.dev님 블로그&lt;/a&gt;	 &lt;/p&gt;
+&lt;h1 id=&quot;axios-methods&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#axios-methods&quot; aria-label=&quot;axios methods permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;Axios Methods&lt;/h1&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;POST: URI 요청 시 리소스 생성 &lt;code class=&quot;language-text&quot;&gt;Create&lt;/code&gt;
+- GET: 리소스를 조회 &lt;code class=&quot;language-text&quot;&gt;Read&lt;/code&gt;
+- PUT: 리소스를 수정 &lt;code class=&quot;language-text&quot;&gt;Update&lt;/code&gt;
+- DELETE: 리소스를 삭제 &lt;code class=&quot;language-text&quot;&gt;Delete&lt;/code&gt;&lt;/p&gt;
+&lt;h2 id=&quot;get&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#get&quot; aria-label=&quot;get permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;GET&lt;/h2&gt;
+&lt;p&gt;입력한 url에 존재하는 리소스에 요청 Read (데이터 받아옴)
+&lt;code class=&quot;language-text&quot;&gt;axios.get(url,[,config])&lt;/code&gt;	&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;GET으로 로그인을 구현했을때 웹 사이트 주소창에 www.yourserver.com/login?id=Hnk&amp;#x26;pw=1234 이런식으로 뜸
+✔ GET은 서버에서 어떤 데이터를 가져와서 보여준다거나 하는 용도이다.  (json형태로 받아옴)
+주소에 있는 쿼리스트링을 활용해서 정보를 전달하는 것이지 GET메서드는 값이나 상태등을 바꿀 수 없습니다.&lt;/p&gt;
+&lt;p&gt;예제 코드
+import axios from ‘axios’;&lt;/p&gt;
+&lt;p&gt;axios.get(’&lt;a href=&quot;https://my-json-server.typicode.com/zofqofhtltm8015/fs/user&amp;#x27;&quot;&gt;https://my-json-server.typicode.com/zofqofhtltm8015/fs/user’&lt;/a&gt;).then((Response)=&gt;{
+console.log(Response.data);
+}).catch((Error)=&gt;{
+console.log(Error);
+})&lt;/p&gt;
+&lt;h2 id=&quot;post&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#post&quot; aria-label=&quot;post permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;POST&lt;/h2&gt;
+&lt;p&gt;새로운 리소스를 생성 create
+&lt;code class=&quot;language-text&quot;&gt;axios.post(&quot;url주소&quot;,{ data객체 },[,config])&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;두 번째 인자{ data객체 }는 본문으로 보낼 데이터를 설정한 객체 리터럴을 전달&lt;/p&gt;
+&lt;p&gt;로그인, 회원가입 등 사용자가 생성한 파일을 서버에다가 업로드할때 사용합니다.
+Post를 사용하면 주소창에 쿼리스트링이 남지 않기때문에 👍 GET보다 안전해요!&lt;/p&gt;
+&lt;h2 id=&quot;delete&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#delete&quot; aria-label=&quot;delete permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;Delete&lt;/h2&gt;
+&lt;p&gt;데이터베이스에 저장되어 있는 내용을 삭제
+&lt;code class=&quot;language-text&quot;&gt;axios.delete(URL,[,config]);&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;예제 코드
+axios.delete(“/thisisExample/list/30”).then(function(response){
+console.log(response);
+}).catch(function(ex){
+throw new Error(ex)
+}&lt;/p&gt;
+&lt;h2 id=&quot;put&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#put&quot; aria-label=&quot;put permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;PUT&lt;/h2&gt;
+&lt;p&gt;데이터베이스에 저장되어 있는 내용을 갱신
+&lt;code class=&quot;language-text&quot;&gt;axios.put(url[, data[, config]])&lt;/code&gt;&lt;/p&gt;
+&lt;h1 id=&quot;axios-서버-통신&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#axios-%EC%84%9C%EB%B2%84-%ED%86%B5%EC%8B%A0&quot; aria-label=&quot;axios 서버 통신 permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;Axios 서버 통신&lt;/h1&gt;
+&lt;p&gt;로그인 아키텍처
+Client(유저 이메일, 비번) -Request-&gt; Web Server
+Web Server -Response-&gt; Client 200(성공코드),토큰
+400(실패코드) Error log&lt;/p&gt;
+&lt;h2 id=&quot;로그인-post-method&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#%EB%A1%9C%EA%B7%B8%EC%9D%B8-post-method&quot; aria-label=&quot;로그인 post method permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;로그인 (POST Method)&lt;/h2&gt;
+&lt;p&gt;일단 api 통신 테스트만 간단히 해 놓고 나중에 데이터(이메일, 비밀번호) 전달 할 예정 &amp;#x26; 토큰 &lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;javascript&quot;&gt;&lt;pre class=&quot;language-javascript&quot;&gt;&lt;code class=&quot;language-javascript&quot;&gt;&lt;span class=&quot;token keyword&quot;&gt;import&lt;/span&gt; Axios &lt;span class=&quot;token keyword&quot;&gt;from&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&quot;axios&quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;token keyword&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt; useRouter &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;from&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&quot;next/router&quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+
+&lt;span class=&quot;token keyword&quot;&gt;export&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;default&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;function&lt;/span&gt; &lt;span class=&quot;token function&quot;&gt;Login&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;token keyword&quot;&gt;const&lt;/span&gt; router &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token function&quot;&gt;useRouter&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+    &lt;span class=&quot;token keyword&quot;&gt;function&lt;/span&gt; &lt;span class=&quot;token function&quot;&gt;login&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+        Axios&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;post&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&quot;/api/login&quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;then&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token parameter&quot;&gt;res&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;=&gt;&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+        &lt;span class=&quot;token keyword&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;res&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;status &lt;span class=&quot;token operator&quot;&gt;===&lt;/span&gt; &lt;span class=&quot;token number&quot;&gt;200&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+            &lt;span class=&quot;token comment&quot;&gt;//로그인 성공&lt;/span&gt;
+            router&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;push&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&quot;/admin&quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+        &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;
+        &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+    &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;
+    &lt;span class=&quot;token keyword&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;
+        &lt;span class=&quot;token operator&quot;&gt;&amp;lt;&lt;/span&gt;div&lt;span class=&quot;token operator&quot;&gt;&gt;&lt;/span&gt;
+            &lt;span class=&quot;token operator&quot;&gt;&amp;lt;&lt;/span&gt;p color&lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&quot;blue&quot;&lt;/span&gt; onClick&lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;login&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;&gt;&lt;/span&gt;
+            Login
+            &lt;span class=&quot;token operator&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;/&lt;/span&gt;p&lt;span class=&quot;token operator&quot;&gt;&gt;&lt;/span&gt;
+        &lt;span class=&quot;token operator&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;/&lt;/span&gt;div&lt;span class=&quot;token operator&quot;&gt;&gt;&lt;/span&gt;
+    &lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;h2 id=&quot;로그아웃-get-method&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#%EB%A1%9C%EA%B7%B8%EC%95%84%EC%9B%83-get-method&quot; aria-label=&quot;로그아웃 get method permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;로그아웃 (GET Method)&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;admin page에서 로그인 체크 &amp;#x26; 로그아웃 &lt;/li&gt;
+&lt;li&gt;로그인시 State변경함수를 이용해 로그아웃이 화면상에 표시되도록&lt;/li&gt;
+&lt;li&gt;로그인 안되어있으면 로그인 페이지로 이동&lt;/li&gt;
+&lt;li&gt;로그아웃 누르면 메인페이지로 이동&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;javascript&quot;&gt;&lt;pre class=&quot;language-javascript&quot;&gt;&lt;code class=&quot;language-javascript&quot;&gt;&lt;span class=&quot;token keyword&quot;&gt;import&lt;/span&gt; Axios &lt;span class=&quot;token keyword&quot;&gt;from&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&quot;axios&quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;token keyword&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt; useRouter &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;from&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&quot;next/router&quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;token keyword&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt; useEffect&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; useState &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;from&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&quot;react&quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+
+&lt;span class=&quot;token keyword&quot;&gt;export&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;default&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;function&lt;/span&gt; &lt;span class=&quot;token function&quot;&gt;Admin&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;token keyword&quot;&gt;const&lt;/span&gt; router &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token function&quot;&gt;useRouter&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+    &lt;span class=&quot;token keyword&quot;&gt;const&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;[&lt;/span&gt;isLogin&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; setIsLogin&lt;span class=&quot;token punctuation&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token function&quot;&gt;useState&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token boolean&quot;&gt;false&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+
+    &lt;span class=&quot;token keyword&quot;&gt;function&lt;/span&gt; &lt;span class=&quot;token function&quot;&gt;checkLogin&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+        Axios&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;get&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&quot;/api/isLogin&quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;then&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token parameter&quot;&gt;res&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;=&gt;&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+        &lt;span class=&quot;token keyword&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;res&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;status &lt;span class=&quot;token operator&quot;&gt;===&lt;/span&gt; &lt;span class=&quot;token number&quot;&gt;200&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;&amp;amp;&amp;amp;&lt;/span&gt; res&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;data&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;name&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+            &lt;span class=&quot;token comment&quot;&gt;//로그인&lt;/span&gt;
+            &lt;span class=&quot;token function&quot;&gt;setIsLogin&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token boolean&quot;&gt;true&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+        &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;else&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+            &lt;span class=&quot;token comment&quot;&gt;//로그인 안됨&lt;/span&gt;
+            router&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;push&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&quot;/login&quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+        &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;
+        &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+    &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;
+
+    &lt;span class=&quot;token keyword&quot;&gt;function&lt;/span&gt; &lt;span class=&quot;token function&quot;&gt;logout&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+        Axios&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;get&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&quot;/api/logout&quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;then&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token parameter&quot;&gt;res&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;=&gt;&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+        &lt;span class=&quot;token keyword&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;res&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;status &lt;span class=&quot;token operator&quot;&gt;===&lt;/span&gt; &lt;span class=&quot;token number&quot;&gt;200&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+            router&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;push&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&quot;/&quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+        &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;
+        &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+    &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;
+
+    &lt;span class=&quot;token function&quot;&gt;useEffect&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;=&gt;&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+        &lt;span class=&quot;token function&quot;&gt;checkLogin&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+    &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;]&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+    &lt;span class=&quot;token keyword&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;
+        &lt;span class=&quot;token operator&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;&gt;&lt;/span&gt;
+        admin
+        &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;isLogin &lt;span class=&quot;token operator&quot;&gt;&amp;amp;&amp;amp;&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;&amp;lt;&lt;/span&gt;p onClick&lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;logout&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;&gt;&lt;/span&gt;Logout&lt;span class=&quot;token operator&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;/&lt;/span&gt;p&lt;span class=&quot;token operator&quot;&gt;&gt;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;
+        &lt;span class=&quot;token operator&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;/&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;&gt;&lt;/span&gt;
+    &lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;(구현 완료되는 대로 이곳에 추가 해 나갈 예정)&lt;/p&gt;
+&lt;h1 id=&quot;쿠키-vs-세션-vs-캐시&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#%EC%BF%A0%ED%82%A4-vs-%EC%84%B8%EC%85%98-vs-%EC%BA%90%EC%8B%9C&quot; aria-label=&quot;쿠키 vs 세션 vs 캐시 permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;쿠키 VS 세션 VS 캐시&lt;/h1&gt;
+&lt;h1 id=&quot;쿠키&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#%EC%BF%A0%ED%82%A4&quot; aria-label=&quot;쿠키 permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;쿠키&lt;/h1&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;- 클라이언트 로컬에 저장됨
+- 이름, 값, 유효시간, 도메인(쿠키 전송할 도메인), 경로(쿠키 전송할 요청 경로) 값으로 구성되어 있는 작은 데이터 파일 
+- 상태정보 저장 &amp;amp; 참조
+- 사용자 인증 유효시간 명시가능 ( 쿠키 만료시간 정해지면 브라우저가 종료되어도 클라이언트에서 보관 유지 )
+- 쿠키 저장가능 개수 300개, 하나의 도메인당 20개의 값, 쿠키 한개당 4KB까지 저장
+- Session management : 서버에 저장해야 할 로그인, 장바구니, 게임 스코어 등의 정보 관리
+- Personalization : 사용자 선호, 테마 등의 세팅
+- Tracking : 사용자 행동을 기록하고 분석하는 용도&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;동작 방식
+Response Header에 Set-Cookie 속성을 사용하면 클라이언트에 쿠키를 만들 수 있다.
+쿠키는 사용자가 따로 요청하지 않아도 브라우저가 Request 시에 Request Header를 넣어서 자동으로 서버에 전송한다.&lt;/p&gt;
+&lt;p&gt;클라이언트가 페이지 요청 -&gt; 서버에서 쿠키 생성 -&gt; HTTP 헤더에 쿠키를 포함 시켜 응답
+-&gt; 쿠키 만료 기간 내 같은 요청 할 경우 HTTP 헤더에 쿠키를 함께 보냄 -&gt;
+서버에서 쿠키를 읽어 상태정보 변동 시 업데이트 하여 변경된 쿠키를 HTTP 헤더에 포함시켜 응답&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h1 id=&quot;세션&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#%EC%84%B8%EC%85%98&quot; aria-label=&quot;세션 permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;세션&lt;/h1&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;쿠키 기반, 사용자 정보 파일을 브라우저에 저장하지않고 서버측에서 관리 
+쿠키 = 로컬 , 세션 = 서버에 존재함 (서버 자원 사용)
+세션 ID: 클라이언트가 요청을 보내면 해당 서버의 엔진이 클라이언트에게 유일한 ID를 부여
+라이프 사이클 : 세션 ID로 클라이언트를 구분해 브라우저 종료시까지 인증상태 유지 
+            접속시간 제한 설정 가능, 브라우저 종료시 지정한 만료시간에 상관없이 삭제됨
+            쿠키도 만료시간이 있지만 파일로 저장되기 때문에 브라우저를 종료해도 정보가 남아 있을 수 있음
+사용자의 로그인 &amp;amp; 로그아웃 세션 따로 생성됨     
+보안성: 세션은 쿠키를 이용해서 session id만 저장하고 서버에서 처리하기 때문에 쿠키보단 보안성이 좋음
+but, 쿠키는 클라이언트 로컬에 저장되기 때문에 변질되거나 request에서 스니핑 당할 우려가 있어서 보안에 취약
+속도: 사용자가 많아질 수록 서버 메모리를 많이 차지하게 되어 성능 저하 초래함 &amp;amp; 서버 처리로 요청 속도가 쿠키보다 느림
+사용자가 요청 할 때 마다 필요한 정보들(로그인, 닉네임)을 세션에 담아두면 DB에 접근할 필요가 없어서 효율적&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;동작 방식
+클라이언트가 서버에 처음으로 Request 보냄 -&gt; 서버에서는 session id 쿠키 값을 새로 발급해서 응답
+-&gt; 클라이언트는 전달받은 session id 값을 매 요청마다 헤더 쿠키에 넣어서 요청 -&gt; 서버는 session id를 확인하여 사용자를 식별
+-&gt; 로그인 요청시 서버는 session을 로그인한 사용자 정보로 갱신 &amp;#x26; 새로운 session id를 발급하여 응답
+-&gt; 클라이언트는 로그인 사용자의 session id 쿠키를 요청과 함께 전달하고 서버에서도 로그인된 사용자로 식별 가능
+-&gt; 클라이언트 종료 (브라우저 종료) 시 session id 제거, 서버에서도 세션 제거&lt;/p&gt;
+&lt;h1 id=&quot;캐시&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#%EC%BA%90%EC%8B%9C&quot; aria-label=&quot;캐시 permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;캐시&lt;/h1&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;- 웹 페이지 요소를 저장하기 위한 임시 저장소
+- 목적 : 재사용 가능성 or 용량이 큰 리소스를 임시로 저장해 렌더링 속도를 높이는 것 (ex. 이미지)
+- 쿠키와는 비슷하지만 쿠키는 사용자의 인증을 도와주는게 목적
+- 캐시는 사용자가 직접 수동으로 삭제해주어야 하고 쿠키는 만료기간이 있어 시간이 지나면 자동 삭제됨&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;&lt;a href=&quot;https://hoyeonkim795.github.io/posts/%EC%BA%90%EC%8B%9C%EC%BF%A0%ED%82%A4%EC%84%B8%EC%85%98/&quot;&gt;hoyeonkim님 블로그&lt;/a&gt;&lt;/p&gt;</content:encoded></item><item><title><![CDATA[Shop Project _ Next.js 도입 / 라우팅 / 메인페이지 / 스타일 구성]]></title><description><![CDATA[환경설정 기본 요구사항 Node.js : 자바스크립트 런타임  NPM : 패키지 매니저 도구 Yarn : 개선된 버전의 NPM (선택사항)   설치 (Ver. 12.0.1) Next.js 공식 문서 참고 CNA로 next…]]></description><link>https://www.yoojiih.github.io/TIL_20211027/</link><guid isPermaLink="false">https://www.yoojiih.github.io/TIL_20211027/</guid><pubDate>Wed, 27 Oct 2021 04:00:00 GMT</pubDate><content:encoded>&lt;h2 id=&quot;환경설정&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#%ED%99%98%EA%B2%BD%EC%84%A4%EC%A0%95&quot; aria-label=&quot;환경설정 permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;환경설정&lt;/h2&gt;
 &lt;p&gt;기본 요구사항&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;Node.js : 자바스크립트 런타임 &lt;/li&gt;
