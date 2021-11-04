@@ -276,10 +276,18 @@ Next js에서는 index.html의 역할을 pages 디렉토리 밑의 _document.js 
 도메인/classes/2  classes 뒤에 index 고유번호가 따라붙으면 반들 중 해당 인덱스 번호의 반 정보
 도메인/classes/2/students 뒤에 students를 붙여서 보내면 이 반에 해당하는 학생들의 정보
 도메인/classes/2/students/15 뒤에 인덱스를 붙이면 학생들중 번호가 15번인 학생의 정보
-도메인/classes/2/students?sex=male 이런식으로 조건을 붙여서 남학생들의 정보만
+도메인/classes/2/students?sex=male 이런 쿼리 스트링으로 조건을 붙여서 남학생들의 정보만
 도메인/classes/2/students?page=2&amp;count=10 한페이지에 10명씩 받아오는 요청 가능
 이렇게 자원을 구조와 함께 나타내는 이런식의 구분자를 uri이라고 함</code></pre></div>
 </blockquote>
+<ul>
+<li>
+<p>쿼리스트링</p>
+<ul>
+<li>페이지 요청 시 페이지명?a=b와 같은 형식으로 값을 넘겨주는 것 -> 동적 페이지 생성시에도 쓰임</li>
+</ul>
+</li>
+</ul>
 <h1 id="rest-특징" style="position:relative;"><a href="#rest-%ED%8A%B9%EC%A7%95" aria-label="rest 특징 permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>REST 특징</h1>
 <ul>
 <li>Uniform Interface

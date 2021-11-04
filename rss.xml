@@ -1,4 +1,82 @@
-<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Yooji's Blog]]></title><description><![CDATA[줌코딩의 개발일기]]></description><link>https://www.yoojiih.github.io</link><generator>GatsbyJS</generator><lastBuildDate>Thu, 04 Nov 2021 08:42:33 GMT</lastBuildDate><item><title><![CDATA[Shop Project_Shop Project_Login & Logout(Auth) 장바구니]]></title><link>https://www.yoojiih.github.io/TIL_20211103/index./</link><guid isPermaLink="false">https://www.yoojiih.github.io/TIL_20211103/index./</guid><pubDate>Wed, 03 Nov 2021 11:00:00 GMT</pubDate><content:encoded></content:encoded></item><item><title><![CDATA[Shop Project_동적 라우팅]]></title><link>https://www.yoojiih.github.io/TIL_20211102/</link><guid isPermaLink="false">https://www.yoojiih.github.io/TIL_20211102/</guid><pubDate>Tue, 02 Nov 2021 11:00:00 GMT</pubDate><content:encoded></content:encoded></item><item><title><![CDATA[Shop Project_SSG vs SSR (with Method)]]></title><link>https://www.yoojiih.github.io/TIL_20211101/</link><guid isPermaLink="false">https://www.yoojiih.github.io/TIL_20211101/</guid><pubDate>Mon, 01 Nov 2021 11:00:00 GMT</pubDate><content:encoded></content:encoded></item><item><title><![CDATA[Shop Project_Next style comparison]]></title><description><![CDATA[Flex css (참고)  flex는 css에서 레이아웃 표현 기법중 하나임 
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Yooji's Blog]]></title><description><![CDATA[줌코딩의 개발일기]]></description><link>https://www.yoojiih.github.io</link><generator>GatsbyJS</generator><lastBuildDate>Thu, 04 Nov 2021 10:44:37 GMT</lastBuildDate><item><title><![CDATA[Shop Project_Shop Project_Login & Logout(Auth) 장바구니]]></title><link>https://www.yoojiih.github.io/TIL_20211103/index./</link><guid isPermaLink="false">https://www.yoojiih.github.io/TIL_20211103/index./</guid><pubDate>Wed, 03 Nov 2021 11:00:00 GMT</pubDate><content:encoded></content:encoded></item><item><title><![CDATA[Shop Project_동적 라우팅]]></title><description><![CDATA[Next js에서 라우팅 구현 페이지 이동 이동할 페이지를 만들기 위해 pages 디렉토리 내부에 파일 생성 pages/about.js
+pages/blog/slug.js 간단하게 파일 내부 구현 메인 페이지(index.js…]]></description><link>https://www.yoojiih.github.io/TIL_20211102/</link><guid isPermaLink="false">https://www.yoojiih.github.io/TIL_20211102/</guid><pubDate>Tue, 02 Nov 2021 11:00:00 GMT</pubDate><content:encoded>&lt;h1 id=&quot;next-js에서-라우팅-구현&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#next-js%EC%97%90%EC%84%9C-%EB%9D%BC%EC%9A%B0%ED%8C%85-%EA%B5%AC%ED%98%84&quot; aria-label=&quot;next js에서 라우팅 구현 permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;Next js에서 라우팅 구현&lt;/h1&gt;
+&lt;h2 id=&quot;페이지-이동&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#%ED%8E%98%EC%9D%B4%EC%A7%80-%EC%9D%B4%EB%8F%99&quot; aria-label=&quot;페이지 이동 permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;페이지 이동&lt;/h2&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;이동할 페이지를 만들기 위해 pages 디렉토리 내부에 파일 생성&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;pages/about.js
+pages/blog/[slug].js&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;간단하게 파일 내부 구현&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;javascript&quot;&gt;&lt;pre class=&quot;language-javascript&quot;&gt;&lt;code class=&quot;language-javascript&quot;&gt;&lt;span class=&quot;token keyword&quot;&gt;export&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;default&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;function&lt;/span&gt; &lt;span class=&quot;token function&quot;&gt;About&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+&lt;span class=&quot;token keyword&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;
+&lt;span class=&quot;token operator&quot;&gt;&amp;lt;&lt;/span&gt;div&lt;span class=&quot;token operator&quot;&gt;&gt;&lt;/span&gt;
+  &lt;span class=&quot;token operator&quot;&gt;&amp;lt;&lt;/span&gt;p&lt;span class=&quot;token operator&quot;&gt;&gt;&lt;/span&gt;about page&lt;span class=&quot;token operator&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;/&lt;/span&gt;p&lt;span class=&quot;token operator&quot;&gt;&gt;&lt;/span&gt;
+&lt;span class=&quot;token operator&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;/&lt;/span&gt;div&lt;span class=&quot;token operator&quot;&gt;&gt;&lt;/span&gt;
+&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;/li&gt;
+&lt;li&gt;메인 페이지(index.js)에서 페이지 이동을 위해 “next/link”에서 모듈을 불러와서 Link라는 태그를 작성&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;링크 태그 안에 a 태그 넣어주고  Link 태그의 속성에는 href를 넣어서 어디로 이동해야 파일이 있는지 명시&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;라우트가 아닌 외부링크를 사용시에는 Link 사용 x a태그에 주소를 입력.
+className같은 속성을 부여할 일이 있을 경우 Link가 아닌 a 태그에 부여할 것.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;javascript&quot;&gt;&lt;pre class=&quot;language-javascript&quot;&gt;&lt;code class=&quot;language-javascript&quot;&gt;&lt;span class=&quot;token keyword&quot;&gt;import&lt;/span&gt; Link &lt;span class=&quot;token keyword&quot;&gt;from&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&apos;next/link&apos;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;function Home() {
+return (
+&amp;#x3C;&gt;
+&lt;Link href=&quot;/&quot;&gt;
+&lt;a&gt;Home&lt;/a&gt;
+&lt;/Link&gt;
+&lt;Link href=&quot;/about&quot;&gt;
+&lt;a&gt;About Us&lt;/a&gt;
+&lt;/Link&gt;
+&lt;Link href=&quot;/blog/hello-world&quot;&gt;
+&lt;a&gt;Blog Post&lt;/a&gt;
+&lt;/Link&gt;
+&amp;#x3C;/&gt;
+)
+}&lt;/p&gt;
+&lt;p&gt;export default Home&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;# 동적 페이지 생성 (dynamic Routes)
+
+## Dynamic Routes 
+[Nextjs공식문서](https://nextjs.org/docs/routing/dynamic-routes)
+
+사용 예시) 제품 클릭 시 각 id에 해당하는 상세 페이지로 전환
+view/1 이나 view/abc로 들어왔을 때 모두 pages/view/[id].js 페이지로 가는 것 (pages디렉토리 내에 디렉토리 하나 더 생성 후 [id].js 파일을 생성)
+
+1. 누르면 페이지 보내줘야 하니까  import Link from &quot;next/link&quot;;
+2. href는 각 아이템의 id로 가게함 (href로 써주는건 a태그랑 사용법 같음)
+    - 방법 1) 쿼리스트링으로 원하는 정보 넘겨주기 &amp;lt;Link href=&quot;/view/abc?name=${props.name}&quot;&gt;
+    페이지를 요청할 때 페이지명?a=b와 같은 형식으로 값을 넘겨주는 쿼리 스트링으로 동적 페이지 생성
+    - 방법 2) [파일명].js 방식 &amp;lt;Link href=&quot;/view/${props.name}&quot;&gt; 
+    실제 이동할 경로를 의미하며 URL에 어떻게 보일지를 결정. 각 /view/이름 으로 URL창에 나타남
+    [...id]로 정의하게 되면 {id: [1,2,3]} 은 post/1/2/3 링크와 매치가능.
+    /의 개수만큼 폴더를 만들지 않아도 Link에 /를 여러번 사용가능.
+3. next/router에 존재하는 모듈 중 하나인 useRouter Hook 이용해 쿼리에 담긴 문자열을 받음
+4. [id]를 통해서 url 얻어낸 다음에 
+5. const {id} = router.query 
+```javascript
+// pages/view/[id].js
+import { useRouter } from &apos;next/router&apos;;
+
+const Post = () =&gt; {
+    const router = useRouter();
+    const { id } = router.query;
+    return &amp;lt;p&gt;Post: {id}&amp;lt;/p&gt;;
+};
+
+export default Post;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;&lt;a href=&quot;https://nextjs.org/docs/api-reference/next/link&quot;&gt;Nextjs공식문서&lt;/a&gt;
+&lt;a href=&quot;https://velog.io/@jakeseo_me/Next.js-%EB%B9%A8%EB%A6%AC-%EB%B0%B0%EC%9A%B0%EA%B8%B0-y0jz9oebn0#%EC%8B%9C%EC%9E%91%ED%95%98%EA%B8%B0&quot;&gt;jakeseo_me님 블로그&lt;/a&gt;&lt;/p&gt;</content:encoded></item><item><title><![CDATA[Shop Project_SSG vs SSR (with Method)]]></title><link>https://www.yoojiih.github.io/TIL_20211101/</link><guid isPermaLink="false">https://www.yoojiih.github.io/TIL_20211101/</guid><pubDate>Mon, 01 Nov 2021 11:00:00 GMT</pubDate><content:encoded></content:encoded></item><item><title><![CDATA[Shop Project_Next style comparison]]></title><description><![CDATA[Flex css (참고)  flex는 css에서 레이아웃 표현 기법중 하나임 
 예전 css는 한정되고 복잡한 속성들로 레이아웃을 표현해왔었는데 이젠 간단하게 레이아웃을 표현할 수 있는 방법이 많이 생겼다 
 그 중 대표적인게 flex 속성
 flex…]]></description><link>https://www.yoojiih.github.io/TIL_20211031/</link><guid isPermaLink="false">https://www.yoojiih.github.io/TIL_20211031/</guid><pubDate>Sun, 31 Oct 2021 11:00:00 GMT</pubDate><content:encoded>&lt;h2 id=&quot;flex-css-참고&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#flex-css-%EC%B0%B8%EA%B3%A0&quot; aria-label=&quot;flex css 참고 permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;Flex css (참고)&lt;/h2&gt;
@@ -350,10 +428,18 @@ Next js에서는 index.html의 역할을 pages 디렉토리 밑의 _document.js 
 도메인/classes/2  classes 뒤에 index 고유번호가 따라붙으면 반들 중 해당 인덱스 번호의 반 정보
 도메인/classes/2/students 뒤에 students를 붙여서 보내면 이 반에 해당하는 학생들의 정보
 도메인/classes/2/students/15 뒤에 인덱스를 붙이면 학생들중 번호가 15번인 학생의 정보
-도메인/classes/2/students?sex=male 이런식으로 조건을 붙여서 남학생들의 정보만
+도메인/classes/2/students?sex=male 이런 쿼리 스트링으로 조건을 붙여서 남학생들의 정보만
 도메인/classes/2/students?page=2&amp;amp;count=10 한페이지에 10명씩 받아오는 요청 가능
 이렇게 자원을 구조와 함께 나타내는 이런식의 구분자를 uri이라고 함&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 &lt;/blockquote&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;쿼리스트링&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;페이지 요청 시 페이지명?a=b와 같은 형식으로 값을 넘겨주는 것 -&gt; 동적 페이지 생성시에도 쓰임&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
 &lt;h1 id=&quot;rest-특징&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#rest-%ED%8A%B9%EC%A7%95&quot; aria-label=&quot;rest 특징 permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;REST 특징&lt;/h1&gt;
 &lt;ul&gt;
 &lt;li&gt;Uniform Interface
