@@ -226,14 +226,29 @@ pages>product>detail.js -<a href="http://localhost:3000/product/detail">http://l
 <h2 id="스타일-적용-ui-framework" style="position:relative;"><a href="#%EC%8A%A4%ED%83%80%EC%9D%BC-%EC%A0%81%EC%9A%A9-ui-framework" aria-label="스타일 적용 ui framework permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>스타일 적용 (UI Framework)</h2>
 <ul>
 <li>
-<h3 id="semantic-ui-react" style="position:relative;"><a href="#semantic-ui-react" aria-label="semantic ui react permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>semantic UI React</h3>
-<p><a href="https://react.semantic-ui.com/">Semantic UI React 링크 </a> </p>
+<h3 id="tailwind-css-framework" style="position:relative;"><a href="#tailwind-css-framework" aria-label="tailwind css framework permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Tailwind CSS Framework</h3>
 <ol>
-<li>설치
-<code class="language-text">npm install semantic-ui-react semantic-ui-css</code></li>
-<li>적용 (_app.js)
-<code class="language-text">import 'semantic-ui-css/semantic.min.css</code></li>
+<li>패키지 설치
+<code class="language-text">npm install -D tailwindcss@latest postcss@latest autoprefixer@latest</code></li>
+<li>설정 파일 생성 (<code class="language-text">tailwind.config.js</code> 와 <code class="language-text">postcss.config.js</code> 파일 생성시킴)
+<code class="language-text">npx tailwindcss init -p</code></li>
+<li>
+<p>Tailwind를 사용할 모든 페이지와 컴포넌트를 설정
+사용하지 않는 스타일을 프로덕션 빌드에서 트리-세이킹(제거) 해서 빌드 크기를 최적화 가능
+<code class="language-text">tailwind.config.js</code> 파일에 <code class="language-text">purge</code> 옵션 설정</p>
+<p>purge: [], 지우고
+purge: [’./pages/<strong>/*.{js,ts,jsx,tsx}’, ‘./components/</strong>/*.{js,ts,jsx,tsx}’],</p>
+</li>
+<li>Next.js 프로젝트 CSS에 Tailwind 추가
+@tailwind dirctivie 이용해서 Tailwind의 <code class="language-text">base</code>, <code class="language-text">components</code>, <code class="language-text">utilities</code> 스타일 추가</li>
 </ol>
+<div class="gatsby-highlight" data-language="jsx"><pre class="language-jsx"><code class="language-jsx"><span class="token comment">/* ./styles/globals.css */</span> 
+@tailwind base<span class="token punctuation">;</span>
+@tailwind components<span class="token punctuation">;</span>
+@tailwind utilities<span class="token punctuation">;</span></code></pre></div>
+<div class="gatsby-highlight" data-language="jsx"><pre class="language-jsx"><code class="language-jsx"><span class="token comment">// pages/_app.js</span>
+<span class="token keyword">import</span> <span class="token string">'../styles/globals.css'</span>
+<span class="token operator">...</span></code></pre></div>
 </li>
 <li>
 <h3 id="react-icons-heroicons" style="position:relative;"><a href="#react-icons-heroicons" aria-label="react icons heroicons permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>react-icons (Heroicons)</h3>
