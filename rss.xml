@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Yooji's Blog]]></title><description><![CDATA[줌코딩의 개발일기]]></description><link>https://www.yoojiih.github.io</link><generator>GatsbyJS</generator><lastBuildDate>Thu, 04 Nov 2021 15:36:22 GMT</lastBuildDate><item><title><![CDATA[Shop Project_Shop Project_Login & Logout(Auth) 장바구니]]></title><link>https://www.yoojiih.github.io/TIL_20211103/index./</link><guid isPermaLink="false">https://www.yoojiih.github.io/TIL_20211103/index./</guid><pubDate>Wed, 03 Nov 2021 11:00:00 GMT</pubDate><content:encoded></content:encoded></item><item><title><![CDATA[Shop Project_동적 라우팅]]></title><description><![CDATA[Next js에서 라우팅 구현 페이지 이동 이동할 페이지를 만들기 위해 pages 디렉토리 내부에 파일 생성 pages/about.js
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Yooji's Blog]]></title><description><![CDATA[줌코딩의 개발일기]]></description><link>https://www.yoojiih.github.io</link><generator>GatsbyJS</generator><lastBuildDate>Fri, 05 Nov 2021 05:28:22 GMT</lastBuildDate><item><title><![CDATA[Shop Project_Shop Project_Login & Logout(Auth) 장바구니]]></title><description><![CDATA[Reference]]></description><link>https://www.yoojiih.github.io/TIL_20211103/index./</link><guid isPermaLink="false">https://www.yoojiih.github.io/TIL_20211103/index./</guid><pubDate>Wed, 03 Nov 2021 11:00:00 GMT</pubDate><content:encoded>&lt;p&gt;Reference&lt;/p&gt;</content:encoded></item><item><title><![CDATA[Shop Project_동적 라우팅]]></title><description><![CDATA[Next js에서 라우팅 구현 페이지 이동 이동할 페이지를 만들기 위해 pages 디렉토리 내부에 파일 생성 pages/about.js
 pages/blog/slug.js 간단하게 파일 내부 구현 메인 페이지(index.js…]]></description><link>https://www.yoojiih.github.io/TIL_20211102/</link><guid isPermaLink="false">https://www.yoojiih.github.io/TIL_20211102/</guid><pubDate>Tue, 02 Nov 2021 11:00:00 GMT</pubDate><content:encoded>&lt;h1 id=&quot;next-js에서-라우팅-구현&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#next-js%EC%97%90%EC%84%9C-%EB%9D%BC%EC%9A%B0%ED%8C%85-%EA%B5%AC%ED%98%84&quot; aria-label=&quot;next js에서 라우팅 구현 permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;Next js에서 라우팅 구현&lt;/h1&gt;
 &lt;h2 id=&quot;페이지-이동&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#%ED%8E%98%EC%9D%B4%EC%A7%80-%EC%9D%B4%EB%8F%99&quot; aria-label=&quot;페이지 이동 permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;페이지 이동&lt;/h2&gt;
 &lt;ol&gt;
@@ -75,6 +75,7 @@ const Post = () =&gt; {
 };
 
 export default Post;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;Reference&lt;/p&gt;
 &lt;p&gt;&lt;a href=&quot;https://nextjs.org/docs/api-reference/next/link&quot;&gt;Nextjs공식문서&lt;/a&gt;
 &lt;a href=&quot;https://velog.io/@jakeseo_me/Next.js-%EB%B9%A8%EB%A6%AC-%EB%B0%B0%EC%9A%B0%EA%B8%B0-y0jz9oebn0#%EC%8B%9C%EC%9E%91%ED%95%98%EA%B8%B0&quot;&gt;jakeseo_me님 블로그&lt;/a&gt;&lt;/p&gt;</content:encoded></item><item><title><![CDATA[Shop Project_SSG vs SSR (with Method)]]></title><description><![CDATA[next.js는 기본적으로 static generation이 적용되어 있으며 외부데이터(API, DB)등을 포함하여 렌더링해야할 때 ssg ssr을 선택적으로 적용할 수 있다. Nextjs공식문서 Static Generation with data…]]></description><link>https://www.yoojiih.github.io/TIL_20211101/</link><guid isPermaLink="false">https://www.yoojiih.github.io/TIL_20211101/</guid><pubDate>Mon, 01 Nov 2021 11:00:00 GMT</pubDate><content:encoded>&lt;h2 id=&quot;nextjs는-기본적으로-static-generation이-적용되어-있으며-외부데이터api-db등을-포함하여-렌더링해야할-때-ssg-ssr을-선택적으로-적용할-수-있다&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#nextjs%EB%8A%94-%EA%B8%B0%EB%B3%B8%EC%A0%81%EC%9C%BC%EB%A1%9C-static-generation%EC%9D%B4-%EC%A0%81%EC%9A%A9%EB%90%98%EC%96%B4-%EC%9E%88%EC%9C%BC%EB%A9%B0-%EC%99%B8%EB%B6%80%EB%8D%B0%EC%9D%B4%ED%84%B0api-db%EB%93%B1%EC%9D%84-%ED%8F%AC%ED%95%A8%ED%95%98%EC%97%AC-%EB%A0%8C%EB%8D%94%EB%A7%81%ED%95%B4%EC%95%BC%ED%95%A0-%EB%95%8C-ssg-ssr%EC%9D%84-%EC%84%A0%ED%83%9D%EC%A0%81%EC%9C%BC%EB%A1%9C-%EC%A0%81%EC%9A%A9%ED%95%A0-%EC%88%98-%EC%9E%88%EB%8B%A4&quot; aria-label=&quot;nextjs는 기본적으로 static generation이 적용되어 있으며 외부데이터api db등을 포함하여 렌더링해야할 때 ssg ssr을 선택적으로 적용할 수 있다 permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;next.js는 기본적으로 static generation이 적용되어 있으며 외부데이터(API, DB)등을 포함하여 렌더링해야할 때 ssg ssr을 선택적으로 적용할 수 있다.&lt;/h2&gt;
 &lt;p&gt;&lt;a href=&quot;https://nextjs.org/docs/basic-features/pages&quot;&gt;Nextjs공식문서&lt;/a&gt;&lt;/p&gt;
@@ -243,12 +244,240 @@ previewData: setPreviewData로 설정한 preview data를 지닌다.&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
 &lt;/ul&gt;
+&lt;p&gt;Reference&lt;/p&gt;
 &lt;p&gt;&lt;a href=&quot;https://velog.io/@gytlr01/Next.js-%EC%A3%BC%EC%9A%94-%EA%B0%9C%EB%85%90-%EC%A0%95%EB%A6%AC-%EB%B0%8F-%EC%82%AC%EC%9A%A9%EB%B2%95&quot;&gt;Hyosik님 블로그&lt;/a&gt;
 &lt;a href=&quot;https://www.howdy-mj.me/next/next-js-intro/&quot;&gt;MJKim님 블로그&lt;/a&gt;
-&lt;a href=&quot;https://coffeeandcakeandnewjeong.tistory.com/m/97&quot;&gt;newjeong님 블로그&lt;/a&gt;&lt;/p&gt;</content:encoded></item><item><title><![CDATA[Shop Project_Next style comparison]]></title><description><![CDATA[Flex css (참고)  flex는 css에서 레이아웃 표현 기법중 하나임 
-예전 css는 한정되고 복잡한 속성들로 레이아웃을 표현해왔었는데 이젠 간단하게 레이아웃을 표현할 수 있는 방법이 많이 생겼다 
-그 중 대표적인게 flex 속성
-flex…]]></description><link>https://www.yoojiih.github.io/TIL_20211031/</link><guid isPermaLink="false">https://www.yoojiih.github.io/TIL_20211031/</guid><pubDate>Sun, 31 Oct 2021 11:00:00 GMT</pubDate><content:encoded>&lt;h2 id=&quot;flex-css-참고&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#flex-css-%EC%B0%B8%EA%B3%A0&quot; aria-label=&quot;flex css 참고 permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;Flex css (참고)&lt;/h2&gt;
+&lt;a href=&quot;https://coffeeandcakeandnewjeong.tistory.com/m/97&quot;&gt;newjeong님 블로그&lt;/a&gt;&lt;/p&gt;</content:encoded></item><item><title><![CDATA[Shop Project_Next style CSS Framwork comparison]]></title><description><![CDATA[CSS Framework 비교  TailwindCSS “A utility-first CSS framework for rapid UI development”
+이번 블로그에 도입한 Tailwind CSS를 소개하고자 한다
+기존엔 React…]]></description><link>https://www.yoojiih.github.io/TIL_20211031/</link><guid isPermaLink="false">https://www.yoojiih.github.io/TIL_20211031/</guid><pubDate>Sun, 31 Oct 2021 11:00:00 GMT</pubDate><content:encoded>&lt;h1 id=&quot;css-framework-비교&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#css-framework-%EB%B9%84%EA%B5%90&quot; aria-label=&quot;css framework 비교 permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;CSS Framework 비교&lt;/h1&gt;
+&lt;p&gt;&lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 720px; &quot;
+    &gt;
+      &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 47.22222222222222%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAJCAYAAAAywQxIAAAACXBIWXMAABYlAAAWJQFJUiTwAAABa0lEQVQoz11SCW7DMAzL/385YM3aOk583zZHJ+suA4QEWQdNa7HWQkoJpRRijPDeY993pJQwxsA8057+F87wtNO87r/8pbWGiesMrLoiKIFiOCQZCC/YvKBtAsEYxNzR8srBCrVUoLerWc0nlsnkxab3fpEAftmL3SiBBQk9OwwviR3DCWLDCPTt87xfMpvlnM/isyGDIxomMNk8vgt7YiO9ooeDA5jX6s+w8UOEDDNS9OeUMzlZwlxPmKw4BC8to2be8Zf5PyylFJScgMmIbL7PeNmB0gt8i9SOg/2B9vv+T8FsyOfGktFHRs0aiemhZ3jC9QTbIxEYS9jqgaMZuKaxZ4EP/8AjCIgocHPvcMVjqbXCeoubumNVTyj9xFN+QMgH7tvKFRLQh4BTGne54SbeYPaNMQmvd/78hILVni8tWCbZmslC3nFwNZI16FyJEdRpp66dGnfuaHUOSVPfuRWRMlH/C9MPbFTxCXaWvo+itII5AAAAAElFTkSuQmCC&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        alt=&quot;cssbootstrap.png&quot;
+        title=&quot;cssbootstrap.png&quot;
+        src=&quot;/static/e0bd2286ed92e010c7b7058a1db57aa1/37523/cssbootstrap.png&quot;
+        srcset=&quot;/static/e0bd2286ed92e010c7b7058a1db57aa1/e9ff0/cssbootstrap.png 180w,
+/static/e0bd2286ed92e010c7b7058a1db57aa1/f21e7/cssbootstrap.png 360w,
+/static/e0bd2286ed92e010c7b7058a1db57aa1/37523/cssbootstrap.png 720w,
+/static/e0bd2286ed92e010c7b7058a1db57aa1/302a4/cssbootstrap.png 1080w,
+/static/e0bd2286ed92e010c7b7058a1db57aa1/07a9c/cssbootstrap.png 1440w,
+/static/e0bd2286ed92e010c7b7058a1db57aa1/a01dc/cssbootstrap.png 2006w&quot;
+        sizes=&quot;(max-width: 720px) 100vw, 720px&quot;
+        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
+        loading=&quot;lazy&quot;
+      /&gt;
+    &lt;/span&gt;&lt;/p&gt;
+&lt;h1 id=&quot;tailwindcss&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#tailwindcss&quot; aria-label=&quot;tailwindcss permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;TailwindCSS&lt;/h1&gt;
+&lt;blockquote&gt;
+&lt;p&gt;“A utility-first CSS framework for rapid UI development”
+이번 블로그에 도입한 Tailwind CSS를 소개하고자 한다
+기존엔 React와 함께 bootstrap, sementic UI등을 사용해 개발해왔지만
+이번엔 Next js로 개발한 프로젝트이기에 Next js와 가장 호흡이 좋은 CSS Framwork가 어떤 것인지 비교가 필요했음
+수많은 프레임 워크중에서도 GitHub와 Nuxt.js 공식 사이트에서도 사용하고 있는
+Tailwind CSS는 Utility-First 컨셉을 가진 CSS 프레임워크라 m-1, flex와 같이 미리 세팅된 유틸리티 클래스를 활용하는 방식으로
+클래스명을 설정하는 것만으로도 디자인 시스템의 색상이나 간격, 사이즈 등을 빠르게 반영 가능하고 HTML 코드 내에서 스타일링이 가능해 편리하고 빠른 개발을 가능하게 해주기에 Tailwind CSS를 선택하게 되었다&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h1 id=&quot;tailwind-css의-특징&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#tailwind-css%EC%9D%98-%ED%8A%B9%EC%A7%95&quot; aria-label=&quot;tailwind css의 특징 permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;Tailwind CSS의 특징&lt;/h1&gt;
+&lt;h2 id=&quot;utility-first의-편리함과-빠른-개발&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#utility-first%EC%9D%98-%ED%8E%B8%EB%A6%AC%ED%95%A8%EA%B3%BC-%EB%B9%A0%EB%A5%B8-%EA%B0%9C%EB%B0%9C&quot; aria-label=&quot;utility first의 편리함과 빠른 개발 permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;Utility-First의 편리함과 빠른 개발&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;HTML와 CSS 파일을 별도로 관리할 필요 없이 스타일 코드가 HTML 코드 안에 있기 때문에
+파일을 왔다 갔다하며 시간을 쓰거나 화면을 분할해서 사용하지 않아도 된다. &lt;/li&gt;
+&lt;li&gt;게다가 원하는 태그의 스타일을 변경하기 위해 클래스명을 검색해가며 CSS 코드를 찾는 수고 덜어줌&lt;/li&gt;
+&lt;li&gt;Tailwind CSS를 사용하면 랩핑 태그의 클래스명을 사용할 일이 거의 없어 BEM, OOCSS 등의 방법론이 나올 정도의 까다로운 작업인 클래스명을 짓지 않아도 됨&lt;/li&gt;
+&lt;li&gt;직관적으로 속성 값을 알 수 있어서 복잡함은 덜하지만 속성값이 많아지면 가독성은 떨어짐&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Utility-First 방식은 올드하지만 어떻게 구현했는지에 따라 충분히 세련될 수 있음&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;&amp;lt;button class=&quot;py-2 px-4 rounded-lg shadow-md text-white bg-blue-500&quot;&gt;
+Click me
+&amp;lt;/button&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&quot;일관된-디자인&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#%EC%9D%BC%EA%B4%80%EB%90%9C-%EB%94%94%EC%9E%90%EC%9D%B8&quot; aria-label=&quot;일관된 디자인 permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;일관된 디자인&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;모든 곳에서 동일한 색상이나 사이즈, 간격 등의 유틸리티 클래스를 사용하므로 일관된 스타일로 구현하기가 수월하다.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&quot;쉽고-자유로운-커스텀-_-확장-간편함&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#%EC%89%BD%EA%B3%A0-%EC%9E%90%EC%9C%A0%EB%A1%9C%EC%9A%B4-%EC%BB%A4%EC%8A%A4%ED%85%80-_-%ED%99%95%EC%9E%A5-%EA%B0%84%ED%8E%B8%ED%95%A8&quot; aria-label=&quot;쉽고 자유로운 커스텀 _ 확장 간편함 permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;쉽고 자유로운 커스텀 _ 확장 간편함&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;다른 프레임워크들에 비해 기본 스타일 값을 디테일한 부분까지 쉽게 커스텀이 가능해 디자인 일관성을 해치지 않고 &lt;code class=&quot;language-text&quot;&gt;다크 모드&lt;/code&gt; 구현도 간단함 &lt;/li&gt;
+&lt;li&gt;변경 시 값을 바꾸는 방식이기 때문에 충돌위험은 없음&lt;/li&gt;
+&lt;li&gt;모든 스타일 (색상이나 특정 스타일, 변수 등) 커스텀 가능하고 JavaScript 코드도 활용 가능&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;확장 기능 : Variants, Theme, Colors, Spacing, Plugins, Presets&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;특히 Variants theme 속성값 property 지원을 선택적으로 할 수 있어서 편하게 쓸수 있지만 기본 속성이 같이 오는게 아니라 선택한 속성값만 가능&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;javascript&quot;&gt;&lt;pre class=&quot;language-javascript&quot;&gt;&lt;code class=&quot;language-javascript&quot;&gt;&lt;span class=&quot;token comment&quot;&gt;// tailwind.config.js&lt;/span&gt;
+module&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;exports &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+theme&lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+colors&lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+gray&lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt; colors&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;coolGray&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
+blue&lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt; colors&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;lightBlue&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
+red&lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt; colors&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;rose&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
+pink&lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt; colors&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;fuchsia&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
+&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
+fontFamily&lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+sans&lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&quot;Graphik&quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&quot;sans-serif&quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;]&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
+serif&lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&quot;Merriweather&quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&quot;serif&quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;]&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
+&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
+extend&lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+spacing&lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;token string&quot;&gt;&apos;128&apos;&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&apos;32rem&apos;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
+    &lt;span class=&quot;token string&quot;&gt;&apos;144&apos;&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&apos;36rem&apos;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
+&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
+borderRadius&lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;token string&quot;&gt;&apos;4xl&apos;&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&apos;2rem&apos;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
+&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
+&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
+&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
+variants&lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+extend&lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+borderColor&lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&apos;focus-visible&apos;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;]&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
+opacity&lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&apos;disabled&apos;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;]&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
+&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
+&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
+&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&quot;로우-레벨의-스타일-제공-tailwind-css-intellisense-vscode-지원&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#%EB%A1%9C%EC%9A%B0-%EB%A0%88%EB%B2%A8%EC%9D%98-%EC%8A%A4%ED%83%80%EC%9D%BC-%EC%A0%9C%EA%B3%B5-tailwind-css-intellisense-vscode-%EC%A7%80%EC%9B%90&quot; aria-label=&quot;로우 레벨의 스타일 제공 tailwind css intellisense vscode 지원 permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;로우 레벨의 스타일 제공 (Tailwind CSS IntelliSense (vscode 지원))&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;로우 레벨의 스타일을 제공한다는 것은 거의 모든 스타일의 유틸리티 클래스를 학습해야 한다는 것인데
+이 때문에 초반에 처음엔 규칙과 속성에 대한 공식문서를 보면서 개발해야하는 번거로움이 존재하지만 (초반 클래스명 러닝 커브)&lt;/li&gt;
+&lt;li&gt;대부분의 클래스명이 기존 CSS 속성값을 줄임말처럼 사용하며 VScode에서 사용 가능한 자동완성을 지원하는 Intelli Sense 플러그인이 있어서 금방 익숙해짐 (+Autocomplete, lint, 미리보기, Syntax Highlighting 기능 지원)&lt;/li&gt;
+&lt;li&gt;로우 레벨 스타일은 각 CSS 요소 수준의 유틸리티 클래스를 제공하기 때문에 세밀하게 원하는 디자인을 구현할 수 있다는 장점을 가짐&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&quot;javascript-코드와의-분리&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#javascript-%EC%BD%94%EB%93%9C%EC%99%80%EC%9D%98-%EB%B6%84%EB%A6%AC&quot; aria-label=&quot;javascript 코드와의 분리 permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;JavaScript 코드와의 분리&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Tailwind CSS는 JavaScript 코드와 완전히 분리되어 있어 프로젝트 진행 도중 JavaScript 프레임워크를 변경하여도 큰 추가 작업 없이 기존의 HTML 코드를 그대로 쓸 수 있다.&lt;/li&gt;
+&lt;li&gt;JavaScript 코드 사용 불가능 하기 때문에 클래스명을 분기 처리하여 동적으로 스타일링을 설정할 수는 있지만
+styled-components와 같이 JavaScript 변수 값에 따라 가로 길이를 설정하는 등의 구현은 가능하기는 하지만 번거로운 설정이 필요&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&quot;작고-가벼운-사이즈&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#%EC%9E%91%EA%B3%A0-%EA%B0%80%EB%B2%BC%EC%9A%B4-%EC%82%AC%EC%9D%B4%EC%A6%88&quot; aria-label=&quot;작고 가벼운 사이즈 permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;작고 가벼운 사이즈&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;일단 기본적으로 모듈 사이즈가 다른 css frameworks에 비해 작으며, 추가적으로 purge옵션을 통해 사용하지 않는 스타일을 설정해 최종 빌드 크기 최적화 가능&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&quot;브라우저-지원-tailwind-css-v20x-버전-기준&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#%EB%B8%8C%EB%9D%BC%EC%9A%B0%EC%A0%80-%EC%A7%80%EC%9B%90-tailwind-css-v20x-%EB%B2%84%EC%A0%84-%EA%B8%B0%EC%A4%80&quot; aria-label=&quot;브라우저 지원 tailwind css v20x 버전 기준 permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;브라우저 지원 (Tailwind CSS v2.0.x 버전 기준)&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Chrome, Firefox, Edge, Safari 사용이 가능하고, IE 는 지원이 안되기 때문에 autoprefixer 사용해야 함&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h1 id=&quot;next-js에-tailwindcss-적용&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#next-js%EC%97%90-tailwindcss-%EC%A0%81%EC%9A%A9&quot; aria-label=&quot;next js에 tailwindcss 적용 permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;Next js에 TailwindCSS 적용&lt;/h1&gt;
+&lt;ol&gt;
+&lt;li&gt;패키지 설치
+&lt;code class=&quot;language-text&quot;&gt;npm install -D tailwindcss@latest postcss@latest autoprefixer@latest&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;설정 파일 생성 (프로젝트 루트에 &lt;code class=&quot;language-text&quot;&gt;tailwind.config.js&lt;/code&gt; 와 &lt;code class=&quot;language-text&quot;&gt;postcss.config.js&lt;/code&gt; 파일 생성됨)
+&lt;code class=&quot;language-text&quot;&gt;npx tailwindcss init -p&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;Tailwind를 사용할 모든 페이지와 컴포넌트를 설정 &lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;기본 스타일이나 플러그인 등을 설정할 수 있는 파일임
+사용하지 않는 스타일을 프로덕션으로 빌드할 때 트리-세이킹(제거) 해서 빌드 크기를 최적화 가능
+&lt;code class=&quot;language-text&quot;&gt;tailwind.config.js&lt;/code&gt; 파일에 &lt;code class=&quot;language-text&quot;&gt;purge&lt;/code&gt; 옵션 설정: 여기에 설정된 파일에서 사용되지 않는 모든 클래스는 제거됨&lt;/p&gt;
+&lt;p&gt;purge: [], 지우고
+purge: [’./pages/&lt;strong&gt;/*.{js,ts,jsx,tsx}’, ‘./components/&lt;/strong&gt;/*.{js,ts,jsx,tsx}’],&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;extend 객체 안에 넣어주지 않으면 기본 스타일 값이 덮어써지므로 오버라이딩 하지 않게 아래와 같이 extend를 활용함&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;javascript&quot;&gt;&lt;pre class=&quot;language-javascript&quot;&gt;&lt;code class=&quot;language-javascript&quot;&gt;module&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;exports &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+&lt;span class=&quot;token operator&quot;&gt;...&lt;/span&gt;
+theme&lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+&lt;span class=&quot;token operator&quot;&gt;...&lt;/span&gt;
+extend&lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+colors&lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+  primary&lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&apos;#8ffebf&apos;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
+&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
+&lt;span class=&quot;token operator&quot;&gt;...&lt;/span&gt;
+&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
+&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
+variants&lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+extend&lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+borderWidth&lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&apos;hover&apos;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;]&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
+&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
+&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
+&lt;span class=&quot;token operator&quot;&gt;...&lt;/span&gt;
+&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Tailwind CSS v2 부터는 IE를 지원하지 않기 때문에 PostCSS의 autoprefixer 등을 함께 사용해야 한다.&lt;/li&gt;
+&lt;li&gt;npm install tailwindcss@latest postcss@latest autoprefixer@latest&lt;/li&gt;
+&lt;li&gt;PostCSS 플러그인에 Tailwind CSS 추가&lt;/li&gt;
+&lt;li&gt;postcss.config.js 등의 postcss 설정 파일 생성됨&lt;/li&gt;
+&lt;li&gt;Next.js 프로젝트 CSS에 Tailwind 추가
+@tailwind dirctivie 이용해서 Tailwind의 &lt;code class=&quot;language-text&quot;&gt;base&lt;/code&gt;, &lt;code class=&quot;language-text&quot;&gt;components&lt;/code&gt;, &lt;code class=&quot;language-text&quot;&gt;utilities&lt;/code&gt; 스타일 추가&lt;/li&gt;
+&lt;/ol&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;jsx&quot;&gt;&lt;pre class=&quot;language-jsx&quot;&gt;&lt;code class=&quot;language-jsx&quot;&gt;&lt;span class=&quot;token comment&quot;&gt;/* ./styles/globals.css */&lt;/span&gt; 
+@tailwind base&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+@tailwind components&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+@tailwind utilities&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;jsx&quot;&gt;&lt;pre class=&quot;language-jsx&quot;&gt;&lt;code class=&quot;language-jsx&quot;&gt;&lt;span class=&quot;token comment&quot;&gt;// pages/_app.js&lt;/span&gt;
+&lt;span class=&quot;token keyword&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&apos;../styles/globals.css&apos;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;ol start=&quot;5&quot;&gt;
+&lt;li&gt;
+&lt;p&gt;반복되는 스타일 설정하기
+동일한 스타일을 여러 번 사용하게 되는 경우 아래처럼 유틸리티 클래스를 추가로 만들어서 사용 가능&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;jsx&quot;&gt;&lt;pre class=&quot;language-jsx&quot;&gt;&lt;code class=&quot;language-jsx&quot;&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;&amp;lt;&lt;/span&gt;button&lt;/span&gt; &lt;span class=&quot;token attr-name&quot;&gt;class&lt;/span&gt;&lt;span class=&quot;token attr-value&quot;&gt;&lt;span class=&quot;token punctuation attr-equals&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&quot;&lt;/span&gt;btn btn-green mr-4&lt;span class=&quot;token punctuation&quot;&gt;&quot;&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;token plain-text&quot;&gt;Button&lt;/span&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;&amp;lt;/&lt;/span&gt;button&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&gt;&lt;/span&gt;&lt;/span&gt;
+&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;&amp;lt;&lt;/span&gt;button&lt;/span&gt; &lt;span class=&quot;token attr-name&quot;&gt;class&lt;/span&gt;&lt;span class=&quot;token attr-value&quot;&gt;&lt;span class=&quot;token punctuation attr-equals&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&quot;&lt;/span&gt;btn btn-blue&lt;span class=&quot;token punctuation&quot;&gt;&quot;&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;token plain-text&quot;&gt;Button&lt;/span&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;&amp;lt;/&lt;/span&gt;button&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&gt;&lt;/span&gt;&lt;/span&gt;
+​
+&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;&amp;lt;&lt;/span&gt;style&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;token plain-text&quot;&gt;
+.btn {
+@apply py-2 px-4 font-semibold rounded-lg shadow-md;
+}
+.btn-green {
+@apply text-white bg-green-500 hover:bg-green-700;
+}
+.btn-blue {
+@apply text-white bg-blue-500 hover:bg-blue-700;
+}
+&lt;/span&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;&amp;lt;/&lt;/span&gt;style&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;hover 등의 상태 스타일 설정하기&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;jsx&quot;&gt;&lt;pre class=&quot;language-jsx&quot;&gt;&lt;code class=&quot;language-jsx&quot;&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;&amp;lt;&lt;/span&gt;button&lt;/span&gt; &lt;span class=&quot;token attr-name&quot;&gt;class&lt;/span&gt;&lt;span class=&quot;token attr-value&quot;&gt;&lt;span class=&quot;token punctuation attr-equals&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&quot;&lt;/span&gt;bg-red-500 hover:bg-red-700 ...&lt;span class=&quot;token punctuation&quot;&gt;&quot;&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;token plain-text&quot;&gt;Hover me&lt;/span&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;&amp;lt;/&lt;/span&gt;button&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;자식 태그들을 그룹핑하여 부모 태그의 상태값에 따라 반영되도록 설정할 수도 있다.&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;jsx&quot;&gt;&lt;pre class=&quot;language-jsx&quot;&gt;&lt;code class=&quot;language-jsx&quot;&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;&amp;lt;&lt;/span&gt;div&lt;/span&gt; &lt;span class=&quot;token attr-name&quot;&gt;className&lt;/span&gt;&lt;span class=&quot;token attr-value&quot;&gt;&lt;span class=&quot;token punctuation attr-equals&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&quot;&lt;/span&gt;group border-indigo-500 hover:bg-white hover:shadow-lg hover:border-transparent ...&lt;span class=&quot;token punctuation&quot;&gt;&quot;&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;token plain-text&quot;&gt;
+&lt;/span&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;&amp;lt;&lt;/span&gt;p&lt;/span&gt; &lt;span class=&quot;token attr-name&quot;&gt;className&lt;/span&gt;&lt;span class=&quot;token attr-value&quot;&gt;&lt;span class=&quot;token punctuation attr-equals&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&quot;&lt;/span&gt;text-indigo-600 group-hover:text-gray-900 ...&lt;span class=&quot;token punctuation&quot;&gt;&quot;&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;token plain-text&quot;&gt;New Project&lt;/span&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;&amp;lt;/&lt;/span&gt;p&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;token plain-text&quot;&gt;
+&lt;/span&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;&amp;lt;&lt;/span&gt;p&lt;/span&gt; &lt;span class=&quot;token attr-name&quot;&gt;className&lt;/span&gt;&lt;span class=&quot;token attr-value&quot;&gt;&lt;span class=&quot;token punctuation attr-equals&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&quot;&lt;/span&gt;text-indigo-500 group-hover:text-gray-500 ...&lt;span class=&quot;token punctuation&quot;&gt;&quot;&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;token plain-text&quot;&gt;
+Create a new project from a variety of starting templates.
+&lt;/span&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;&amp;lt;/&lt;/span&gt;p&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;token plain-text&quot;&gt;
+&lt;/span&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;&amp;lt;/&lt;/span&gt;div&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;반응형 스타일 설정하기
+mobile First이며 md:XX와 같이 prefix에 설정한 breakpoint 값에 따라 변경된다.&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;javascript&quot;&gt;&lt;pre class=&quot;language-javascript&quot;&gt;&lt;code class=&quot;language-javascript&quot;&gt;&lt;span class=&quot;token operator&quot;&gt;&amp;lt;&lt;/span&gt;div &lt;span class=&quot;token keyword&quot;&gt;class&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&quot;bg-yellow-500 lg:bg-yellow-700 ...&quot;&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;&gt;&lt;/span&gt;Resize Window&lt;span class=&quot;token operator&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;/&lt;/span&gt;div&lt;span class=&quot;token operator&quot;&gt;&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;자식 태그 간격 설정하기
+리스트 등을 구현할 때 각 아이템 사이의 간격을 쉽게 설정할 수 있다.&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;javascript&quot;&gt;&lt;pre class=&quot;language-javascript&quot;&gt;&lt;code class=&quot;language-javascript&quot;&gt;&lt;span class=&quot;token operator&quot;&gt;&amp;lt;&lt;/span&gt;div &lt;span class=&quot;token keyword&quot;&gt;class&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&quot;flex space-x-4&quot;&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;&gt;&lt;/span&gt;
+&lt;span class=&quot;token operator&quot;&gt;&amp;lt;&lt;/span&gt;div v&lt;span class=&quot;token operator&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;token keyword&quot;&gt;for&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&quot;item in items&quot;&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt;key&lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&quot;item&quot;&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;class&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&quot;...&quot;&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;&gt;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt; item &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;/&lt;/span&gt;div&lt;span class=&quot;token operator&quot;&gt;&gt;&lt;/span&gt;
+&lt;span class=&quot;token operator&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;/&lt;/span&gt;div&lt;span class=&quot;token operator&quot;&gt;&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;자식 태그 순서에 따른 스타일 설정
+메뉴 등을 스타일링할 때 마지막 메뉴만 오른쪽 마진을 주지 않는 등의 자식 요소 설정도 쉽다.
+자식 태그 클래스에 hover:와 같이 last: 프리픽스를 사용한다.&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;javascript&quot;&gt;&lt;pre class=&quot;language-javascript&quot;&gt;&lt;code class=&quot;language-javascript&quot;&gt;&lt;span class=&quot;token operator&quot;&gt;&amp;lt;&lt;/span&gt;div &lt;span class=&quot;token keyword&quot;&gt;class&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&quot;...&quot;&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;&gt;&lt;/span&gt;
+&lt;span class=&quot;token operator&quot;&gt;&amp;lt;&lt;/span&gt;div v&lt;span class=&quot;token operator&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;token keyword&quot;&gt;for&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&quot;item in items&quot;&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt;key&lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&quot;item&quot;&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;class&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&quot;transform last:rotate-45 ...&quot;&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;&gt;&lt;/span&gt;
+&lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt; item &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;
+&lt;span class=&quot;token operator&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;/&lt;/span&gt;div&lt;span class=&quot;token operator&quot;&gt;&gt;&lt;/span&gt;
+&lt;span class=&quot;token operator&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;/&lt;/span&gt;div&lt;span class=&quot;token operator&quot;&gt;&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;단, last: 프리픽스는 기본으로 설정되어 있지 않기 때문에  tailwind.config.js 파일에 추가&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;javascript&quot;&gt;&lt;pre class=&quot;language-javascript&quot;&gt;&lt;code class=&quot;language-javascript&quot;&gt;variants&lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+    extend&lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+      rotate&lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&quot;last&quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;]&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
+    &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
+  &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;h1 id=&quot;flex-css-참고&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#flex-css-%EC%B0%B8%EA%B3%A0&quot; aria-label=&quot;flex css 참고 permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;Flex css (참고)&lt;/h1&gt;
 &lt;p&gt;&lt;span
       class=&quot;gatsby-resp-image-wrapper&quot;
       style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 720px; &quot;
@@ -274,7 +503,7 @@ flex…]]></description><link>https://www.yoojiih.github.io/TIL_20211031/</link>
       /&gt;
     &lt;/span&gt;&lt;/p&gt;
 &lt;blockquote&gt;
-&lt;p&gt;flex는 css에서 레이아웃 표현 기법중 하나임
+&lt;p&gt;css에서 레이아웃 표현 기법중 하나
 예전 css는 한정되고 복잡한 속성들로 레이아웃을 표현해왔었는데 이젠 간단하게 레이아웃을 표현할 수 있는 방법이 많이 생겼다
 그 중 대표적인게 flex 속성
 flex는 기본적으로 정렬된 아이템들의 부모 요소에다가 적용하고(가로정렬, 세로정렬등)
@@ -309,7 +538,10 @@ flex-direction: colum-reverse → 아이템들 세로로 정렬 후 반대로 �
         justify-content: space-between;
         align-items: center;
         flex-direction: colum;
-    }&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</content:encoded></item><item><title><![CDATA[Shop Project_TDD_Test jest]]></title><link>https://www.yoojiih.github.io/TIL_20211030/</link><guid isPermaLink="false">https://www.yoojiih.github.io/TIL_20211030/</guid><pubDate>Sat, 30 Oct 2021 11:00:00 GMT</pubDate><content:encoded></content:encoded></item><item><title><![CDATA[Shop Project_Error Page & 환경변수 구분 개발환경 분리]]></title><description><![CDATA[Error Page…]]></description><link>https://www.yoojiih.github.io/TIL_20211029/</link><guid isPermaLink="false">https://www.yoojiih.github.io/TIL_20211029/</guid><pubDate>Fri, 29 Oct 2021 11:00:00 GMT</pubDate><content:encoded>&lt;h1 id=&quot;error-page&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#error-page&quot; aria-label=&quot;error page permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;Error Page&lt;/h1&gt;
+    }&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;Reference
+&lt;a href=&quot;https://blog.songc.io/react/how-to-use-tailwind/&quot;&gt;SONGC님 블로그&lt;/a&gt;
+&lt;a href=&quot;https://wonny.space/writing/dev/hello-tailwind-css&quot;&gt;Wonny님 블로그&lt;/a&gt;&lt;/p&gt;</content:encoded></item><item><title><![CDATA[Shop Project_TDD_Test jest]]></title><description><![CDATA[Reference]]></description><link>https://www.yoojiih.github.io/TIL_20211030/</link><guid isPermaLink="false">https://www.yoojiih.github.io/TIL_20211030/</guid><pubDate>Sat, 30 Oct 2021 11:00:00 GMT</pubDate><content:encoded>&lt;p&gt;Reference&lt;/p&gt;</content:encoded></item><item><title><![CDATA[Shop Project_Error Page & 환경변수 구분 개발환경 분리]]></title><description><![CDATA[Error Page…]]></description><link>https://www.yoojiih.github.io/TIL_20211029/</link><guid isPermaLink="false">https://www.yoojiih.github.io/TIL_20211029/</guid><pubDate>Fri, 29 Oct 2021 11:00:00 GMT</pubDate><content:encoded>&lt;h1 id=&quot;error-page&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#error-page&quot; aria-label=&quot;error page permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;Error Page&lt;/h1&gt;
 &lt;p&gt;에러페이지 구현 이유
 유저가 항상 옳은 경로로 들어온다는 확신도 없고 에러 발생할 경우 유저에게 발생 여부를 알려야 문제 인식 가능함
 사용자 입장에선 뭐가 문제인지 알아야 그에 맞게 빠르게 대처 가능하기 때문에 좋은 UX를 제공 가능&lt;/p&gt;
@@ -688,10 +920,6 @@ POST : Body 부분에 데이터 담아 전송하는 방식, 서버의 값이나 
 &lt;li&gt;4xx : client error&lt;/li&gt;
 &lt;li&gt;5xx : server error&lt;/li&gt;
 &lt;/ul&gt;
-&lt;h3 id=&quot;참조&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#%EC%B0%B8%EC%A1%B0&quot; aria-label=&quot;참조 permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;참조&lt;/h3&gt;
-&lt;p&gt;&lt;a href=&quot;https://gmlwjd9405.github.io/2018/09/21/rest-and-restful.html&quot;&gt;[Network] REST란? REST API란? RESTful이란?&lt;/a&gt;
-&lt;a href=&quot;https://meetup.toast.com/posts/92&quot;&gt;REST API 제대로 알고 사용하기&lt;/a&gt;
-&lt;a href=&quot;https://ijbgo.tistory.com/20&quot;&gt;REST API 란 ?&lt;/a&gt;&lt;/p&gt;
 &lt;h1 id=&quot;axios&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#axios&quot; aria-label=&quot;axios permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;Axios&lt;/h1&gt;
 &lt;ul&gt;
 &lt;li&gt;Axios는 브라우저, Node.js를 위한 Promise API를 활용하는 HTTP 비동기 통신 라이브러리&lt;/li&gt;
@@ -781,7 +1009,6 @@ POST : Body 부분에 데이터 담아 전송하는 방식, 서버의 값이나 
 해당 소스코드 싹 지우고 콘솔로그만 띄워서 정상작동 되는거 확인 후에 다시 소스코드 원래대로 되돌려 보면 정상적으로 api 호출됨
 에러 뜰 때와 안뜰 때의 코드 변화가 전혀 없어서 아직은 원인을 알 수는 없다&lt;/p&gt;
 &lt;/blockquote&gt;
-&lt;p&gt;&lt;a href=&quot;https://kyun2da.dev/%EB%9D%BC%EC%9D%B4%EB%B8%8C%EB%9F%AC%EB%A6%AC/axios-%EA%B0%9C%EB%85%90-%EC%A0%95%EB%A6%AC/&quot;&gt;kyun2da.dev님 블로그&lt;/a&gt;	 &lt;/p&gt;
 &lt;h1 id=&quot;axios-methods&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#axios-methods&quot; aria-label=&quot;axios methods permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;Axios Methods&lt;/h1&gt;
 &lt;ul&gt;
 &lt;li&gt;
@@ -939,7 +1166,12 @@ but, 쿠키는 클라이언트 로컬에 저장되기 때문에 변질되거나 
 - 목적 : 재사용 가능성 or 용량이 큰 리소스를 임시로 저장해 렌더링 속도를 높이는 것 (ex. 이미지)
 - 쿠키와는 비슷하지만 쿠키는 사용자의 인증을 도와주는게 목적
 - 캐시는 사용자가 직접 수동으로 삭제해주어야 하고 쿠키는 만료기간이 있어 시간이 지나면 자동 삭제됨&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;&lt;a href=&quot;https://hoyeonkim795.github.io/posts/%EC%BA%90%EC%8B%9C%EC%BF%A0%ED%82%A4%EC%84%B8%EC%85%98/&quot;&gt;hoyeonkim님 블로그&lt;/a&gt;&lt;/p&gt;</content:encoded></item><item><title><![CDATA[Shop Project _ Next.js 도입 / 라우팅 / 메인페이지 / 스타일 구성]]></title><description><![CDATA[환경설정 기본 요구사항 Node.js : 자바스크립트 런타임  NPM : 패키지 매니저 도구 Yarn : 개선된 버전의 NPM (선택사항)   설치 (Ver. 12.0.1) Next.js 공식 문서 참고 CNA로 next…]]></description><link>https://www.yoojiih.github.io/TIL_20211027/</link><guid isPermaLink="false">https://www.yoojiih.github.io/TIL_20211027/</guid><pubDate>Wed, 27 Oct 2021 04:00:00 GMT</pubDate><content:encoded>&lt;h2 id=&quot;환경설정&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#%ED%99%98%EA%B2%BD%EC%84%A4%EC%A0%95&quot; aria-label=&quot;환경설정 permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;환경설정&lt;/h2&gt;
+&lt;p&gt;Reference&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;https://gmlwjd9405.github.io/2018/09/21/rest-and-restful.html&quot;&gt;[Network] REST란? REST API란? RESTful이란?&lt;/a&gt;
+&lt;a href=&quot;https://meetup.toast.com/posts/92&quot;&gt;REST API 제대로 알고 사용하기&lt;/a&gt;
+&lt;a href=&quot;https://ijbgo.tistory.com/20&quot;&gt;REST API 란 ?&lt;/a&gt;
+&lt;a href=&quot;https://kyun2da.dev/%EB%9D%BC%EC%9D%B4%EB%B8%8C%EB%9F%AC%EB%A6%AC/axios-%EA%B0%9C%EB%85%90-%EC%A0%95%EB%A6%AC/&quot;&gt;kyun2da.dev님 블로그&lt;/a&gt;
+&lt;a href=&quot;https://hoyeonkim795.github.io/posts/%EC%BA%90%EC%8B%9C%EC%BF%A0%ED%82%A4%EC%84%B8%EC%85%98/&quot;&gt;hoyeonkim님 블로그&lt;/a&gt;&lt;/p&gt;</content:encoded></item><item><title><![CDATA[Shop Project _ Next.js 도입 / 라우팅 / 메인페이지 / 스타일 구성]]></title><description><![CDATA[환경설정 기본 요구사항 Node.js : 자바스크립트 런타임  NPM : 패키지 매니저 도구 Yarn : 개선된 버전의 NPM (선택사항)   설치 (Ver. 12.0.1) Next.js 공식 문서 참고 CNA로 next…]]></description><link>https://www.yoojiih.github.io/TIL_20211027/</link><guid isPermaLink="false">https://www.yoojiih.github.io/TIL_20211027/</guid><pubDate>Wed, 27 Oct 2021 04:00:00 GMT</pubDate><content:encoded>&lt;h2 id=&quot;환경설정&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#%ED%99%98%EA%B2%BD%EC%84%A4%EC%A0%95&quot; aria-label=&quot;환경설정 permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;환경설정&lt;/h2&gt;
 &lt;p&gt;기본 요구사항&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;Node.js : 자바스크립트 런타임 &lt;/li&gt;
@@ -1106,8 +1338,8 @@ SearchIcon&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
 &lt;/ol&gt;
 &lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;참고
-&lt;a href=&quot;https://www.howdy-mj.me/next/next-js-intro/&quot;&gt;MJ Kim님 블로그&lt;/a&gt;&lt;/p&gt;</content:encoded></item><item><title><![CDATA[Shop Project]]></title><description><![CDATA[Project명 (무제) _ 개인 프로젝트 목표 Frontend 기술 스택 학습에 집중하되 
+&lt;p&gt;Reference&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;https://www.howdy-mj.me/next/next-js-intro/&quot;&gt;MJ Kim님 블로그&lt;/a&gt;&lt;/p&gt;</content:encoded></item><item><title><![CDATA[Shop Project]]></title><description><![CDATA[Project명 (무제) _ 개인 프로젝트 목표 Frontend 기술 스택 학습에 집중하되 
 실제로 사용자들이 사용한다는 가정하에 UI / UX 고려 및 사용자들의 유입을 위한 검색 엔진 최적화(SEO…]]></description><link>https://www.yoojiih.github.io/TIL_ShopProject/</link><guid isPermaLink="false">https://www.yoojiih.github.io/TIL_ShopProject/</guid><pubDate>Tue, 26 Oct 2021 06:00:00 GMT</pubDate><content:encoded>&lt;h1 id=&quot;project명-무제-_-개인-프로젝트&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#project%EB%AA%85-%EB%AC%B4%EC%A0%9C-_-%EA%B0%9C%EC%9D%B8-%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8&quot; aria-label=&quot;project명 무제 _ 개인 프로젝트 permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;Project명 (무제) _ 개인 프로젝트&lt;/h1&gt;
 &lt;ul&gt;
 &lt;li&gt;
@@ -1318,7 +1550,7 @@ ex) 마케팅페이지, 제품 리스트&lt;/li&gt;
 &lt;li&gt;그러한 요구를 충족시켜주는게 바로 Next.js (SSG, SSR, CSR 혼합방식)&lt;/li&gt;
 &lt;li&gt;Next.js는 CRA보다 더욱 추상화 되고 간단해 React로 개발할 때 SSR을 매우 편하게 해주는 프레임워크라 SSR을 직접 구축함으로써 발생하는 유지보수측면과 여러가지 이슈들을 해결 가능하고 게다가 더 빠르게 페이지를 불러오기 위해 코드 스프릿도 지원하기 때문에 이번 프로젝트에 적합하다는 판단하에 도입하게 되었다.&lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;참고자료&lt;/p&gt;
+&lt;p&gt;Reference&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;a href=&quot;https://geonlee.tistory.com/229&quot;&gt;빠리의 택시 운전사님 블로그&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&quot;https://chaeyoung2.tistory.com/42&quot;&gt;공부하는 공작새님 블로그&lt;/a&gt;&lt;/li&gt;
