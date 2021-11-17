@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Yooji's Blog]]></title><description><![CDATA[줌코딩의 개발일기]]></description><link>https://www.yoojiih.github.io</link><generator>GatsbyJS</generator><lastBuildDate>Wed, 17 Nov 2021 06:10:29 GMT</lastBuildDate><item><title><![CDATA[Shop Project_Next js에서 Redux사용해 인증(로그인, 회원가입)]]></title><description><![CDATA[Testing 테스트의 종류 및 Jest…]]></description><link>https://www.yoojiih.github.io/TIl_20211110/</link><guid isPermaLink="false">https://www.yoojiih.github.io/TIl_20211110/</guid><pubDate>Wed, 10 Nov 2021 11:00:00 GMT</pubDate><content:encoded>&lt;p&gt; [Testing] 테스트의 종류 및 Jest&lt;/p&gt;
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Yooji's Blog]]></title><description><![CDATA[줌코딩의 개발일기]]></description><link>https://www.yoojiih.github.io</link><generator>GatsbyJS</generator><lastBuildDate>Wed, 17 Nov 2021 06:51:13 GMT</lastBuildDate><item><title><![CDATA[Shop Project_Next js에서 Redux사용해 인증(로그인, 회원가입)]]></title><description><![CDATA[Testing 테스트의 종류 및 Jest…]]></description><link>https://www.yoojiih.github.io/TIl_20211110/</link><guid isPermaLink="false">https://www.yoojiih.github.io/TIl_20211110/</guid><pubDate>Wed, 10 Nov 2021 11:00:00 GMT</pubDate><content:encoded>&lt;p&gt; [Testing] 테스트의 종류 및 Jest&lt;/p&gt;
 &lt;p&gt;유닛 테스트, 통합 테스트, 기능 테스트
 유닛 테스트 : 코드가 제대로 작동하는지 확인하기 위해 애플리케이션의 개별 모듈을 독립적으로 테스트(종속성과의 상호 작용없이)하는 것을 의미합니다.
 통합 테스트 : 다른 모듈이 그룹으로 결합될 때 잘 작동하는지 확인하는 것을 의미합니다.
@@ -650,276 +650,61 @@ export function* postsSaga() {
 &lt;p&gt;이제 &lt;code class=&quot;language-text&quot;&gt;GO_TO_HOME&lt;/code&gt; 액션이 디스패치되면 / 경로로 이동 될 것입니다.&lt;/p&gt;
 &lt;p&gt;이번 튜토리얼에선 리덕스 미들웨어를 다루는 방법에 대해서 알아보았습니다. redux-thunk와 redux-saga의 기본적인 사용법을 알아보았으며, 만약 프로미스를 처리를 하게 될 때에는 어떻게 하면 코드를 깔끔하게 작성 할 수 있는지도 배워보았습니다.&lt;/p&gt;
 &lt;p&gt;앞으로 여러분들이 프로젝트를 개발 할 때, 무조건 리덕스 + 리덕스 미들웨어를 사용할 필요는 없습니다. 하지만, 프로젝트의 규모가 커졌을 때, 상태를 전역적으로 사용해야 할 때, 비동기 작업을 자주 하게 될 때 리덕스와 리덕스 미들웨어를 잘 활용하시면 프로젝트를 관리 할 때 큰 도움을 줍니다.
-Reference&lt;/p&gt;</content:encoded></item><item><title><![CDATA[Shop Project_성능 최적화]]></title><description><![CDATA[성능 최적화시 기능구현 후 성능향상 & 유지관리  리액트에서 컴포넌트의 로딩속도 등을 향상시킬 수 있는 방법   1.익명함수/object 사용 자제 함수나 오브젝트는 변수에 담아쓰는게 좋음 class로 만든 컴포넌트는 class…]]></description><link>https://www.yoojiih.github.io/TIl_20211109/</link><guid isPermaLink="false">https://www.yoojiih.github.io/TIl_20211109/</guid><pubDate>Tue, 09 Nov 2021 11:00:00 GMT</pubDate><content:encoded>&lt;ul&gt;
-&lt;li&gt;
-&lt;p&gt;성능 최적화시&lt;/p&gt;
-&lt;p&gt;기능구현 후 성능향상 &amp;#x26; 유지관리&lt;/p&gt;
-&lt;p&gt;[ 리액트에서 컴포넌트의 로딩속도 등을 향상시킬 수 있는 방법 ] &lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;
-&lt;p&gt;1.익명함수/object 사용 자제&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;함수나 오브젝트는 변수에 담아쓰는게 좋음&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;class로 만든 컴포넌트는 class 안에 함수 집어넣는 공간에 저장&lt;/p&gt;
-&lt;p&gt;메모리공간을 아끼는 JS 관습 (리액트 개념 X)&lt;/p&gt;
-&lt;p&gt;컴포넌트 재렌더링 시 이름없는(변수에 저장안된) object, function 자료형 → 매번 새로운 메모리 영역을 할당해줘야하기 때문에 컴퓨터 바빠짐&lt;/p&gt;
-&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;var 스타일 = {color : &apos;red&apos;};
+Reference&lt;/p&gt;</content:encoded></item><item><title><![CDATA[Shop Project_성능 최적화]]></title><description><![CDATA[기능구현 후 성능향상 & 유지관리  컴포넌트 로딩속도 등을 향상시킴   1.익명함수/object…]]></description><link>https://www.yoojiih.github.io/TIl_20211109/</link><guid isPermaLink="false">https://www.yoojiih.github.io/TIl_20211109/</guid><pubDate>Tue, 09 Nov 2021 11:00:00 GMT</pubDate><content:encoded>&lt;h1 id=&quot;기능구현-후-성능향상--유지관리&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#%EA%B8%B0%EB%8A%A5%EA%B5%AC%ED%98%84-%ED%9B%84-%EC%84%B1%EB%8A%A5%ED%96%A5%EC%83%81--%EC%9C%A0%EC%A7%80%EA%B4%80%EB%A6%AC&quot; aria-label=&quot;기능구현 후 성능향상  유지관리 permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;기능구현 후 성능향상 &amp;#x26; 유지관리&lt;/h1&gt;
+&lt;p&gt;[ 컴포넌트 로딩속도 등을 향상시킴 ] &lt;/p&gt;
+&lt;h2 id=&quot;1익명함수object-사용-자제&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#1%EC%9D%B5%EB%AA%85%ED%95%A8%EC%88%98object-%EC%82%AC%EC%9A%A9-%EC%9E%90%EC%A0%9C&quot; aria-label=&quot;1익명함수object 사용 자제 permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;1.익명함수/object 사용 자제&lt;/h2&gt;
+&lt;p&gt;함수나 오브젝트는 변수에 담아쓰는게 좋음. 콜백하마수나 오브젝트 형식이 아닌 컴포넌트 바깥에 있는 변수에 저장해서 불러 씀
+-&gt; 메모리공간을 아끼는 JS 관습
+컴포넌트 재렌더링 시 이름없는(변수에 저장안된) object, function 자료형 → 매번 새로운 메모리 영역을 할당해줘야하기 때문에 컴퓨터 바빠짐&lt;/p&gt;
+&lt;h2 id=&quot;2레이아웃에-애니메이션-사용-자제&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#2%EB%A0%88%EC%9D%B4%EC%95%84%EC%9B%83%EC%97%90-%EC%95%A0%EB%8B%88%EB%A9%94%EC%9D%B4%EC%85%98-%EC%82%AC%EC%9A%A9-%EC%9E%90%EC%A0%9C&quot; aria-label=&quot;2레이아웃에 애니메이션 사용 자제 permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;2.레이아웃에 애니메이션 사용 자제&lt;/h2&gt;
+&lt;p&gt;애니메이션 넣을 때 성능에 지장 없이 만들려면 자바스크립트, transition을 이용한 레이아웃 변경 애니메이션은 브라우저 입장에서는 큰 부담이니 사용 자제
+(레이아웃: width, margin, padding, left right top bottom 등)&lt;br&gt;
+transform, opacity 같은 CSS 속성(transform은 사이즈 변경, 좌표이동, 회전 전부 가능한 속성)을 이용해 성능 지장 없게 만들어야함.&lt;/p&gt;
+&lt;h2 id=&quot;3-컴포넌트-lazy-loading-하기&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#3-%EC%BB%B4%ED%8F%AC%EB%84%8C%ED%8A%B8-lazy-loading-%ED%95%98%EA%B8%B0&quot; aria-label=&quot;3 컴포넌트 lazy loading 하기 permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;3. 컴포넌트 lazy loading 하기&lt;/h2&gt;
+&lt;p&gt;보통 App.js 라는 메인페이지 방문시 많은 컴포넌트 파일을 import 해오기 때문에 사이트 초기 접속속도가 굉장히 느려짐 (웹앱 사이트들의 특징)
+첫 페이지 방문시 import를 바로 해올 필요없는 컴포넌트는 필요해질 때 import 해달라고 할 수 있음&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;import React, {useState, useContext, lazy, Suspense} from &apos;react&apos;;
+const Detail = lazy( ()=&gt;{ return import(&apos;./Detail.js&apos;) } );
 
-function Cart(){
-  return (
-
-		//이렇게 이름없는 콜백 함수나 오브젝트 X
-		&amp;lt;div style={ {color : &apos;red&apos;} } &gt;&amp;lt;/div&gt;
-		
-		//컴포넌트 바깥에 있는 변수에 저장해 씀 (함수도 마찬가지)
-    &amp;lt;div style={ 스타일 } &gt;&amp;lt;/div&gt;
-  )
-}&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;2.레이아웃에 애니메이션 사용 자제&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;2. 애니메이션 넣을 때 성능에 지장 없이 만들려면 (&lt;/strong&gt;전반적인 CSS 코딩 팁)&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;레이아웃 변경 애니메이션은 좋지않음 (&lt;/strong&gt;레이아웃: width, margin, padding, left right top bottom 등)   → CSS 렌더링 단계 참고! 자바스크립트, transition을 이용해 레이아웃을 변경시키는건 브라우저 입장에서 큰 부담&lt;/p&gt;
-&lt;p&gt;transform, opacity 같은 CSS 속성을 이용 (transform은 사이즈 변경, 좌표이동, 회전 전부 가능한 속성) 을 이용해 성능 지장 없게 만들어야함.&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;ol start=&quot;3&quot;&gt;
-&lt;li&gt;컴포넌트 lazy loading 하기&lt;/li&gt;
-&lt;/ol&gt;
-&lt;p&gt;&lt;strong&gt;컴포넌트 import 시 lazy 하게&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;App.js 라는 메인페이지 방문시 많은 컴포넌트 파일을 import 해오는데 그러면 사이트 초기 접속속도가 굉장히 느려짐! 웹앱 사이트들의 특징임&lt;/p&gt;
-&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;(App.js 상단)
-
-import React, {useState, useContext} from &apos;react&apos;;
-import Detail from &apos;./Detail.js&apos;;
-import Cart from &apos;./Cart.js&apos;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;첫 페이지 방문시 import를 바로 해올 필요없는 Detail, Cart 같은 컴포넌트는 &lt;strong&gt;필요해질 때 import 해달라고 할 수 있음.&lt;/strong&gt;&lt;/p&gt;
-&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;(App.js 상단)
-
-import React, {useState, useContext, lazy, Suspense} from &apos;react&apos;;
-let Detail = lazy( ()=&gt;{ return import(&apos;./Detail.js&apos;) } );
-
-(App.js 중단에 Detail 컴포넌트 쓰는 곳)
 render (
-  &amp;lt;Suspense fallback={ &amp;lt;div&gt;로딩중입니다~!&amp;lt;/div&gt; }&gt;
+  &amp;lt;Suspense fallback={ &amp;lt;div&gt;로딩중&amp;lt;/div&gt; }&gt;
     &amp;lt;Detail/&gt;
   &amp;lt;/Suspense&gt;
 )&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;blockquote&gt;
 &lt;ol&gt;
 &lt;li&gt;react 라이브러리에서 lazy, Suspense를 import &lt;/li&gt;
 &lt;li&gt;import Detail 대신 lazy 함수를 이용&lt;/li&gt;
 &lt;li&gt;&lt;Suspense&gt; 컴포넌트로 &lt;Detail&gt;을 감싸줌&lt;/li&gt;
 &lt;li&gt;&lt;Detail&gt; 컴포넌트가 필요해질 때 import Detail &lt;/li&gt;
-&lt;li&gt;&lt;Suspense&gt;의 fallback 속성을 이용해 &lt;Detail&gt; 컴포넌트 로딩 전까지 띄울 HTML 안내문 적을 수 있음. &lt;div&gt;대신 회전하는 이미지 등을 컴포넌트로 만들어 넣어도 됨.&lt;/li&gt;
+&lt;li&gt;&lt;Suspense&gt;의 fallback 속성을 이용해 &lt;Detail&gt; 컴포넌트 로딩 전까지 띄울 HTML 안내문 적을 수 있음&lt;/li&gt;
 &lt;/ol&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;ol start=&quot;4&quot;&gt;
-&lt;li&gt;&lt;strong&gt;React Dev Tools 리액트 개발자 도구 크롬 확장프로그램&lt;/strong&gt;&lt;/li&gt;
-&lt;/ol&gt;
-&lt;p&gt;크롬으로 구글에 react dev tools 검색해 설치시 크롬브라우저에서 &lt;strong&gt;우클릭 - 검사&lt;/strong&gt; 누르면 리액트 관련 탭 생김&lt;/p&gt;
-&lt;p&gt;컴포넌트를 적게, 코드를 깔끔하고 예쁘게 짜면 이런 과정 불필요…&lt;/p&gt;
-&lt;p&gt;Components탭&lt;/p&gt;
-&lt;p&gt;→ 현재 페이지에 사용된 모든 컴포넌트들을 쭉 나열해 보여줌&lt;/p&gt;
-&lt;p&gt;컴포넌트를 클릭시 사용중인 props, state, hook 표시해주기 때문에 &lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h2 id=&quot;4-react-dev-tools-리액트-개발자-도구-크롬-확장프로그램&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#4-react-dev-tools-%EB%A6%AC%EC%95%A1%ED%8A%B8-%EA%B0%9C%EB%B0%9C%EC%9E%90-%EB%8F%84%EA%B5%AC-%ED%81%AC%EB%A1%AC-%ED%99%95%EC%9E%A5%ED%94%84%EB%A1%9C%EA%B7%B8%EB%9E%A8&quot; aria-label=&quot;4 react dev tools 리액트 개발자 도구 크롬 확장프로그램 permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;4. React Dev Tools 리액트 개발자 도구 크롬 확장프로그램&lt;/h2&gt;
+&lt;p&gt;크롬으로 구글에 react dev tools 검색해 설치시 크롬브라우저에서 우클릭 -&gt; 검사 누르면 리액트 관련 탭 생김
+Components탭
+→ 현재 페이지에 사용된 모든 컴포넌트들을 쭉 나열해 보여줌
+컴포넌트를 클릭시 사용중인 props, state, hook 표시해주기 때문에 &lt;/p&gt;
 &lt;ul&gt;
-&lt;li&gt;props가 잘 전해졌는지&lt;/li&gt;
-&lt;li&gt;state가 잘 변하고 있는지 확인&lt;/li&gt;
+&lt;li&gt;props가 잘 전해졌는지, state가 잘 변하고 있는지 확인&lt;/li&gt;
 &lt;li&gt;실시간 state, props 수정해보는것 가능&lt;/li&gt;
 &lt;li&gt;시계모양 버튼 → 해당 컴포넌트 렌더링을 잠깐 정지&lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;Profiler탭 &lt;/p&gt;
-&lt;p&gt;→ 맨 왼쪽 녹화 버튼(파란점) 을 눌러서 컴포넌트 렌더링 속도를 측정 가능&lt;/p&gt;
-&lt;ol&gt;
-&lt;li&gt;버튼 누르고 2. 사이트 탐색하고 3. 버튼 다시 누르면 녹화 끝&lt;/li&gt;
-&lt;/ol&gt;
-&lt;p&gt;렌더링된 컴포넌트 다 기록되어 있음&lt;/p&gt;
+&lt;p&gt;Profiler탭
+→ 맨 왼쪽 녹화 버튼(파란점)을 눌러서 컴포넌트 렌더링 속도를 측정 가능
+버튼 누르고 사이트 탐색하고 버튼 다시 누르면 녹화가 완료되며 렌더링된 컴포넌트 다 기록되어 있음&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;어떤 컴포넌트가 렌더링 시간이 젤 오래걸리는지&lt;/li&gt;
 &lt;li&gt;쓸데없이 재렌더링 자주되는 컴포넌트가 있는지&lt;/li&gt;
 &lt;li&gt;렌더링 필요없는 컴포넌트가 있는지 찾아낼 수 있음&lt;/li&gt;
 &lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;ol start=&quot;5&quot;&gt;
-&lt;li&gt;memo&lt;/li&gt;
-&lt;/ol&gt;
-&lt;p&gt;리액트 앱은 컴포넌트는 컴포넌트와 관련된 state 혹은 props가 변경되면 항상 자동 재렌더링 됨 → 사이트 구동 속도가 저하&lt;/p&gt;
-&lt;p&gt;특히 컴포넌트안에 컴포넌트가 여러개 있을 때,&lt;/p&gt;
-&lt;p&gt;Parent(부모 컴포넌트)를 구성하는 state나 props가 변경되면 그것과 관련된 모든 컴포넌트(props를 전송받고있는 자식 컴포넌트)를 전부 자동 재렌더링 시킴&lt;/p&gt;
-&lt;p&gt;props 변동사항이 없는 가만히 있던 자식 컴포넌트들도&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;재렌더링이 비효율적인 경우!&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;아무 js 파일에 &lt;strong&gt;컴포넌트 3개 생성해 예를 들어봄&lt;/strong&gt; &lt;/p&gt;
-&lt;ol&gt;
-&lt;li&gt;function Cart 에다가 &lt;Parent/&gt; 컴포넌트 집어 넣음 → 미리보기 가능해짐 &lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;컴포넌트가 로드/재렌더링 시 useEffect로 콘솔창에 짧은 단어를 출력&lt;/p&gt;
-&lt;p&gt;(useEffect 사용 시 상단에 import)&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;Cart 안에 있던 &lt;strong&gt;존박, 20&lt;/strong&gt; 데이터를 &lt;strong&gt;Child1/Child2&lt;/strong&gt; 까지 props를 각각 child1에겐 존박을 child2에겐 20을 전달하려면 &lt;/li&gt;
-&lt;/ol&gt;
-&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;function Cart(){
-  return (
-    &amp;lt;Parent 이름=&quot;존박&quot; 나이=&quot;20&quot;/&gt;
-  )
-}
-
-function Parent(props){
-  return (
-    &amp;lt;div&gt;
-      &amp;lt;Child1 이름={props.존박} /&gt;
-      &amp;lt;Child2 나이={props.나이} /&gt;
-    &amp;lt;/div&gt;
-  )
-}
-
-function Child1(){
-  useEffect( ()=&gt;{ console.log(&apos;렌더링됨1&apos;) } );
-  return &amp;lt;div&gt;1111&amp;lt;/div&gt;
-}
-function Child2(){
-  useEffect( ()=&gt;{ console.log(&apos;렌더링됨2&apos;) } );
-  return &amp;lt;div&gt;2222&amp;lt;/div&gt;
-}&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;&lt;strong&gt;&amp;#x3C;Parent 이름=“존박”&gt;&lt;/strong&gt; 여기 전송하고 있는 props를 존박1로 변경시 &lt;/p&gt;
-&lt;p&gt;( 리액트 개발자도구의 Components 탭에서&lt;parent&gt; 클릭하면 props 이름: 을 존박 1로 수정가능 )&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;&lt;Child1&gt;과 존박이랑 아무상관없는&lt;Child2&gt; 이 두개의 컴포넌트가 재렌더링됨.&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;렌더링 될 때마다 콘솔창에 출력하라고 useEffect() 작성했기 때문에 콘솔창에 렌더링됨 1 2 1 2 번갈아 나옴&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;memo()함수로 컴포넌트 불필요한 재렌더링 막기&lt;/strong&gt;&lt;/p&gt;
-&lt;ol&gt;
-&lt;li&gt;‘react’ 라이브러리로부터 memo import &lt;/li&gt;
-&lt;/ol&gt;
-&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;import React, {useEffect, memo} from &apos;react&apos;;
-
-function Cart(){
- ....
-}
-
-function Parent(props){
-  ....
-}
-function Child1(){
-  ....
-}
-let Child2 = memo(function(){
-  useEffect( ()=&gt;{ console.log(&apos;렌더링됨2&apos;) } );
-  return &amp;lt;div&gt;2222&amp;lt;/div&gt;
-})&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;ol start=&quot;2&quot;&gt;
-&lt;li&gt;Child2라는 원하는 컴포넌트를 memo로 감싸면 관련있는 props가 변경이 될때만 제렌더링&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;자바스크립트 함수만드는 두가지 방법 중 let 으로 만들어야 memo로 감쌀 수 있음&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;function 함수(){ }&lt;/li&gt;
-&lt;li&gt;let 함수 = function() { }&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ol&gt;
-&lt;p&gt;컴포넌트가 너무 크거나 해서 잦은 재렌더링이 부담스러울 때 쓰는 방법&lt;/p&gt;
-&lt;p&gt;memo로 감싼 컴포넌트는 기존 props와 바뀐 props를 비교하는 연산이 추가로 진행되어&lt;/p&gt;
-&lt;p&gt;props가 크고 복잡하면 이거 자체로도 부담이 &lt;/p&gt;
-&lt;p&gt;작은 사이트를 만들거나 컴포넌트 내부에 있는 HTML 양이 매우 적을 경우엔 사용 X&lt;/p&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;Reference&lt;/p&gt;</content:encoded></item><item><title><![CDATA[Shop Project_Next js 지도 API]]></title><description><![CDATA[Reference]]></description><link>https://www.yoojiih.github.io/TIl_20211108/</link><guid isPermaLink="false">https://www.yoojiih.github.io/TIl_20211108/</guid><pubDate>Sat, 06 Nov 2021 11:00:00 GMT</pubDate><content:encoded>&lt;p&gt;Reference&lt;/p&gt;</content:encoded></item><item><title><![CDATA[Shop Project_Next js에서 Redux사용해 인증(로그인, 회원가입)]]></title><description><![CDATA[Reference]]></description><link>https://www.yoojiih.github.io/TIl_20211106/</link><guid isPermaLink="false">https://www.yoojiih.github.io/TIl_20211106/</guid><pubDate>Sat, 06 Nov 2021 11:00:00 GMT</pubDate><content:encoded>&lt;p&gt;Reference&lt;/p&gt;</content:encoded></item><item><title><![CDATA[Shop Project_Next js 장바구니 구현]]></title><description><![CDATA[장바구니 데이터를 조작할 수 있는 reducer 생성과정 이미 있는 상품을 장바구니 추가 누르면 수량만 1증가 O 항목추가 X ‘항목추가’라는 dispatch요청할 때 문제가 있는거니까 reducer…]]></description><link>https://www.yoojiih.github.io/TIl_20211107/</link><guid isPermaLink="false">https://www.yoojiih.github.io/TIl_20211107/</guid><pubDate>Sat, 06 Nov 2021 11:00:00 GMT</pubDate><content:encoded>&lt;h2 id=&quot;장바구니-데이터를-조작할-수-있는-reducer-생성과정&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#%EC%9E%A5%EB%B0%94%EA%B5%AC%EB%8B%88-%EB%8D%B0%EC%9D%B4%ED%84%B0%EB%A5%BC-%EC%A1%B0%EC%9E%91%ED%95%A0-%EC%88%98-%EC%9E%88%EB%8A%94-reducer-%EC%83%9D%EC%84%B1%EA%B3%BC%EC%A0%95&quot; aria-label=&quot;장바구니 데이터를 조작할 수 있는 reducer 생성과정 permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;장바구니 데이터를 조작할 수 있는 reducer 생성과정&lt;/h2&gt;
-&lt;ul&gt;
-&lt;li&gt;이미 있는 상품을 장바구니 추가 누르면 수량만 1증가 O 항목추가 X&lt;/li&gt;
-&lt;li&gt;‘항목추가’라는 dispatch요청할 때 문제가 있는거니까 reducer에서 데이터 수정방법을 손봐주면 됨&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;주문하기 버튼 누르면 누를 때 마다 찾은상품.id / 찾은상품.name이라는 실제 페이지내의 상품데이터가 redux store에 저장됨&lt;/p&gt;
-&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;jsx&quot;&gt;&lt;pre class=&quot;language-jsx&quot;&gt;&lt;code class=&quot;language-jsx&quot;&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;&amp;lt;&lt;/span&gt;button&lt;/span&gt; &lt;span class=&quot;token attr-name&quot;&gt;onClick&lt;/span&gt;&lt;span class=&quot;token script language-javascript&quot;&gt;&lt;span class=&quot;token script-punctuation punctuation&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
-props&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;dispatch&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;type &lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&apos;항목추가&apos;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; 데이터 &lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;id&lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt; 찾은상품&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;id&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; name &lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt; 찾은상품&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;title&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; quan &lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token number&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
-&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;token plain-text&quot;&gt;주문하기&lt;/span&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;&amp;lt;/&lt;/span&gt;button&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;jsx&quot;&gt;&lt;pre class=&quot;language-jsx&quot;&gt;&lt;code class=&quot;language-jsx&quot;&gt;&lt;span class=&quot;token keyword&quot;&gt;const&lt;/span&gt; 초기값 &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;[&lt;/span&gt; 
-    &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;id &lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token number&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; name &lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&apos;신발&apos;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; quan &lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token number&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
-    &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;id &lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token number&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; name &lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&apos;신발2&apos;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; quan &lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token number&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
-&lt;span class=&quot;token punctuation&quot;&gt;]&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
-&lt;span class=&quot;token comment&quot;&gt;// reducer에 초기값을 default파라미터 문법으로 집어넣음 &lt;/span&gt;
-&lt;span class=&quot;token keyword&quot;&gt;function&lt;/span&gt; &lt;span class=&quot;token function&quot;&gt;reducer&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token parameter&quot;&gt;state &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; 초기값&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; 액션&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
-    &lt;span class=&quot;token comment&quot;&gt;// 액션.type === 수정방법이름&lt;/span&gt;
-    &lt;span class=&quot;token keyword&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;액션&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;type &lt;span class=&quot;token operator&quot;&gt;===&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&apos;항목추가&apos;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
-        &lt;span class=&quot;token comment&quot;&gt;// dispatch로 수신한 데이터의 id ({ id : 0, name : &apos;새로운상품&apos; })가 state(초기값 배열)안에 같은 id가 이미 존재 한다면 push()하지 않고 수량(quan)만 증가 &lt;/span&gt;
-        &lt;span class=&quot;token keyword&quot;&gt;const&lt;/span&gt; 몇번째있니 &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; state&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;findIndex&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token parameter&quot;&gt;a&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;=&gt;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt; 
-            &lt;span class=&quot;token comment&quot;&gt;// state array내 각 자료의 id === 액션.데이터.id 비교&lt;/span&gt;
-            &lt;span class=&quot;token keyword&quot;&gt;return&lt;/span&gt; a&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;id &lt;span class=&quot;token operator&quot;&gt;===&lt;/span&gt; 액션&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;데이터&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;id &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
-
-        &lt;span class=&quot;token keyword&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt; 몇번째있니 &lt;span class=&quot;token operator&quot;&gt;&gt;=&lt;/span&gt; &lt;span class=&quot;token number&quot;&gt;0&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
-        &lt;span class=&quot;token keyword&quot;&gt;const&lt;/span&gt; copy &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;...&lt;/span&gt;state&lt;span class=&quot;token punctuation&quot;&gt;]&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
-        copy&lt;span class=&quot;token punctuation&quot;&gt;[&lt;/span&gt;몇번째있니&lt;span class=&quot;token punctuation&quot;&gt;]&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;quan&lt;span class=&quot;token operator&quot;&gt;++&lt;/span&gt;
-        &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;else&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
-        &lt;span class=&quot;token keyword&quot;&gt;const&lt;/span&gt; copy &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;...&lt;/span&gt;state&lt;span class=&quot;token punctuation&quot;&gt;]&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
-        copy&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;push&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;액션&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;데이터&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;
-        &lt;span class=&quot;token keyword&quot;&gt;return&lt;/span&gt; copy
-        &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;
-    &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;token keyword&quot;&gt;else&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;액션&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;type &lt;span class=&quot;token operator&quot;&gt;===&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&apos;수량증가&apos;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
-        &lt;span class=&quot;token comment&quot;&gt;//수량증가 요청이 들어오면 state 데이터 카피본을 만들어 해당 아이템 quan 항목에 1 더해주고 return&lt;/span&gt;
-        &lt;span class=&quot;token comment&quot;&gt;// array, object로 구성된 state 데이터 수정시 사본을 만드는게 좋음&lt;/span&gt;
-        &lt;span class=&quot;token keyword&quot;&gt;const&lt;/span&gt; copy &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;...&lt;/span&gt;state&lt;span class=&quot;token punctuation&quot;&gt;]&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
-        &lt;span class=&quot;token comment&quot;&gt;//dispatch()할 때 방금 누른 +버튼 옆의 상품번호를 redux store로 함께 실어 보냈기 때문에&lt;/span&gt;
-        &lt;span class=&quot;token comment&quot;&gt;//copy[0].quan++; 가 아닌 copy[방금 누른 +버튼 옆의 상품번호].quan++ 로 변경&lt;/span&gt;
-        &lt;span class=&quot;token comment&quot;&gt;// {액션.데이터}를 state에 추가&lt;/span&gt;
-	    copy&lt;span class=&quot;token punctuation&quot;&gt;[&lt;/span&gt;액션&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;데이터&lt;span class=&quot;token punctuation&quot;&gt;]&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;quan&lt;span class=&quot;token operator&quot;&gt;++&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
-        &lt;span class=&quot;token keyword&quot;&gt;return&lt;/span&gt; copy
-    
-    &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;token keyword&quot;&gt;else&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;액션&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;type &lt;span class=&quot;token operator&quot;&gt;===&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&apos;수량감소&apos;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
-        &lt;span class=&quot;token keyword&quot;&gt;const&lt;/span&gt; copy &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;...&lt;/span&gt;state&lt;span class=&quot;token punctuation&quot;&gt;]&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
-        copy&lt;span class=&quot;token punctuation&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;token number&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;]&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;quan&lt;span class=&quot;token operator&quot;&gt;--&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
-        &lt;span class=&quot;token keyword&quot;&gt;return&lt;/span&gt; copy
-    
-    &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;token keyword&quot;&gt;else&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt; &lt;span class=&quot;token comment&quot;&gt;// 요청 안들어온 경우 기본 state 리턴&lt;/span&gt;
-        &lt;span class=&quot;token keyword&quot;&gt;return&lt;/span&gt; state
-        &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;
-&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;findIndex()
-특정 값이 array 안에 있는지 찾을 때 사용하는 자바스크립트 기본함수&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;
-&lt;p&gt;예시&lt;/p&gt;
-&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;jsx&quot;&gt;&lt;pre class=&quot;language-jsx&quot;&gt;&lt;code class=&quot;language-jsx&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;token number&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;token number&quot;&gt;3&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;token number&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;token number&quot;&gt;4&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;]&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;findIndex&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token parameter&quot;&gt;a&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;=&gt;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;return&lt;/span&gt; a &lt;span class=&quot;token operator&quot;&gt;===&lt;/span&gt; &lt;span class=&quot;token number&quot;&gt;1&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;
-&lt;span class=&quot;token comment&quot;&gt;//결과값 3&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;array 안에 1이 있는지 찾고 싶으면
-a: array안에 있던 하나하나의 자료 {}
-a와 1을 비교해 일치시 몇번째 값인지 남겨줌&lt;/p&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;주문하기 버튼 옆에 수량을 직접 입력할 수 있는 input 생성&lt;/strong&gt;&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;상품의 사이즈 정보를 저장할 수 있는 곳을 만들어서 사이즈 선택 기능 추가&lt;/strong&gt;&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;장바구니 항목 삭제 기능&lt;/strong&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h1 id=&quot;redux를-이용한-개발환경-셋팅&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#redux%EB%A5%BC-%EC%9D%B4%EC%9A%A9%ED%95%9C-%EA%B0%9C%EB%B0%9C%ED%99%98%EA%B2%BD-%EC%85%8B%ED%8C%85&quot; aria-label=&quot;redux를 이용한 개발환경 셋팅 permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;redux를 이용한 개발환경 셋팅&lt;/h1&gt;
-&lt;ul&gt;
-&lt;li&gt;
-&lt;p&gt;redux에서 state를 생성하려면 useState가 아닌 createStore() 함수를 써야함&lt;/p&gt;
-&lt;ol&gt;
-&lt;li&gt;createStore를 import 후 &lt;code class=&quot;language-text&quot;&gt;import {createStore} from &apos;redux&apos;;&lt;/code&gt;&lt;/li&gt;
-&lt;li&gt;state 만들어 store 변수에 저장&lt;/li&gt;
-&lt;li&gt;createStore 콜백함수엔 원하는 state 초기값 작성&lt;/li&gt;
-&lt;li&gt;&amp;#x3C; Provider&gt; import 후 &lt;code class=&quot;language-text&quot;&gt;import {Provider} from &apos;react-redux&apos;;&lt;/code&gt;&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;&lt;Provider&gt;에 store state를 props처럼 등록하면 Provider로 감싼 모든 HTML, 컴포넌트들은 전부 store안에 있던 state값을 props 전송없이 공유 가능 -&gt; state값 공유 원하는 컴포넌트(App)를 감쌈
-//redux 설치 후엔 state들을 store라는 명칭으로 부름!&lt;/p&gt;
-&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;jsx&quot;&gt;&lt;pre class=&quot;language-jsx&quot;&gt;&lt;code class=&quot;language-jsx&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;index&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;js&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;
-&lt;span class=&quot;token keyword&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;Provider&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;from&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&apos;react-redux&apos;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
-&lt;span class=&quot;token keyword&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;createStore&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;from&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&apos;redux&apos;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;/li&gt;
-&lt;/ol&gt;
-&lt;p&gt;const store = createStore(()=&gt;{ return [{id : 0, name : ‘멋진신발’, quan : 2}]  })&lt;/p&gt;
-&lt;p&gt;ReactDOM.render(
-&amp;#x3C;React.StrictMode&gt;
-&lt;BrowserRouter&gt;
-&lt;Provider store={store}&gt;
-&lt;App/&gt;
-&lt;/Provider&gt;
-&lt;/BrowserRouter&gt;
-&amp;#x3C;/React.StrictMode&gt;
-);&lt;/p&gt;
-&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;Reference&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;/li&gt;
-&lt;/ul&gt;</content:encoded></item><item><title><![CDATA[Shop Project_Typescript 적용]]></title><description><![CDATA[설치 
+&lt;h2 id=&quot;5-memo&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#5-memo&quot; aria-label=&quot;5 memo permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;5. memo&lt;/h2&gt;
+&lt;p&gt;리액트 앱은 컴포넌트와 관련된 state 혹은 props가 변경되면 항상 자동 재렌더링 됨 → 사이트 구동 속도가 저하
+컴포넌트의 규모가 너무 커 잦은 재렌더링이 부담스러울 때 쓰는 방법
+특히 컴포넌트안에 컴포넌트가 여러개 있을 때 유용함 (부모 컴포넌트를 구성하는 state나 props가 변경되면 해당 Props를 전달받는 자식 컴포넌트를 전부 자동 재렌더링 시키기 때문)
+memo로 감싼 컴포넌트는 기존 props와 바뀐 props를 비교하는 연산이 추가로 진행되기 때문에 props가 크고 복잡하면 이거 자체로도 부담이 됨
+규모가 작은 사이트를 만들거나 컴포넌트 내부에 있는 HTML 양이 매우 적을 경우엔 사용 X&lt;/p&gt;
+&lt;p&gt;Reference&lt;/p&gt;</content:encoded></item><item><title><![CDATA[Shop Project_Next js 지도 API]]></title><description><![CDATA[Reference]]></description><link>https://www.yoojiih.github.io/TIl_20211108/</link><guid isPermaLink="false">https://www.yoojiih.github.io/TIl_20211108/</guid><pubDate>Sat, 06 Nov 2021 11:00:00 GMT</pubDate><content:encoded>&lt;p&gt;Reference&lt;/p&gt;</content:encoded></item><item><title><![CDATA[Shop Project_Next js에서 Redux사용해 인증(로그인, 회원가입)]]></title><description><![CDATA[Reference]]></description><link>https://www.yoojiih.github.io/TIl_20211106/</link><guid isPermaLink="false">https://www.yoojiih.github.io/TIl_20211106/</guid><pubDate>Sat, 06 Nov 2021 11:00:00 GMT</pubDate><content:encoded>&lt;p&gt;Reference&lt;/p&gt;</content:encoded></item><item><title><![CDATA[Shop Project_Next js 장바구니 구현]]></title><link>https://www.yoojiih.github.io/TIl_20211107/</link><guid isPermaLink="false">https://www.yoojiih.github.io/TIl_20211107/</guid><pubDate>Sat, 06 Nov 2021 11:00:00 GMT</pubDate><content:encoded></content:encoded></item><item><title><![CDATA[Shop Project_Typescript 적용]]></title><description><![CDATA[설치 
 
 
 로그인 -> post
