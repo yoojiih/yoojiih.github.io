@@ -1,4 +1,74 @@
-<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Yooji's Blog]]></title><description><![CDATA[줌코딩의 개발일기]]></description><link>https://www.yoojiih.github.io</link><generator>GatsbyJS</generator><lastBuildDate>Sun, 21 Nov 2021 14:41:29 GMT</lastBuildDate><item><title><![CDATA[Shop Project_React]]></title><description><![CDATA[환경설정 기본 요구사항 Node.js : 자바스크립트 런타임  NPM : 패키지 매니저 도구 Node js javascirpt를 server side에서 사용할 수 있는 언어 npm package 생성
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Yooji's Blog]]></title><description><![CDATA[줌코딩의 개발일기]]></description><link>https://www.yoojiih.github.io</link><generator>GatsbyJS</generator><lastBuildDate>Mon, 22 Nov 2021 14:49:38 GMT</lastBuildDate><item><title><![CDATA[Shop Project_React]]></title><description><![CDATA[회원가입 기능 Client, Server 간 통신 Client인 browser 측에서 정보 입력하면 서버측에서 받아서 처리하는 형식 이 정보들을 받기 위해선 Body-parser라는 Dependency가 필요
+ 회원가입을 위한 Route…]]></description><link>https://www.yoojiih.github.io/Shop_React2/</link><guid isPermaLink="false">https://www.yoojiih.github.io/Shop_React2/</guid><pubDate>Fri, 12 Nov 2021 01:00:00 GMT</pubDate><content:encoded>&lt;h1 id=&quot;회원가입-기능&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#%ED%9A%8C%EC%9B%90%EA%B0%80%EC%9E%85-%EA%B8%B0%EB%8A%A5&quot; aria-label=&quot;회원가입 기능 permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;회원가입 기능&lt;/h1&gt;
+&lt;h2 id=&quot;client-server-간-통신&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#client-server-%EA%B0%84-%ED%86%B5%EC%8B%A0&quot; aria-label=&quot;client server 간 통신 permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;Client, Server 간 통신&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Client인 browser 측에서 정보 입력하면 서버측에서 받아서 처리하는 형식&lt;/li&gt;
+&lt;li&gt;이 정보들을 받기 위해선 Body-parser라는 Dependency가 필요
+&lt;code class=&quot;language-text&quot;&gt;npm i body-parser&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;회원가입을 위한 Route 생성 (server/index.js)&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;javascript&quot;&gt;&lt;pre class=&quot;language-javascript&quot;&gt;&lt;code class=&quot;language-javascript&quot;&gt;&lt;span class=&quot;token keyword&quot;&gt;const&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt; User &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token function&quot;&gt;require&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&quot;./models/User&quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;const bodyParser = require(‘body-parser’);
+//----- body parser option-------
+// bodyparser: client에서 오는 정보를 서버에서 분석해서 가져올 수 있게 해주는 것
+// application/x-www-form-urlencoded 이렇게 된 데이터를 분석해서 가져올 수 있게 설정
+app.use(bodyParser.urlencoded({ extended: true }));
+//application/json 타입으로 된 걸 분석해서 가져올 수 있게 해주기 위함
+app.use(bodyParser.json());
+//-------------------------------
+// post 메소드를 이용, 라우터의 end pointer는 register, callback function을  (req, res) =&gt; 넣어줌
+// &lt;a href=&quot;http://localhost:5000/register&quot;&gt;http://localhost:5000/register&lt;/a&gt;
+app.post(‘/api/users/register’, (req, res) =&gt; {&lt;/p&gt;
+&lt;p&gt;  // 회원 가입 할떄 필요한 정보들을 client에서 가져오면 데이터 베이스에 넣어주기 위해 위에서 User modeld을 가져옴
+// 이걸 이용해 user 인스턴스 생성
+// 이 bodyparser로 인해 req.body에 사용자가 입력한 정보가 json형식으로 {id: &quot;&quot;, password:&quot;&quot;}이런식으로 들어있을 수 잇게 해줌
+// bodyparser를 이용해서 req.body로 client측 정보를 받아줌
+const user = new User(req.body)
+// save: mongo db 메소드 (req.body의 정보들이 user model에 저장됨)
+user.save((err, userInfo) =&gt; {
+// 저장 시 에러가 있다면 클라이언트에다가 에러가 있다고 json 형식으로 에러 메시지와 함께 전달 해주기 위해
+if (err) return res.json({ success: false, err })
+// 성공 시 저장한 user info를 client에다가 성공했다는 표시인 status(200)을 json형식으로 success: true라는 정보를 전달
+return res.status(200).json({
+success: true
+})
+})
+})&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;## NODE MON (개발모드 즉, 로컬에서만 사용)
+node server를 실행 후 소스 변경 시 변화를 감지해서 자동으로 서버 재시작해주는 tool 
+번거롭게 굳이 서버를 올리고 내리고 하지 않아도 변화된 부분을 반영시켜줌
+`npm i nodemon`
+시작할 때 nodemon으로 시작하기 위해 package.json에 스크립트 추가
+`&quot;backend&quot;: &quot;nodemon server/index.js&quot;,`
+이후 `npm run backend`로 실행
+
+
+## 비밀정보 보호
+소스 코드 내 비밀정보 보호를 위해 비밀정보를 다른 파일로 빼서 .gitignore 파일에 추가
+- 개발환경을 로컬모드, 배포모드로 구분
+  환경변수 process.env.NODE_ENV
+  Local 환경: development
+  Deploy(배포): production  -&gt; 클라우드 서비스(aws)를 통해 배포 한 후 개발용
+
+development 모드에 있을 땐 process.env.NODE_ENV (환경변수)가 development라고 나오고 
+deploy한 이후면 production이라고 뜸 
+```javascript
+if(process.env.NODE_ENV === &apos;production&apos;) {
+    module.exports = require(&apos;./prod&apos;);
+} else {
+  // development라면 module.exports를 prod에서 하는게 아니라 dev.js 파일에서 함
+    module.exports = require(&apos;./dev&apos;);
+}&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;development 모드에서 하면 dev.js에서 &lt;code class=&quot;language-text&quot;&gt;mongoURI&lt;/code&gt; 가져옴
+production이면 prod.js에다가 MONGO_URI적어줌(aws에 작성한 것과 동일해야함)&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;javascript&quot;&gt;&lt;pre class=&quot;language-javascript&quot;&gt;&lt;code class=&quot;language-javascript&quot;&gt;module&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;exports &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+    mongoURI&lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt; process&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;env&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token constant&quot;&gt;MONGO_URI&lt;/span&gt;
+&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;server/index.js에다가는 config.mongoURI 넣어줌&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;js&quot;&gt;&lt;pre class=&quot;language-js&quot;&gt;&lt;code class=&quot;language-js&quot;&gt;&lt;span class=&quot;token keyword&quot;&gt;const&lt;/span&gt; config &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token function&quot;&gt;require&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&apos;./config/key&apos;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+mongoose&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;connect&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;config&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;mongoURI&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt; &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</content:encoded></item><item><title><![CDATA[Shop Project_React]]></title><description><![CDATA[환경설정 기본 요구사항 Node.js : 자바스크립트 런타임  NPM : 패키지 매니저 도구 Node js javascirpt를 server side에서 사용할 수 있는 언어 npm package 생성
  sever…]]></description><link>https://www.yoojiih.github.io/Shop_React1/</link><guid isPermaLink="false">https://www.yoojiih.github.io/Shop_React1/</guid><pubDate>Thu, 11 Nov 2021 01:00:00 GMT</pubDate><content:encoded>&lt;h2 id=&quot;환경설정&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#%ED%99%98%EA%B2%BD%EC%84%A4%EC%A0%95&quot; aria-label=&quot;환경설정 permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;환경설정&lt;/h2&gt;
 &lt;p&gt;기본 요구사항&lt;/p&gt;
 &lt;ul&gt;
@@ -36,11 +106,36 @@ res&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=
 app&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;listen&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;port&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;=&gt;&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
 console&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;log&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token template-string&quot;&gt;&lt;span class=&quot;token template-punctuation string&quot;&gt;`&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;Example app listening at http://localhost:&lt;/span&gt;&lt;span class=&quot;token interpolation&quot;&gt;&lt;span class=&quot;token interpolation-punctuation punctuation&quot;&gt;${&lt;/span&gt;port&lt;span class=&quot;token interpolation-punctuation punctuation&quot;&gt;}&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;token template-punctuation string&quot;&gt;`&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;
 &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;/li&gt;
+&lt;li&gt;Express 기본 라우팅 (참고)
+라우팅은 URI(또는 경로) 및 특정한 HTTP 요청 메소드(GET, POST 등)인 특정 엔드포인트에 대한 클라이언트 요청에 애플리케이션이 응답하는 방법을 결정하는 것
+각 라우트는 하나 이상의 핸들러 함수를 가질 수 있으며, 이러한 함수는 라우트가 일치할 때 실행됨&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;라우트 정의 구조
+&lt;code class=&quot;language-text&quot;&gt;app.METHOD(PATH, HANDLER)&lt;/code&gt;
+&gt; app: express의 인스턴스
+&gt; METHOD: HTTP 요청 메소드
+&gt; PATH: 서버에서의 경로
+&gt; HANDLER: 라우트가 일치할 때 실행되는 함수&lt;/p&gt;
+&lt;p&gt;홈 페이지에서 Hello World!로 응답:
+app.get(’/’, function (req, res) {
+res.send(‘Hello World!’);
+});&lt;/p&gt;
+&lt;p&gt;애플리케이션의 홈 페이지인 루트 라우트(/)에서 POST 요청에 응답:
+app.post(’/’, function (req, res) {
+res.send(‘Got a POST request’);
+});&lt;/p&gt;
+&lt;p&gt;/user 라우트에 대한 PUT 요청에 응답:
+app.put(‘/user’, function (req, res) {
+res.send(‘Got a PUT request at /user’);
+});&lt;/p&gt;
+&lt;p&gt;/user 라우트에 대한 DELETE 요청에 응답:
+app.delete(‘/user’, function (req, res) {
+res.send(‘Got a DELETE request at /user’);
+});&lt;/p&gt;
 &lt;p&gt;package.json 파일에 &lt;code class=&quot;language-text&quot;&gt;&quot;start&quot;: &quot;node server/index.js&quot;,&lt;/code&gt; 명령 작성 후 터미널에 &lt;code class=&quot;language-text&quot;&gt;npm run start&lt;/code&gt; 입력해 앱을 실행
 npm run start 중 start하면 node app을 실행하는데 시작점이 index.js
 -&gt; 브라우저에서 &lt;a href=&quot;http://localhost:3000/%EC%9D%84&quot;&gt;http://localhost:3000/을&lt;/a&gt; 로드하여 결과물을 확인&lt;/p&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
 &lt;h1 id=&quot;express-js-app에-mongo-db-연결&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#express-js-app%EC%97%90-mongo-db-%EC%97%B0%EA%B2%B0&quot; aria-label=&quot;express js app에 mongo db 연결 permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;Express js app에 mongo db 연결&lt;/h1&gt;
 &lt;p&gt;&lt;a href=&quot;https://www.mongodb.com/&quot;&gt;설치 사이트&lt;/a&gt;&lt;/p&gt;
 &lt;ol&gt;
@@ -53,8 +148,64 @@ username: yoojiih password:&lt;/li&gt;
 &lt;li&gt;mongo db object modeling tool 설치
 Mongoose: mongo db 다루기 쉽게 해주는 툴
 &lt;code class=&quot;language-text&quot;&gt;npm i mongoose&lt;/code&gt;&lt;/li&gt;
-&lt;li&gt;app에 mongodb 연결  &lt;/li&gt;
-&lt;/ol&gt;</content:encoded></item><item><title><![CDATA[Shop Project_React]]></title><description><![CDATA[Project명 (무제) _ 개인 프로젝트 목표 Front end 뿐만 아니라 백 서버와 DB를 구축해서 어느 서비스에나 존재하는 
+&lt;li&gt;
+&lt;p&gt;app에 mongodb 연결&lt;br&gt;
+mongoose를 모듈 가져옴
+mongoose를 이용해서 app과 mongo db를 연결&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;javascript&quot;&gt;&lt;pre class=&quot;language-javascript&quot;&gt;&lt;code class=&quot;language-javascript&quot;&gt;&lt;span class=&quot;token keyword&quot;&gt;const&lt;/span&gt; mongoose &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token function&quot;&gt;require&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&apos;mongoose&apos;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;
+mongoose&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;connect&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token template-string&quot;&gt;&lt;span class=&quot;token template-punctuation string&quot;&gt;`&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;mongo db에서 유저 생성 후 복사한 connection app code&lt;/span&gt;&lt;span class=&quot;token template-punctuation string&quot;&gt;`&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+&lt;span class=&quot;token comment&quot;&gt;// 오류 발생가능성 제거를 위한 코드&lt;/span&gt;
+useNewUrlParser&lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token boolean&quot;&gt;true&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; useUnifiedTopology&lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token boolean&quot;&gt;true&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; useCreateIndex&lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token boolean&quot;&gt;true&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; useFindAndModify&lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token boolean&quot;&gt;false&lt;/span&gt;
+&lt;span class=&quot;token comment&quot;&gt;// 연결 잘 됐다면 then, err가 있으면 콘솔에 err보여줌&lt;/span&gt;
+&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;then&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;=&gt;&lt;/span&gt; console&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;log&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&apos;MongoDB Connected...&apos;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;catch&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token parameter&quot;&gt;err&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;=&gt;&lt;/span&gt; console&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;log&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;err&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h1 id=&quot;user-model-생성&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#user-model-%EC%83%9D%EC%84%B1&quot; aria-label=&quot;user model 생성 permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;user model 생성&lt;/h1&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;MongoDB Model &amp;#x26; Schema
+유저랑 관련된 데이터들을 데이터베이스에 보관하기 위해서 스키마와 스키마를 감싸주는 역할을 하는 모델을 생성
+server&gt;models&gt;User.js&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;javascript&quot;&gt;&lt;pre class=&quot;language-javascript&quot;&gt;&lt;code class=&quot;language-javascript&quot;&gt;&lt;span class=&quot;token keyword&quot;&gt;const&lt;/span&gt; mongoose &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token function&quot;&gt;require&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&apos;mongoose&apos;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;token comment&quot;&gt;//mongoose를 이용해 schema 생성&lt;/span&gt;
+&lt;span class=&quot;token keyword&quot;&gt;const&lt;/span&gt; userSchema &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; mongoose&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;Schema&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+name&lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+    type&lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt; String&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
+    maxlength&lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token number&quot;&gt;50&lt;/span&gt;
+&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
+email&lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+    type&lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt; String&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
+    &lt;span class=&quot;token comment&quot;&gt;//입력한 이메일에 공백이 포함되어있을 경우 없애주는 역할&lt;/span&gt;
+    trim&lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token boolean&quot;&gt;true&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
+    &lt;span class=&quot;token comment&quot;&gt;// 똑같은 이메일을 쓰지 못하게, 이메일 중복 방지&lt;/span&gt;
+    unique&lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token number&quot;&gt;1&lt;/span&gt;
+&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
+password&lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+    type&lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt; String&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
+    minlength&lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token number&quot;&gt;5&lt;/span&gt;
+&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
+&lt;span class=&quot;token comment&quot;&gt;//일반 유저와 관리자를 구분&lt;/span&gt;
+role&lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+    type&lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt; Number&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
+    &lt;span class=&quot;token keyword&quot;&gt;default&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token number&quot;&gt;0&lt;/span&gt;
+&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
+&lt;span class=&quot;token comment&quot;&gt;//object를 주지않고 string 이런식으로만 해도 됨&lt;/span&gt;
+image&lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt; String&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
+&lt;span class=&quot;token comment&quot;&gt;//유효성 관리&lt;/span&gt;
+token&lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+    type&lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt; String
+&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
+tokenExp&lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+    type&lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt; Number
+&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;
+&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;token comment&quot;&gt;// schema를 model로 감싸줌&lt;/span&gt;
+&lt;span class=&quot;token keyword&quot;&gt;const&lt;/span&gt; User &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; mongoose&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;model&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&apos;User&apos;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; userSchema&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;token comment&quot;&gt;// 이 model을 다른 파일에서 사용가능하도록 설정&lt;/span&gt;
+module&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;exports &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt; User &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;/li&gt;
+&lt;/ul&gt;</content:encoded></item><item><title><![CDATA[Shop Project_React]]></title><description><![CDATA[Project명 (무제) _ 개인 프로젝트 목표 Front end 뿐만 아니라 백 서버와 DB를 구축해서 어느 서비스에나 존재하는 
 로그인, 회원가입과 더불어 상품들을 관리하는 쇼핑몰 프로젝트를 진행하고자 한다
 추가적으로 완성한 프로젝트를 aws…]]></description><link>https://www.yoojiih.github.io/Shop_React0/</link><guid isPermaLink="false">https://www.yoojiih.github.io/Shop_React0/</guid><pubDate>Wed, 10 Nov 2021 01:00:00 GMT</pubDate><content:encoded>&lt;h1 id=&quot;project명-무제-_-개인-프로젝트&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#project%EB%AA%85-%EB%AC%B4%EC%A0%9C-_-%EA%B0%9C%EC%9D%B8-%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8&quot; aria-label=&quot;project명 무제 _ 개인 프로젝트 permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;Project명 (무제) _ 개인 프로젝트&lt;/h1&gt;
 &lt;ul&gt;
