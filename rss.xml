@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Yooji's Blog]]></title><description><![CDATA[줌코딩의 개발일기]]></description><link>https://www.yoojiih.github.io</link><generator>GatsbyJS</generator><lastBuildDate>Thu, 25 Nov 2021 07:04:26 GMT</lastBuildDate><item><title><![CDATA[Shop Project_React]]></title><description><![CDATA[Data Request, Response Flow & Axios  <=>  -response-> 
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Yooji's Blog]]></title><description><![CDATA[줌코딩의 개발일기]]></description><link>https://www.yoojiih.github.io</link><generator>GatsbyJS</generator><lastBuildDate>Thu, 25 Nov 2021 07:08:40 GMT</lastBuildDate><item><title><![CDATA[Shop Project_React]]></title><description><![CDATA[Data Request, Response Flow & Axios  <=>  -response-> 
                         <-request…]]></description><link>https://www.yoojiih.github.io/Shop_React6/</link><guid isPermaLink="false">https://www.yoojiih.github.io/Shop_React6/</guid><pubDate>Tue, 16 Nov 2021 01:00:00 GMT</pubDate><content:encoded>&lt;h1 id=&quot;data-request-response-flow--axios&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#data-request-response-flow--axios&quot; aria-label=&quot;data request response flow  axios permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;Data Request, Response Flow &amp;#x26; Axios&lt;/h1&gt;
 &lt;p&gt;&lt;code class=&quot;language-text&quot;&gt;Database&lt;/code&gt; &amp;#x3C;=&gt; &lt;code class=&quot;language-text&quot;&gt;server&lt;/code&gt; -response-&gt; &lt;code class=&quot;language-text&quot;&gt;client&lt;/code&gt;
 &amp;#x3C;-request-
@@ -2210,18 +2210,7 @@ URL : 인터넷 상의 자원의 위치&lt;/li&gt;
 &lt;li&gt;POST: URI 요청 시 리소스 생성 &lt;code class=&quot;language-text&quot;&gt;Create&lt;/code&gt;&lt;/li&gt;
 &lt;li&gt;GET: 리소스를 조회 &lt;code class=&quot;language-text&quot;&gt;Read&lt;/code&gt;&lt;/li&gt;
 &lt;li&gt;PUT: 리소스를 수정 &lt;code class=&quot;language-text&quot;&gt;Update&lt;/code&gt;&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;DELETE: 리소스를 삭제 &lt;code class=&quot;language-text&quot;&gt;Delete&lt;/code&gt;&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;GET VS POST
-POST를 제외한 나머지 메소드들은 여러번 수행시 결과가 같음 (멱등성)
-HTTP프로토콜 이용해 서버에 요청시 사용하는 메소드
-GET : 헤더부분에 데이터 담아 전송하는 방식, 크기 제한, 데이터 요청시 데이터가 HTTP Request Message 헤더부분의 url에 그대로 담겨 전송되기 때문에 보안에 신경써야 하는 부분이라면 사용 자제 (브라우저 주소창에 naver.com입력_네이버의 특정 페이지를 갖다달라는 요청)
-GET 요청은 브라우저에 캐싱되기 때문에 사용시 기존에 캐싱된 데이터가 응답할 수 있음
-ex) 검색창에 a 데이터 입력시 &lt;a href=&quot;https://www.google.com/search?q=a&quot;&gt;https://www.google.com/search?q=a&lt;/a&gt; 라고 뜸
-POST : Body 부분에 데이터 담아 전송하는 방식, 서버의 값이나 상태등을 변경하고자 할 때 사용 ((로그인 or 댓글 달기))&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;/li&gt;
+&lt;li&gt;DELETE: 리소스를 삭제 &lt;code class=&quot;language-text&quot;&gt;Delete&lt;/code&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
 &lt;/ul&gt;
@@ -2234,6 +2223,15 @@ POST : Body 부분에 데이터 담아 전송하는 방식, 서버의 값이나 
 &lt;/ul&gt;
 &lt;/li&gt;
 &lt;/ol&gt;
+&lt;h3 id=&quot;get-vs-post&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#get-vs-post&quot; aria-label=&quot;get vs post permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;GET VS POST&lt;/h3&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;POST를 제외한 나머지 메소드들은 여러번 수행시 결과가 같음 (멱등성)
+HTTP프로토콜 이용해 서버에 요청시 사용하는 메소드 
+GET : 헤더부분에 데이터 담아 전송하는 방식, 크기 제한, 데이터 요청시 데이터가 HTTP Request
+      Message 헤더부분의 url에 그대로 담겨 전송되기 때문에 보안에 신경써야 하는 부분이라면 사용자제  (브라우저 주소창에 naver.com입력_네이버의 특정 페이지를 갖다달라는 요청)
+      GET 요청은 브라우저에 캐싱되기 때문에 사용시 기존에 캐싱된 데이터가 응답할 수 있음
+      ex) 검색창에 a 데이터 입력시 https://www.google.com/search?q=a 라고 뜸
+POST : Body 부분에 데이터 담아 전송하는 방식, 서버의 값이나 상태등을 변경하고자 할 때 사용 
+    (로그인 or 댓글 달기)&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 &lt;h1 id=&quot;rest-api-응답-상태&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#rest-api-%EC%9D%91%EB%8B%B5-%EC%83%81%ED%83%9C&quot; aria-label=&quot;rest api 응답 상태 permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;REST API 응답 상태&lt;/h1&gt;
 &lt;ul&gt;
 &lt;li&gt;1xx : 전송 프로토콜 수준의 정보 교환&lt;/li&gt;
@@ -2340,12 +2338,10 @@ console&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span cl
 &lt;/li&gt;
 &lt;/ol&gt;
 &lt;h1 id=&quot;axios-methods&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#axios-methods&quot; aria-label=&quot;axios methods permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;Axios Methods&lt;/h1&gt;
-&lt;ul&gt;
-&lt;li&gt;POST: URI 요청 시 리소스 생성 &lt;code class=&quot;language-text&quot;&gt;Create&lt;/code&gt;&lt;/li&gt;
-&lt;li&gt;GET: 리소스를 조회 &lt;code class=&quot;language-text&quot;&gt;Read&lt;/code&gt;&lt;/li&gt;
-&lt;li&gt;PUT: 리소스를 수정 &lt;code class=&quot;language-text&quot;&gt;Update&lt;/code&gt;&lt;/li&gt;
-&lt;li&gt;DELETE: 리소스를 삭제 &lt;code class=&quot;language-text&quot;&gt;Delete&lt;/code&gt;&lt;/li&gt;
-&lt;/ul&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;- POST: URI 요청 시 리소스 생성 `Create`
+- GET: 리소스를 조회 `Read`
+- PUT: 리소스를 수정 `Update`
+- DELETE: 리소스를 삭제 `Delete`&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 &lt;h2 id=&quot;post&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#post&quot; aria-label=&quot;post permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;POST&lt;/h2&gt;
 &lt;p&gt;create - 새로운 리소스를 생성
 &lt;code class=&quot;language-text&quot;&gt;axios.post(&quot;url주소&quot;,{ data객체 },[,config])&lt;/code&gt;&lt;/p&gt;
