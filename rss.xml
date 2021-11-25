@@ -1,60 +1,124 @@
-<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Yooji's Blog]]></title><description><![CDATA[줌코딩의 개발일기]]></description><link>https://www.yoojiih.github.io</link><generator>GatsbyJS</generator><lastBuildDate>Thu, 25 Nov 2021 07:08:40 GMT</lastBuildDate><item><title><![CDATA[Shop Project_React]]></title><description><![CDATA[Data Request, Response Flow & Axios  <=>  -response-> 
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Yooji's Blog]]></title><description><![CDATA[줌코딩의 개발일기]]></description><link>https://www.yoojiih.github.io</link><generator>GatsbyJS</generator><lastBuildDate>Thu, 25 Nov 2021 14:51:04 GMT</lastBuildDate><item><title><![CDATA[Shop Project_React]]></title><description><![CDATA[Data Request, Response Flow & Axios  <=>  -response-> 
                         <-request…]]></description><link>https://www.yoojiih.github.io/Shop_React6/</link><guid isPermaLink="false">https://www.yoojiih.github.io/Shop_React6/</guid><pubDate>Tue, 16 Nov 2021 01:00:00 GMT</pubDate><content:encoded>&lt;h1 id=&quot;data-request-response-flow--axios&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#data-request-response-flow--axios&quot; aria-label=&quot;data request response flow  axios permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;Data Request, Response Flow &amp;#x26; Axios&lt;/h1&gt;
 &lt;p&gt;&lt;code class=&quot;language-text&quot;&gt;Database&lt;/code&gt; &amp;#x3C;=&gt; &lt;code class=&quot;language-text&quot;&gt;server&lt;/code&gt; -response-&gt; &lt;code class=&quot;language-text&quot;&gt;client&lt;/code&gt;
-&amp;#x3C;-request-
-로그인 과정으로 예를 들자면
-유저가 로그인 시 클라이언트에서 사용자의 이름과 비밀번호를 넣고 로그인 버튼누르면 그 요청(request)이 서버로 이동
-서버에서는 db에 유저 아이디가 있는지 찾고 있다면 보내준 비밀번호가 맞는지 체크함.
-맞으면 response를 클라이언트 측에 성공했다는 걸 전해주고 비밀번호가 틀리거나 유저 자체가 없으면 그런 정보들을 클라이언트에 보내줌
+&amp;#x3C;-request-&lt;/p&gt;
+&lt;p&gt;로그인 과정으로 예를 들자면&lt;/p&gt;
+&lt;p&gt;유저가 로그인 시 클라이언트에서 사용자의 이름과 비밀번호를 넣고 로그인 버튼누르면 그 요청(request)이 서버로 이동 &lt;/p&gt;
+&lt;p&gt;서버에서는 db에 유저 아이디가 있는지 찾고 있다면 보내준 비밀번호가 맞는지 체크함.&lt;/p&gt;
+&lt;p&gt;맞으면 response를 클라이언트 측에 성공했다는 걸 전해주고 비밀번호가 틀리거나 유저 자체가 없으면 그런
+정보들을 클라이언트에 보내줌
 &lt;a href=&quot;https://yoojiih.github.io/TIL_20211029/&quot;&gt;axios 참고&lt;/a&gt;
-데이터 요청시 axios 라이브러리를 사용해서 보냄
-(axios: JQuery를 사용시 ajax라고 보면됨)
-axios 설치
-&lt;code class=&quot;language-text&quot;&gt;npm i axios&lt;/code&gt;&lt;/p&gt;
+데이터 요청시 axios 라이브러리를 사용해서 보냄&lt;/p&gt;
+&lt;p&gt;axios 설치&lt;/p&gt;
+&lt;p&gt;&lt;code class=&quot;language-text&quot;&gt;npm i axios&lt;/code&gt;&lt;/p&gt;
 &lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;js&quot;&gt;&lt;pre class=&quot;language-js&quot;&gt;&lt;code class=&quot;language-js&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;client&lt;span class=&quot;token operator&quot;&gt;/&lt;/span&gt;src&lt;span class=&quot;token operator&quot;&gt;/&lt;/span&gt;components&lt;span class=&quot;token operator&quot;&gt;/&lt;/span&gt;views&lt;span class=&quot;token operator&quot;&gt;/&lt;/span&gt;LandingPage&lt;span class=&quot;token operator&quot;&gt;/&lt;/span&gt;LandingPage&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;js&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;
 &lt;span class=&quot;token keyword&quot;&gt;import&lt;/span&gt; React&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt; useEffect &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;from&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&apos;react&apos;&lt;/span&gt;
 &lt;span class=&quot;token keyword&quot;&gt;import&lt;/span&gt; axios &lt;span class=&quot;token keyword&quot;&gt;from&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&apos;axios&apos;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
-&lt;span class=&quot;token keyword&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt; withRouter &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;from&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&apos;react-router-dom&apos;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt; 
 &lt;span class=&quot;token keyword&quot;&gt;function&lt;/span&gt; &lt;span class=&quot;token function&quot;&gt;LandingPage&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token parameter&quot;&gt;props&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
-
+  &lt;span class=&quot;token comment&quot;&gt;// LandingPage에 들어오자마자 실행되는 부분&lt;/span&gt;
     &lt;span class=&quot;token function&quot;&gt;useEffect&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;=&gt;&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+      &lt;span class=&quot;token comment&quot;&gt;//get request를 서버(server/index.js)로 보냄 (end point는 /api/hello)&lt;/span&gt;
         axios&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;get&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&apos;/api/hello&apos;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;
+        &lt;span class=&quot;token comment&quot;&gt;// 서버에 보낸 후 서버에서 돌아오는 response(받은 메시지)를 콘솔창에다가 보여줌&lt;/span&gt;
             &lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;then&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token parameter&quot;&gt;response&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;=&gt;&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt; console&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;log&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;response&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;
     &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;]&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;
-
-
-    &lt;span class=&quot;token keyword&quot;&gt;const&lt;/span&gt; &lt;span class=&quot;token function-variable function&quot;&gt;onClickHandler&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;=&gt;&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
-        axios&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;get&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token template-string&quot;&gt;&lt;span class=&quot;token template-punctuation string&quot;&gt;`&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;/api/users/logout&lt;/span&gt;&lt;span class=&quot;token template-punctuation string&quot;&gt;`&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;
-            &lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;then&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token parameter&quot;&gt;response&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;=&gt;&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
-                &lt;span class=&quot;token keyword&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;response&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;data&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;success&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
-                    props&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;history&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;push&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&quot;/login&quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;
-                &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;else&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
-                    &lt;span class=&quot;token function&quot;&gt;alert&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&apos;로그아웃 하는데 실패 했습니다.&apos;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;
-                &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;
-            &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;
-    &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;
-
     &lt;span class=&quot;token keyword&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;
-        &lt;span class=&quot;token operator&quot;&gt;&amp;lt;&lt;/span&gt;div style&lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
-            display&lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&apos;flex&apos;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; justifyContent&lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&apos;center&apos;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; alignItems&lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&apos;center&apos;&lt;/span&gt;
-            &lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; width&lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&apos;100%&apos;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; height&lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&apos;100vh&apos;&lt;/span&gt;
-        &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;&gt;&lt;/span&gt;
+        &lt;span class=&quot;token operator&quot;&gt;&amp;lt;&lt;/span&gt;div&lt;span class=&quot;token operator&quot;&gt;&gt;&lt;/span&gt;
             &lt;span class=&quot;token operator&quot;&gt;&amp;lt;&lt;/span&gt;h2&lt;span class=&quot;token operator&quot;&gt;&gt;&lt;/span&gt;시작 페이지&lt;span class=&quot;token operator&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;/&lt;/span&gt;h2&lt;span class=&quot;token operator&quot;&gt;&gt;&lt;/span&gt;
-
-            &lt;span class=&quot;token operator&quot;&gt;&amp;lt;&lt;/span&gt;button onClick&lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;onClickHandler&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;&gt;&lt;/span&gt;
-                로그아웃
-            &lt;span class=&quot;token operator&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;/&lt;/span&gt;button&lt;span class=&quot;token operator&quot;&gt;&gt;&lt;/span&gt;
-
         &lt;span class=&quot;token operator&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;/&lt;/span&gt;div&lt;span class=&quot;token operator&quot;&gt;&gt;&lt;/span&gt;
     &lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;
 &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;
-
-&lt;span class=&quot;token keyword&quot;&gt;export&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;default&lt;/span&gt; &lt;span class=&quot;token function&quot;&gt;withRouter&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;LandingPage&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;span class=&quot;token keyword&quot;&gt;export&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;default&lt;/span&gt; LandingPage&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 &lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;js&quot;&gt;&lt;pre class=&quot;language-js&quot;&gt;&lt;code class=&quot;language-js&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;server&lt;span class=&quot;token operator&quot;&gt;/&lt;/span&gt;index&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;js&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;token comment&quot;&gt;// request를 받는 router 생성 &lt;/span&gt;
+&lt;span class=&quot;token comment&quot;&gt;// 클라이언트측에서 get으로 줬으니 get메소드 사용, end point는 /api/hello, (req, res) callback을 주고 &lt;/span&gt;
+&lt;span class=&quot;token comment&quot;&gt;// 원래 라우터 같은 경우 request받은 걸로 처리 후 front로 다시 response줌 (지금은 프론트에 response(메시지)만 줌)&lt;/span&gt;
 app&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;get&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&apos;/api/hello&apos;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token parameter&quot;&gt;req&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; res&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;=&gt;&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
   res&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;send&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&apos;Hello World!~~ &apos;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;
 &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;Reference&lt;/p&gt;</content:encoded></item><item><title><![CDATA[Shop Project_React]]></title><description><![CDATA[React js 페이스북에서 제공하는 자바스크립트 라이브러리 오픈소스 자바스크립트로 AJAX, HTML 조작 → 코드 多 / React, Angular, Vue 라이브러리 사용 → 간결한 코드 Component 기반 구조
+&lt;h1 id=&quot;cors이슈-proxy-설정&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#cors%EC%9D%B4%EC%8A%88-proxy-%EC%84%A4%EC%A0%95&quot; aria-label=&quot;cors이슈 proxy 설정 permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;CORS이슈, Proxy 설정&lt;/h1&gt;
+&lt;p&gt;Cross-Origin Resource Sharing(CORS): origin이 다른데 resource를 Sharing할 때 적용되는 정책
+web document와 서버가 교환 시 same origin이면 항상 허용됨 다르면 정책에 의해 컨트롤 당함&lt;/p&gt;
+&lt;p&gt;Server 포트번호 5000번 -&gt; localhost:5000 (Response) - origin&lt;/p&gt;
+&lt;p&gt;Client 포트번호 3000번 -&gt; localhost:3000 (Request) - origin&lt;/p&gt;
+&lt;p&gt;axios.get(‘/api/hello’) 이렇게 요청 보내면 3000번으로 가기 때문에 5000번인 서버는 받지 못하는 상황 벌어짐
+이렇게 두개의 다른 포트를 가지고 있는 서버는 Cors 보안 정책 때문에 아무 설정없이 서버에 request를 보낼 수 없음&lt;/p&gt;
+&lt;h2 id=&quot;해결방법&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#%ED%95%B4%EA%B2%B0%EB%B0%A9%EB%B2%95&quot; aria-label=&quot;해결방법 permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;해결방법&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;방법 1
+개발자 도구 사용(Chrome Cors Extension)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;개발자들만 사용하는 방법이기 때문에 제한적임&lt;/p&gt;
+&lt;p&gt;프론트엔드 부분만 고칠 수 있는 상황이라면 json 방식을 이용해 모든 request를 get request로 보냄으로써 해결이 가능하지만 제한적임
+backend 와 frontend 모두 컨트롤 할 수있는 상황이라면 서버에다가 클라이언트에서 오는 건 받을 수 있게 해주고
+클라이언트 측에서도 보낼 때 ~한 것들은 허용해달라고 request를 보낼 때 같이 전달해서 보내면 해결됨&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;방법 2&lt;br&gt;
+Proxy 사용
+&lt;a href=&quot;https://create-react-app.dev/docs/proxying-api-requests-in-development/&quot;&gt;Configuring the Proxy Manually&lt;/a&gt;
+Proxy를 임의로 설정하기 위해 client 부분에 모듈 다운로드&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;code class=&quot;language-text&quot;&gt;npm install http-proxy-middleware --save&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;그 다음 src/setupProxy.js 파일 생성&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;js&quot;&gt;&lt;pre class=&quot;language-js&quot;&gt;&lt;code class=&quot;language-js&quot;&gt;&lt;span class=&quot;token keyword&quot;&gt;const&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt; createProxyMiddleware &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token function&quot;&gt;require&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&apos;http-proxy-middleware&apos;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+
+module&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function-variable function&quot;&gt;exports&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;function&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token parameter&quot;&gt;app&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+  app&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;use&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;
+    &lt;span class=&quot;token string&quot;&gt;&apos;/api&apos;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
+    &lt;span class=&quot;token function&quot;&gt;createProxyMiddleware&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+      &lt;span class=&quot;token comment&quot;&gt;//server/index.js에서 정의한 port번호가 5000번이니까 target을 5000번으로 설정&lt;/span&gt;
+      &lt;span class=&quot;token comment&quot;&gt;// front end 3000번 -&gt; back end 5000번으로 주겠다고 설정해 놓음&lt;/span&gt;
+      target&lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&apos;http://localhost:5000&apos;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
+      changeOrigin&lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token boolean&quot;&gt;true&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
+    &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;
+  &lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;h1 id=&quot;proxy-server&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#proxy-server&quot; aria-label=&quot;proxy server permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;Proxy Server&lt;/h1&gt;
+&lt;p&gt;보안상의 이유 등으로 직접 통신할 수 없는 두 점 사이에서 대리로 통신(request, response)을 수행하는 기능을 프록시, 그 중계 기능을 하는 컴퓨터 시스템이나 응용프로그램을 프록시 서버라 함&lt;/p&gt;
+&lt;h2 id=&quot;프록시-서버의-주요-특징&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#%ED%94%84%EB%A1%9D%EC%8B%9C-%EC%84%9C%EB%B2%84%EC%9D%98-%EC%A3%BC%EC%9A%94-%ED%8A%B9%EC%A7%95&quot; aria-label=&quot;프록시 서버의 주요 특징 permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;프록시 서버의 주요 특징&lt;/h2&gt;
+&lt;ol&gt;
+&lt;li&gt;프록시 서버는 클라이언트가 자신을 통해서 다른 네트워크 서비스에 간접적으로 접속할 수 있게 해줌 (pc와 외부 인터넷 사이의 징검다리 역할) &lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;  시스템에 방화벽을 가지고 있는 경우 외부와의 통신을 위해 만들어 놓은 서버 -&gt; 외부 인터넷의 내부 침입을 막는 방화벽 기능&lt;/p&gt;
+&lt;ol start=&quot;2&quot;&gt;
+&lt;li&gt;프록시 서버는 프록시 서버에 요청된 웹 페이지 내용들을 캐시를 이용해 저장 (캐시 데이터, 공유 데이터 제공 기능)&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;  Proxy 서버는 사용자의 요청을 Cahche해서 동일 요청이 들어오면 Cache 자원을 반환하기 때문에 리소스로의 접근을 빠르게 할 수 있음&lt;/p&gt;
+&lt;p&gt;  예를들어 특정 사이트에 접속시 static한 이미지등을 proxy서버에 저장 시켜놔서 보고 싶을 때 빠르게 proxy서버에 담겨있는 해당 이미지를 볼 수 있음. &lt;/p&gt;
+&lt;p&gt;  이렇게 하면 전송시간도 절약하고 불필요하게 외부와의 연결을 하지 않아도 되며 외부와의 트래픽을 줄이게 됨으로써 네트워크 병목현상을 방지 가능&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;캐시는 컴퓨터의 기억장치에 관련된 기술로, 속도가 느린 기억장치와 속도가 빠른 기억장치가 존재할 경우, 빠른 기억장치에 느린 기억장치의 내용 중 최근에 사용한 일부를 넣어두는 것을 말한다. 이 경우 같은 내용을 여러 번 참조할 때, 두 번째부터는 빠른 속도로 읽을 수 있다.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;IP 조작
+임의로 보낸 유저 ip 조작할 수 있어 실제 ip를 모르게해 더 나은 보안을 제공함&lt;/p&gt;
+&lt;p&gt;추가적으로 ip뿐만 아니라 데이터도 중간에서 조작 가능&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;A Client(Proxy Server 설치)가 B Proxy에 접근하여 C인터넷(google.com)에 접속하는 방식&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;네트워크 서비스나 콘텐츠로의 접근 정책을 적용 가능&lt;/p&gt;
+&lt;p&gt;ACL(access control list ACL): 사이트 접근에 대한 접근 정책을 정의&lt;/p&gt;
+&lt;p&gt;회사에서 직원들이나 집안에서 아이들 특정 사이트 접근제어&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;사용률 기록 &amp;#x26; 검사&lt;/p&gt;
+&lt;p&gt;log/Audit: 회사 내 직원의 인터넷 사용을 레포팅할 수 있다. 반대로 인트라넷의 사용을 레포팅할 수 도 있다.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;보안 및 통제를 뚫고 나가기 위해 사용할 수 있으며 역으로 IP 추적을 당하지 않을 목적으로 사용. 역기능이긴 하지만 우회를 할 수 있도록 함&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;밖으로 나가는 콘텐츠 검사&lt;/p&gt;
+&lt;p&gt;중계 서버인 프록시 서버를 거치기 때문에 콘텐츠를 검사할 수 있다. &lt;/p&gt;
+&lt;p&gt;보안 상의 이유로 80 포트 외에 포트를 막아놓는 지역 제한을 우회해 다른 서비스 이용 가능&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;익명의 사용자가 서버에 접근하는 것을 막아 보안 유지&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h1 id=&quot;concurrently를-이용해-front-back-서버-한번에-켜기&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#concurrently%EB%A5%BC-%EC%9D%B4%EC%9A%A9%ED%95%B4-front-back-%EC%84%9C%EB%B2%84-%ED%95%9C%EB%B2%88%EC%97%90-%EC%BC%9C%EA%B8%B0&quot; aria-label=&quot;concurrently를 이용해 front back 서버 한번에 켜기 permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;Concurrently를 이용해 front, back 서버 한번에 켜기&lt;/h1&gt;
+&lt;p&gt;여러개의 commands를 동시에 작동 시킬 수 있게해주는 tool&lt;/p&gt;
+&lt;p&gt;사용법
+concurrently “command1 arg” “commmand2 arg”&lt;/p&gt;
+&lt;p&gt;Reference
+[]&lt;/p&gt;</content:encoded></item><item><title><![CDATA[Shop Project_React]]></title><description><![CDATA[React js 페이스북에서 제공하는 자바스크립트 라이브러리 오픈소스 자바스크립트로 AJAX, HTML 조작 → 코드 多 / React, Angular, Vue 라이브러리 사용 → 간결한 코드 Component 기반 구조
 Component…]]></description><link>https://www.yoojiih.github.io/Shop_React5/</link><guid isPermaLink="false">https://www.yoojiih.github.io/Shop_React5/</guid><pubDate>Mon, 15 Nov 2021 01:00:00 GMT</pubDate><content:encoded>&lt;h1 id=&quot;react-js&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#react-js&quot; aria-label=&quot;react js permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;React js&lt;/h1&gt;
 &lt;ul&gt;
 &lt;li&gt;페이스북에서 제공하는 자바스크립트 라이브러리 오픈소스&lt;/li&gt;
@@ -2343,41 +2407,42 @@ console&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span cl
 - PUT: 리소스를 수정 `Update`
 - DELETE: 리소스를 삭제 `Delete`&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 &lt;h2 id=&quot;post&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#post&quot; aria-label=&quot;post permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;POST&lt;/h2&gt;
-&lt;p&gt;create - 새로운 리소스를 생성
-&lt;code class=&quot;language-text&quot;&gt;axios.post(&quot;url주소&quot;,{ data객체 },[,config])&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;create - 새로운 리소스를 생성 &lt;/p&gt;
+&lt;p&gt;&lt;code class=&quot;language-text&quot;&gt;axios.post(&quot;url주소&quot;,{ data객체 },[,config])&lt;/code&gt;&lt;/p&gt;
 &lt;p&gt;두 번째 인자{ data객체 }는 본문으로 보낼 데이터를 설정한 객체 리터럴을 전달&lt;/p&gt;
-&lt;p&gt;로그인, 회원가입 등 사용자가 생성한 파일을 서버에다가 업로드할때 사용합니다.
-Post를 사용하면 주소창에 쿼리스트링이 남지 않기때문에 👍 GET보다 안전해요!&lt;/p&gt;
+&lt;p&gt;로그인, 회원가입 등 사용자가 생성한 파일을 서버에다가 업로드할때 사용하며 주소창에 쿼리스트링이 남지 않기 때문에 GET보다 안전함&lt;/p&gt;
 &lt;h2 id=&quot;get&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#get&quot; aria-label=&quot;get permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;GET&lt;/h2&gt;
-&lt;p&gt;Read - 입력한 url에 존재하는 리소스에 요청 (데이터 받아옴)
-&lt;code class=&quot;language-text&quot;&gt;axios.get(url,[,config])&lt;/code&gt;	&lt;/p&gt;
-&lt;p&gt;GET으로 로그인을 구현했을때 웹 사이트 주소창에 www.yourserver.com/login?id=Hnk&amp;#x26;pw=1234 이런식으로 뜸
-✔ GET은 서버에서 어떤 데이터를 가져와서 보여준다거나 하는 용도이다.  (json형태로 받아옴)
-주소에 있는 쿼리스트링을 활용해서 정보를 전달하는 것이지 GET메서드는 값이나 상태등을 바꿀 수 없습니다.&lt;/p&gt;
-&lt;p&gt;예제 코드
-import axios from ‘axios’;&lt;/p&gt;
-&lt;p&gt;axios.get(’&lt;a href=&quot;https://my-json-server.typicode.com/zofqofhtltm8015/fs/user&amp;#x27;&quot;&gt;https://my-json-server.typicode.com/zofqofhtltm8015/fs/user’&lt;/a&gt;).then((Response)=&gt;{
-console.log(Response.data);
-}).catch((Error)=&gt;{
-console.log(Error);
-})&lt;/p&gt;
+&lt;p&gt;Read - 입력한 url에 존재하는 리소스에 요청 &lt;/p&gt;
+&lt;p&gt;&lt;code class=&quot;language-text&quot;&gt;axios.get(url,[,config])&lt;/code&gt;	&lt;/p&gt;
+&lt;p&gt;GET은 서버에서 어떤 데이터를 가져와서 보여줄 때 사용 (json형태로 데이터 받아옴)&lt;/p&gt;
+&lt;p&gt;주소에 있는 쿼리스트링을 활용해서 정보를 전달함 (값이나 상태등을 바꿀 수 없음)&lt;/p&gt;
+&lt;p&gt;GET으로 로그인 구현 시 웹 사이트 주소창에 www.yourserver.com/login?id=Hnk&amp;#x26;pw=1234 이런식으로 뜸&lt;/p&gt;
+&lt;p&gt;예제 코드&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;js&quot;&gt;&lt;pre class=&quot;language-js&quot;&gt;&lt;code class=&quot;language-js&quot;&gt;&lt;span class=&quot;token keyword&quot;&gt;import&lt;/span&gt; axios &lt;span class=&quot;token keyword&quot;&gt;from&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&apos;axios&apos;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+
+axios&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;get&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&apos;https://my-json-server.typicode.com/zofqofhtltm8015/fs/user&apos;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;then&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token parameter&quot;&gt;Response&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;=&gt;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+    console&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;log&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;Response&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;data&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;catch&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token parameter&quot;&gt;Error&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;=&gt;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+    console&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;log&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;Error&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 &lt;h2 id=&quot;delete&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#delete&quot; aria-label=&quot;delete permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;Delete&lt;/h2&gt;
-&lt;p&gt;데이터베이스에 저장되어 있는 내용을 삭제
-&lt;code class=&quot;language-text&quot;&gt;axios.delete(URL,[,config]);&lt;/code&gt;&lt;/p&gt;
-&lt;p&gt;예제 코드
-axios.delete(“/thisisExample/list/30”).then(function(response){
-console.log(response);
-}).catch(function(ex){
-throw new Error(ex)
-}&lt;/p&gt;
+&lt;p&gt;데이터베이스에 저장되어 있는 내용을 삭제&lt;/p&gt;
+&lt;p&gt;&lt;code class=&quot;language-text&quot;&gt;axios.delete(URL,[,config]);&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;예제 코드&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;js&quot;&gt;&lt;pre class=&quot;language-js&quot;&gt;&lt;code class=&quot;language-js&quot;&gt;axios&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;delete&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&quot;/thisisExample/list/30&quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;then&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token keyword&quot;&gt;function&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token parameter&quot;&gt;response&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+    console&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;log&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;response&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+      &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;catch&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token keyword&quot;&gt;function&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token parameter&quot;&gt;ex&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+      &lt;span class=&quot;token keyword&quot;&gt;throw&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;token class-name&quot;&gt;Error&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;ex&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 &lt;h2 id=&quot;put&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#put&quot; aria-label=&quot;put permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;PUT&lt;/h2&gt;
-&lt;p&gt;데이터베이스에 저장되어 있는 내용을 갱신
-&lt;code class=&quot;language-text&quot;&gt;axios.put(url[, data[, config]])&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;데이터베이스에 저장되어 있는 내용을 갱신&lt;/p&gt;
+&lt;p&gt;&lt;code class=&quot;language-text&quot;&gt;axios.put(url[, data[, config]])&lt;/code&gt;&lt;/p&gt;
 &lt;h1 id=&quot;axios-서버-통신&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#axios-%EC%84%9C%EB%B2%84-%ED%86%B5%EC%8B%A0&quot; aria-label=&quot;axios 서버 통신 permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;Axios 서버 통신&lt;/h1&gt;
-&lt;p&gt;로그인 아키텍처
-Client(유저 이메일, 비번) -Request-&gt; Web Server
-Web Server -Response-&gt; Client 200(성공코드),토큰
-400(실패코드) Error log&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;로그인 아키텍처&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Client(유저 이메일, 비번)에서 Web Server로 Request&lt;/p&gt;
+&lt;p&gt;Web Server에서 Client로 Response [ 성공시 200(성공코드),토큰 / 실패시 400(실패코드) Error log ]&lt;/p&gt;
 &lt;h2 id=&quot;로그인-post-method&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#%EB%A1%9C%EA%B7%B8%EC%9D%B8-post-method&quot; aria-label=&quot;로그인 post method permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;로그인 (POST Method)&lt;/h2&gt;
 &lt;p&gt;일단 api 통신 테스트만 간단히 해 놓고 나중에 데이터(이메일, 비밀번호) 전달 할 예정 &amp;#x26; 토큰 &lt;/p&gt;
 &lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;javascript&quot;&gt;&lt;pre class=&quot;language-javascript&quot;&gt;&lt;code class=&quot;language-javascript&quot;&gt;&lt;span class=&quot;token keyword&quot;&gt;import&lt;/span&gt; Axios &lt;span class=&quot;token keyword&quot;&gt;from&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&quot;axios&quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
@@ -2449,47 +2514,51 @@ Web Server -Response-&gt; Client 200(성공코드),토큰
 &lt;p&gt;(구현 완료되는 대로 이곳에 추가 해 나갈 예정)&lt;/p&gt;
 &lt;h1 id=&quot;쿠키-vs-세션-vs-캐시&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#%EC%BF%A0%ED%82%A4-vs-%EC%84%B8%EC%85%98-vs-%EC%BA%90%EC%8B%9C&quot; aria-label=&quot;쿠키 vs 세션 vs 캐시 permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;쿠키 VS 세션 VS 캐시&lt;/h1&gt;
 &lt;h2 id=&quot;쿠키&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#%EC%BF%A0%ED%82%A4&quot; aria-label=&quot;쿠키 permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;쿠키&lt;/h2&gt;
-&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;- 클라이언트 로컬에 저장됨
-- 이름, 값, 유효시간, 도메인(쿠키 전송할 도메인), 경로(쿠키 전송할 요청 경로) 값으로 구성되어 있는 작은 데이터 파일 
-- 상태정보 저장 &amp;amp; 참조
-- 사용자 인증 유효시간 명시가능 ( 쿠키 만료시간 정해지면 브라우저가 종료되어도 클라이언트에서 보관 유지 )
-- 쿠키 저장가능 개수 300개, 하나의 도메인당 20개의 값, 쿠키 한개당 4KB까지 저장
-- Session management : 서버에 저장해야 할 로그인, 장바구니, 게임 스코어 등의 정보 관리
-- Personalization : 사용자 선호, 테마 등의 세팅
-- Tracking : 사용자 행동을 기록하고 분석하는 용도&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 &lt;ul&gt;
+&lt;li&gt;클라이언트 로컬에 저장됨&lt;/li&gt;
+&lt;li&gt;이름, 값, 유효시간, 도메인(쿠키 전송할 도메인), 경로(쿠키 전송할 요청 경로) 값으로 구성되어 있는 작은 데이터 파일 &lt;/li&gt;
+&lt;li&gt;상태정보 저장 &amp;#x26; 참조&lt;/li&gt;
+&lt;li&gt;사용자 인증 유효시간 명시가능 ( 쿠키 만료시간 정해지면 브라우저가 종료되어도 클라이언트에서 보관 유지 )&lt;/li&gt;
+&lt;li&gt;쿠키 저장가능 개수 300개, 하나의 도메인당 20개의 값, 쿠키 한개당 4KB까지 저장&lt;/li&gt;
+&lt;li&gt;Session management : 서버에 저장해야 할 로그인, 장바구니, 게임 스코어 등의 정보 관리&lt;/li&gt;
+&lt;li&gt;Personalization : 사용자 선호, 테마 등의 세팅&lt;/li&gt;
+&lt;li&gt;Tracking : 사용자 행동을 기록하고 분석하는 용도&lt;/li&gt;
 &lt;li&gt;
-&lt;p&gt;동작 방식
-Response Header에 Set-Cookie 속성을 사용하면 클라이언트에 쿠키를 만들 수 있다.
-쿠키는 사용자가 따로 요청하지 않아도 브라우저가 Request 시에 Request Header를 넣어서 자동으로 서버에 전송한다.&lt;/p&gt;
-&lt;p&gt;클라이언트가 페이지 요청 -&gt; 서버에서 쿠키 생성 -&gt; HTTP 헤더에 쿠키를 포함 시켜 응답
+&lt;p&gt;동작 방식&lt;/p&gt;
+&lt;p&gt;클라이언트가 페이지 요청 (쿠키는 사용자가 따로 요청하지 않아도 브라우저가 Request시에 Request Header를 넣어서 자동으로 서버에 전송함) -&gt; 서버에서 쿠키 생성 -&gt; HTTP 헤더에 쿠키를 포함 시켜 응답( Response Header에 Set-Cookie 속성을 사용)
 -&gt; 쿠키 만료 기간 내 같은 요청 할 경우 HTTP 헤더에 쿠키를 함께 보냄 -&gt;
 서버에서 쿠키를 읽어 상태정보 변동 시 업데이트 하여 변경된 쿠키를 HTTP 헤더에 포함시켜 응답&lt;/p&gt;
 &lt;/li&gt;
 &lt;/ul&gt;
 &lt;h2 id=&quot;세션&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#%EC%84%B8%EC%85%98&quot; aria-label=&quot;세션 permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;세션&lt;/h2&gt;
-&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;쿠키 기반, 사용자 정보 파일을 브라우저에 저장하지않고 서버측에서 관리 
-쿠키 = 로컬 , 세션 = 서버에 존재함 (서버 자원 사용)
-세션 ID: 클라이언트가 요청을 보내면 해당 서버의 엔진이 클라이언트에게 유일한 ID를 부여
-라이프 사이클 : 세션 ID로 클라이언트를 구분해 브라우저 종료시까지 인증상태 유지 
-            접속시간 제한 설정 가능, 브라우저 종료시 지정한 만료시간에 상관없이 삭제됨
-            쿠키도 만료시간이 있지만 파일로 저장되기 때문에 브라우저를 종료해도 정보가 남아 있을 수 있음
-사용자의 로그인 &amp;amp; 로그아웃 세션 따로 생성됨     
-보안성: 세션은 쿠키를 이용해서 session id만 저장하고 서버에서 처리하기 때문에 쿠키보단 보안성이 좋음
-but, 쿠키는 클라이언트 로컬에 저장되기 때문에 변질되거나 request에서 스니핑 당할 우려가 있어서 보안에 취약
-속도: 사용자가 많아질 수록 서버 메모리를 많이 차지하게 되어 성능 저하 초래함 &amp;amp; 서버 처리로 요청 속도가 쿠키보다 느림
-사용자가 요청 할 때 마다 필요한 정보들(로그인, 닉네임)을 세션에 담아두면 DB에 접근할 필요가 없어서 효율적&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;동작 방식
-클라이언트가 서버에 처음으로 Request 보냄 -&gt; 서버에서는 session id 쿠키 값을 새로 발급해서 응답
+&lt;ul&gt;
+&lt;li&gt;쿠키(로컬) 기반, but 세션은 서버에 존재하기 때문에 사용자 정보 파일을 브라우저에 저장하지않고 서버측에서 관리 (서버 자원 사용)&lt;/li&gt;
+&lt;li&gt;세션 ID: 클라이언트가 요청을 보내면 해당 서버가 유일한 ID를 부여 해줌&lt;/li&gt;
+&lt;li&gt;라이프 사이클 : 세션 ID로 클라이언트를 구분해 브라우저 종료시까지 인증상태 유지
+접속시간 제한 설정 가능하지만 브라우저 종료시 지정한 만료시간에 상관없이 삭제됨
+쿠키도 만료시간이 있지만 파일로 저장되기 때문에 브라우저를 종료해도 정보가 남아 있을 수 있음&lt;/li&gt;
+&lt;li&gt;사용자의 로그인 &amp;#x26; 로그아웃 세션 따로 생성됨     &lt;/li&gt;
+&lt;li&gt;보안성: 쿠키를 이용해서 session id만 저장하고 서버에서 처리하기 때문에 쿠키보단 보안성이 좋음
+쿠키는 클라이언트 로컬에 저장되기 때문에 변질되거나 request에서 스니핑 당할 우려가 있어서 보안에 취약&lt;/li&gt;
+&lt;li&gt;속도: 사용자가 많아질수록 서버 메모리를 많이 차지해 성능저하를 초래 &amp;#x26; 서버 처리로 요청 속도가
+쿠키보다 느림&lt;/li&gt;
+&lt;li&gt;사용자가 요청 할 때 마다 필요한 정보들(로그인, 닉네임)을 세션에 담아두면 DB에 접근할 필요가 없어서 효율적&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;동작 방식&lt;/p&gt;
+&lt;p&gt;클라이언트가 서버에 처음으로 Request 보냄 -&gt; 서버에서는 session id 쿠키 값을 새로 발급해서 응답
 -&gt; 클라이언트는 전달받은 session id 값을 매 요청마다 헤더 쿠키에 넣어서 요청 -&gt; 서버는 session id를 확인하여 사용자를 식별
 -&gt; 로그인 요청시 서버는 session을 로그인한 사용자 정보로 갱신 &amp;#x26; 새로운 session id를 발급하여 응답
 -&gt; 클라이언트는 로그인 사용자의 session id 쿠키를 요청과 함께 전달하고 서버에서도 로그인된 사용자로 식별 가능
 -&gt; 클라이언트 종료 (브라우저 종료) 시 session id 제거, 서버에서도 세션 제거&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
 &lt;h2 id=&quot;캐시&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#%EC%BA%90%EC%8B%9C&quot; aria-label=&quot;캐시 permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;캐시&lt;/h2&gt;
-&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;- 웹 페이지 요소를 저장하기 위한 임시 저장소
-- 목적 : 재사용 가능성 or 용량이 큰 리소스를 임시로 저장해 렌더링 속도를 높이는 것 (ex. 이미지)
-- 쿠키와는 비슷하지만 쿠키는 사용자의 인증을 도와주는게 목적
-- 캐시는 사용자가 직접 수동으로 삭제해주어야 하고 쿠키는 만료기간이 있어 시간이 지나면 자동 삭제됨&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;ul&gt;
+&lt;li&gt;웹 페이지 요소를 저장하기 위한 임시 저장소&lt;/li&gt;
+&lt;li&gt;목적 : 재사용 가능성 or 용량이 큰 리소스를 임시로 저장해 렌더링 속도를 높이는 것 (ex. 이미지)&lt;/li&gt;
+&lt;li&gt;쿠키와는 비슷하지만 쿠키는 사용자의 인증을 도와주는게 목적&lt;/li&gt;
+&lt;li&gt;캐시는 사용자가 직접 수동으로 삭제해주어야 하고 쿠키는 만료기간이 있어 시간이 지나면 자동 삭제됨&lt;/li&gt;
+&lt;/ul&gt;
 &lt;p&gt;Reference&lt;/p&gt;
 &lt;p&gt;&lt;a href=&quot;https://gmlwjd9405.github.io/2018/09/21/rest-and-restful.html&quot;&gt;[Network] REST란? REST API란? RESTful이란?&lt;/a&gt;
 &lt;a href=&quot;https://meetup.toast.com/posts/92&quot;&gt;REST API 제대로 알고 사용하기&lt;/a&gt;
