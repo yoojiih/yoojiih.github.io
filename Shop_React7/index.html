@@ -158,6 +158,7 @@ store내에는 많은 메소드들이 존재하며 그 메소드들을 이용해
 (원래는 store를 redux에서 생성시create store만 하지만 객체밖에 못받기 때문에 미들웨어들과 함께 생성해줌)</li>
 <li>store 만든 createStoreWithMiddleware을 Provider store={ 이 안에다가 넣어주고 그 안에 reducer와 REDUX<em>DEVTOOLS</em>EXTENSION__까지 넣어주면 어플리케이션에 리덕스가 연결이 됨</li>
 </ol>
+<p>(src/index.js)</p>
 <div class="gatsby-highlight" data-language="js"><pre class="language-js"><code class="language-js"><span class="token operator">...</span>
 <span class="token keyword">import</span> <span class="token punctuation">{</span> Provider <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">'react-redux'</span><span class="token punctuation">;</span>
 <span class="token keyword">import</span> <span class="token punctuation">{</span> applyMiddleware<span class="token punctuation">,</span> createStore <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">'redux'</span><span class="token punctuation">;</span>
