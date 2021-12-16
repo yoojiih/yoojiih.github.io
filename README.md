@@ -1,5 +1,5 @@
 <h1 align="center">
-  Zoomkoding Gatsby Blog
+  Today I Learned (TIL)
 </h1>
 
 <p align="center">
