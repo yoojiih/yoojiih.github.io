@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Yooji's Blog]]></title><description><![CDATA[줌코딩의 개발일기]]></description><link>https://www.yoojiih.github.io</link><generator>GatsbyJS</generator><lastBuildDate>Wed, 15 Dec 2021 16:12:48 GMT</lastBuildDate><item><title><![CDATA[Shop Project_React 배포]]></title><description><![CDATA[서비스는 개발이 다가 아니라 빌드 후 배포까지 하는게 진정한 완성이다 프론트엔드 개발을 시작하기에 참 편한 시대이지만, localhost…]]></description><link>https://www.yoojiih.github.io/Shop_React14/</link><guid isPermaLink="false">https://www.yoojiih.github.io/Shop_React14/</guid><pubDate>Wed, 15 Dec 2021 01:00:00 GMT</pubDate><content:encoded>&lt;blockquote&gt;
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Yooji's Blog]]></title><description><![CDATA[줌코딩의 개발일기]]></description><link>https://www.yoojiih.github.io</link><generator>GatsbyJS</generator><lastBuildDate>Sat, 18 Dec 2021 04:51:50 GMT</lastBuildDate><item><title><![CDATA[Shop Project_React 배포]]></title><description><![CDATA[서비스는 개발이 다가 아니라 빌드 후 배포까지 하는게 진정한 완성이다 프론트엔드 개발을 시작하기에 참 편한 시대이지만, localhost…]]></description><link>https://www.yoojiih.github.io/Shop_React14/</link><guid isPermaLink="false">https://www.yoojiih.github.io/Shop_React14/</guid><pubDate>Wed, 15 Dec 2021 01:00:00 GMT</pubDate><content:encoded>&lt;blockquote&gt;
 &lt;p&gt;서비스는 개발이 다가 아니라 빌드 후 배포까지 하는게 진정한 완성이다&lt;/p&gt;
 &lt;/blockquote&gt;
 &lt;p&gt;프론트엔드 개발을 시작하기에 참 편한 시대이지만, localhost에서만 작동하는 서비스는 서비스로서 전혀 의미가 없다.
@@ -161,7 +161,7 @@ module&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span cla
 &lt;p&gt;인스턴스(가상 컴퓨터)를 생성하여 AWS가 제공하는 컴퓨터를 임대해 대신 돌림&lt;/p&gt;
 &lt;h2 id=&quot;초기-셋팅&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#%EC%B4%88%EA%B8%B0-%EC%85%8B%ED%8C%85&quot; aria-label=&quot;초기 셋팅 permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;초기 셋팅&lt;/h2&gt;
 &lt;ul&gt;
-&lt;li&gt;도메인 구매&lt;/li&gt;
+&lt;li&gt;도메인 구매 (가바아)&lt;/li&gt;
 &lt;li&gt;react앱을 build로 배포버전 생성함 &lt;/li&gt;
 &lt;li&gt;형성된 build 폴더를 git에 push&lt;/li&gt;
 &lt;li&gt;aws 접속 후 로그인&lt;/li&gt;
@@ -196,7 +196,7 @@ module&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span cla
 &lt;li&gt;아까 생성한 인스턴스를 선택하고 연결해주면 인스턴스의 Public IPv4가 탄력적 IP로 바뀌어 있음&lt;/li&gt;
 &lt;/ul&gt;
 &lt;h2 id=&quot;aws-ec2-인스턴스-보안-설정&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#aws-ec2-%EC%9D%B8%EC%8A%A4%ED%84%B4%EC%8A%A4-%EB%B3%B4%EC%95%88-%EC%84%A4%EC%A0%95&quot; aria-label=&quot;aws ec2 인스턴스 보안 설정 permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;AWS EC2 인스턴스 보안 설정&lt;/h2&gt;
-&lt;p&gt;인스턴스에서 어떤 포트를 개방할 지 설정해야 node app.js로 서버를 실행시켜 3.36.69.146:3001으로 접속 가능&lt;/p&gt;
+&lt;p&gt;인스턴스에서 어떤 포트를 개방할 지 설정해야 node app.js로 서버를 실행시켜 3.36.69.146:3000으로 접속 가능&lt;/p&gt;
 &lt;p&gt;인스턴스 리스트 페이지에서 해당 인스턴스를 체크를 한 후, Security groups에 첫 번째 항목에 이름을 기억해 Security Groups 페이지로 이동&lt;/p&gt;
 &lt;p&gt;Security groups에 첫 번째 항목 이름과 일치하는 항목을 체크해주고 &lt;code class=&quot;language-text&quot;&gt;Edit inbound rules&lt;/code&gt;를 클릭&lt;/p&gt;
 &lt;p&gt;사용할 포트 넘버(Port range)를 입력 후, &lt;code class=&quot;language-text&quot;&gt;Save rules&lt;/code&gt;를 클릭&lt;/p&gt;
@@ -294,10 +294,10 @@ nvm &lt;span class=&quot;token function&quot;&gt;install&lt;/span&gt; node
 node -e &lt;span class=&quot;token string&quot;&gt;&quot;console.log(&apos;Running Node.js &apos; + process.version)&quot;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 &lt;p&gt;&lt;a href=&quot;https://docs.aws.amazon.com/ko_kr/sdk-for-javascript/v2/developer-guide/setting-up-node-on-ec2-instance.html&quot;&gt;공식문서 참고&lt;/a&gt;&lt;/p&gt;
 &lt;h2 id=&quot;오류-사항&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#%EC%98%A4%EB%A5%98-%EC%82%AC%ED%95%AD&quot; aria-label=&quot;오류 사항 permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;오류 사항&lt;/h2&gt;
-&lt;p&gt;code EACCES npm ERR! syscall access npm ERR! path /home/ubuntu/React_Shop/client npm ERR! errno -13
-아래와 같은 명령어를 사용해 설치시 버전이 맞지 않아 에러가 발생함&lt;/p&gt;
+&lt;p&gt;code EACCES npm ERR! syscall access npm ERR! path /home/ubuntu/React_Shop/client npm ERR! errno -13&lt;/p&gt;
 &lt;/li&gt;
 &lt;/ul&gt;
+&lt;p&gt;Stockoverflow에서 나와 비슷한 문제를 겪고 있는 이의 질문을 찾아냈다. 그리고 아래와 같은 명령어를 사용해 설치시 버전이 맞지 않아 에러가 발생했다는 것을 알게되었다&lt;/p&gt;
 &lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;bash&quot;&gt;&lt;pre class=&quot;language-bash&quot;&gt;&lt;code class=&quot;language-bash&quot;&gt;&lt;span class=&quot;token comment&quot;&gt;# sudo apt install nodejs&lt;/span&gt;
 &lt;span class=&quot;token comment&quot;&gt;# sudo apt install npm&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 &lt;h2 id=&quot;오류-해결&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#%EC%98%A4%EB%A5%98-%ED%95%B4%EA%B2%B0&quot; aria-label=&quot;오류 해결 permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;오류 해결&lt;/h2&gt;
@@ -343,9 +343,12 @@ configure error  gyp ERR! stack Error: EACCES: permission denied, mkdir &apos;/h
 &lt;h2 id=&quot;서버-실행&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#%EC%84%9C%EB%B2%84-%EC%8B%A4%ED%96%89&quot; aria-label=&quot;서버 실행 permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;서버 실행&lt;/h2&gt;
 &lt;ul&gt;
 &lt;li&gt;
-&lt;p&gt;서버를 실행하기 전, production mode를 적용해주고&lt;/p&gt;
+&lt;p&gt;서버를 실행하기 전, production mode를 적용해주고 &lt;/p&gt;
 &lt;!-- `export NODE_ENV=production` --&gt;
-&lt;p&gt;&lt;code class=&quot;language-text&quot;&gt;npm start&lt;/code&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;start를 하려면 build가 무조건 선행되어야한다.
+&lt;code class=&quot;language-text&quot;&gt;npm start&lt;/code&gt;&lt;/p&gt;
 &lt;h2 id=&quot;오류-발생--1-1&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#%EC%98%A4%EB%A5%98-%EB%B0%9C%EC%83%9D--1-1&quot; aria-label=&quot;오류 발생  1 1 permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;오류 발생 -1&lt;/h2&gt;
 &lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;Error: error:0308010C:digital envelope routines::unsupported
 at new Hash (node:internal/crypto/hash:67:19)
@@ -398,14 +401,34 @@ ctrl + c &lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;종료하
 &lt;p&gt;만약 종료해주고 싶다면 &lt;code class=&quot;language-text&quot;&gt;pm2 stop [id]&lt;/code&gt;를 해줌 (참고로 처음 실행시 id는 0임)&lt;/p&gt;
 &lt;/li&gt;
 &lt;/ul&gt;
-&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;bash&quot;&gt;&lt;pre class=&quot;language-bash&quot;&gt;&lt;code class=&quot;language-bash&quot;&gt;&lt;span class=&quot;token comment&quot;&gt;# pm2 설치&lt;/span&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;bash&quot;&gt;&lt;pre class=&quot;language-bash&quot;&gt;&lt;code class=&quot;language-bash&quot;&gt;&lt;span class=&quot;token comment&quot;&gt;# pm2 설치 (전역 설치시 sudo 권한으로 설치해줘야함 원래는 npm install pm2)&lt;/span&gt;
 &lt;span class=&quot;token function&quot;&gt;npm&lt;/span&gt; &lt;span class=&quot;token function&quot;&gt;install&lt;/span&gt; -g pm2
-&lt;span class=&quot;token comment&quot;&gt;# 설치 후 app.js가 있는 폴더로 이동해 다음 명령 실행해줌&lt;/span&gt;
-pm2 start server/index.js&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;span class=&quot;token comment&quot;&gt;# 설치 후 index.js가 있는 폴더로 이동해 다음 명령 실행해줌 &lt;/span&gt;
+pm2 start server/index.js
+&lt;span class=&quot;token comment&quot;&gt;# 중단&lt;/span&gt;
+pm2 &lt;span class=&quot;token function&quot;&gt;kill&lt;/span&gt;
+&lt;span class=&quot;token comment&quot;&gt;# 콘솔 나갈 땐 &lt;/span&gt;
+&lt;span class=&quot;token builtin class-name&quot;&gt;exit&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 &lt;h1 id=&quot;실행&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#%EC%8B%A4%ED%96%89&quot; aria-label=&quot;실행 permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;실행&lt;/h1&gt;
 &lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;bash&quot;&gt;&lt;pre class=&quot;language-bash&quot;&gt;&lt;code class=&quot;language-bash&quot;&gt;&lt;span class=&quot;token builtin class-name&quot;&gt;cd&lt;/span&gt; client
 &lt;span class=&quot;token function&quot;&gt;npm&lt;/span&gt; start&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;h2 id=&quot;웹-서버nginx-설치-및-환경-설정하기-참고&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#%EC%9B%B9-%EC%84%9C%EB%B2%84nginx-%EC%84%A4%EC%B9%98-%EB%B0%8F-%ED%99%98%EA%B2%BD-%EC%84%A4%EC%A0%95%ED%95%98%EA%B8%B0-%EC%B0%B8%EA%B3%A0&quot; aria-label=&quot;웹 서버nginx 설치 및 환경 설정하기 참고 permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;웹 서버(Nginx) 설치 및 환경 설정하기 (참고)&lt;/h2&gt;
+&lt;h2 id=&quot;pm2-로그-관리&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#pm2-%EB%A1%9C%EA%B7%B8-%EA%B4%80%EB%A6%AC&quot; aria-label=&quot;pm2 로그 관리 permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;PM2 로그 관리&lt;/h2&gt;
+&lt;p&gt;Config 파일에서 설정한 로그 경로에 저장되는 로그는 우리가 삭제해주지 않는한 계속 쌓이게 되어 서버 용량 부족으로 이어질 수 있음&lt;/p&gt;
+&lt;p&gt;이를 해결하기 위해 로그 파일을 관리해주는 pm2-logrotate라는 plugin을 사용해줌&lt;/p&gt;
+&lt;h1 id=&quot;npm으로-설치하는-것이-아닌-pm2로-설치해줘야함&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#npm%EC%9C%BC%EB%A1%9C-%EC%84%A4%EC%B9%98%ED%95%98%EB%8A%94-%EA%B2%83%EC%9D%B4-%EC%95%84%EB%8B%8C-pm2%EB%A1%9C-%EC%84%A4%EC%B9%98%ED%95%B4%EC%A4%98%EC%95%BC%ED%95%A8&quot; aria-label=&quot;npm으로 설치하는 것이 아닌 pm2로 설치해줘야함 permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;npm으로 설치하는 것이 아닌 pm2로 설치해줘야함&lt;/h1&gt;
+&lt;p&gt;$ pm2 install pm2-logrotate&lt;/p&gt;
+&lt;h1 id=&quot;옵션-설정은-다음과-같이-설정해줌&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#%EC%98%B5%EC%85%98-%EC%84%A4%EC%A0%95%EC%9D%80-%EB%8B%A4%EC%9D%8C%EA%B3%BC-%EA%B0%99%EC%9D%B4-%EC%84%A4%EC%A0%95%ED%95%B4%EC%A4%8C&quot; aria-label=&quot;옵션 설정은 다음과 같이 설정해줌 permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;옵션 설정은 다음과 같이 설정해줌&lt;/h1&gt;
+&lt;p&gt;$ pm2 set pm2-logrotate:&lt;option&gt; &lt;value&gt;&lt;/p&gt;
+&lt;p&gt;&lt;span class=&quot;mjx-chtml&quot;&gt;&lt;span class=&quot;mjx-math&quot; aria-label=&quot;pm2 set pm2-logrotate:max_size 1K&quot;&gt;&lt;span class=&quot;mjx-mrow&quot; aria-hidden=&quot;true&quot;&gt;&lt;span class=&quot;mjx-mi&quot;&gt;&lt;span class=&quot;mjx-char MJXc-TeX-math-I&quot; style=&quot;padding-top: 0.225em; padding-bottom: 0.446em;&quot;&gt;p&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;mjx-mi&quot;&gt;&lt;span class=&quot;mjx-char MJXc-TeX-math-I&quot; style=&quot;padding-top: 0.225em; padding-bottom: 0.298em;&quot;&gt;m&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;mjx-mn&quot;&gt;&lt;span class=&quot;mjx-char MJXc-TeX-main-R&quot; style=&quot;padding-top: 0.372em; padding-bottom: 0.372em;&quot;&gt;2&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;mjx-mi&quot;&gt;&lt;span class=&quot;mjx-char MJXc-TeX-math-I&quot; style=&quot;padding-top: 0.225em; padding-bottom: 0.298em;&quot;&gt;s&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;mjx-mi&quot;&gt;&lt;span class=&quot;mjx-char MJXc-TeX-math-I&quot; style=&quot;padding-top: 0.225em; padding-bottom: 0.298em;&quot;&gt;e&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;mjx-mi&quot;&gt;&lt;span class=&quot;mjx-char MJXc-TeX-math-I&quot; style=&quot;padding-top: 0.372em; padding-bottom: 0.298em;&quot;&gt;t&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;mjx-mi&quot;&gt;&lt;span class=&quot;mjx-char MJXc-TeX-math-I&quot; style=&quot;padding-top: 0.225em; padding-bottom: 0.446em;&quot;&gt;p&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;mjx-mi&quot;&gt;&lt;span class=&quot;mjx-char MJXc-TeX-math-I&quot; style=&quot;padding-top: 0.225em; padding-bottom: 0.298em;&quot;&gt;m&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;mjx-mn&quot;&gt;&lt;span class=&quot;mjx-char MJXc-TeX-main-R&quot; style=&quot;padding-top: 0.372em; padding-bottom: 0.372em;&quot;&gt;2&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;mjx-mo MJXc-space2&quot;&gt;&lt;span class=&quot;mjx-char MJXc-TeX-main-R&quot; style=&quot;padding-top: 0.298em; padding-bottom: 0.446em;&quot;&gt;−&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;mjx-mi MJXc-space2&quot;&gt;&lt;span class=&quot;mjx-char MJXc-TeX-math-I&quot; style=&quot;padding-top: 0.446em; padding-bottom: 0.298em;&quot;&gt;l&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;mjx-mi&quot;&gt;&lt;span class=&quot;mjx-char MJXc-TeX-math-I&quot; style=&quot;padding-top: 0.225em; padding-bottom: 0.298em;&quot;&gt;o&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;mjx-mi&quot;&gt;&lt;span class=&quot;mjx-char MJXc-TeX-math-I&quot; style=&quot;padding-top: 0.225em; padding-bottom: 0.519em; padding-right: 0.003em;&quot;&gt;g&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;mjx-mi&quot;&gt;&lt;span class=&quot;mjx-char MJXc-TeX-math-I&quot; style=&quot;padding-top: 0.225em; padding-bottom: 0.298em;&quot;&gt;r&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;mjx-mi&quot;&gt;&lt;span class=&quot;mjx-char MJXc-TeX-math-I&quot; style=&quot;padding-top: 0.225em; padding-bottom: 0.298em;&quot;&gt;o&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;mjx-mi&quot;&gt;&lt;span class=&quot;mjx-char MJXc-TeX-math-I&quot; style=&quot;padding-top: 0.372em; padding-bottom: 0.298em;&quot;&gt;t&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;mjx-mi&quot;&gt;&lt;span class=&quot;mjx-char MJXc-TeX-math-I&quot; style=&quot;padding-top: 0.225em; padding-bottom: 0.298em;&quot;&gt;a&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;mjx-mi&quot;&gt;&lt;span class=&quot;mjx-char MJXc-TeX-math-I&quot; style=&quot;padding-top: 0.372em; padding-bottom: 0.298em;&quot;&gt;t&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;mjx-mi&quot;&gt;&lt;span class=&quot;mjx-char MJXc-TeX-math-I&quot; style=&quot;padding-top: 0.225em; padding-bottom: 0.298em;&quot;&gt;e&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;mjx-mo MJXc-space3&quot;&gt;&lt;span class=&quot;mjx-char MJXc-TeX-main-R&quot; style=&quot;padding-top: 0.151em; padding-bottom: 0.372em;&quot;&gt;:&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;mjx-mi MJXc-space3&quot;&gt;&lt;span class=&quot;mjx-char MJXc-TeX-math-I&quot; style=&quot;padding-top: 0.225em; padding-bottom: 0.298em;&quot;&gt;m&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;mjx-mi&quot;&gt;&lt;span class=&quot;mjx-char MJXc-TeX-math-I&quot; style=&quot;padding-top: 0.225em; padding-bottom: 0.298em;&quot;&gt;a&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;mjx-msubsup&quot;&gt;&lt;span class=&quot;mjx-base&quot;&gt;&lt;span class=&quot;mjx-mi&quot;&gt;&lt;span class=&quot;mjx-char MJXc-TeX-math-I&quot; style=&quot;padding-top: 0.225em; padding-bottom: 0.298em;&quot;&gt;x&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;mjx-sub&quot; style=&quot;font-size: 70.7%; vertical-align: -0.212em; padding-right: 0.071em;&quot;&gt;&lt;span class=&quot;mjx-mi&quot; style=&quot;&quot;&gt;&lt;span class=&quot;mjx-char MJXc-TeX-math-I&quot; style=&quot;padding-top: 0.225em; padding-bottom: 0.298em;&quot;&gt;s&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;mjx-mi&quot;&gt;&lt;span class=&quot;mjx-char MJXc-TeX-math-I&quot; style=&quot;padding-top: 0.446em; padding-bottom: 0.298em;&quot;&gt;i&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;mjx-mi&quot;&gt;&lt;span class=&quot;mjx-char MJXc-TeX-math-I&quot; style=&quot;padding-top: 0.225em; padding-bottom: 0.298em; padding-right: 0.003em;&quot;&gt;z&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;mjx-mi&quot;&gt;&lt;span class=&quot;mjx-char MJXc-TeX-math-I&quot; style=&quot;padding-top: 0.225em; padding-bottom: 0.298em;&quot;&gt;e&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;mjx-mn&quot;&gt;&lt;span class=&quot;mjx-char MJXc-TeX-main-R&quot; style=&quot;padding-top: 0.372em; padding-bottom: 0.372em;&quot;&gt;1&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;mjx-mi&quot;&gt;&lt;span class=&quot;mjx-char MJXc-TeX-math-I&quot; style=&quot;padding-top: 0.446em; padding-bottom: 0.298em; padding-right: 0.04em;&quot;&gt;K&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt; pm2 set pm2-logrotate:retain 10&lt;/p&gt;
+&lt;h2 id=&quot;이후-재접속-시-에러-발생&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#%EC%9D%B4%ED%9B%84-%EC%9E%AC%EC%A0%91%EC%86%8D-%EC%8B%9C-%EC%97%90%EB%9F%AC-%EB%B0%9C%EC%83%9D&quot; aria-label=&quot;이후 재접속 시 에러 발생 permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;이후 재접속 시 에러 발생&lt;/h2&gt;
+&lt;p&gt;yujihyeon@MacBook-Air-2 .ssh % ssh -i “web_dev.pem” ubuntu@3.36.69.146
+ssh: connect to host 3.36.69.146 port 22: Operation timed out&lt;/p&gt;
+&lt;h2 id=&quot;해결&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#%ED%95%B4%EA%B2%B0&quot; aria-label=&quot;해결 permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;해결&lt;/h2&gt;
+&lt;p&gt;탄력적 ip를 설정해줬기 때문에 그 주소를 넣고 실행해야함
+접속 시
+ssh -i “web&lt;em&gt;dev.pem” ubuntu@퍼블릭 IPv4 가 아닌
+ssh -i “web&lt;/em&gt;dev.pem” ubuntu@탄력적 ip 로 접속해야함!&lt;/p&gt;
+&lt;h2 id=&quot;웹-서버nginx-설치-및-환경-설정하기&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#%EC%9B%B9-%EC%84%9C%EB%B2%84nginx-%EC%84%A4%EC%B9%98-%EB%B0%8F-%ED%99%98%EA%B2%BD-%EC%84%A4%EC%A0%95%ED%95%98%EA%B8%B0&quot; aria-label=&quot;웹 서버nginx 설치 및 환경 설정하기 permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;웹 서버(Nginx) 설치 및 환경 설정하기&lt;/h2&gt;
 &lt;p&gt;서버 컴퓨터에 파일만 올려서는 실행이 안되니 Apache나 Nginx 같은 웹서버를 설치해서 구동시켜 줘야한다&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;Nginx 설치 (apt로 설치 받음) - ubuntu 20.04에 Nginx 설치
@@ -413,24 +436,73 @@ pm2 start server/index.js&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 &lt;li&gt;실행
 &lt;code class=&quot;language-text&quot;&gt;sudo service start nginx&lt;/code&gt;
 ec2의 퍼블릭 IP 주소로 입력해서 들어갔을 때&lt;code class=&quot;language-text&quot;&gt;welcom to nginx!&lt;/code&gt;화면이 뜬다면 nginx 웹서버가 정상적으로 설치 되어 작동되고 있다는 뜻이다.&lt;/li&gt;
+&lt;li&gt;nginx 시작
+&lt;code class=&quot;language-text&quot;&gt;sudo service nginx start&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;nginx 중지
+&lt;code class=&quot;language-text&quot;&gt;sudo service nginx stop&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;nginx 재시작
+&lt;code class=&quot;language-text&quot;&gt;sudo service nginx restart&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;nginx 구동되고 있는지 확인
+&lt;code class=&quot;language-text&quot;&gt;ps-ef|grep nginx&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;nginx에 빌드파일 연결하기
+nginx는 빌드된 파일을 사용하기 때문에 빌드 산출물을 생성해야 함
+&lt;code class=&quot;language-text&quot;&gt;npm run build&lt;/code&gt; (react의 경우 빌드 명령어)&lt;/li&gt;
 &lt;/ul&gt;
 &lt;h2 id=&quot;nginx-환경-설정&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#nginx-%ED%99%98%EA%B2%BD-%EC%84%A4%EC%A0%95&quot; aria-label=&quot;nginx 환경 설정 permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;Nginx 환경 설정&lt;/h2&gt;
-&lt;p&gt;nginx의 설정은 &lt;code class=&quot;language-text&quot;&gt;nginx.conf 파일&lt;/code&gt;로 설정함 (nginx 파일 위치:/etc/nginx ) &lt;/p&gt;
 &lt;ul&gt;
-&lt;li&gt;해당 파일을 vi로 열고 상단부에 modules-enabled라는 하위 디렉토리에 내가 원하는 conf파일을 만들어 그 파일의 설정 내용을 반영하도록 하는 문장을 입력
-&lt;code class=&quot;language-text&quot;&gt;include /etc/nginx/modules-enabled/*.conf;&lt;/code&gt;&lt;/li&gt;
 &lt;li&gt;
-&lt;p&gt;이후 modules-enabled의 디렉토리에 &lt;code class=&quot;language-text&quot;&gt;파일이름.conf&lt;/code&gt;파일 생성해, listen 3000이라는 줄을 작성하고(로드밸런서에서 웹 서버의 3000번 포트로 요청을 보내기 때문), 해당 포트로 접근 시 내 웹 서버의 location에 위치하는 파일을 열어 보여준다는 코드 작성&lt;/p&gt;
+&lt;p&gt;nginx의 설치가 끝나면 /etc/nginx 경로에 기본 화면으로 연결되는 Nginx 설정파일들이 이미 생성되어 있습니다. 우리가 만들 설정과 겹칠수 있기 때문에 모두 지워야 함 (default 파일 삭제)&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;sudo rm /etc/nginx/sites-available/default
+sudo rm /etc/nginx/sites-enabled/default&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;배포하고자 하는 프로젝트에 대한 Nginx 설정파일 생성&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;cd /etc/nginx/sites-available
+sudo touch myapp.conf&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;myapp.conf의 내용은 아래와 같이 입력하세요.&lt;/p&gt;
 &lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;server {
-listen 3000;  // 3000번 포트로 들어왔을 때
+&amp;lt;!-- listen80: port 80에 대한 설정을 의미 --&gt;
+listen 80;
+
+&amp;lt;!-- location /: URL이 &apos;/&apos;가 포함된 경로에 대한 설정을 의미 --&gt;
 location / {
-root /home/ubuntu/uplanet_mbti;  // 해당 디렉토리에 있는
-index index.html index.htm;        // index.html을 보여줘라!
+
+&amp;lt;!-- root: 실행할 파일들의 루트 위치를 의미함(빌드한 파일 경로) --&gt;
+root   /home/user/hompage_youngbean-master/changwon_night/build;
+
+&amp;lt;!-- index: 인덱스의 파일들을 지정하는 곳, 이 파일들 중 하나는 root 경로 내에 존재해야함--&gt;
+index  index.html index.htm;
+
+&amp;lt;!-- try_files:  어떤 파일을 찾을 때 명시된 순서로 찾으며, 가장 먼저 발견되는 파일을 사용한다는 의미 --&gt;
+try_files $uri $uri/ /index.html;
 }
 }&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;Reference&lt;/p&gt;
 &lt;/li&gt;
+&lt;li&gt;/etc/nginx/sites-available/에 설정 파일을 만들었으면, 아래 명령어로 이 파일의 심볼릭 링크를 /etc/nginx/sites-enabled/에도 만듦 &lt;/li&gt;
+&lt;li&gt;웹서버가 동작될 때 sites-enabled에 있는 설정파일을 참조함&lt;/li&gt;
 &lt;/ul&gt;
+&lt;p&gt;&lt;code class=&quot;language-text&quot;&gt;sudo ln -s /etc/nginx/sites-available/myapp.conf /etc/nginx/sites-enabled/myapp.conf&lt;/code&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;이로써 Nginx 의 환경설정이 모두 끝났으니 이제 Nginx를 실행하면 됨&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;sudo systemctl stop nginx
+sudo systemctl start nginx&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;Nginx가 동작중이라면, 브라우저에서 localhost:80로 접속해봄&lt;/p&gt;
+&lt;!-- nginx의 설정은 `nginx.conf 파일`로 설정함 (nginx 파일 위치:/etc/nginx ) 
+- 해당 파일을 vi로 열고 상단부에 modules-enabled라는 하위 디렉토리에 내가 원하는 conf파일을 만들어 그 파일의 설정 내용을 반영하도록 하는 문장을 입력
+`include /etc/nginx/modules-enabled/*.conf;`
+- 이후 modules-enabled의 디렉토리에 `파일이름.conf`파일 생성해, listen 3000이라는 줄을 작성하고(로드밸런서에서 웹 서버의 3000번 포트로 요청을 보내기 때문), 해당 포트로 접근 시 내 웹 서버의 location에 위치하는 파일을 열어 보여준다는 코드 작성
+```
+server {
+  listen 3000;  // 3000번 포트로 들어왔을 때
+  location / {
+    root /home/ubuntu/uplanet_mbti;  // 해당 디렉토리에 있는
+    index index.html index.htm;        // index.html을 보여줘라!
+  }
+}
+``` --&gt;
+&lt;p&gt;Reference&lt;/p&gt;
+&lt;p&gt;root /home/ubuntu/React_Shop/client/build&lt;/p&gt;
 &lt;p&gt;&lt;a href=&quot;https://blog.leehov.in/36&quot;&gt;leehov님 블로그&lt;/a&gt;
 &lt;a href=&quot;https://data-jj.tistory.com/31&quot;&gt;datajj님 블로그&lt;/a&gt;
 &lt;a href=&quot;https://codechasseur.tistory.com/25&quot;&gt;codechasseur님 블로그&lt;/a&gt;
@@ -514,13 +586,8 @@ index index.html index.htm;        // index.html을 보여줘라!
 &lt;a href=&quot;https://rrecoder.tistory.com/101&quot;&gt;rrecoder님 블로그&lt;/a&gt;
 &lt;a href=&quot;https://velog.io/@devstone/react-router-dom-%EC%9D%B4%ED%95%B4%ED%95%98%EA%B3%A0-%ED%99%9C%EC%9A%A9%ED%95%98%EA%B8%B0&quot;&gt;devstone님 블로그&lt;/a&gt;
 &lt;a href=&quot;https://dsc-sookmyung.tistory.com/41&quot;&gt;dsc님 블로그&lt;/a&gt;
-&lt;a href=&quot;https://velog.io/@sham/Router-Props-link%EB%A1%9C-%EC%A0%84%EB%8B%AC%ED%95%98%EB%8A%94-props&quot;&gt;sham님 블로그&lt;/a&gt;&lt;/p&gt;</content:encoded></item><item><title><![CDATA[Shop Project_React]]></title><description><![CDATA[구현 목표 Redux로 상품 관리 상품 리스트 페이지에서 “장바구니 담기” 버튼 클릭 시, navbar 내 장바구니의 숫자가…]]></description><link>https://www.yoojiih.github.io/Shop_React11/</link><guid isPermaLink="false">https://www.yoojiih.github.io/Shop_React11/</guid><pubDate>Sun, 12 Dec 2021 01:00:00 GMT</pubDate><content:encoded>&lt;h2 id=&quot;구현-목표&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#%EA%B5%AC%ED%98%84-%EB%AA%A9%ED%91%9C&quot; aria-label=&quot;구현 목표 permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;구현 목표&lt;/h2&gt;
-&lt;ul&gt;
-&lt;li&gt;Redux로 상품 관리&lt;/li&gt;
-&lt;li&gt;상품 리스트 페이지에서 “장바구니 담기” 버튼 클릭 시, navbar 내 장바구니의 숫자가 1씩 증가하면서 동시에 장바구니 페이지에 담기게 함&lt;/li&gt;
-&lt;li&gt;장바구니 페이지에서 삭제 버튼(휴지통 모양의 아이콘)을 클릭하였을 때, navbar 내 장바구니의 숫자가 감소하며 동시에 장바구니의 상품을 삭제&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;[Node.js] &lt;/p&gt;
+&lt;a href=&quot;https://velog.io/@sham/Router-Props-link%EB%A1%9C-%EC%A0%84%EB%8B%AC%ED%95%98%EB%8A%94-props&quot;&gt;sham님 블로그&lt;/a&gt;&lt;/p&gt;</content:encoded></item><item><title><![CDATA[Shop Project_React]]></title><description><![CDATA[Node.js  moment 사용하기 서론
+node.js는 javascript 기반으로 기본적으로 시간 및 날짜 오브젝트인 Date를 가지고 있다. 하지만 Date 오브젝트를 사용하여 코드를 작성하면 가독성이 떨어지는 경우가 생겨 moment.js…]]></description><link>https://www.yoojiih.github.io/Shop_React11/</link><guid isPermaLink="false">https://www.yoojiih.github.io/Shop_React11/</guid><pubDate>Sun, 12 Dec 2021 01:00:00 GMT</pubDate><content:encoded>&lt;p&gt;[Node.js] &lt;/p&gt;
 &lt;h1 id=&quot;moment-사용하기&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#moment-%EC%82%AC%EC%9A%A9%ED%95%98%EA%B8%B0&quot; aria-label=&quot;moment 사용하기 permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;moment 사용하기&lt;/h1&gt;
 &lt;ol&gt;
 &lt;li&gt;서론
@@ -588,8 +655,8 @@ npm install @tailwindcss/aspect-ratio&lt;/p&gt;
 &lt;p&gt;문제: Can’t resolve ‘@heroicons/react/outline’
 해결: npm install @heroicons/react    &lt;/p&gt;
 &lt;p&gt;문제: cannot find tailwind css forms
-해결: npm i @tailwindcss/forms;
-Reference&lt;/p&gt;
+해결: npm i @tailwindcss/forms;&lt;/p&gt;
+&lt;p&gt;Reference&lt;/p&gt;
 &lt;p&gt;&lt;a href=&quot;https://millo-l.github.io/Nodejs-moment-%EC%82%AC%EC%9A%A9%ED%95%98%EA%B8%B0/&quot;&gt;milo님 블로그&lt;/a&gt;&lt;/p&gt;</content:encoded></item><item><title><![CDATA[Shop Project_React]]></title><description><![CDATA[Auth 아무나 진입 가능한 페이지: Landing Page, About Page 로그인한 회원만 진입 가능한 페이지: Detail Page 로그인한 회원은 진입 못하는 페이지: Register Page, Login Page…]]></description><link>https://www.yoojiih.github.io/Shop_React10/</link><guid isPermaLink="false">https://www.yoojiih.github.io/Shop_React10/</guid><pubDate>Fri, 10 Dec 2021 01:00:00 GMT</pubDate><content:encoded>&lt;h1 id=&quot;auth&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#auth&quot; aria-label=&quot;auth permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;Auth&lt;/h1&gt;
 &lt;ul&gt;
 &lt;li&gt;아무나 진입 가능한 페이지: Landing Page, About Page&lt;/li&gt;
@@ -754,27 +821,18 @@ app&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=
 &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;
 
 &lt;span class=&quot;token keyword&quot;&gt;export&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;default&lt;/span&gt; App&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;Reference&lt;/p&gt;</content:encoded></item><item><title><![CDATA[Shop Project_React]]></title><description><![CDATA[회원가입 기능 구현 목표 상품 리스트 페이지에서 “장바구니 담기” 버튼을 클릭하였을 때, nav bar…]]></description><link>https://www.yoojiih.github.io/Shop_React9/</link><guid isPermaLink="false">https://www.yoojiih.github.io/Shop_React9/</guid><pubDate>Thu, 09 Dec 2021 01:00:00 GMT</pubDate><content:encoded>&lt;h1 id=&quot;회원가입-기능&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#%ED%9A%8C%EC%9B%90%EA%B0%80%EC%9E%85-%EA%B8%B0%EB%8A%A5&quot; aria-label=&quot;회원가입 기능 permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;회원가입 기능&lt;/h1&gt;
+&lt;p&gt;Reference&lt;/p&gt;</content:encoded></item><item><title><![CDATA[Shop Project_React]]></title><description><![CDATA[Register Page (회원가입 기능) 구현 목표 React Hook Form을 통해 입력한 것에 대한 유효성 체크 loginPage는 state로 구현하고 register Page는 react-hook-form…]]></description><link>https://www.yoojiih.github.io/Shop_React9/</link><guid isPermaLink="false">https://www.yoojiih.github.io/Shop_React9/</guid><pubDate>Thu, 09 Dec 2021 01:00:00 GMT</pubDate><content:encoded>&lt;h1 id=&quot;register-page-회원가입-기능&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#register-page-%ED%9A%8C%EC%9B%90%EA%B0%80%EC%9E%85-%EA%B8%B0%EB%8A%A5&quot; aria-label=&quot;register page 회원가입 기능 permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;Register Page (회원가입 기능)&lt;/h1&gt;
 &lt;h2 id=&quot;구현-목표&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#%EA%B5%AC%ED%98%84-%EB%AA%A9%ED%91%9C&quot; aria-label=&quot;구현 목표 permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;구현 목표&lt;/h2&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;/li&gt;
-&lt;li&gt;&lt;/li&gt;
-&lt;li&gt;상품 리스트 페이지에서 “장바구니 담기” 버튼을 클릭하였을 때, nav bar 의 장바구니의 숫자가 올라가면서 장바구니 페이지에 담기게 할 수 있다.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;장바구니 페이지에서 삭제 버튼(휴지통 모양의 아이콘)을 클릭하였을 때, nav bar 의 장바구니 숫자가 내려가면서 장바구니의 상품을 삭제할 수 있다.&lt;/p&gt;
-&lt;p&gt;이 모든 과정을 redux 로 구현할 수 있다.&lt;/p&gt;
-&lt;h1 id=&quot;register-page&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#register-page&quot; aria-label=&quot;register page permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;Register Page&lt;/h1&gt;
-&lt;h2 id=&quot;구현-목표-1&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#%EA%B5%AC%ED%98%84-%EB%AA%A9%ED%91%9C-1&quot; aria-label=&quot;구현 목표 1 permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;구현 목표&lt;/h2&gt;
 &lt;ul&gt;
 &lt;li&gt;React Hook Form을 통해 입력한 것에 대한 유효성 체크&lt;/li&gt;
 &lt;li&gt;loginPage는 state로 구현하고 register Page는 react-hook-form으로 구현해 차이점을 알 수있게 함&lt;/li&gt;
 &lt;li&gt;UseRef를 이용해 Password와 Password Confirm 일치 여부 구현&lt;/li&gt;
 &lt;li&gt;버튼을 눌러 유저 생성 처리중일 땐 누르지 못하게 막기&lt;/li&gt;
 &lt;li&gt;비동기 요청시 try &amp;#x26; catch문 안에서 해서 오류가 날 때 catch문 내의 에러 메시지를 state로 저장해 콘솔창이 아닌 브라우저 화면상에 출력&lt;/li&gt;
-&lt;li&gt;상품 리스트 페이지에서 “장바구니 담기” 버튼을 클릭하였을 때, nav bar 의 장바구니의 숫자가 올라가면서 장바구니 페이지에 담기게 할 수 있다.&lt;/li&gt;
+&lt;li&gt;상품 리스트 페이지에서 “장바구니 담기” 버튼을 클릭하였을 때, nav bar 의 장바구니의 숫자가 올라가면서 장바구니 페이지에 담기게 함&lt;/li&gt;
+&lt;li&gt;장바구니 페이지에서 삭제 버튼(휴지통 모양의 아이콘)을 클릭하였을 때, nav bar 의 장바구니 숫자가 내려가면서 장바구니의 상품을 삭제 가능&lt;/li&gt;
+&lt;li&gt;이 모든 과정을 redux 로 구현&lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;장바구니 페이지에서 삭제 버튼(휴지통 모양의 아이콘)을 클릭하였을 때, nav bar 의 장바구니 숫자가 내려가면서 장바구니의 상품을 삭제할 수 있다.&lt;/p&gt;
-&lt;p&gt;이 모든 과정을 redux 로 구현할 수 있다.&lt;/p&gt;
 &lt;h1 id=&quot;react-hook-form-사용&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#react-hook-form-%EC%82%AC%EC%9A%A9&quot; aria-label=&quot;react hook form 사용 permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;React Hook Form 사용&lt;/h1&gt;
 &lt;p&gt;React에서 Form을 쉽게 만들기 위한 라이브러리로 성능이 좋고 유연하며 유효성 검사에 탁월하다는 특징이 존재함
 &lt;a href=&quot;https://react-hook-form.com/kr/get-started/&quot;&gt;공식문서 참고&lt;/a&gt;
@@ -1059,9 +1117,7 @@ reducer는 action이 발생하는 것을 먼저 감지하여, action 처리 후�
 (client…]]></description><link>https://www.yoojiih.github.io/Shop_React8/</link><guid isPermaLink="false">https://www.yoojiih.github.io/Shop_React8/</guid><pubDate>Wed, 08 Dec 2021 01:00:00 GMT</pubDate><content:encoded>&lt;h1 id=&quot;login&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#login&quot; aria-label=&quot;login permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;Login&lt;/h1&gt;
 &lt;h1 id=&quot;구현사항&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#%EA%B5%AC%ED%98%84%EC%82%AC%ED%95%AD&quot; aria-label=&quot;구현사항 permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;구현사항&lt;/h1&gt;
 &lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;&gt; 입력 폼에 email과 password를 입력가능하도록 state와 onChange이벤트 사용
-&gt; 
-&gt; 입력시 매번 유효성 체크 &amp;amp; 애니메이션 기능(Formilk,Yup)
-&gt; React Hook Form&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&gt; 입력시 매번 유효성 체&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 &lt;p&gt;(client/src/components/views/LoginPage/LoginPage.js)&lt;/p&gt;
 &lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;js&quot;&gt;&lt;pre class=&quot;language-js&quot;&gt;&lt;code class=&quot;language-js&quot;&gt;&lt;span class=&quot;token comment&quot;&gt;// useState를 react라이브러리에서 가져옴&lt;/span&gt;
 &lt;span class=&quot;token keyword&quot;&gt;import&lt;/span&gt; React&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt; useState &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;from&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&apos;react&apos;&lt;/span&gt;
@@ -1246,8 +1302,8 @@ app&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=
 그래서 데이터베이스에서 중복된 이메일을 직접 삭제해줬더니 에러가 해결됨
 이로써 회원가입 시 이메일 중복체크의 필요성을 느끼게 되었다.&lt;/li&gt;
 &lt;/ol&gt;
-&lt;p&gt;Reference&lt;/p&gt;</content:encoded></item><item><title><![CDATA[Shop Project_React]]></title><description><![CDATA[Redux 상태(state) 관리 라이브러리 redux 참고 Props VS State (React에서는 Props와 State가 존재함) Props(properties…]]></description><link>https://www.yoojiih.github.io/Shop_React7/</link><guid isPermaLink="false">https://www.yoojiih.github.io/Shop_React7/</guid><pubDate>Tue, 07 Dec 2021 01:00:00 GMT</pubDate><content:encoded>&lt;h1 id=&quot;redux&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#redux&quot; aria-label=&quot;redux permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;Redux&lt;/h1&gt;
-&lt;p&gt;상태(state) 관리 라이브러리&lt;/p&gt;
+&lt;p&gt;Reference&lt;/p&gt;</content:encoded></item><item><title><![CDATA[Shop Project_React (상태 관리를 위한 Redux 사용)]]></title><description><![CDATA[회원가입 시 입력한 유저 정보를 리덕스 스토어에 저장하기 위해서 리덕스 설정을 알아보게 되었다. Redux: 상태(state) 관리 라이브러리 redux 참고 Props VS State (React에서는 Props와 State가 존재함) Props…]]></description><link>https://www.yoojiih.github.io/Shop_React7/</link><guid isPermaLink="false">https://www.yoojiih.github.io/Shop_React7/</guid><pubDate>Tue, 07 Dec 2021 01:00:00 GMT</pubDate><content:encoded>&lt;p&gt;회원가입 시 입력한 유저 정보를 리덕스 스토어에 저장하기 위해서 리덕스 설정을 알아보게 되었다.&lt;/p&gt;
+&lt;h1 id=&quot;redux-상태state-관리-라이브러리&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#redux-%EC%83%81%ED%83%9Cstate-%EA%B4%80%EB%A6%AC-%EB%9D%BC%EC%9D%B4%EB%B8%8C%EB%9F%AC%EB%A6%AC&quot; aria-label=&quot;redux 상태state 관리 라이브러리 permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;Redux: 상태(state) 관리 라이브러리&lt;/h1&gt;
 &lt;p&gt;&lt;a href=&quot;https://yoojiih.github.io/TIL_20211103/&quot;&gt;redux 참고&lt;/a&gt;&lt;/p&gt;
 &lt;h1 id=&quot;props-vs-state-react에서는-props와-state가-존재함&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#props-vs-state-react%EC%97%90%EC%84%9C%EB%8A%94-props%EC%99%80-state%EA%B0%80-%EC%A1%B4%EC%9E%AC%ED%95%A8&quot; aria-label=&quot;props vs state react에서는 props와 state가 존재함 permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;Props VS State (React에서는 Props와 State가 존재함)&lt;/h1&gt;
 &lt;h2 id=&quot;propsproperties&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#propsproperties&quot; aria-label=&quot;propsproperties permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;Props(properties)&lt;/h2&gt;
@@ -1258,7 +1314,7 @@ app&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=
 &lt;p&gt;부모 자식 간이 아닌 컴포넌트 내 데이터 교환 시 사용 &lt;/p&gt;
 &lt;p&gt;컴포넌트 내에서도 충분히 state를 변하게 할 수 있으며 (mutable) 데이터 변화시 자동으로 리렌더링됨&lt;/p&gt;
 &lt;p&gt;&lt;code class=&quot;language-text&quot;&gt;state = { message: &apos;&apos;, attachFile: undefined, openMenu: false,};&lt;/code&gt;&lt;/p&gt;
-&lt;h2 id=&quot;redux-1&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#redux-1&quot; aria-label=&quot;redux 1 permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;Redux&lt;/h2&gt;
+&lt;h2 id=&quot;redux&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#redux&quot; aria-label=&quot;redux permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;Redux&lt;/h2&gt;
 &lt;p&gt;컴포넌트끼리 전달이 아니라 저장소를 두고 바로 꺼내서 사용해 훨씬 편하게 상태관리 할 수 있게됨&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;Redux 데이터 flow (strict unidirectional(단방향) data flow)
@@ -1400,7 +1456,12 @@ serviceWorker&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;s
         type&lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token constant&quot;&gt;AUTH_USER&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
         payload&lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt; request
     &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;
-&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</content:encoded></item><item><title><![CDATA[Shop Project_React]]></title><description><![CDATA[Data Request, Response Flow & Axios  <=>  -response-> 
+&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;h1 id=&quot;redux-toolkit&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#redux-toolkit&quot; aria-label=&quot;redux toolkit permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;Redux toolkit&lt;/h1&gt;
+&lt;p&gt;추가적으로 이 복잡한 redux를 Redux tookit을 적용해 간단하게 사용하고자 한다&lt;/p&gt;
+&lt;h2 id=&quot;모듈-다운로드&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#%EB%AA%A8%EB%93%88-%EB%8B%A4%EC%9A%B4%EB%A1%9C%EB%93%9C&quot; aria-label=&quot;모듈 다운로드 permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;모듈 다운로드&lt;/h2&gt;
+&lt;p&gt;&lt;code class=&quot;language-text&quot;&gt;npm i next-redux-wrapper @reduxjs/toolkit&lt;/code&gt;
+&lt;code class=&quot;language-text&quot;&gt;npm i @types/react-redux&lt;/code&gt;&lt;/p&gt;</content:encoded></item><item><title><![CDATA[Shop Project_React]]></title><description><![CDATA[Data Request, Response Flow & Axios  <=>  -response-> 
                         <-request…]]></description><link>https://www.yoojiih.github.io/Shop_React6/</link><guid isPermaLink="false">https://www.yoojiih.github.io/Shop_React6/</guid><pubDate>Mon, 06 Dec 2021 01:00:00 GMT</pubDate><content:encoded>&lt;h1 id=&quot;data-request-response-flow--axios&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#data-request-response-flow--axios&quot; aria-label=&quot;data request response flow  axios permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;Data Request, Response Flow &amp;#x26; Axios&lt;/h1&gt;
 &lt;p&gt;&lt;code class=&quot;language-text&quot;&gt;Database&lt;/code&gt; &amp;#x3C;=&gt; &lt;code class=&quot;language-text&quot;&gt;server&lt;/code&gt; -response-&gt; &lt;code class=&quot;language-text&quot;&gt;client&lt;/code&gt;
 &amp;#x3C;-request-&lt;/p&gt;
@@ -1527,10 +1588,13 @@ concurrently “command1 arg” “commmand2 arg”
 client 폴더 내 start로 실행 하기 위해 prefix 사용
 &lt;code class=&quot;language-text&quot;&gt;&quot;dev&quot;: &quot;concurrently \&quot;npm run backend\&quot; \&quot;npm run start --prefix client\&quot;&quot;&lt;/code&gt;&lt;/p&gt;
 &lt;p&gt;Reference
-&lt;a href=&quot;https://velog.io/@jangwonyoon/Proxy-Server%ED%94%84%EB%A1%9D%EC%8B%9C-%EC%84%9C%EB%B2%84%EB%9E%80&quot;&gt;jang님 블로그&lt;/a&gt;&lt;/p&gt;</content:encoded></item><item><title><![CDATA[Shop Project_React]]></title><description><![CDATA[React js 페이스북에서 제공하는 자바스크립트 라이브러리 오픈소스 자바스크립트로 AJAX, HTML 조작 → 코드 多 / React, Angular, Vue 라이브러리 사용 → 간결한 코드 Component 기반 구조
-Component…]]></description><link>https://www.yoojiih.github.io/Shop_React5/</link><guid isPermaLink="false">https://www.yoojiih.github.io/Shop_React5/</guid><pubDate>Sun, 05 Dec 2021 01:00:00 GMT</pubDate><content:encoded>&lt;h1 id=&quot;react-js&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#react-js&quot; aria-label=&quot;react js permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;React js&lt;/h1&gt;
+&lt;a href=&quot;https://velog.io/@jangwonyoon/Proxy-Server%ED%94%84%EB%A1%9D%EC%8B%9C-%EC%84%9C%EB%B2%84%EB%9E%80&quot;&gt;jang님 블로그&lt;/a&gt;&lt;/p&gt;</content:encoded></item><item><title><![CDATA[Shop Project_React]]></title><description><![CDATA[React js 페이스북에서 제공하는 자바스크립트 라이브러리 오픈소스 React는 프레임워크라고 생각 할 수도 있지만 React에서는 상태관리와 라우팅을 기본적으로 제공하지 않기 때문에 라이브러리로 분류한다.
+( Vue와 Angular…]]></description><link>https://www.yoojiih.github.io/Shop_React5/</link><guid isPermaLink="false">https://www.yoojiih.github.io/Shop_React5/</guid><pubDate>Sun, 05 Dec 2021 01:00:00 GMT</pubDate><content:encoded>&lt;h1 id=&quot;react-js&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#react-js&quot; aria-label=&quot;react js permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;React js&lt;/h1&gt;
 &lt;ul&gt;
 &lt;li&gt;페이스북에서 제공하는 자바스크립트 라이브러리 오픈소스&lt;/li&gt;
+&lt;li&gt;React는 프레임워크라고 생각 할 수도 있지만 React에서는 상태관리와 라우팅을 기본적으로 제공하지 않기 때문에 라이브러리로 분류한다.
+( Vue와 Angular에서는 자체적으로 상태관리를 지원하기 때문에 프레임워크라고 함)
+React는 Vue와 Angular와 다르게 자체적으로 상태관리를 지원하지 않기 때문에 &lt;code class=&quot;language-text&quot;&gt;Redux&lt;/code&gt;나 MobX를 선택적으로 사용해서 상태를 관리한다.&lt;/li&gt;
 &lt;li&gt;자바스크립트로 AJAX, HTML 조작 → 코드 多 / React, Angular, Vue 라이브러리 사용 → 간결한 코드&lt;/li&gt;
 &lt;li&gt;Component 기반 구조
 Component는 독립적인 단위의 소프트웨어 모듈을 말하며 컴포넌트로 이루어져 있어 재사용 성이 뛰어남 (컴포넌트 조립해서 사용)
@@ -1573,6 +1637,9 @@ webpack은 src폴더 내에만 관리해주고 public은 관리를 안해주기 
   &lt;span class=&quot;token builtin class-name&quot;&gt;cd&lt;/span&gt; reactshop
   &lt;span class=&quot;token function&quot;&gt;npm&lt;/span&gt; start
 Happy hacking&lt;span class=&quot;token operator&quot;&gt;!&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;사실 CRA를 사용 시 손쉽게 React 프로젝트를 생성할 수 있지만 이렇게 프로젝트를 생성하다보면, &lt;/p&gt;
+&lt;p&gt;막상 Webpack을 직접 커스텀해서 해야할때 마냥 어렵게만 느껴지고, 프로젝트에 불필요한 요소들이 자동으로 생성되기 때문에 좋지 않다.&lt;/p&gt;
+&lt;p&gt;현재는 tailwind를 사용하기 위해 CRA를 적용했지만 다음 프로젝트에서는 webpack을 직접 커스텀해서 프로젝트를 생성해보고자 한다.&lt;/p&gt;
 &lt;h1 id=&quot;npm-vs-npx&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#npm-vs-npx&quot; aria-label=&quot;npm vs npx permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;npm VS npx&lt;/h1&gt;
 &lt;p&gt;요즘 대부분의 라이브러리에서 npx의 설치 방식을 공식문서에 소개하는 만큼 굉장히 자주 사용하는 도구이기에 해당 명령어가 어떤 의미를 가지고 있는지를 파악한 후 사용하는 것이 중요&lt;/p&gt;
 &lt;h2 id=&quot;npx란&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#npx%EB%9E%80&quot; aria-label=&quot;npx란 permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;npx란?&lt;/h2&gt;
@@ -2183,59 +2250,7 @@ production이면 prod.js에다가 MONGO_URI적어줌(aws에 작성한 것과 동
 &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 &lt;p&gt;server/index.js에다가는 config.mongoURI 넣어줌&lt;/p&gt;
 &lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;js&quot;&gt;&lt;pre class=&quot;language-js&quot;&gt;&lt;code class=&quot;language-js&quot;&gt;&lt;span class=&quot;token keyword&quot;&gt;const&lt;/span&gt; config &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token function&quot;&gt;require&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&apos;./config/key&apos;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
-mongoose&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;connect&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;config&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;mongoURI&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt; &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</content:encoded></item><item><title><![CDATA[Shop Project_React]]></title><description><![CDATA[Project명 (무제) _ 개인 프로젝트 목표 Front-end 뿐만 아니라 백 서버와 DB를 구축해서 어느 서비스에나 존재하는 
-로그인, 회원가입과 더불어 상품들을 관리하는 쇼핑몰 프로젝트를 진행하고자 한다
-추가적으로 완성한 프로젝트를 aws…]]></description><link>https://www.yoojiih.github.io/Shop_React0/</link><guid isPermaLink="false">https://www.yoojiih.github.io/Shop_React0/</guid><pubDate>Wed, 01 Dec 2021 01:00:00 GMT</pubDate><content:encoded>&lt;h1 id=&quot;project명-무제-_-개인-프로젝트&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#project%EB%AA%85-%EB%AC%B4%EC%A0%9C-_-%EA%B0%9C%EC%9D%B8-%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8&quot; aria-label=&quot;project명 무제 _ 개인 프로젝트 permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;Project명 (무제) _ 개인 프로젝트&lt;/h1&gt;
-&lt;ul&gt;
-&lt;li&gt;
-&lt;h3 id=&quot;목표&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#%EB%AA%A9%ED%91%9C&quot; aria-label=&quot;목표 permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;목표&lt;/h3&gt;
-&lt;p&gt;Front-end 뿐만 아니라 백 서버와 DB를 구축해서 어느 서비스에나 존재하는
-로그인, 회원가입과 더불어 상품들을 관리하는 쇼핑몰 프로젝트를 진행하고자 한다
-추가적으로 완성한 프로젝트를 aws로 배포해보고자 한다&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;h3 id=&quot;프로젝트-예상-기간-2021년-12월-01일--2021년-12월-16일&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8-%EC%98%88%EC%83%81-%EA%B8%B0%EA%B0%84-2021%EB%85%84-12%EC%9B%94-01%EC%9D%BC--2021%EB%85%84-12%EC%9B%94-16%EC%9D%BC&quot; aria-label=&quot;프로젝트 예상 기간 2021년 12월 01일  2021년 12월 16일 permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;프로젝트 예상 기간 (2021년 12월 01일 ~ 2021년 12월 16일)&lt;/h3&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h1 id=&quot;스택&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#%EC%8A%A4%ED%83%9D&quot; aria-label=&quot;스택 permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;스택&lt;/h1&gt;
-&lt;ul&gt;
-&lt;li&gt;
-&lt;h2 id=&quot;front-end&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#front-end&quot; aria-label=&quot;front end permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;Front-end&lt;/h2&gt;
-&lt;blockquote&gt;
-&lt;p&gt;React
-Redux
-Javascript
-Tailwind&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;h2 id=&quot;back-end&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#back-end&quot; aria-label=&quot;back end permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;Back-end&lt;/h2&gt;
-&lt;blockquote&gt;
-&lt;p&gt;node js
-express&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;h2 id=&quot;db&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#db&quot; aria-label=&quot;db permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;DB&lt;/h2&gt;
-&lt;blockquote&gt;
-&lt;p&gt;mongo DB&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;h2 id=&quot;배포&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#%EB%B0%B0%ED%8F%AC&quot; aria-label=&quot;배포 permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;배포&lt;/h2&gt;
-&lt;blockquote&gt;
-&lt;p&gt;aws&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h1 id=&quot;구현-순서&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#%EA%B5%AC%ED%98%84-%EC%88%9C%EC%84%9C&quot; aria-label=&quot;구현 순서 permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;구현 순서&lt;/h1&gt;
-&lt;ol&gt;
-&lt;li&gt;모델 설계&lt;/li&gt;
-&lt;li&gt;백엔드 로직 구현&lt;/li&gt;
-&lt;li&gt;프론트 구현&lt;/li&gt;
-&lt;li&gt;Redux로 상태관리&lt;/li&gt;
-&lt;li&gt;배포 &lt;/li&gt;
-&lt;/ol&gt;</content:encoded></item><item><title><![CDATA[Shop Project_React]]></title><description><![CDATA[환경설정 기본 요구사항 Node.js : 자바스크립트 런타임  NPM : 패키지 매니저 도구 Node js javascirpt를 server side에서 사용할 수 있는 언어 npm package 생성
+mongoose&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;connect&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;config&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;mongoURI&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt; &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</content:encoded></item><item><title><![CDATA[Shop Project_React]]></title><description><![CDATA[환경설정 기본 요구사항 Node.js : 자바스크립트 런타임  NPM : 패키지 매니저 도구 Node js javascirpt를 server side에서 사용할 수 있는 언어 npm package 생성
  sever…]]></description><link>https://www.yoojiih.github.io/Shop_React1/</link><guid isPermaLink="false">https://www.yoojiih.github.io/Shop_React1/</guid><pubDate>Wed, 01 Dec 2021 01:00:00 GMT</pubDate><content:encoded>&lt;h2 id=&quot;환경설정&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#%ED%99%98%EA%B2%BD%EC%84%A4%EC%A0%95&quot; aria-label=&quot;환경설정 permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;환경설정&lt;/h2&gt;
 &lt;p&gt;기본 요구사항&lt;/p&gt;
 &lt;ul&gt;
@@ -2382,7 +2397,93 @@ module&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;exports &lt;
 &lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;Reference
-&lt;a href=&quot;https://expressjs.com/ko/starter/basic-routing.html&quot;&gt;express 공식문서&lt;/a&gt;&lt;/p&gt;</content:encoded></item><item><title><![CDATA[Shop Project_TDD(Test-Driven-Development) 방법론]]></title><description><![CDATA[Test…]]></description><link>https://www.yoojiih.github.io/TIl_20211106/</link><guid isPermaLink="false">https://www.yoojiih.github.io/TIl_20211106/</guid><pubDate>Sat, 06 Nov 2021 11:00:00 GMT</pubDate><content:encoded>&lt;blockquote&gt;
+&lt;a href=&quot;https://expressjs.com/ko/starter/basic-routing.html&quot;&gt;express 공식문서&lt;/a&gt;&lt;/p&gt;</content:encoded></item><item><title><![CDATA[Shop Project_React 쇼핑몰 사이트 프로젝트 시작]]></title><description><![CDATA[프로젝트 소개    개발인원: 1명 (개인 프로젝트) 개발 예상 기간 (2021년 12월 01일 ~ 2021년 12월 16일) 프로젝트 목표 사용 기술 Front-end React
+React Hooks
+React Router
+Redux…]]></description><link>https://www.yoojiih.github.io/Shop_React0/</link><guid isPermaLink="false">https://www.yoojiih.github.io/Shop_React0/</guid><pubDate>Wed, 01 Dec 2021 01:00:00 GMT</pubDate><content:encoded>&lt;h1 id=&quot;프로젝트-소개&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8-%EC%86%8C%EA%B0%9C&quot; aria-label=&quot;프로젝트 소개 permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;프로젝트 소개&lt;/h1&gt;
+&lt;p&gt;  &lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 720px; &quot;
+    &gt;
+      &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 60%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/jpeg;base64,/9j/2wBDABALDA4MChAODQ4SERATGCgaGBYWGDEjJR0oOjM9PDkzODdASFxOQERXRTc4UG1RV19iZ2hnPk1xeXBkeFxlZ2P/2wBDARESEhgVGC8aGi9jQjhCY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2P/wgARCAAMABQDASIAAhEBAxEB/8QAFwABAQEBAAAAAAAAAAAAAAAAAAIBBf/EABUBAQEAAAAAAAAAAAAAAAAAAAEC/9oADAMBAAIQAxAAAAHoVOyyB//EABcQAAMBAAAAAAAAAAAAAAAAAAABEBH/2gAIAQEAAQUCMiv/xAAUEQEAAAAAAAAAAAAAAAAAAAAQ/9oACAEDAQE/AT//xAAUEQEAAAAAAAAAAAAAAAAAAAAQ/9oACAECAQE/AT//xAAWEAADAAAAAAAAAAAAAAAAAAAAIEH/2gAIAQEABj8CKv8A/8QAGhAAAgMBAQAAAAAAAAAAAAAAAREAEDFRcf/aAAgBAQABPyEB64nKah8r/9oADAMBAAIAAwAAABC0L//EABQRAQAAAAAAAAAAAAAAAAAAABD/2gAIAQMBAT8QP//EABQRAQAAAAAAAAAAAAAAAAAAABD/2gAIAQIBAT8QP//EAB0QAAIBBAMAAAAAAAAAAAAAAAERIQAQMVFBYXH/2gAIAQEAAT8QQKEBoYqCX+c2TIMUk9NmLf/Z&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        alt=&quot;all.jpg&quot;
+        title=&quot;all.jpg&quot;
+        src=&quot;/static/2259bc5b4282d668adf50548cc13d3f0/80e3c/all.jpg&quot;
+        srcset=&quot;/static/2259bc5b4282d668adf50548cc13d3f0/4ec73/all.jpg 180w,
+/static/2259bc5b4282d668adf50548cc13d3f0/158ba/all.jpg 360w,
+/static/2259bc5b4282d668adf50548cc13d3f0/80e3c/all.jpg 720w,
+/static/2259bc5b4282d668adf50548cc13d3f0/47311/all.jpg 1080w,
+/static/2259bc5b4282d668adf50548cc13d3f0/644c5/all.jpg 1440w,
+/static/2259bc5b4282d668adf50548cc13d3f0/2ae5f/all.jpg 2318w&quot;
+        sizes=&quot;(max-width: 720px) 100vw, 720px&quot;
+        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
+        loading=&quot;lazy&quot;
+      /&gt;
+    &lt;/span&gt;&lt;/p&gt;
+&lt;h2 id=&quot;개발인원-1명-개인-프로젝트&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#%EA%B0%9C%EB%B0%9C%EC%9D%B8%EC%9B%90-1%EB%AA%85-%EA%B0%9C%EC%9D%B8-%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8&quot; aria-label=&quot;개발인원 1명 개인 프로젝트 permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;개발인원: 1명 (개인 프로젝트)&lt;/h2&gt;
+&lt;h2 id=&quot;개발-예상-기간-2021년-12월-01일--2021년-12월-16일&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#%EA%B0%9C%EB%B0%9C-%EC%98%88%EC%83%81-%EA%B8%B0%EA%B0%84-2021%EB%85%84-12%EC%9B%94-01%EC%9D%BC--2021%EB%85%84-12%EC%9B%94-16%EC%9D%BC&quot; aria-label=&quot;개발 예상 기간 2021년 12월 01일  2021년 12월 16일 permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;개발 예상 기간 (2021년 12월 01일 ~ 2021년 12월 16일)&lt;/h2&gt;
+&lt;h2 id=&quot;프로젝트-목표&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8-%EB%AA%A9%ED%91%9C&quot; aria-label=&quot;프로젝트 목표 permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;프로젝트 목표&lt;/h2&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;Front-end 뿐만 아니라 백 서버와 DB를 구축해서 어느 서비스에나 존재하는 
+로그인, 회원가입과 더불어 상품들을 관리하는 쇼핑몰 프로젝트를 진행하고자 한다
+추가적으로 완성한 프로젝트를 aws로 배포해보고자 한다&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;h1 id=&quot;사용-기술&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#%EC%82%AC%EC%9A%A9-%EA%B8%B0%EC%88%A0&quot; aria-label=&quot;사용 기술 permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;사용 기술&lt;/h1&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;h2 id=&quot;front-end&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#front-end&quot; aria-label=&quot;front end permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;Front-end&lt;/h2&gt;
+&lt;blockquote&gt;
+&lt;p&gt;React
+React Hooks
+React Router
+Redux
+Javascript
+Tailwind&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;h2 id=&quot;back-end&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#back-end&quot; aria-label=&quot;back end permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;Back-end&lt;/h2&gt;
+&lt;blockquote&gt;
+&lt;p&gt;node js
+express&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;h2 id=&quot;db&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#db&quot; aria-label=&quot;db permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;DB&lt;/h2&gt;
+&lt;blockquote&gt;
+&lt;p&gt;mongo DB&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;h2 id=&quot;배포&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#%EB%B0%B0%ED%8F%AC&quot; aria-label=&quot;배포 permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;배포&lt;/h2&gt;
+&lt;blockquote&gt;
+&lt;p&gt;aws&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h1 id=&quot;구현-사항&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#%EA%B5%AC%ED%98%84-%EC%82%AC%ED%95%AD&quot; aria-label=&quot;구현 사항 permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;구현 사항&lt;/h1&gt;
+&lt;ul&gt;
+&lt;li&gt;Navbar, Footer, Login, Register, Landing, ShoppingBag Page 레이아웃 구현&lt;/li&gt;
+&lt;li&gt;제품 전체 리스트, 제품 상세 페이지 구현&lt;/li&gt;
+&lt;li&gt;회원가입 시 jwt기술을 사용한 회원 인증 시스템으로 회원가입 구현&lt;/li&gt;
+&lt;li&gt;React Hooks Form과 &lt;/li&gt;
+&lt;li&gt;Redux를 사용해 유저정보에 대한 상태 관리 구현 &lt;/li&gt;
+&lt;li&gt;Node.js 기반 웹 서비스 전체 개발&lt;/li&gt;
+&lt;li&gt;javascript기반 AWS 상에서 운영하는 서비스를 운영&lt;/li&gt;
+&lt;li&gt;웹서비스 보안&lt;/li&gt;
+&lt;li&gt;Git을 통한 버전관리 (브랜치 분리)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h1 id=&quot;구현-순서&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#%EA%B5%AC%ED%98%84-%EC%88%9C%EC%84%9C&quot; aria-label=&quot;구현 순서 permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;구현 순서&lt;/h1&gt;
+&lt;ol&gt;
+&lt;li&gt;모델 설계&lt;/li&gt;
+&lt;li&gt;백엔드 로직 구현&lt;/li&gt;
+&lt;li&gt;프론트 구현&lt;/li&gt;
+&lt;li&gt;Redux로 상태관리&lt;/li&gt;
+&lt;li&gt;배포 &lt;/li&gt;
+&lt;/ol&gt;</content:encoded></item><item><title><![CDATA[Shop Project_TDD(Test-Driven-Development) 방법론]]></title><description><![CDATA[Test…]]></description><link>https://www.yoojiih.github.io/TIl_20211106/</link><guid isPermaLink="false">https://www.yoojiih.github.io/TIl_20211106/</guid><pubDate>Sat, 06 Nov 2021 11:00:00 GMT</pubDate><content:encoded>&lt;blockquote&gt;
 &lt;p&gt;Test는 어떤 가설을 검증해 나가는 과정이며 고품질의 소프트웨어를 개발하기 위해선 꼭 필요한 기본 중의 기본
 왜 필요한가
 제대로 동작하는 소프트웨어를 작성하기 위함
