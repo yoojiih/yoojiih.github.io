@@ -1,4 +1,71 @@
-<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Yooji's Blog]]></title><description><![CDATA[줌코딩의 개발일기]]></description><link>https://www.yoojiih.github.io</link><generator>GatsbyJS</generator><lastBuildDate>Sat, 18 Dec 2021 04:51:50 GMT</lastBuildDate><item><title><![CDATA[Shop Project_React 배포]]></title><description><![CDATA[서비스는 개발이 다가 아니라 빌드 후 배포까지 하는게 진정한 완성이다 프론트엔드 개발을 시작하기에 참 편한 시대이지만, localhost…]]></description><link>https://www.yoojiih.github.io/Shop_React14/</link><guid isPermaLink="false">https://www.yoojiih.github.io/Shop_React14/</guid><pubDate>Wed, 15 Dec 2021 01:00:00 GMT</pubDate><content:encoded>&lt;blockquote&gt;
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Yooji's Blog]]></title><description><![CDATA[줌코딩의 개발일기]]></description><link>https://www.yoojiih.github.io</link><generator>GatsbyJS</generator><lastBuildDate>Sat, 18 Dec 2021 07:35:13 GMT</lastBuildDate><item><title><![CDATA[AWS의 EC2인스턴스와 도메인 연결]]></title><description><![CDATA[서비스는 개발이 다가 아니라 빌드 후 배포까지 하는게 진정한 완성이다
+서비스를 배포하기 위해서는 도메인이 필수
+IP…]]></description><link>https://www.yoojiih.github.io/[AWS] 도메인과 EC2 서버 연결/</link><guid isPermaLink="false">https://www.yoojiih.github.io/[AWS] 도메인과 EC2 서버 연결/</guid><pubDate>Thu, 16 Dec 2021 01:00:00 GMT</pubDate><content:encoded>&lt;blockquote&gt;
+&lt;p&gt;서비스는 개발이 다가 아니라 빌드 후 배포까지 하는게 진정한 완성이다
+서비스를 배포하기 위해서는 도메인이 필수
+IP로는 나타낼 수 없는 자신의 서비스에 대한 아이덴티티를 도메인을 통해 나타내는 것은 물론 사용자들도 편하게 서비스에 접근할 수 있음&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h1 id=&quot;도메인-취득&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#%EB%8F%84%EB%A9%94%EC%9D%B8-%EC%B7%A8%EB%93%9D&quot; aria-label=&quot;도메인 취득 permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;도메인 취득&lt;/h1&gt;
+&lt;ul&gt;
+&lt;li&gt;무료로 도메인을 취득 할 수도 있었지만 실제 서비스를 운영한다고 가정하고 만들어본 프로젝트라
+유료 도메인을 사용함 (게다가 무료 도메인은 불안정하다는 단점이 존재함)&lt;/li&gt;
+&lt;li&gt;유료 도메인은 가비아, 카페24, 고대디 등 유명한 도메인 구매 사이트에서 구매 가능하며
+AWS에서도 도메인 취득 가능하지만 국내 도메인 판매 업체에서 구매하는 것이 더 수월함(&lt;a href=&quot;https://aws.amazon.com/ko/getting-started/tutorials/get-a-domain/&quot;&gt;공식문서 참고&lt;/a&gt;) &lt;/li&gt;
+&lt;li&gt;국내 도메인 판매 업체이며 경험상 만족도가 가장 높았던 유료 도메인인 &lt;code class=&quot;language-text&quot;&gt;가비아&lt;/code&gt;를 선택&lt;/li&gt;
+&lt;li&gt;tip. 할인중인 도메인(ex. 도메인명.shop)을 이용 시 1년간 500원만 내면 됨 (이후엔 500원으로 이용 불가)&lt;/li&gt;
+&lt;li&gt;네임서버를 입력하는 부분은 우선 해당 도메인업체의 네임서버를 이용한다고 표시해놓고
+이후에 AWS에서 네임서버를 받아 다시 수정해주면 됨&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;h1 id=&quot;route53을-이용하여-도메인과-ec2-인스턴스-연결&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#route53%EC%9D%84-%EC%9D%B4%EC%9A%A9%ED%95%98%EC%97%AC-%EB%8F%84%EB%A9%94%EC%9D%B8%EA%B3%BC-ec2-%EC%9D%B8%EC%8A%A4%ED%84%B4%EC%8A%A4-%EC%97%B0%EA%B2%B0&quot; aria-label=&quot;route53을 이용하여 도메인과 ec2 인스턴스 연결 permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;Route53을 이용하여 도메인과 EC2 인스턴스 연결&lt;/h1&gt;
+&lt;ul&gt;
+&lt;li&gt;Route53 : 도메인 등록(구입), DNS 라우팅(IP를 Domain과 연결), 상태 및 트래픽 확인을 제공하는 AWS 서비스&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&quot;도메인-연결&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#%EB%8F%84%EB%A9%94%EC%9D%B8-%EC%97%B0%EA%B2%B0&quot; aria-label=&quot;도메인 연결 permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;도메인 연결&lt;/h2&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;code class=&quot;language-text&quot;&gt;Route 53&lt;/code&gt; 서비스를 검색 후 선택&lt;/li&gt;
+&lt;li&gt;왼쪽 사이드바의 &lt;code class=&quot;language-text&quot;&gt;호스팅 영역&lt;/code&gt;을 선택한 후 &lt;code class=&quot;language-text&quot;&gt;호스팅 영역 생성&lt;/code&gt;을 클릭&lt;/li&gt;
+&lt;li&gt;구입한 도메인 이름을 입력 후 &lt;code class=&quot;language-text&quot;&gt;생성&lt;/code&gt; 클릭 시 레코드 세트 만들어짐&lt;/li&gt;
+&lt;li&gt;생성된 레코드 세트 중 &lt;code class=&quot;language-text&quot;&gt;NS 유형&lt;/code&gt;을 선택하고 해당 값들을 복사 (ns-.org,net,co.uk,com 전부 다)&lt;/li&gt;
+&lt;li&gt;도메인을 구입한 업체에 다시 들어가 해당 도메인관리에서 네임서버(NS)를 앞서 복사한 값으로 변경하여 줌&lt;/li&gt;
+&lt;li&gt;위의 과정을 마치면 도메인과 Route53의 연결이 완료됨&lt;/li&gt;
+&lt;li&gt;잘 연결되었는지 확인하려면 cmd에 &lt;code class=&quot;language-text&quot;&gt;nslookup domainname.com&lt;/code&gt; 명령어 입력해봄&lt;/li&gt;
+&lt;/ol&gt;
+&lt;hr&gt;
+&lt;h2 id=&quot;ec2의-탄력적ip-생성&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#ec2%EC%9D%98-%ED%83%84%EB%A0%A5%EC%A0%81ip-%EC%83%9D%EC%84%B1&quot; aria-label=&quot;ec2의 탄력적ip 생성 permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;EC2의 탄력적IP 생성&lt;/h2&gt;
+&lt;blockquote&gt;
+&lt;p&gt;탄력적 IP란
+AWS에서 제공하는 강력한 클라우드 컴퓨팅 EC2는 인스턴스를 키고 끌때마다 IP가 달라지게 됩니다
+따라서 클라이언트와 연동을 하거나 도메인을 연결하는 등 고정적인 IP가 필요한 서비스에서
+인스턴스를 재가동할때마다 IP가 바뀌는 문제가 발생할 수 있습니다
+이러한 문제를 해결해줄 수 있는 서비스가 바로 AWS의 elastic IP, 탄력적 IP입니다&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;code class=&quot;language-text&quot;&gt;EC2&lt;/code&gt; 서비스 접속&lt;/li&gt;
+&lt;li&gt;왼쪽 사이브바 &lt;code class=&quot;language-text&quot;&gt;네트워크 및 보안&lt;/code&gt;에서 &lt;code class=&quot;language-text&quot;&gt;탄력적 IP&lt;/code&gt; -&gt; &lt;code class=&quot;language-text&quot;&gt;탄력적 IP 주소 할당&lt;/code&gt;을 클릭&lt;/li&gt;
+&lt;li&gt;&lt;code class=&quot;language-text&quot;&gt;Amazon의 IPv4 주소 풀&lt;/code&gt;을 선택한 후 &lt;code class=&quot;language-text&quot;&gt;할당&lt;/code&gt;을 눌러주면 탄력적 IP 생성 완료&lt;/li&gt;
+&lt;li&gt;이제 연결을 위해 사용할 &lt;code class=&quot;language-text&quot;&gt;탄력적 IP&lt;/code&gt;를 눌러주고 &lt;code class=&quot;language-text&quot;&gt;탄력적 IP 주소 연결&lt;/code&gt;을 클릭&lt;/li&gt;
+&lt;li&gt;&lt;code class=&quot;language-text&quot;&gt;인스턴스&lt;/code&gt;를 선택하고 탄력적IP를 할당해 줄 해당 인스턴스를 선택한 후에 &lt;code class=&quot;language-text&quot;&gt;연결&lt;/code&gt;을 클릭하면 연결한 인스턴스에 들어가서 할당된 탄력적 IP를 확인 가능&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h3 id=&quot;주의할-점&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#%EC%A3%BC%EC%9D%98%ED%95%A0-%EC%A0%90&quot; aria-label=&quot;주의할 점 permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;주의할 점&lt;/h3&gt;
+&lt;p&gt;탄력적IP를 프리티어 인스턴스에 연결을 해놓으면 비용이 청구되지 않지만 다음과 같은 상황들에서는 비용이 청구될 수 있으므로 주의가 필요함&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;ol&gt;
+&lt;li&gt;탄력적IP를 받고 어떤 인스턴스에도 연결하지 않는 경우&lt;/li&gt;
+&lt;li&gt;프리티어가 아닌 유료 인스턴스에 연결하는 경우&lt;/li&gt;
+&lt;li&gt;프리티어 인스턴스에 연결해놓고 해당 인스턴스를 중지시키거나 삭제하여 탄력적 IP가 붕 뜨는 경우 (프리티어 사용자는 특히 주의)&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/blockquote&gt;
+&lt;hr&gt;
+&lt;h2 id=&quot;ec2-인스턴스와-해당-도메인을-연결&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#ec2-%EC%9D%B8%EC%8A%A4%ED%84%B4%EC%8A%A4%EC%99%80-%ED%95%B4%EB%8B%B9-%EB%8F%84%EB%A9%94%EC%9D%B8%EC%9D%84-%EC%97%B0%EA%B2%B0&quot; aria-label=&quot;ec2 인스턴스와 해당 도메인을 연결 permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;EC2 인스턴스와 해당 도메인을 연결&lt;/h2&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;code class=&quot;language-text&quot;&gt;Route 53&lt;/code&gt;에서 &lt;code class=&quot;language-text&quot;&gt;레코드 세트 생성&lt;/code&gt; 클릭 후 &lt;code class=&quot;language-text&quot;&gt;A 유형&lt;/code&gt;을 생성해줌 (별칭: &lt;code class=&quot;language-text&quot;&gt;아니오&lt;/code&gt; 선택)&lt;/li&gt;
+&lt;li&gt;A유형(A-IPv4주소)의 레코드를 통해 EC2의 IP와 도메인을 연결하기 위해 값에는 &lt;code class=&quot;language-text&quot;&gt;EC2의 탄력적 IP&lt;/code&gt;를 입력함&lt;/li&gt;
+&lt;li&gt;만약 도메인앞에 www. 를 붙여서 접속되기를 원한다면 다음과 같이 레코드세트를 하나 더 생성&lt;/li&gt;
+&lt;li&gt;&lt;code class=&quot;language-text&quot;&gt;레코드 세트 생성&lt;/code&gt; 클릭 후 이름에 &lt;code class=&quot;language-text&quot;&gt;www&lt;/code&gt; 입력, 값에 www를 제외한 해당 도메인 입력(example.com)&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;Reference
+&lt;a href=&quot;https://artiiicy.tistory.com/18&quot;&gt;artiiicy님 블로그&lt;/a&gt;&lt;/p&gt;</content:encoded></item><item><title><![CDATA[Shop Project_React 배포]]></title><description><![CDATA[서비스는 개발이 다가 아니라 빌드 후 배포까지 하는게 진정한 완성이다 프론트엔드 개발을 시작하기에 참 편한 시대이지만, localhost…]]></description><link>https://www.yoojiih.github.io/Shop_React14/</link><guid isPermaLink="false">https://www.yoojiih.github.io/Shop_React14/</guid><pubDate>Wed, 15 Dec 2021 01:00:00 GMT</pubDate><content:encoded>&lt;blockquote&gt;
 &lt;p&gt;서비스는 개발이 다가 아니라 빌드 후 배포까지 하는게 진정한 완성이다&lt;/p&gt;
 &lt;/blockquote&gt;
 &lt;p&gt;프론트엔드 개발을 시작하기에 참 편한 시대이지만, localhost에서만 작동하는 서비스는 서비스로서 전혀 의미가 없다.
@@ -10,20 +77,22 @@
 &lt;p&gt;필자는 SaaS 서비스를 이용해 블로그 글을 배포하고 있기 때문에 이번 쇼핑몰 프로젝트에선 IaaS를 사용해보고 싶기도 하고
 AWS를 이용한 배포를 배우는 것은 시간은 오래 걸릴지언정 프론트엔드뿐만 아닌 전반적인 컴퓨터과학적인 지식의 학습의 기회가 될 것이고,
 실제 서비스의 인프라에 대해 더욱 깊게 이해할 수 있는 기회가 될 것 같아 IaaS 서비스를 이용하고자 한다&lt;/p&gt;
+&lt;hr&gt;
 &lt;h2 id=&quot;프로젝트-환경&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8-%ED%99%98%EA%B2%BD&quot; aria-label=&quot;프로젝트 환경 permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;프로젝트 환경&lt;/h2&gt;
-&lt;p&gt;client: React
-server: Node.js, Express를 사용함&lt;/p&gt;
+&lt;p&gt;client: React&lt;/p&gt;
+&lt;p&gt;server: Node.js, Express를 사용&lt;/p&gt;
 &lt;ul&gt;
+&lt;li&gt;웹서버: NGINX 사용&lt;/li&gt;
+&lt;li&gt;React로 만든 code를 build하여 정적 파일(html,css 등)을 웹 서버를 통해 제공하며
+, DB 연결과 비지니스 로직을 담당하고있는 Node.js 서버를 Reverse Proxy로 요청을 처리하고 있음&lt;/li&gt;
 &lt;li&gt;디렉토리 구조
 projectName/
 client/
 /build
 server/
 index.js&lt;/li&gt;
-&lt;li&gt;웹서버: NGINX 사용&lt;/li&gt;
-&lt;li&gt;React로 만든 code를 build하여 정적 파일(html,css 등)을 웹 서버를 통해 제공합니다.&lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;그리고 DB 연결과 비지니스 로직을 담당하고있는 Node.js 서버를 Reverse Proxy로 요청을 처리하고 있구요&lt;/p&gt;
+&lt;hr&gt;
 &lt;h2 id=&quot;git-배포-전략-브랜치-전략-지속적-통합배포cicd를-위한-git-workflow-전략&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#git-%EB%B0%B0%ED%8F%AC-%EC%A0%84%EB%9E%B5-%EB%B8%8C%EB%9E%9C%EC%B9%98-%EC%A0%84%EB%9E%B5-%EC%A7%80%EC%86%8D%EC%A0%81-%ED%86%B5%ED%95%A9%EB%B0%B0%ED%8F%ACcicd%EB%A5%BC-%EC%9C%84%ED%95%9C-git-workflow-%EC%A0%84%EB%9E%B5&quot; aria-label=&quot;git 배포 전략 브랜치 전략 지속적 통합배포cicd를 위한 git workflow 전략 permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;Git (배포 전략, 브랜치 전략, 지속적 통합/배포(CI/CD)를 위한 git workflow 전략)&lt;/h2&gt;
 &lt;p&gt;릴리즈를 위한 branch를 생성하고 checkout하기 위해&lt;/p&gt;
 &lt;ul&gt;
@@ -43,8 +112,11 @@ index.js&lt;/li&gt;
 &lt;span class=&quot;token function&quot;&gt;git&lt;/span&gt; checkout master
 &lt;span class=&quot;token function&quot;&gt;git&lt;/span&gt; merge release-1.0.0
 &lt;span class=&quot;token function&quot;&gt;git&lt;/span&gt; push origin master&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;h2 id=&quot;serverindexjs&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#serverindexjs&quot; aria-label=&quot;serverindexjs permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;server/index.js&lt;/h2&gt;
 &lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;h2 id=&quot;serverindexjs&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#serverindexjs&quot; aria-label=&quot;serverindexjs permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;server/index.js&lt;/h2&gt;
+&lt;ul&gt;
 &lt;li&gt;PORT 설정&lt;/li&gt;
 &lt;li&gt;static 설정&lt;/li&gt;
 &lt;li&gt;
@@ -68,7 +140,9 @@ res.sendFile(path.resolve(__dirname, “../client”, “build”, “index.html
 });
 }
 app.listen(PORT, () =&gt; console.log(&lt;code class=&quot;language-text&quot;&gt;port ${PORT}&lt;/code&gt;));&lt;/p&gt;
-&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;## AWS에 배포
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;-----------------------------------------
+
+## AWS에 배포
 
 # EC2: Elastic Compute Cloud 
 # AWS: Amazon Web Services
@@ -85,6 +159,8 @@ app.listen(PORT, () =&gt; console.log(&lt;code class=&quot;language-text&quot;&g
 사용자가 인스턴스를 완전히 제어할 수 있다.
 보안 및 네트워크 구성, 스토리지 관리 효과적이다.
 
+--------------------------
+
 ## 배포 준비
 프로젝트를 통째로 EC2 인스턴스에 NginX를 설치해 업로드 하는 것이 아니라 번들러를 이용해 하나의 파일로 묶어서 업로드 해야 한다.
 번들러 사용 시 최초 요청 완료 시간이 더 빠름
@@ -100,6 +176,8 @@ app.listen(PORT, () =&gt; console.log(&lt;code class=&quot;language-text&quot;&g
 - Parcel : 작은 규모의 프로젝트, 간단한 설정에 적합
 - Rollup
 근데 CRA로 프로젝트를 생성 시 webpack이 자동으로 설정되어있어 이 경우 굳이 신경 안써도 됨
+
+------------------------------
 
 ## React와 Express 서버의 작동방식
 React 앱과 Express서버는 접속 포트가 다르기에 각자 개별적으로 동작해 localhost:3000과 localhost:5000에서 접근 가능함
@@ -157,6 +235,7 @@ module&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span cla
 &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 &lt;p&gt;이렇게 되면 http-proxy-middleware가 setupProxy.js를 인식하기 때문에 localhost:3000/api 이하의 경로로 시작되는 요청이 &lt;a href=&quot;http://localhost:5000/api&quot;&gt;http://localhost:5000/api&lt;/a&gt; 에서 처리됨&lt;/p&gt;
 &lt;p&gt;이후 터미널에 &lt;code class=&quot;language-text&quot;&gt;npm run dev&lt;/code&gt;를 실행해 proxy created… 관련 내용 뜨면 성공&lt;/p&gt;
+&lt;hr&gt;
 &lt;h1 id=&quot;amazon-ec2-생성-가상-머신-시작&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#amazon-ec2-%EC%83%9D%EC%84%B1-%EA%B0%80%EC%83%81-%EB%A8%B8%EC%8B%A0-%EC%8B%9C%EC%9E%91&quot; aria-label=&quot;amazon ec2 생성 가상 머신 시작 permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;Amazon EC2 생성 (가상 머신 시작)&lt;/h1&gt;
 &lt;p&gt;인스턴스(가상 컴퓨터)를 생성하여 AWS가 제공하는 컴퓨터를 임대해 대신 돌림&lt;/p&gt;
 &lt;h2 id=&quot;초기-셋팅&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#%EC%B4%88%EA%B8%B0-%EC%85%8B%ED%8C%85&quot; aria-label=&quot;초기 셋팅 permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;초기 셋팅&lt;/h2&gt;
@@ -305,12 +384,14 @@ node -e &lt;span class=&quot;token string&quot;&gt;&quot;console.log(&apos;Runni
 &lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;bash&quot;&gt;&lt;pre class=&quot;language-bash&quot;&gt;&lt;code class=&quot;language-bash&quot;&gt;nvm &lt;span class=&quot;token function&quot;&gt;install&lt;/span&gt; &lt;span class=&quot;token number&quot;&gt;14&lt;/span&gt;
 nvm use &lt;span class=&quot;token number&quot;&gt;14&lt;/span&gt;
 node version -&lt;span class=&quot;token operator&quot;&gt;&gt;&lt;/span&gt; v14.17.6&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;hr&gt;
 &lt;h2 id=&quot;프로젝트-clone&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8-clone&quot; aria-label=&quot;프로젝트 clone permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;프로젝트 Clone&lt;/h2&gt;
 &lt;ul&gt;
 &lt;li&gt;이후 원하는 디렉토리에다 Node.js 서버(빌드파일 올렸던 git 파일)를 git clone 해줌&lt;/li&gt;
 &lt;li&gt;앞서 배포용 git에 dist 파일을 올린 상태에서, AWS에서 EC2를 만들어서 git으로 해당 프로젝트를 clone 받음&lt;/li&gt;
 &lt;li&gt;&lt;code class=&quot;language-text&quot;&gt;git clone 프로젝트url&lt;/code&gt;&lt;/li&gt;
 &lt;/ul&gt;
+&lt;hr&gt;
 &lt;h2 id=&quot;프로젝트-디렉토리로-이동&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8-%EB%94%94%EB%A0%89%ED%86%A0%EB%A6%AC%EB%A1%9C-%EC%9D%B4%EB%8F%99&quot; aria-label=&quot;프로젝트 디렉토리로 이동 permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;프로젝트 디렉토리로 이동&lt;/h2&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;code class=&quot;language-text&quot;&gt;cd projectName&lt;/code&gt;&lt;/li&gt;
@@ -391,36 +472,48 @@ ctrl + c &lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;종료하
 &lt;/ol&gt;
 &lt;p&gt;인스턴스의 퍼블릭 IPv4 (DNS)로 접속했을 때 제대로 뜬다면 성공
 -&gt; &lt;code class=&quot;language-text&quot;&gt;3.36.69.146:3000&lt;/code&gt; URL로 이동 시 개발한 프로젝트가 뜸&lt;/p&gt;
+&lt;hr&gt;
 &lt;h2 id=&quot;pm2&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#pm2&quot; aria-label=&quot;pm2 permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;pm2&lt;/h2&gt;
 &lt;p&gt;현재는 server에서만 npm start를 한 거라 server만 켜져있는 상태라 브라우저 상에&lt;code class=&quot;language-text&quot;&gt;Cannot GET /&lt;/code&gt; 만 뜸&lt;/p&gt;
 &lt;p&gt;그래서 client에서 실행하려면 server는 pm2로 실행 해줘야함&lt;/p&gt;
+&lt;h3 id=&quot;pm2란&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#pm2%EB%9E%80&quot; aria-label=&quot;pm2란 permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;pm2란&lt;/h3&gt;
+&lt;p&gt;PM2는 Node.js 프로세스 관리 도구로서 IBM, Microsoft, Paypal 등의 유명 기업에서도 사용하고 있다. &lt;/p&gt;
+&lt;p&gt;다양한 기능을 지원하지만 가장 큰 특징으로는 역시 Cluster 모드일 것이다. &lt;/p&gt;
+&lt;p&gt;자바스크립트는 싱글 스레드로 앱을 실행하지만 PM2는 Node.js의 Cluster 모듈을 사용해서 서버 앱에 복수의 인스턴스가 같은 포트를 사용하게 할 수 있도록 해준다.&lt;/p&gt;
+&lt;p&gt;Node.js의 다중 프로젝트를 실행하고 관리하기 위한 관리 툴&lt;/p&gt;
+&lt;p&gt;이를 통해 사용량에 따라 CPU 점유율 늘리고 줄이면서 앱의 안정성을 높일 수 있다.&lt;/p&gt;
 &lt;ul&gt;
-&lt;li&gt;
-&lt;p&gt;pm2에서 간단하게 살펴보자면 pm2는 서버를 실행 후 터미널에서 인스턴스를 나올려면 어쩔 수 없이 서버를 꺼야하지만,&lt;/p&gt;
-&lt;p&gt;pm2 설치 시 실행 후 status가 online이면 ubuntu 터미널을 닫아도 서버가 종료되지 않고 계속 실행됨&lt;/p&gt;
-&lt;p&gt;만약 종료해주고 싶다면 &lt;code class=&quot;language-text&quot;&gt;pm2 stop [id]&lt;/code&gt;를 해줌 (참고로 처음 실행시 id는 0임)&lt;/p&gt;
-&lt;/li&gt;
+&lt;li&gt;pm2에서 간단하게 살펴보자면 pm2는 서버를 실행 후 터미널에서 인스턴스를 나올려면 어쩔 수 없이 서버를 꺼야하지만, pm2 설치 시 실행 후 status가 online이면 ubuntu 터미널을 닫아도 서버가 종료되지 않고 계속 실행됨&lt;/li&gt;
 &lt;/ul&gt;
-&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;bash&quot;&gt;&lt;pre class=&quot;language-bash&quot;&gt;&lt;code class=&quot;language-bash&quot;&gt;&lt;span class=&quot;token comment&quot;&gt;# pm2 설치 (전역 설치시 sudo 권한으로 설치해줘야함 원래는 npm install pm2)&lt;/span&gt;
-&lt;span class=&quot;token function&quot;&gt;npm&lt;/span&gt; &lt;span class=&quot;token function&quot;&gt;install&lt;/span&gt; -g pm2
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;bash&quot;&gt;&lt;pre class=&quot;language-bash&quot;&gt;&lt;code class=&quot;language-bash&quot;&gt;&lt;span class=&quot;token comment&quot;&gt;# pm2 설치 - Node 패키지 매니저인 npm을 통해서 간단하게 설치 가능&lt;/span&gt;
+&lt;span class=&quot;token comment&quot;&gt;# PM2는 여러 프로젝트에서 사용하므로 기본적으로 글로벌 셋팅으로 설치하는 것을 권장&lt;/span&gt;
+&lt;span class=&quot;token comment&quot;&gt;# (전역 설치시 sudo 권한으로 설치해줘야함 원래는 npm install pm2)&lt;/span&gt;
+&lt;span class=&quot;token variable&quot;&gt;&lt;span class=&quot;token variable&quot;&gt;`&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;npm&lt;/span&gt; &lt;span class=&quot;token function&quot;&gt;install&lt;/span&gt; -g pm2&lt;span class=&quot;token variable&quot;&gt;`&lt;/span&gt;&lt;/span&gt;
 &lt;span class=&quot;token comment&quot;&gt;# 설치 후 index.js가 있는 폴더로 이동해 다음 명령 실행해줌 &lt;/span&gt;
-pm2 start server/index.js
+&lt;span class=&quot;token variable&quot;&gt;&lt;span class=&quot;token variable&quot;&gt;`&lt;/span&gt;pm2 start server/index.js&lt;span class=&quot;token variable&quot;&gt;`&lt;/span&gt;&lt;/span&gt;
+&lt;span class=&quot;token comment&quot;&gt;# --watch 옵션 추가 시 Node.js소스가 수정되면 자동으로 해당 내용으로 서비스를 재시작해 내용을 갱신&lt;/span&gt;
+&lt;span class=&quot;token variable&quot;&gt;&lt;span class=&quot;token variable&quot;&gt;`&lt;/span&gt;pm2 start server/index.js --watch&lt;span class=&quot;token variable&quot;&gt;`&lt;/span&gt;&lt;/span&gt;
+&lt;span class=&quot;token comment&quot;&gt;# 모니터링&lt;/span&gt;
+&lt;span class=&quot;token comment&quot;&gt;# list: 현재 상태를 시각화, monit: 실시간 상태 확인&lt;/span&gt;
+&lt;span class=&quot;token variable&quot;&gt;&lt;span class=&quot;token variable&quot;&gt;`&lt;/span&gt;pm2 list&lt;span class=&quot;token variable&quot;&gt;`&lt;/span&gt;&lt;/span&gt;
+&lt;span class=&quot;token variable&quot;&gt;&lt;span class=&quot;token variable&quot;&gt;`&lt;/span&gt;pm2 monit&lt;span class=&quot;token variable&quot;&gt;`&lt;/span&gt;&lt;/span&gt;
+&lt;span class=&quot;token comment&quot;&gt;# 프로세스 중지&lt;/span&gt;
+&lt;span class=&quot;token variable&quot;&gt;&lt;span class=&quot;token variable&quot;&gt;`&lt;/span&gt;pm2 stop server/index.js&lt;span class=&quot;token variable&quot;&gt;`&lt;/span&gt;&lt;/span&gt;
 &lt;span class=&quot;token comment&quot;&gt;# 중단&lt;/span&gt;
-pm2 &lt;span class=&quot;token function&quot;&gt;kill&lt;/span&gt;
+&lt;span class=&quot;token variable&quot;&gt;&lt;span class=&quot;token variable&quot;&gt;`&lt;/span&gt;pm2 &lt;span class=&quot;token function&quot;&gt;kill&lt;/span&gt;&lt;span class=&quot;token variable&quot;&gt;`&lt;/span&gt;&lt;/span&gt;
 &lt;span class=&quot;token comment&quot;&gt;# 콘솔 나갈 땐 &lt;/span&gt;
-&lt;span class=&quot;token builtin class-name&quot;&gt;exit&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;span class=&quot;token variable&quot;&gt;&lt;span class=&quot;token variable&quot;&gt;`&lt;/span&gt;&lt;span class=&quot;token builtin class-name&quot;&gt;exit&lt;/span&gt;&lt;span class=&quot;token variable&quot;&gt;`&lt;/span&gt;&lt;/span&gt;
+&lt;span class=&quot;token comment&quot;&gt;# 프로세스 재시작&lt;/span&gt;
+&lt;span class=&quot;token variable&quot;&gt;&lt;span class=&quot;token variable&quot;&gt;`&lt;/span&gt;pm2 restart server/index.js&lt;span class=&quot;token variable&quot;&gt;`&lt;/span&gt;&lt;/span&gt;
+&lt;span class=&quot;token comment&quot;&gt;# 프로세스 삭제&lt;/span&gt;
+&lt;span class=&quot;token variable&quot;&gt;&lt;span class=&quot;token variable&quot;&gt;`&lt;/span&gt;pm2 delete index.js&lt;span class=&quot;token variable&quot;&gt;`&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;token variable&quot;&gt;&lt;span class=&quot;token variable&quot;&gt;`&lt;/span&gt;
+&lt;span class=&quot;token comment&quot;&gt;# 로그 확인 (현재 실행중인 로그 확인)&lt;/span&gt;
+&lt;span class=&quot;token variable&quot;&gt;`&lt;/span&gt;&lt;/span&gt;pm2 logs`&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 &lt;h1 id=&quot;실행&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#%EC%8B%A4%ED%96%89&quot; aria-label=&quot;실행 permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;실행&lt;/h1&gt;
 &lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;bash&quot;&gt;&lt;pre class=&quot;language-bash&quot;&gt;&lt;code class=&quot;language-bash&quot;&gt;&lt;span class=&quot;token builtin class-name&quot;&gt;cd&lt;/span&gt; client
 &lt;span class=&quot;token function&quot;&gt;npm&lt;/span&gt; start&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;h2 id=&quot;pm2-로그-관리&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#pm2-%EB%A1%9C%EA%B7%B8-%EA%B4%80%EB%A6%AC&quot; aria-label=&quot;pm2 로그 관리 permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;PM2 로그 관리&lt;/h2&gt;
-&lt;p&gt;Config 파일에서 설정한 로그 경로에 저장되는 로그는 우리가 삭제해주지 않는한 계속 쌓이게 되어 서버 용량 부족으로 이어질 수 있음&lt;/p&gt;
-&lt;p&gt;이를 해결하기 위해 로그 파일을 관리해주는 pm2-logrotate라는 plugin을 사용해줌&lt;/p&gt;
-&lt;h1 id=&quot;npm으로-설치하는-것이-아닌-pm2로-설치해줘야함&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#npm%EC%9C%BC%EB%A1%9C-%EC%84%A4%EC%B9%98%ED%95%98%EB%8A%94-%EA%B2%83%EC%9D%B4-%EC%95%84%EB%8B%8C-pm2%EB%A1%9C-%EC%84%A4%EC%B9%98%ED%95%B4%EC%A4%98%EC%95%BC%ED%95%A8&quot; aria-label=&quot;npm으로 설치하는 것이 아닌 pm2로 설치해줘야함 permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;npm으로 설치하는 것이 아닌 pm2로 설치해줘야함&lt;/h1&gt;
-&lt;p&gt;$ pm2 install pm2-logrotate&lt;/p&gt;
-&lt;h1 id=&quot;옵션-설정은-다음과-같이-설정해줌&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#%EC%98%B5%EC%85%98-%EC%84%A4%EC%A0%95%EC%9D%80-%EB%8B%A4%EC%9D%8C%EA%B3%BC-%EA%B0%99%EC%9D%B4-%EC%84%A4%EC%A0%95%ED%95%B4%EC%A4%8C&quot; aria-label=&quot;옵션 설정은 다음과 같이 설정해줌 permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;옵션 설정은 다음과 같이 설정해줌&lt;/h1&gt;
-&lt;p&gt;$ pm2 set pm2-logrotate:&lt;option&gt; &lt;value&gt;&lt;/p&gt;
-&lt;p&gt;&lt;span class=&quot;mjx-chtml&quot;&gt;&lt;span class=&quot;mjx-math&quot; aria-label=&quot;pm2 set pm2-logrotate:max_size 1K&quot;&gt;&lt;span class=&quot;mjx-mrow&quot; aria-hidden=&quot;true&quot;&gt;&lt;span class=&quot;mjx-mi&quot;&gt;&lt;span class=&quot;mjx-char MJXc-TeX-math-I&quot; style=&quot;padding-top: 0.225em; padding-bottom: 0.446em;&quot;&gt;p&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;mjx-mi&quot;&gt;&lt;span class=&quot;mjx-char MJXc-TeX-math-I&quot; style=&quot;padding-top: 0.225em; padding-bottom: 0.298em;&quot;&gt;m&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;mjx-mn&quot;&gt;&lt;span class=&quot;mjx-char MJXc-TeX-main-R&quot; style=&quot;padding-top: 0.372em; padding-bottom: 0.372em;&quot;&gt;2&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;mjx-mi&quot;&gt;&lt;span class=&quot;mjx-char MJXc-TeX-math-I&quot; style=&quot;padding-top: 0.225em; padding-bottom: 0.298em;&quot;&gt;s&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;mjx-mi&quot;&gt;&lt;span class=&quot;mjx-char MJXc-TeX-math-I&quot; style=&quot;padding-top: 0.225em; padding-bottom: 0.298em;&quot;&gt;e&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;mjx-mi&quot;&gt;&lt;span class=&quot;mjx-char MJXc-TeX-math-I&quot; style=&quot;padding-top: 0.372em; padding-bottom: 0.298em;&quot;&gt;t&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;mjx-mi&quot;&gt;&lt;span class=&quot;mjx-char MJXc-TeX-math-I&quot; style=&quot;padding-top: 0.225em; padding-bottom: 0.446em;&quot;&gt;p&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;mjx-mi&quot;&gt;&lt;span class=&quot;mjx-char MJXc-TeX-math-I&quot; style=&quot;padding-top: 0.225em; padding-bottom: 0.298em;&quot;&gt;m&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;mjx-mn&quot;&gt;&lt;span class=&quot;mjx-char MJXc-TeX-main-R&quot; style=&quot;padding-top: 0.372em; padding-bottom: 0.372em;&quot;&gt;2&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;mjx-mo MJXc-space2&quot;&gt;&lt;span class=&quot;mjx-char MJXc-TeX-main-R&quot; style=&quot;padding-top: 0.298em; padding-bottom: 0.446em;&quot;&gt;−&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;mjx-mi MJXc-space2&quot;&gt;&lt;span class=&quot;mjx-char MJXc-TeX-math-I&quot; style=&quot;padding-top: 0.446em; padding-bottom: 0.298em;&quot;&gt;l&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;mjx-mi&quot;&gt;&lt;span class=&quot;mjx-char MJXc-TeX-math-I&quot; style=&quot;padding-top: 0.225em; padding-bottom: 0.298em;&quot;&gt;o&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;mjx-mi&quot;&gt;&lt;span class=&quot;mjx-char MJXc-TeX-math-I&quot; style=&quot;padding-top: 0.225em; padding-bottom: 0.519em; padding-right: 0.003em;&quot;&gt;g&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;mjx-mi&quot;&gt;&lt;span class=&quot;mjx-char MJXc-TeX-math-I&quot; style=&quot;padding-top: 0.225em; padding-bottom: 0.298em;&quot;&gt;r&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;mjx-mi&quot;&gt;&lt;span class=&quot;mjx-char MJXc-TeX-math-I&quot; style=&quot;padding-top: 0.225em; padding-bottom: 0.298em;&quot;&gt;o&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;mjx-mi&quot;&gt;&lt;span class=&quot;mjx-char MJXc-TeX-math-I&quot; style=&quot;padding-top: 0.372em; padding-bottom: 0.298em;&quot;&gt;t&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;mjx-mi&quot;&gt;&lt;span class=&quot;mjx-char MJXc-TeX-math-I&quot; style=&quot;padding-top: 0.225em; padding-bottom: 0.298em;&quot;&gt;a&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;mjx-mi&quot;&gt;&lt;span class=&quot;mjx-char MJXc-TeX-math-I&quot; style=&quot;padding-top: 0.372em; padding-bottom: 0.298em;&quot;&gt;t&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;mjx-mi&quot;&gt;&lt;span class=&quot;mjx-char MJXc-TeX-math-I&quot; style=&quot;padding-top: 0.225em; padding-bottom: 0.298em;&quot;&gt;e&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;mjx-mo MJXc-space3&quot;&gt;&lt;span class=&quot;mjx-char MJXc-TeX-main-R&quot; style=&quot;padding-top: 0.151em; padding-bottom: 0.372em;&quot;&gt;:&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;mjx-mi MJXc-space3&quot;&gt;&lt;span class=&quot;mjx-char MJXc-TeX-math-I&quot; style=&quot;padding-top: 0.225em; padding-bottom: 0.298em;&quot;&gt;m&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;mjx-mi&quot;&gt;&lt;span class=&quot;mjx-char MJXc-TeX-math-I&quot; style=&quot;padding-top: 0.225em; padding-bottom: 0.298em;&quot;&gt;a&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;mjx-msubsup&quot;&gt;&lt;span class=&quot;mjx-base&quot;&gt;&lt;span class=&quot;mjx-mi&quot;&gt;&lt;span class=&quot;mjx-char MJXc-TeX-math-I&quot; style=&quot;padding-top: 0.225em; padding-bottom: 0.298em;&quot;&gt;x&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;mjx-sub&quot; style=&quot;font-size: 70.7%; vertical-align: -0.212em; padding-right: 0.071em;&quot;&gt;&lt;span class=&quot;mjx-mi&quot; style=&quot;&quot;&gt;&lt;span class=&quot;mjx-char MJXc-TeX-math-I&quot; style=&quot;padding-top: 0.225em; padding-bottom: 0.298em;&quot;&gt;s&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;mjx-mi&quot;&gt;&lt;span class=&quot;mjx-char MJXc-TeX-math-I&quot; style=&quot;padding-top: 0.446em; padding-bottom: 0.298em;&quot;&gt;i&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;mjx-mi&quot;&gt;&lt;span class=&quot;mjx-char MJXc-TeX-math-I&quot; style=&quot;padding-top: 0.225em; padding-bottom: 0.298em; padding-right: 0.003em;&quot;&gt;z&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;mjx-mi&quot;&gt;&lt;span class=&quot;mjx-char MJXc-TeX-math-I&quot; style=&quot;padding-top: 0.225em; padding-bottom: 0.298em;&quot;&gt;e&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;mjx-mn&quot;&gt;&lt;span class=&quot;mjx-char MJXc-TeX-main-R&quot; style=&quot;padding-top: 0.372em; padding-bottom: 0.372em;&quot;&gt;1&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;mjx-mi&quot;&gt;&lt;span class=&quot;mjx-char MJXc-TeX-math-I&quot; style=&quot;padding-top: 0.446em; padding-bottom: 0.298em; padding-right: 0.04em;&quot;&gt;K&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt; pm2 set pm2-logrotate:retain 10&lt;/p&gt;
-&lt;h2 id=&quot;이후-재접속-시-에러-발생&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#%EC%9D%B4%ED%9B%84-%EC%9E%AC%EC%A0%91%EC%86%8D-%EC%8B%9C-%EC%97%90%EB%9F%AC-%EB%B0%9C%EC%83%9D&quot; aria-label=&quot;이후 재접속 시 에러 발생 permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;이후 재접속 시 에러 발생&lt;/h2&gt;
+&lt;hr&gt;
+&lt;h2 id=&quot;재접속-시-에러-발생&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#%EC%9E%AC%EC%A0%91%EC%86%8D-%EC%8B%9C-%EC%97%90%EB%9F%AC-%EB%B0%9C%EC%83%9D&quot; aria-label=&quot;재접속 시 에러 발생 permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;재접속 시 에러 발생&lt;/h2&gt;
 &lt;p&gt;yujihyeon@MacBook-Air-2 .ssh % ssh -i “web_dev.pem” ubuntu@3.36.69.146
 ssh: connect to host 3.36.69.146 port 22: Operation timed out&lt;/p&gt;
 &lt;h2 id=&quot;해결&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#%ED%95%B4%EA%B2%B0&quot; aria-label=&quot;해결 permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;해결&lt;/h2&gt;
@@ -428,10 +521,12 @@ ssh: connect to host 3.36.69.146 port 22: Operation timed out&lt;/p&gt;
 접속 시
 ssh -i “web&lt;em&gt;dev.pem” ubuntu@퍼블릭 IPv4 가 아닌
 ssh -i “web&lt;/em&gt;dev.pem” ubuntu@탄력적 ip 로 접속해야함!&lt;/p&gt;
+&lt;hr&gt;
 &lt;h2 id=&quot;웹-서버nginx-설치-및-환경-설정하기&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#%EC%9B%B9-%EC%84%9C%EB%B2%84nginx-%EC%84%A4%EC%B9%98-%EB%B0%8F-%ED%99%98%EA%B2%BD-%EC%84%A4%EC%A0%95%ED%95%98%EA%B8%B0&quot; aria-label=&quot;웹 서버nginx 설치 및 환경 설정하기 permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;웹 서버(Nginx) 설치 및 환경 설정하기&lt;/h2&gt;
-&lt;p&gt;서버 컴퓨터에 파일만 올려서는 실행이 안되니 Apache나 Nginx 같은 웹서버를 설치해서 구동시켜 줘야한다&lt;/p&gt;
+&lt;p&gt;Nginx를 통해 build된 React 프로젝트를 서버에 배포
+서버 컴퓨터에 파일만 올려서는 실행이 안되니 Apache나 Nginx 같은 웹서버를 설치해서 구동시켜 줘야한다&lt;/p&gt;
 &lt;ul&gt;
-&lt;li&gt;Nginx 설치 (apt로 설치 받음) - ubuntu 20.04에 Nginx 설치
+&lt;li&gt;ec2서버에 Nginx 설치 (apt로 설치 받음) - ubuntu 20.04에 Nginx 설치
 &lt;code class=&quot;language-text&quot;&gt;sudo apt-get install nginx&lt;/code&gt;&lt;/li&gt;
 &lt;li&gt;실행
 &lt;code class=&quot;language-text&quot;&gt;sudo service start nginx&lt;/code&gt;
@@ -447,19 +542,27 @@ ec2의 퍼블릭 IP 주소로 입력해서 들어갔을 때&lt;code class=&quot;
 &lt;li&gt;nginx에 빌드파일 연결하기
 nginx는 빌드된 파일을 사용하기 때문에 빌드 산출물을 생성해야 함
 &lt;code class=&quot;language-text&quot;&gt;npm run build&lt;/code&gt; (react의 경우 빌드 명령어)&lt;/li&gt;
+&lt;li&gt;nginx 설정파일 수정&lt;/li&gt;
 &lt;/ul&gt;
 &lt;h2 id=&quot;nginx-환경-설정&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#nginx-%ED%99%98%EA%B2%BD-%EC%84%A4%EC%A0%95&quot; aria-label=&quot;nginx 환경 설정 permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;Nginx 환경 설정&lt;/h2&gt;
 &lt;ul&gt;
+&lt;li&gt;nginx의 설치가 끝나면 /etc/nginx 경로에 기본 화면으로 연결되는 Nginx 설정파일들이 이미 생성되어 있는데 우리가 만들 설정과 겹칠수 있기 때문에 모두 지워야 함 (default 파일 삭제)&lt;/li&gt;
 &lt;li&gt;
-&lt;p&gt;nginx의 설치가 끝나면 /etc/nginx 경로에 기본 화면으로 연결되는 Nginx 설정파일들이 이미 생성되어 있습니다. 우리가 만들 설정과 겹칠수 있기 때문에 모두 지워야 함 (default 파일 삭제)&lt;/p&gt;
+&lt;p&gt;/site-available 로 가서 default파일을 수정&lt;/p&gt;
 &lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;sudo rm /etc/nginx/sites-available/default
 sudo rm /etc/nginx/sites-enabled/default&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 &lt;/li&gt;
+&lt;li&gt;배포하고자 하는 프로젝트에 대한 Nginx 설정파일 생성&lt;/li&gt;
 &lt;li&gt;
-&lt;p&gt;배포하고자 하는 프로젝트에 대한 Nginx 설정파일 생성&lt;/p&gt;
+&lt;p&gt;nginx에서 디폴트로 가지고 있는 설정 파일인 default.conf를 수정해도 되고, 새로운 .conf 파일을 생성해서 사용해도 됨&lt;/p&gt;
 &lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;cd /etc/nginx/sites-available
 sudo touch myapp.conf&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;myapp.conf의 내용은 아래와 같이 입력하세요.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;nginx에서 원하는 포트에 띄울 프로젝트의 경로를 설정함&lt;/li&gt;
+&lt;li&gt;이 때, react 프로젝트를 빌드한 폴더 안의 index.html을 실행시키도록 경로를 설정&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;서버 안에 외부에서 React build 한 폴더를 직접 넣어줘도 되고, 서버 내에서 git으로 소스를 받아서 바로 build 해도 됨
+(myapp.conf)&lt;/p&gt;
 &lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;server {
 &amp;lt;!-- listen80: port 80에 대한 설정을 의미 --&gt;
 listen 80;
@@ -487,22 +590,14 @@ try_files $uri $uri/ /index.html;
 &lt;/ul&gt;
 &lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;sudo systemctl stop nginx
 sudo systemctl start nginx&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;Nginx가 동작중이라면, 브라우저에서 localhost:80로 접속해봄&lt;/p&gt;
-&lt;!-- nginx의 설정은 `nginx.conf 파일`로 설정함 (nginx 파일 위치:/etc/nginx ) 
-- 해당 파일을 vi로 열고 상단부에 modules-enabled라는 하위 디렉토리에 내가 원하는 conf파일을 만들어 그 파일의 설정 내용을 반영하도록 하는 문장을 입력
-`include /etc/nginx/modules-enabled/*.conf;`
-- 이후 modules-enabled의 디렉토리에 `파일이름.conf`파일 생성해, listen 3000이라는 줄을 작성하고(로드밸런서에서 웹 서버의 3000번 포트로 요청을 보내기 때문), 해당 포트로 접근 시 내 웹 서버의 location에 위치하는 파일을 열어 보여준다는 코드 작성
-```
-server {
-  listen 3000;  // 3000번 포트로 들어왔을 때
-  location / {
-    root /home/ubuntu/uplanet_mbti;  // 해당 디렉토리에 있는
-    index index.html index.htm;        // index.html을 보여줘라!
-  }
-}
-``` --&gt;
+&lt;h1 id=&quot;nginx-재시작&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#nginx-%EC%9E%AC%EC%8B%9C%EC%9E%91&quot; aria-label=&quot;nginx 재시작 permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;nginx 재시작&lt;/h1&gt;
+&lt;ul&gt;
+&lt;li&gt;nginx로 띄우려는 React의 폴더 경로를 nginx 서버 설정 파일에 적용한 후 nginx 서비스를 재시작함&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;`sudo service nginx restart&lt;code class=&quot;language-text&quot;&gt;&lt;/code&gt;&lt;/p&gt;
+&lt;h1 id=&quot;완료&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#%EC%99%84%EB%A3%8C&quot; aria-label=&quot;완료 permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;완료&lt;/h1&gt;
+&lt;p&gt;이제 EC2 public DNS주소롤 접속하면 웹 페이지가 잘 뜸(안 뜨면 포트번호가 EC2 인바운드 규칙에 설정되어있는지 확인해봄)&lt;/p&gt;
 &lt;p&gt;Reference&lt;/p&gt;
-&lt;p&gt;root /home/ubuntu/React_Shop/client/build&lt;/p&gt;
 &lt;p&gt;&lt;a href=&quot;https://blog.leehov.in/36&quot;&gt;leehov님 블로그&lt;/a&gt;
 &lt;a href=&quot;https://data-jj.tistory.com/31&quot;&gt;datajj님 블로그&lt;/a&gt;
 &lt;a href=&quot;https://codechasseur.tistory.com/25&quot;&gt;codechasseur님 블로그&lt;/a&gt;
@@ -2440,8 +2535,9 @@ Redux…]]></description><link>https://www.yoojiih.github.io/Shop_React0/</link>
 React Hooks
 React Router
 Redux
-Javascript
-Tailwind&lt;/p&gt;
+Javascript(ES6)
+Tailwind
+Axios&lt;/p&gt;
 &lt;/blockquote&gt;
 &lt;/li&gt;
 &lt;li&gt;
@@ -2460,7 +2556,13 @@ express&lt;/p&gt;
 &lt;li&gt;
 &lt;h2 id=&quot;배포&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#%EB%B0%B0%ED%8F%AC&quot; aria-label=&quot;배포 permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;배포&lt;/h2&gt;
 &lt;blockquote&gt;
-&lt;p&gt;aws&lt;/p&gt;
+&lt;p&gt;aws(EC2)&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;h2 id=&quot;버전관리&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#%EB%B2%84%EC%A0%84%EA%B4%80%EB%A6%AC&quot; aria-label=&quot;버전관리 permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;버전관리&lt;/h2&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Git, Github&lt;/p&gt;
 &lt;/blockquote&gt;
 &lt;/li&gt;
 &lt;/ul&gt;
